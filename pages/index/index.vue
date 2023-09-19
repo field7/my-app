@@ -24,10 +24,10 @@
 			<view class="right">
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax || index == oneMin2 || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin2 || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -64,11 +64,11 @@ onLoad(() => {
 	getData()
 	findHandle(0)
 	findHandle(1)
-	nextTick(() => {
-	  if (oneAmountMin.value == twoAmountMin.value) {
-	  	twoAmountMin.value = twoAmountMax.value
-	  }
-	})
+	// nextTick(() => {
+	//   if (oneAmountMin.value == twoAmountMin.value) {
+	//   	twoAmountMin.value = twoAmountMax.value
+	//   }
+	// })
 })
 
 /* methods */
@@ -86,11 +86,11 @@ function setValueHandle() {
 		setStorage()
 		findHandle(0)
 		findHandle(1)
-		nextTick(() => {
-		  if (oneAmountMin.value == twoAmountMin.value) {
-		  	twoAmountMin.value = twoAmountMax.value
-		  }
-		})
+		// nextTick(() => {
+		//   if (oneAmountMin.value == twoAmountMin.value) {
+		//   	twoAmountMin.value = twoAmountMax.value
+		//   }
+		// })
 	}
 }
 function clearValueHandle() {
@@ -164,6 +164,12 @@ function findHandle(index) {
 		oneMin2.value = index5
 		oneAmountMax.value = objMaxMin.max
 		oneAmountMin.value = objMaxMin.min
+		if (oneMin2.value == oneAmountMin.value) {
+			oneMin2.value = oneAmountMax.value
+		}
+		if (oneMax.value == oneAmountMin.value) {
+			oneMax.value = oneMax2.value
+		}
 	} else {
 		twoMax.value = index1
 		twoMax2.value = index2
@@ -172,6 +178,12 @@ function findHandle(index) {
 		twoMin2.value = index5
 		twoAmountMax.value = objMaxMin.max
 		twoAmountMin.value = objMaxMin.min
+		if (twoMin2.value == twoAmountMin.value) {
+			twoMin2.value = twoAmountMax.value
+		}
+		if (twoMax.value == twoAmountMin.value) {
+			twoMax.value = twoMax2.value
+		}
 	}
 }
 function find(arr, item) {
