@@ -25,11 +25,6 @@ const _sfc_main = {
       getData();
       findHandle(0);
       findHandle(1);
-      common_vendor.nextTick(() => {
-        if (oneAmountMin.value == twoAmountMin.value) {
-          twoAmountMin.value = twoAmountMax.value;
-        }
-      });
     });
     function setValueHandle() {
       if (typeof num.value[0] != "undefined" && typeof num.value[1] != "undefined") {
@@ -45,11 +40,6 @@ const _sfc_main = {
         setStorage();
         findHandle(0);
         findHandle(1);
-        common_vendor.nextTick(() => {
-          if (oneAmountMin.value == twoAmountMin.value) {
-            twoAmountMin.value = twoAmountMax.value;
-          }
-        });
       }
     }
     function clearValueHandle() {
@@ -121,6 +111,12 @@ const _sfc_main = {
         oneMin2.value = index5;
         oneAmountMax.value = objMaxMin.max;
         oneAmountMin.value = objMaxMin.min;
+        if (oneMin2.value == oneAmountMin.value) {
+          oneMin2.value = oneAmountMax.value;
+        }
+        if (oneMax.value == oneAmountMin.value) {
+          oneMax.value = oneMax2.value;
+        }
       } else {
         twoMax.value = index1;
         twoMax2.value = index2;
@@ -129,6 +125,12 @@ const _sfc_main = {
         twoMin2.value = index5;
         twoAmountMax.value = objMaxMin.max;
         twoAmountMin.value = objMaxMin.min;
+        if (twoMin2.value == twoAmountMin.value) {
+          twoMin2.value = twoAmountMax.value;
+        }
+        if (twoMax.value == twoAmountMin.value) {
+          twoMax.value = twoMax2.value;
+        }
       }
     }
     function find(arr, item) {
@@ -161,14 +163,14 @@ const _sfc_main = {
         g: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == oneAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == oneMax.value || index == oneMin2.value || index == oneAmountMin.value ? "item active" : "item"),
             c: index
           };
         }),
         h: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == twoAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == twoMax.value || index == twoMin2.value || index == twoAmountMin.value ? "item active" : "item"),
             c: index
           };
         })
@@ -176,5 +178,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/\u5EBE\u8363\u948A/project/my-app/pages/index/index.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/myProject/my-app/pages/index/index.vue"]]);
 wx.createPage(MiniProgramPage);
