@@ -24,10 +24,10 @@
 			<view class="right">
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneMax2 || index == oneMax3 || index == oneMin || index == oneMin2 || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax || index == oneMax2 || index == oneMin || index == oneMin2 || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMax2 || index == twoMax3 || index == twoMin || index == twoMin2 || index == twoAmountMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMax2 || index == twoMin || index == twoMin2 || index == twoAmountMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -64,11 +64,11 @@ onLoad(() => {
 	getData()
 	findHandle(0)
 	findHandle(1)
-	nextTick(() => {
-	  if (oneAmountMin.value == twoAmountMin.value) {
-	  	twoAmountMin.value = twoAmountMax.value
-	  }
-	})
+	// nextTick(() => {
+	//   if (oneAmountMin.value == twoAmountMin.value) {
+	//   	twoAmountMin.value = twoAmountMax.value
+	//   }
+	// })
 })
 
 /* methods */
@@ -86,11 +86,11 @@ function setValueHandle() {
 		setStorage()
 		findHandle(0)
 		findHandle(1)
-		nextTick(() => {
-		  if (oneAmountMin.value == twoAmountMin.value) {
-		  	twoAmountMin.value = twoAmountMax.value
-		  }
-		})
+		// nextTick(() => {
+		//   if (oneAmountMin.value == twoAmountMin.value) {
+		//   	twoAmountMin.value = twoAmountMax.value
+		//   }
+		// })
 	}
 }
 function clearValueHandle() {
