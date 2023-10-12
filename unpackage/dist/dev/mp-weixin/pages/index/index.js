@@ -151,14 +151,14 @@ const _sfc_main = {
         g: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == oneMax.value || index == oneMax2.value || index == oneMin.value || index == oneMin2.value || index == oneAmountMax.value || index == oneAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == oneMax.value || index == oneMax2.value || index == oneAmountMax.value || index == oneAmountMin.value ? "item active" : "item"),
             c: index
           };
         }),
         h: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == twoMax.value || index == twoMax2.value || index == twoMin.value || index == twoMin2.value || index == twoAmountMax.value || index == twoAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == twoMax.value || index == twoMax2.value || index == twoAmountMax.value || index == twoAmountMin.value ? "item active" : "item"),
             c: index
           };
         })
