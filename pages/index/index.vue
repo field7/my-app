@@ -24,10 +24,10 @@
 			<view class="right">
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -64,14 +64,24 @@ onLoad(() => {
 	getData()
 	findHandle(0)
 	findHandle(1)
-	// nextTick(() => {
-	//   if (oneAmountMin.value == twoAmountMin.value) {
-	//   	twoAmountMin.value = twoAmountMax.value
-	//   }
-	// })
+	nextTick(() => {
+	  if(getRandom(0, 1) == 0) {
+			oneMax.value = oneAmountMin.value
+			twoAmountMin.value = twoMax.value
+		}
+		if (oneMax.value == twoAmountMin.value) {
+			twoAmountMin.value = twoAmountMax.value
+		}
+		if (oneMax.value == twoAmountMin.value) {
+			oneMax.value = oneMin.value
+		}
+	})
 })
 
 /* methods */
+function getRandom(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min
+}
 function setValueHandle() {
 	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
@@ -86,11 +96,18 @@ function setValueHandle() {
 		setStorage()
 		findHandle(0)
 		findHandle(1)
-		// nextTick(() => {
-		//   if (oneAmountMin.value == twoAmountMin.value) {
-		//   	twoAmountMin.value = twoAmountMax.value
-		//   }
-		// })
+		nextTick(() => {
+			if(getRandom(0, 1) == 0) {
+				oneMax.value = oneAmountMin.value
+				twoAmountMin.value = twoMax.value
+			}
+			if (oneMax.value == twoAmountMin.value) {
+				twoAmountMin.value = twoAmountMax.value
+			}
+			if (oneMax.value == twoAmountMin.value) {
+				oneMax.value = oneMin.value
+			}
+		})
 	}
 }
 function clearValueHandle() {

@@ -25,7 +25,22 @@ const _sfc_main = {
       getData();
       findHandle(0);
       findHandle(1);
+      common_vendor.nextTick(() => {
+        if (getRandom(0, 1) == 0) {
+          oneMax.value = oneAmountMin.value;
+          twoAmountMin.value = twoMax.value;
+        }
+        if (oneMax.value == twoAmountMin.value) {
+          twoAmountMin.value = twoAmountMax.value;
+        }
+        if (oneMax.value == twoAmountMin.value) {
+          oneMax.value = oneMin.value;
+        }
+      });
     });
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
     function setValueHandle() {
       if (typeof num.value[0] != "undefined" && typeof num.value[1] != "undefined") {
         arr1.value.unshift(num.value[0]);
@@ -40,6 +55,18 @@ const _sfc_main = {
         setStorage();
         findHandle(0);
         findHandle(1);
+        common_vendor.nextTick(() => {
+          if (getRandom(0, 1) == 0) {
+            oneMax.value = oneAmountMin.value;
+            twoAmountMin.value = twoMax.value;
+          }
+          if (oneMax.value == twoAmountMin.value) {
+            twoAmountMin.value = twoAmountMax.value;
+          }
+          if (oneMax.value == twoAmountMin.value) {
+            oneMax.value = oneMin.value;
+          }
+        });
       }
     }
     function clearValueHandle() {
@@ -163,14 +190,14 @@ const _sfc_main = {
         g: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == oneMax.value || index == oneAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == oneMax.value ? "item active" : "item"),
             c: index
           };
         }),
         h: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == twoMax.value || index == twoAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == twoAmountMin.value ? "item active" : "item"),
             c: index
           };
         })

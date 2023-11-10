@@ -6220,6 +6220,7 @@ exports.createSSRApp = createSSRApp;
 exports.f = f;
 exports.index = index;
 exports.n = n;
+exports.nextTick = nextTick;
 exports.o = o;
 exports.onLoad = onLoad;
 exports.ref = ref;
