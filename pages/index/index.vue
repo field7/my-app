@@ -19,6 +19,9 @@
 					<view class="data2">
 						<view :class="index == arr2.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr2" :key="index">{{ item }}</view>
 					</view>
+					<view class="data3">
+						<view :class="index == arr3.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr3" :key="index">{{ item }}</view>
+					</view>
 				</view>
 			</view>
 			<view class="right">
@@ -27,6 +30,9 @@
 						<view :class="(index == oneMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
+						<view :class="(index == twoMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result3">
 						<view :class="(index == twoMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
@@ -43,6 +49,7 @@ import { onLoad } from '@dcloudio/uni-app'
 const num = ref('')
 const arr1 = ref([])
 const arr2 = ref([])
+const arr3 = ref([])
 const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const oneMax = ref(-1)
 const oneMax2 = ref(-1)
@@ -54,16 +61,24 @@ const twoMax2 = ref(-1)
 const twoMax3 = ref(-1)
 const twoMin = ref(-1)
 const twoMin2 = ref(-1)
+const threeMax = ref(-1)
+const threeMax2 = ref(-1)
+const threeMax3 = ref(-1)
+const threeMin = ref(-1)
+const threeMin2 = ref(-1)
 const oneAmountMax = ref(-1)
 const oneAmountMin = ref(-1)
 const twoAmountMax = ref(-1)
 const twoAmountMin = ref(-1)
+const threeAmountMax = ref(-1)
+const threeAmountMin = ref(-1)
 
 /* 生命周期函数 */
 onLoad(() => {
 	getData()
 	findHandle(0)
 	findHandle(1)
+	findHandle(2)
 	// nextTick(() => {
 	//   if (oneAmountMin.value == twoAmountMin.value) {
 	//   	twoAmountMin.value = twoAmountMax.value
@@ -73,19 +88,24 @@ onLoad(() => {
 
 /* methods */
 function setValueHandle() {
-	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined') {
+	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
+		arr3.value.unshift(num.value[2]);
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
 		}
 		if (arr2.value.length > 20) {
 			arr2.value.pop()
 		}
+		if (arr3.value.length > 20) {
+			arr3.value.pop()
+		}
 		num.value = ''
 		setStorage()
 		findHandle(0)
 		findHandle(1)
+		findHandle(2)
 		// nextTick(() => {
 		//   if (oneAmountMin.value == twoAmountMin.value) {
 		//   	twoAmountMin.value = twoAmountMax.value
@@ -96,18 +116,22 @@ function setValueHandle() {
 function clearValueHandle() {
 	arr1.value.shift()
 	arr2.value.shift()
+	arr3.value.shift()
 	setStorage()
 	findHandle(0)
 	findHandle(1)
+	findHandle(2)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
 	uni.setStorageSync('arr2', JSON.stringify(arr2.value))
+	uni.setStorageSync('arr3', JSON.stringify(arr3.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
 		arr1.value = JSON.parse(uni.getStorageSync('arr1'))
 		arr2.value = JSON.parse(uni.getStorageSync('arr2'))
+		arr3.value = JSON.parse(uni.getStorageSync('arr3'))
 	}
 }
 function findMaxMin(arr){
@@ -170,7 +194,7 @@ function findHandle(index) {
 		if (oneMax.value == oneAmountMin.value) {
 			oneMax.value = oneMax2.value
 		}
-	} else {
+	} else if (index == 1) {
 		twoMax.value = index1
 		twoMax2.value = index2
 		twoMax3.value = index3
@@ -183,6 +207,20 @@ function findHandle(index) {
 		}
 		if (twoMax.value == twoAmountMin.value) {
 			twoMax.value = twoMax2.value
+		}
+	} else if (index == 2) {
+		threeMax.value = index1
+		threeMax2.value = index2
+		threeMax3.value = index3
+		threeMin.value = index4
+		threeMin2.value = index5
+		threeAmountMax.value = objMaxMin.max
+		threeAmountMin.value = objMaxMin.min
+		if (threeMin2.value == threeAmountMin.value) {
+			threeMin2.value = threeAmountMax.value
+		}
+		if (threeMax.value == threeAmountMin.value) {
+			threeMax.value = threeMax2.value
 		}
 	}
 }
@@ -250,8 +288,10 @@ function find(arr, item) {
 			position: relative;
 			.data {
 				display: flex;
+				justify-content: space-around;
 				box-sizing: border-box;
-				padding-left: 50rpx;
+				width: 84%;
+				padding-left: 20rpx;
 				.item {
 					padding: 4rpx 30rpx;
 					font-size: 24rpx;
@@ -268,7 +308,7 @@ function find(arr, item) {
 				height: 600rpx;
 				background-color: #ccc;
 				position: absolute;
-				right: 50rpx;
+				right: 25rpx;
 				top: 150rpx;
 				border-radius: 1rpx;
 			}
@@ -277,19 +317,19 @@ function find(arr, item) {
 			padding: 10rpx;
 			width: 50%;
 			box-sizing: border-box;
-			padding-left: 40rpx;
 			.result {
 				display: flex;
+				justify-content: space-around;
 				.item {
-					width: 50%;
 					padding: 20rpx 10rpx;
+					text-align: center;
 					&.active {
 						background-color: #f00;
 					}
 				}
 			}
-			.result1, .result2 {
-				width: 100%;
+			.result1, .result2, .result3 {
+				width: 23%;
 			}
 		}
 	}

@@ -6,6 +6,7 @@ const _sfc_main = {
     const num = common_vendor.ref("");
     const arr1 = common_vendor.ref([]);
     const arr2 = common_vendor.ref([]);
+    const arr3 = common_vendor.ref([]);
     const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     const oneMax = common_vendor.ref(-1);
     const oneMax2 = common_vendor.ref(-1);
@@ -17,46 +18,63 @@ const _sfc_main = {
     const twoMax3 = common_vendor.ref(-1);
     const twoMin = common_vendor.ref(-1);
     const twoMin2 = common_vendor.ref(-1);
+    const threeMax = common_vendor.ref(-1);
+    const threeMax2 = common_vendor.ref(-1);
+    const threeMax3 = common_vendor.ref(-1);
+    const threeMin = common_vendor.ref(-1);
+    const threeMin2 = common_vendor.ref(-1);
     const oneAmountMax = common_vendor.ref(-1);
     const oneAmountMin = common_vendor.ref(-1);
     const twoAmountMax = common_vendor.ref(-1);
     const twoAmountMin = common_vendor.ref(-1);
+    const threeAmountMax = common_vendor.ref(-1);
+    const threeAmountMin = common_vendor.ref(-1);
     common_vendor.onLoad(() => {
       getData();
       findHandle(0);
       findHandle(1);
+      findHandle(2);
     });
     function setValueHandle() {
-      if (typeof num.value[0] != "undefined" && typeof num.value[1] != "undefined") {
+      if (typeof num.value[0] != "undefined" && typeof num.value[1] != "undefined" && typeof num.value[2] != "undefined") {
         arr1.value.unshift(num.value[0]);
         arr2.value.unshift(num.value[1]);
+        arr3.value.unshift(num.value[2]);
         if (arr1.value.length > 20) {
           arr1.value.pop();
         }
         if (arr2.value.length > 20) {
           arr2.value.pop();
         }
+        if (arr3.value.length > 20) {
+          arr3.value.pop();
+        }
         num.value = "";
         setStorage();
         findHandle(0);
         findHandle(1);
+        findHandle(2);
       }
     }
     function clearValueHandle() {
       arr1.value.shift();
       arr2.value.shift();
+      arr3.value.shift();
       setStorage();
       findHandle(0);
       findHandle(1);
+      findHandle(2);
     }
     function setStorage() {
       common_vendor.index.setStorageSync("arr1", JSON.stringify(arr1.value));
       common_vendor.index.setStorageSync("arr2", JSON.stringify(arr2.value));
+      common_vendor.index.setStorageSync("arr3", JSON.stringify(arr3.value));
     }
     function getData() {
       if (common_vendor.index.getStorageSync("arr1")) {
         arr1.value = JSON.parse(common_vendor.index.getStorageSync("arr1"));
         arr2.value = JSON.parse(common_vendor.index.getStorageSync("arr2"));
+        arr3.value = JSON.parse(common_vendor.index.getStorageSync("arr3"));
       }
     }
     function findMaxMin(arr) {
@@ -117,7 +135,7 @@ const _sfc_main = {
         if (oneMax.value == oneAmountMin.value) {
           oneMax.value = oneMax2.value;
         }
-      } else {
+      } else if (index == 1) {
         twoMax.value = index1;
         twoMax2.value = index2;
         twoMax3.value = index3;
@@ -130,6 +148,20 @@ const _sfc_main = {
         }
         if (twoMax.value == twoAmountMin.value) {
           twoMax.value = twoMax2.value;
+        }
+      } else if (index == 2) {
+        threeMax.value = index1;
+        threeMax2.value = index2;
+        threeMax3.value = index3;
+        threeMin.value = index4;
+        threeMin2.value = index5;
+        threeAmountMax.value = objMaxMin.max;
+        threeAmountMin.value = objMaxMin.min;
+        if (threeMin2.value == threeAmountMin.value) {
+          threeMin2.value = threeAmountMax.value;
+        }
+        if (threeMax.value == threeAmountMin.value) {
+          threeMax.value = threeMax2.value;
         }
       }
     }
@@ -160,14 +192,28 @@ const _sfc_main = {
             c: index
           };
         }),
-        g: common_vendor.f(numArr, (item, index, i0) => {
+        g: common_vendor.f(arr3.value, (item, index, i0) => {
+          return {
+            a: common_vendor.t(item),
+            b: common_vendor.n(index == arr3.value.length - 1 ? "item end" : "item"),
+            c: index
+          };
+        }),
+        h: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
             b: common_vendor.n(index == oneMax.value || index == oneAmountMin.value ? "item active" : "item"),
             c: index
           };
         }),
-        h: common_vendor.f(numArr, (item, index, i0) => {
+        i: common_vendor.f(numArr, (item, index, i0) => {
+          return {
+            a: common_vendor.t(index),
+            b: common_vendor.n(index == twoMax.value || index == twoAmountMin.value ? "item active" : "item"),
+            c: index
+          };
+        }),
+        j: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
             b: common_vendor.n(index == twoMax.value || index == twoAmountMin.value ? "item active" : "item"),

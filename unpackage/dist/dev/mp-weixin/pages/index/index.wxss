@@ -78,8 +78,10 @@
 }
 .content .data-box .left .data {
   display: flex;
+  justify-content: space-around;
   box-sizing: border-box;
-  padding-left: 50rpx;
+  width: 84%;
+  padding-left: 20rpx;
 }
 .content .data-box .left .data .item {
   padding: 4rpx 30rpx;
@@ -96,7 +98,7 @@
   height: 600rpx;
   background-color: #ccc;
   position: absolute;
-  right: 50rpx;
+  right: 25rpx;
   top: 150rpx;
   border-radius: 1rpx;
 }
@@ -104,18 +106,18 @@
   padding: 10rpx;
   width: 50%;
   box-sizing: border-box;
-  padding-left: 40rpx;
 }
 .content .data-box .right .result {
   display: flex;
+  justify-content: space-around;
 }
 .content .data-box .right .result .item {
-  width: 50%;
   padding: 20rpx 10rpx;
+  text-align: center;
 }
 .content .data-box .right .result .item.active {
   background-color: #f00;
 }
-.content .data-box .right .result1, .content .data-box .right .result2 {
-  width: 100%;
+.content .data-box .right .result1, .content .data-box .right .result2, .content .data-box .right .result3 {
+  width: 23%;
 }
