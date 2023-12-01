@@ -33,7 +33,7 @@
 						<view :class="(index == twoMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == twoMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -153,8 +153,10 @@ function findHandle(index) {
 	let arr = []
 	if (index == 0) {
 		arr = arr1.value
-	} else {
+	} else if(index == 1) {
 		arr = arr2.value
+	} else if (index == 2) {
+		arr = arr3.value
 	}
 	let arrRes = []
 	for(let i = 0; i < 10; i++) {

@@ -94,8 +94,10 @@ const _sfc_main = {
       let arr = [];
       if (index == 0) {
         arr = arr1.value;
-      } else {
+      } else if (index == 1) {
         arr = arr2.value;
+      } else if (index == 2) {
+        arr = arr3.value;
       }
       let arrRes = [];
       for (let i = 0; i < 10; i++) {
@@ -216,7 +218,7 @@ const _sfc_main = {
         j: common_vendor.f(numArr, (item, index, i0) => {
           return {
             a: common_vendor.t(index),
-            b: common_vendor.n(index == twoMax.value || index == twoAmountMin.value ? "item active" : "item"),
+            b: common_vendor.n(index == threeMax.value || index == threeAmountMin.value ? "item active" : "item"),
             c: index
           };
         })
