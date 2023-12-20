@@ -164,12 +164,12 @@ function findHandle(index) {
 		oneMin2.value = index5
 		oneAmountMax.value = objMaxMin.max
 		oneAmountMin.value = objMaxMin.min
-		if (oneMin2.value == oneAmountMin.value) {
-			oneMin2.value = oneAmountMax.value
-		}
-		if (oneMax.value == oneAmountMin.value) {
-			oneMax.value = oneMax2.value
-		}
+		// if (oneMin2.value == oneAmountMin.value) {
+		// 	oneMin2.value = oneAmountMax.value
+		// }
+		// if (oneMax.value == oneAmountMin.value) {
+		// 	oneMax.value = oneMax2.value
+		// }
 	} else {
 		twoMax.value = index1
 		twoMax2.value = index2
@@ -178,12 +178,12 @@ function findHandle(index) {
 		twoMin2.value = index5
 		twoAmountMax.value = objMaxMin.max
 		twoAmountMin.value = objMaxMin.min
-		if (twoMin2.value == twoAmountMin.value) {
-			twoMin2.value = twoAmountMax.value
-		}
-		if (twoMax.value == twoAmountMin.value) {
-			twoMax.value = twoMax2.value
-		}
+		// if (twoMin2.value == twoAmountMin.value) {
+		// 	twoMin2.value = twoAmountMax.value
+		// }
+		// if (twoMax.value == twoAmountMin.value) {
+		// 	twoMax.value = twoMax2.value
+		// }
 	}
 }
 function find(arr, item) {
