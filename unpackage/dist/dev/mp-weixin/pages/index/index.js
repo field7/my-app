@@ -6,137 +6,78 @@ const _sfc_main = {
     const num = common_vendor.ref("");
     const arr1 = common_vendor.ref([]);
     const arr2 = common_vendor.ref([]);
-    const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    const oneMax = common_vendor.ref(-1);
-    const oneMax2 = common_vendor.ref(-1);
-    const oneMax3 = common_vendor.ref(-1);
-    const oneMin = common_vendor.ref(-1);
-    const oneMin2 = common_vendor.ref(-1);
-    const twoMax = common_vendor.ref(-1);
-    const twoMax2 = common_vendor.ref(-1);
-    const twoMax3 = common_vendor.ref(-1);
-    const twoMin = common_vendor.ref(-1);
-    const twoMin2 = common_vendor.ref(-1);
-    const oneAmountMax = common_vendor.ref(-1);
-    const oneAmountMin = common_vendor.ref(-1);
-    const twoAmountMax = common_vendor.ref(-1);
-    const twoAmountMin = common_vendor.ref(-1);
+    const arr3 = common_vendor.ref([]);
+    const result1 = common_vendor.ref([]);
+    const result2 = common_vendor.ref([]);
+    const result3 = common_vendor.ref([]);
     common_vendor.onLoad(() => {
       getData();
-      findHandle(0);
-      findHandle(1);
     });
     function setValueHandle() {
-      if (typeof num.value[0] != "undefined" && typeof num.value[1] != "undefined") {
+      if (typeof num.value[0] != "undefined" && typeof num.value[1] != "undefined" && typeof num.value[2] != "undefined") {
         arr1.value.unshift(num.value[0]);
         arr2.value.unshift(num.value[1]);
-        if (arr1.value.length > 20) {
-          arr1.value.pop();
-        }
-        if (arr2.value.length > 20) {
-          arr2.value.pop();
-        }
+        arr3.value.unshift(num.value[2]);
+        findHandle();
         num.value = "";
         setStorage();
-        findHandle(0);
-        findHandle(1);
       }
     }
     function clearValueHandle() {
       arr1.value.shift();
       arr2.value.shift();
+      arr3.value.shift();
+      result1.value.shift();
+      result2.value.shift();
+      result3.value.shift();
       setStorage();
-      findHandle(0);
-      findHandle(1);
     }
     function setStorage() {
       common_vendor.index.setStorageSync("arr1", JSON.stringify(arr1.value));
       common_vendor.index.setStorageSync("arr2", JSON.stringify(arr2.value));
+      common_vendor.index.setStorageSync("arr3", JSON.stringify(arr3.value));
     }
     function getData() {
       if (common_vendor.index.getStorageSync("arr1")) {
         arr1.value = JSON.parse(common_vendor.index.getStorageSync("arr1"));
         arr2.value = JSON.parse(common_vendor.index.getStorageSync("arr2"));
-      }
-    }
-    function findMaxMin(arr) {
-      let number = [...new Set(arr)];
-      let arrstr = arr.join("");
-      let countarr = [];
-      for (let i = 0; i < number.length; i++) {
-        let count = arrstr.split(number[i]).length - 1;
-        countarr.push(count);
-      }
-      return {
-        max: number[countarr.indexOf(Math.max.apply(null, countarr))],
-        min: number[countarr.indexOf(Math.min.apply(null, countarr))]
-      };
-    }
-    function findHandle(index) {
-      let arr = [];
-      if (index == 0) {
-        arr = arr1.value;
-      } else {
-        arr = arr2.value;
-      }
-      let arrRes = [];
-      for (let i = 0; i < 10; i++) {
-        arrRes.push(find(arr, i.toString()));
-      }
-      let max = Math.max(...arrRes);
-      let index1 = arrRes.map((item) => item).indexOf(max);
-      let temp = arrRes[index1];
-      arrRes[index1] = -1;
-      let max2 = Math.max(...arrRes);
-      let index2 = arrRes.map((item) => item).indexOf(max2);
-      let temp2 = arrRes[index2];
-      arrRes[index2] = -1;
-      let max3 = Math.max(...arrRes);
-      let index3 = arrRes.map((item) => item).indexOf(max3);
-      arrRes[index1] = temp;
-      arrRes[index2] = temp2;
-      let min = Math.min(...arrRes);
-      let index4 = arrRes.map((item) => item).indexOf(min);
-      let temp3 = arrRes[index4];
-      arrRes[index4] = 21;
-      let min2 = Math.min(...arrRes);
-      let index5 = arrRes.map((item) => item).indexOf(min2);
-      arrRes[index4] = temp3;
-      let objMaxMin = findMaxMin(arr);
-      if (index == 0) {
-        oneMax.value = index1;
-        oneMax2.value = index2;
-        oneMax3.value = index3;
-        oneMin.value = index4;
-        oneMin2.value = index5;
-        oneAmountMax.value = objMaxMin.max;
-        oneAmountMin.value = objMaxMin.min;
-        common_vendor.nextTick(() => {
-          if (oneMin.value == oneAmountMin.value) {
-            oneMin.value = oneAmountMax.value;
-          }
-        });
-      } else {
-        twoMax.value = index1;
-        twoMax2.value = index2;
-        twoMax3.value = index3;
-        twoMin.value = index4;
-        twoMin2.value = index5;
-        twoAmountMax.value = objMaxMin.max;
-        twoAmountMin.value = objMaxMin.min;
-        common_vendor.nextTick(() => {
-          if (twoMin.value == twoAmountMin.value) {
-            twoMin.value = twoAmountMax.value;
-          }
+        arr3.value = JSON.parse(common_vendor.index.getStorageSync("arr3"));
+        arr1.value.forEach((item, index) => {
+          num.value = arr1.value[index] + arr2.value[index] + arr3.value[index];
+          findHandle(true);
+          num.value = "";
         });
       }
     }
-    function find(arr, item) {
-      let res = arr.indexOf(item);
-      if (res == -1) {
-        return arr.length;
+    function findHandle(isPush) {
+      let sum = Number(num.value[0]) + Number(num.value[1]) + Number(num.value[2]);
+      if (isPush) {
+        result1.value.push(sum);
+      } else {
+        result1.value.unshift(sum);
       }
-      return res;
+      let re2 = "";
+      if (sum > 10) {
+        re2 = "\u5927";
+      } else {
+        re2 = "\u5C0F";
+      }
+      if (isPush) {
+        result2.value.push(re2);
+      } else {
+        result2.value.unshift(re2);
+      }
+      let re3 = "";
+      if (sum % 2 == 0) {
+        re3 = "\u53CC";
+      } else {
+        re3 = "\u5355";
+      }
+      if (isPush) {
+        result3.value.push(re3);
+      } else {
+        result3.value.unshift(re3);
+      }
     }
     return (_ctx, _cache) => {
       return {
@@ -158,17 +99,31 @@ const _sfc_main = {
             c: index
           };
         }),
-        g: common_vendor.f(numArr, (item, index, i0) => {
+        g: common_vendor.f(arr3.value, (item, index, i0) => {
           return {
-            a: common_vendor.t(index),
-            b: common_vendor.n(index == oneMax.value || index == oneMin.value || index == oneAmountMin.value ? "item active" : "item"),
+            a: common_vendor.t(item),
+            b: common_vendor.n(index == arr3.value.length - 1 ? "item end" : "item"),
             c: index
           };
         }),
-        h: common_vendor.f(numArr, (item, index, i0) => {
+        h: common_vendor.f(result1.value, (item, index, i0) => {
           return {
-            a: common_vendor.t(index),
-            b: common_vendor.n(index == twoMax.value || index == twoMin.value || index == twoAmountMin.value ? "item active" : "item"),
+            a: common_vendor.t(item),
+            b: common_vendor.n(index == result1.value.length - 1 ? "item end" : "item"),
+            c: index
+          };
+        }),
+        i: common_vendor.f(result2.value, (item, index, i0) => {
+          return {
+            a: common_vendor.t(item),
+            b: common_vendor.n(index == result2.value.length - 1 ? "item end" : "item"),
+            c: index
+          };
+        }),
+        j: common_vendor.f(result3.value, (item, index, i0) => {
+          return {
+            a: common_vendor.t(item),
+            b: common_vendor.n(index == result3.value.length - 1 ? "item end" : "item"),
             c: index
           };
         })

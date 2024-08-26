@@ -79,14 +79,15 @@
 .content .data-box .left .data {
   display: flex;
   box-sizing: border-box;
-  padding-left: 50rpx;
+  padding-left: 10rpx;
 }
 .content .data-box .left .data .item {
-  padding: 4rpx 30rpx;
+  padding: 10rpx 30rpx;
   font-size: 24rpx;
   border: 1px solid #3a73d9;
   margin-right: 10rpx;
   border-bottom: none;
+  text-align: center;
 }
 .content .data-box .left .data .item.end {
   border-bottom: 1px solid #3a73d9;
@@ -96,26 +97,36 @@
   height: 600rpx;
   background-color: #ccc;
   position: absolute;
-  right: 50rpx;
+  right: 25rpx;
   top: 150rpx;
   border-radius: 1rpx;
 }
 .content .data-box .right {
-  padding: 10rpx;
   width: 50%;
   box-sizing: border-box;
-  padding-left: 40rpx;
+  padding: 10rpx 40rpx;
 }
 .content .data-box .right .result {
   display: flex;
+  justify-content: space-between;
 }
 .content .data-box .right .result .item {
-  width: 50%;
-  padding: 20rpx 10rpx;
+  padding: 10rpx 30rpx;
+  font-size: 24rpx;
+  border: 1px solid #3a73d9;
+  margin-right: 10rpx;
+  border-bottom: none;
+  text-align: center;
 }
-.content .data-box .right .result .item.active {
-  background-color: #f00;
+.content .data-box .right .result .item.end {
+  border-bottom: 1px solid #3a73d9;
 }
-.content .data-box .right .result1, .content .data-box .right .result2 {
-  width: 100%;
+.content .data-box .right .result .result1 .item {
+  color: red;
+}
+.content .data-box .right .result .result2 .item {
+  color: blue;
+}
+.content .data-box .right .result .result3 .item {
+  color: blue;
 }
