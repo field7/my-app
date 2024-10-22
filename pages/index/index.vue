@@ -14,10 +14,10 @@
 				<view class="line"></view>
 				<view class="data">
 					<view class="data1">
-						<view :class="index == arr1.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr1" :key="index">{{ item }}</view>
+						<view :class="index == arr1.length - 1 ? 'item item1 end' : 'item item1'" v-for="(item, index) in arr1" :key="index">{{ item }}</view>
 					</view>
 					<view class="data2">
-						<view :class="index == arr2.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr2" :key="index">{{ item }}</view>
+						<view :class="index == arr2.length - 1 ? 'item item2 end' : 'item item2'" v-for="(item, index) in arr2" :key="index">{{ item }}</view>
 					</view>
 					<view class="data3">
 						<view :class="index == arr3.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr3" :key="index">{{ item }}</view>
@@ -27,7 +27,7 @@
 			<view class="right">
 				<view class="result">
 					<view class="result1">
-						<view :class="{ 'item end': index === result1.length - 1, 'item': index !== result1.length - 1, 'item-blue': item.isSpecial }" v-for="(item, index) in result1" :key="index">{{ item.sum }}</view>
+						<view :class="{ 'item end': index === result1.length - 1, 'item': index !== result1.length - 1, 'item-blue': item.isSpecial, 'item-red': item.isBao }" v-for="(item, index) in result1" :key="index">{{ item.sum }}</view>
 					</view>
 					<view class="result2">
 						<view :class="{ 'item end': index === result2.length - 1, 'item': index !== result2.length - 1, 'item-blue': item === '大'}" v-for="(item, index) in result2" :key="index">{{ item }}</view>
@@ -108,14 +108,14 @@ function findHandle(isPush) {
 	let sum = Number(num.value[0]) + Number(num.value[1]) + Number(num.value[2])
 	let json = {
 		sum,
-		isSpecial: false
+		isSpecial: false,
+		isBao: false
 	}
 	if (Number(num.value[0]) == Number(num.value[1]) && Number(num.value[0]) == Number(num.value[2]) ) {
-		json.isSpecial = true
+		json.isBao = true
 	}
 	if (isPush) {
 		if (result1.value.length > 0) {
-			console.log(sum)
 			if (result1.value[result1.value.length - 1]?.sum === sum) {
 				json.isSpecial = true
 				result1.value[result1.value.length - 1].isSpecial = true
@@ -216,12 +216,17 @@ function findHandle(isPush) {
 				.item {
 					padding: 10rpx 30rpx;
 					font-size: 24rpx;
-					border: 1px solid #3a73d9;
-					margin-right: 10rpx;
+					border: 1px solid #ccc;
 					border-bottom: none;
 					text-align: center;
+					&.item1 {
+						border-right: none;
+					}
+					&.item2 {
+						border-right: none;
+					}
 					&.end {
-						border-bottom: 1px solid #3a73d9;;
+						border-bottom: 1px solid #ccc;;
 					}
 				}
 			}
@@ -230,7 +235,7 @@ function findHandle(isPush) {
 				height: 600rpx;
 				background-color: #ccc;
 				position: absolute;
-				right: 25rpx;
+				right: 35rpx;
 				top: 150rpx;
 				border-radius: 1rpx;
 			}
@@ -241,39 +246,42 @@ function findHandle(isPush) {
 			padding: 10rpx 40rpx;
 			.result {
 				display: flex;
-				justify-content: space-between;
 				.item {
 					padding: 10rpx 30rpx;
 					font-size: 24rpx;
-					border: 1px solid #3a73d9;
-					margin-right: 10rpx;
+					border: 1px solid #ccc;
 					border-bottom: none;
 					text-align: center;
 					&.end {
-						border-bottom: 1px solid #3a73d9;;
+						border-bottom: 1px solid #ccc;;
 					}
 				}
 				.result1 {
 					.item {
-						color: red;
+						color: #666;
+						border-right: none;
 						&.item-blue {
-							color: blue;
+							color: #0e78c7;
+						}
+						&.item-red {
+							color: #f3514a;
 						}
 					}
 				}
 				.result2 {
 					.item {
-						color: red;
+						color: #f3514a;
+						border-right: none;
 						&.item-blue {
-							color: blue;
+							color: #0e78c7;
 						}
 					}
 				}
 				.result3 {
 					.item {
-						color: red;
+						color: #f3514a;
 						&.item-blue {
-							color: blue;
+							color: #0e78c7;
 						}
 					}
 				}

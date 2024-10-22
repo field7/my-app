@@ -84,20 +84,25 @@
 .content .data-box .left .data .item {
   padding: 10rpx 30rpx;
   font-size: 24rpx;
-  border: 1px solid #3a73d9;
-  margin-right: 10rpx;
+  border: 1px solid #ccc;
   border-bottom: none;
   text-align: center;
 }
+.content .data-box .left .data .item.item1 {
+  border-right: none;
+}
+.content .data-box .left .data .item.item2 {
+  border-right: none;
+}
 .content .data-box .left .data .item.end {
-  border-bottom: 1px solid #3a73d9;
+  border-bottom: 1px solid #ccc;
 }
 .content .data-box .left .line {
   width: 1rpx;
   height: 600rpx;
   background-color: #ccc;
   position: absolute;
-  right: 25rpx;
+  right: 35rpx;
   top: 150rpx;
   border-radius: 1rpx;
 }
@@ -108,34 +113,37 @@
 }
 .content .data-box .right .result {
   display: flex;
-  justify-content: space-between;
 }
 .content .data-box .right .result .item {
   padding: 10rpx 30rpx;
   font-size: 24rpx;
-  border: 1px solid #3a73d9;
-  margin-right: 10rpx;
+  border: 1px solid #ccc;
   border-bottom: none;
   text-align: center;
 }
 .content .data-box .right .result .item.end {
-  border-bottom: 1px solid #3a73d9;
+  border-bottom: 1px solid #ccc;
 }
 .content .data-box .right .result .result1 .item {
-  color: red;
+  color: #666;
+  border-right: none;
 }
 .content .data-box .right .result .result1 .item.item-blue {
-  color: blue;
+  color: #0e78c7;
+}
+.content .data-box .right .result .result1 .item.item-red {
+  color: #f3514a;
 }
 .content .data-box .right .result .result2 .item {
-  color: red;
+  color: #f3514a;
+  border-right: none;
 }
 .content .data-box .right .result .result2 .item.item-blue {
-  color: blue;
+  color: #0e78c7;
 }
 .content .data-box .right .result .result3 .item {
-  color: red;
+  color: #f3514a;
 }
 .content .data-box .right .result .result3 .item.item-blue {
-  color: blue;
+  color: #0e78c7;
 }

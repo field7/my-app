@@ -54,14 +54,14 @@ const _sfc_main = {
       let sum = Number(num.value[0]) + Number(num.value[1]) + Number(num.value[2]);
       let json = {
         sum,
-        isSpecial: false
+        isSpecial: false,
+        isBao: false
       };
       if (Number(num.value[0]) == Number(num.value[1]) && Number(num.value[0]) == Number(num.value[2])) {
-        json.isSpecial = true;
+        json.isBao = true;
       }
       if (isPush) {
         if (result1.value.length > 0) {
-          console.log(sum);
           if (((_a = result1.value[result1.value.length - 1]) == null ? void 0 : _a.sum) === sum) {
             json.isSpecial = true;
             result1.value[result1.value.length - 1].isSpecial = true;
@@ -109,14 +109,14 @@ const _sfc_main = {
         e: common_vendor.f(arr1.value, (item, index, i0) => {
           return {
             a: common_vendor.t(item),
-            b: common_vendor.n(index == arr1.value.length - 1 ? "item end" : "item"),
+            b: common_vendor.n(index == arr1.value.length - 1 ? "item item1 end" : "item item1"),
             c: index
           };
         }),
         f: common_vendor.f(arr2.value, (item, index, i0) => {
           return {
             a: common_vendor.t(item),
-            b: common_vendor.n(index == arr2.value.length - 1 ? "item end" : "item"),
+            b: common_vendor.n(index == arr2.value.length - 1 ? "item item2 end" : "item item2"),
             c: index
           };
         }),
@@ -133,7 +133,8 @@ const _sfc_main = {
             b: index === result1.value.length - 1 ? 1 : "",
             c: index !== result1.value.length - 1 ? 1 : "",
             d: item.isSpecial ? 1 : "",
-            e: index
+            e: item.isBao ? 1 : "",
+            f: index
           };
         }),
         i: common_vendor.f(result2.value, (item, index, i0) => {
