@@ -27,13 +27,13 @@
 			<view class="right">
 				<view class="result">
 					<view class="result1">
-						<view :class="index == result1.length - 1 ? 'item end' : 'item'" v-for="(item, index) in result1" :key="index">{{ item }}</view>
+						<view :class="{ 'item end': index === result1.length - 1, 'item': index !== result1.length - 1, 'item-blue': item.isSpecial }" v-for="(item, index) in result1" :key="index">{{ item.sum }}</view>
 					</view>
 					<view class="result2">
-						<view :class="index == result2.length - 1 ? 'item end' : 'item'" v-for="(item, index) in result2" :key="index">{{ item }}</view>
+						<view :class="{ 'item end': index === result2.length - 1, 'item': index !== result2.length - 1, 'item-blue': item === '大'}" v-for="(item, index) in result2" :key="index">{{ item }}</view>
 					</view>
 					<view class="result3">
-						<view :class="index == result3.length - 1 ? 'item end' : 'item'" v-for="(item, index) in result3" :key="index">{{ item }}</view>
+						<view :class="{ 'item end': index === result3.length - 1, 'item': index !== result3.length - 1, 'item-blue': item === '双'}" v-for="(item, index) in result3" :key="index">{{ item }}</view>
 					</view>
 				</view>
 			</view>
@@ -106,10 +106,30 @@ function getData() {
 }
 function findHandle(isPush) {
 	let sum = Number(num.value[0]) + Number(num.value[1]) + Number(num.value[2])
+	let json = {
+		sum,
+		isSpecial: false
+	}
+	if (Number(num.value[0]) == Number(num.value[1]) && Number(num.value[0]) == Number(num.value[2]) ) {
+		json.isSpecial = true
+	}
 	if (isPush) {
-		result1.value.push(sum)
+		if (result1.value.length > 0) {
+			console.log(sum)
+			if (result1.value[result1.value.length - 1]?.sum === sum) {
+				json.isSpecial = true
+				result1.value[result1.value.length - 1].isSpecial = true
+			}
+		}
+		result1.value.push(json)
 	} else {
-		result1.value.unshift(sum)
+		if (result1.value.length > 1) {
+			if (result1.value[0]?.sum === sum) {
+				json.isSpecial = true
+				result1.value[0].isSpecial = true
+			}
+		}
+		result1.value.unshift(json)
 	}
 	let re2 = ''
 	if (sum > 10) {
@@ -236,16 +256,25 @@ function findHandle(isPush) {
 				.result1 {
 					.item {
 						color: red;
+						&.item-blue {
+							color: blue;
+						}
 					}
 				}
 				.result2 {
 					.item {
-						color: blue;
+						color: red;
+						&.item-blue {
+							color: blue;
+						}
 					}
 				}
 				.result3 {
 					.item {
-						color: blue;
+						color: red;
+						&.item-blue {
+							color: blue;
+						}
 					}
 				}
 			}

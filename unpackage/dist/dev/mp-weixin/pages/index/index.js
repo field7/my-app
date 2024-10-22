@@ -50,11 +50,32 @@ const _sfc_main = {
       }
     }
     function findHandle(isPush) {
+      var _a, _b;
       let sum = Number(num.value[0]) + Number(num.value[1]) + Number(num.value[2]);
+      let json = {
+        sum,
+        isSpecial: false
+      };
+      if (Number(num.value[0]) == Number(num.value[1]) && Number(num.value[0]) == Number(num.value[2])) {
+        json.isSpecial = true;
+      }
       if (isPush) {
-        result1.value.push(sum);
+        if (result1.value.length > 0) {
+          console.log(sum);
+          if (((_a = result1.value[result1.value.length - 1]) == null ? void 0 : _a.sum) === sum) {
+            json.isSpecial = true;
+            result1.value[result1.value.length - 1].isSpecial = true;
+          }
+        }
+        result1.value.push(json);
       } else {
-        result1.value.unshift(sum);
+        if (result1.value.length > 1) {
+          if (((_b = result1.value[0]) == null ? void 0 : _b.sum) === sum) {
+            json.isSpecial = true;
+            result1.value[0].isSpecial = true;
+          }
+        }
+        result1.value.unshift(json);
       }
       let re2 = "";
       if (sum > 10) {
@@ -108,23 +129,29 @@ const _sfc_main = {
         }),
         h: common_vendor.f(result1.value, (item, index, i0) => {
           return {
-            a: common_vendor.t(item),
-            b: common_vendor.n(index == result1.value.length - 1 ? "item end" : "item"),
-            c: index
+            a: common_vendor.t(item.sum),
+            b: index === result1.value.length - 1 ? 1 : "",
+            c: index !== result1.value.length - 1 ? 1 : "",
+            d: item.isSpecial ? 1 : "",
+            e: index
           };
         }),
         i: common_vendor.f(result2.value, (item, index, i0) => {
           return {
             a: common_vendor.t(item),
-            b: common_vendor.n(index == result2.value.length - 1 ? "item end" : "item"),
-            c: index
+            b: index === result2.value.length - 1 ? 1 : "",
+            c: index !== result2.value.length - 1 ? 1 : "",
+            d: item === "\u5927" ? 1 : "",
+            e: index
           };
         }),
         j: common_vendor.f(result3.value, (item, index, i0) => {
           return {
             a: common_vendor.t(item),
-            b: common_vendor.n(index == result3.value.length - 1 ? "item end" : "item"),
-            c: index
+            b: index === result3.value.length - 1 ? 1 : "",
+            c: index !== result3.value.length - 1 ? 1 : "",
+            d: item === "\u53CC" ? 1 : "",
+            e: index
           };
         })
       };

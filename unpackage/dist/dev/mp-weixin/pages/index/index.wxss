@@ -124,9 +124,18 @@
 .content .data-box .right .result .result1 .item {
   color: red;
 }
+.content .data-box .right .result .result1 .item.item-blue {
+  color: blue;
+}
 .content .data-box .right .result .result2 .item {
+  color: red;
+}
+.content .data-box .right .result .result2 .item.item-blue {
   color: blue;
 }
 .content .data-box .right .result .result3 .item {
+  color: red;
+}
+.content .data-box .right .result .result3 .item.item-blue {
   color: blue;
 }
