@@ -85,6 +85,7 @@
   padding: 10rpx 30rpx;
   font-size: 24rpx;
   border: 1px solid #ccc;
+  color: #000;
   border-bottom: none;
   text-align: center;
 }
@@ -125,7 +126,7 @@
   border-bottom: 1px solid #ccc;
 }
 .content .data-box .right .result .result1 .item {
-  color: #666;
+  color: #000;
   border-right: none;
 }
 .content .data-box .right .result .result1 .item.item-blue {

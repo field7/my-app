@@ -74,8 +74,10 @@ function setValueHandle() {
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
 		findHandle()
-		num.value = ''
 		setStorage()
+		setTimeout(() => {
+			num.value = ''
+		}, 50)
 	}
 }
 function clearValueHandle() {
@@ -217,6 +219,7 @@ function findHandle(isPush) {
 					padding: 10rpx 30rpx;
 					font-size: 24rpx;
 					border: 1px solid #ccc;
+					color: #000;
 					border-bottom: none;
 					text-align: center;
 					&.item1 {
@@ -258,7 +261,7 @@ function findHandle(isPush) {
 				}
 				.result1 {
 					.item {
-						color: #666;
+						color: #000;
 						border-right: none;
 						&.item-blue {
 							color: #0e78c7;

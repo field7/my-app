@@ -19,8 +19,10 @@ const _sfc_main = {
         arr2.value.unshift(num.value[1]);
         arr3.value.unshift(num.value[2]);
         findHandle();
-        num.value = "";
         setStorage();
+        setTimeout(() => {
+          num.value = "";
+        }, 50);
       }
     }
     function clearValueHandle() {
