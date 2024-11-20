@@ -77,7 +77,7 @@ function setValueHandle() {
 		setStorage()
 		setTimeout(() => {
 			num.value = ''
-		}, 50)
+		}, 100)
 	}
 }
 function clearValueHandle() {
