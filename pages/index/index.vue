@@ -24,10 +24,10 @@
 			<view class="right">
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneMin || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax || index == oneMin || index == oneAmountMin || index == oneAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin || index == twoAmountMin || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
