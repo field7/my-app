@@ -271,7 +271,12 @@ function findHandle(index) {
 	let index5 = arrRes.map(item => item).indexOf(min2)
 	arrRes[index4] = temp3
 	let objMaxMin = findMaxMin(arr)
-
+	if (index1 == objMaxMin.max || index1 == objMaxMin.min) {
+		index1 = index2
+	}
+	if (index4 == objMaxMin.max || index4 == objMaxMin.min) {
+		index4 = index5
+	}
 	if (index == 0) {
 		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0]  == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value ) {
 			orderNumber1.value = 0
