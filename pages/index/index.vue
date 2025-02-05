@@ -25,15 +25,20 @@
 				</view>
 			</view>
 			<view class="right">
+				<div class="times">
+					<div class="item">1</div>
+					<div class="item">1</div>
+					<div class="item">1</div>
+				</div>
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax || index == oneMin || index == oneAmountMin || index == oneAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin || index == twoAmountMin || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == threeMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax || index == threeMin || index == threeAmountMin || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -72,6 +77,24 @@ const twoAmountMax = ref(-1)
 const twoAmountMin = ref(-1)
 const threeAmountMax = ref(-1)
 const threeAmountMin = ref(-1)
+
+const orderNumber1 = ref(0)
+const oneMaxLast = ref('')
+const oneMinLast = ref('')
+const oneAmountMaxLast = ref('')
+const oneAmountMinLast = ref('')
+
+const orderNumber2 = ref(0)
+const twoMaxLast = ref('')
+const twoMinLast = ref('')
+const twoAmountMaxLast = ref('')
+const twoAmountMinLast = ref('')
+
+const orderNumber3 = ref(0)
+const threeMaxLast = ref('')
+const threeMinLast = ref('')
+const threeAmountMaxLast = ref('')
+const threeAmountMinLast = ref('')
 
 /* 生命周期函数 */
 onLoad(() => {
@@ -196,6 +219,16 @@ function findHandle(index) {
 		if (oneMax.value == oneAmountMin.value) {
 			oneMax.value = oneMax2.value
 		}
+		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0]  == oneAmountMaxLast.value || arr[0]  == oneAmountMinLast.value ) {
+			orderNumber1.value = 0
+		} else {
+			orderNumber1.value ++
+		}
+		oneMaxLast.value = oneMax.value
+		oneMinLast.value = oneMin.value
+		oneAmountMaxLast.value = oneAmountMax.value
+		oneAmountMinLast.value = oneAmountMin.value
+		console.log(orderNumber1.value)
 	} else if (index == 1) {
 		twoMax.value = index1
 		twoMax2.value = index2
@@ -210,6 +243,16 @@ function findHandle(index) {
 		if (twoMax.value == twoAmountMin.value) {
 			twoMax.value = twoMax2.value
 		}
+		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0]  == twoAmountMaxLast.value || arr[0]  == twoAmountMinLast.value ) {
+			orderNumber2.value = 0
+		} else {
+			orderNumber2.value ++
+		}
+		twoMaxLast.value = twoMax.value
+		twoMinLast.value = twoMin.value
+		twoAmountMaxLast.value = twoAmountMax.value
+		twoAmountMinLast.value = twoAmountMin.value
+		console.log(orderNumber2.value)
 	} else if (index == 2) {
 		threeMax.value = index1
 		threeMax2.value = index2
@@ -224,6 +267,16 @@ function findHandle(index) {
 		if (threeMax.value == threeAmountMin.value) {
 			threeMax.value = threeMax2.value
 		}
+		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0]  == threeAmountMaxLast.value || arr[0]  == threeAmountMinLast.value ) {
+			orderNumber3.value = 0
+		} else {
+			orderNumber3.value ++
+		}
+		threeMaxLast.value = threeMax.value
+		threeMinLast.value = threeMin.value
+		threeAmountMaxLast.value = threeAmountMax.value
+		threeAmountMinLast.value = threeAmountMin.value
+		console.log(orderNumber3.value)
 	}
 }
 function find(arr, item) {
@@ -318,7 +371,18 @@ function find(arr, item) {
 		.right {
 			padding: 10rpx;
 			width: 50%;
+			position: relative;
+			top: -60rpx;
 			box-sizing: border-box;
+			.times {
+				display: flex;
+				justify-content: space-around;
+				.item {
+					padding: 20rpx 10rpx;
+					text-align: center;
+					width: 23%;
+				}
+			}
 			.result {
 				display: flex;
 				justify-content: space-around;
