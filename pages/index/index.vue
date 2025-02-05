@@ -28,6 +28,9 @@
 					<view class="data5">
 						<view :class="index == arr5.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr5" :key="index">{{ item }}</view>
 					</view>
+					<view class="data6">
+						<view :class="index == arr6.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr6" :key="index">{{ item }}</view>
+					</view>
 				</view>
 			</view>
 			<view class="right">
@@ -37,6 +40,7 @@
 					<div class="item">{{ orderNumber3 }}</div>
 					<div class="item">{{ orderNumber4 }}</div>
 					<div class="item">{{ orderNumber5 }}</div>
+					<div class="item">{{ orderNumber6 }}</div>
 				</div>
 				<view class="result">
 					<view class="result1">
@@ -53,6 +57,9 @@
 					</view>
 					<view class="result5">
 						<view :class="(index == fiveMax || index == fiveMin || index == fiveAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result6">
+						<view :class="(index == sixMax || index == sixMin || index == sixAmountMax || index == sixAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -71,6 +78,7 @@ const arr2 = ref([])
 const arr3 = ref([])
 const arr4 = ref([])
 const arr5 = ref([])
+const arr6 = ref([])
 const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const oneMax = ref(-1)
 const oneMax2 = ref(-1)
@@ -97,6 +105,11 @@ const fiveMax2 = ref(-1)
 const fiveMax3 = ref(-1)
 const fiveMin = ref(-1)
 const fiveMin2 = ref(-1)
+const sixMax = ref(-1)
+const sixMax2 = ref(-1)
+const sixMax3 = ref(-1)
+const sixMin = ref(-1)
+const sixMin2 = ref(-1)
 const oneAmountMax = ref(-1)
 const oneAmountMin = ref(-1)
 const twoAmountMax = ref(-1)
@@ -107,6 +120,8 @@ const fourAmountMax = ref(-1)
 const fourAmountMin = ref(-1)
 const fiveAmountMax = ref(-1)
 const fiveAmountMin = ref(-1)
+const sixAmountMax = ref(-1)
+const sixAmountMin = ref(-1)
 
 const orderNumber1 = ref(0)
 const oneMaxLast = ref(-1)
@@ -138,6 +153,12 @@ const fiveMinLast = ref(-1)
 const fiveAmountMaxLast = ref(-1)
 const fiveAmountMinLast = ref(-1)
 
+const orderNumber6 = ref(0)
+const sixMaxLast = ref(-1)
+const sixMinLast = ref(-1)
+const sixAmountMaxLast = ref(-1)
+const sixAmountMinLast = ref(-1)
+
 /* 生命周期函数 */
 onLoad(() => {
 	getData()
@@ -156,6 +177,9 @@ onLoad(() => {
 	setTimeout(() => {
 		findHandle(4)
 	}, 400)
+	setTimeout(() => {
+		findHandle(5)
+	}, 500)
 	// nextTick(() => {
 	//   if (oneAmountMin.value == twoAmountMin.value) {
 	//   	twoAmountMin.value = twoAmountMax.value
@@ -165,12 +189,13 @@ onLoad(() => {
 
 /* methods */
 function setValueHandle() {
-	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined') {
+	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
 		arr4.value.unshift(num.value[3]);
 		arr5.value.unshift(num.value[4]);
+		arr6.value.unshift(num.value[5]);
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
 		}
@@ -185,6 +210,9 @@ function setValueHandle() {
 		}
 		if (arr5.value.length > 20) {
 			arr5.value.pop()
+		}
+		if (arr6.value.length > 20) {
+			arr6.value.pop()
 		}
 		num.value = ''
 		setStorage()
@@ -203,6 +231,9 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(4)
 		}, 400)
+		setTimeout(() => {
+			findHandle(5)
+		}, 500)
 		// nextTick(() => {
 		//   if (oneAmountMin.value == twoAmountMin.value) {
 		//   	twoAmountMin.value = twoAmountMax.value
@@ -216,12 +247,14 @@ function clearValueHandle() {
 	arr3.value.shift()
 	arr4.value.shift()
 	arr5.value.shift()
+	arr6.value.shift()
 	setStorage()
 	findHandle(0)
 	findHandle(1)
 	findHandle(2)
 	findHandle(3)
 	findHandle(4)
+	findHandle(5)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -229,6 +262,7 @@ function setStorage() {
 	uni.setStorageSync('arr3', JSON.stringify(arr3.value))
 	uni.setStorageSync('arr4', JSON.stringify(arr4.value))
 	uni.setStorageSync('arr5', JSON.stringify(arr5.value))
+	uni.setStorageSync('arr6', JSON.stringify(arr6.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -237,6 +271,7 @@ function getData() {
 		arr3.value = JSON.parse(uni.getStorageSync('arr3'))
 		arr4.value = JSON.parse(uni.getStorageSync('arr4'))
 		arr5.value = JSON.parse(uni.getStorageSync('arr5'))
+		arr6.value = JSON.parse(uni.getStorageSync('arr6'))
 	}
 }
 function findMaxMin(arr){
@@ -266,6 +301,8 @@ function findHandle(index) {
 		arr = JSON.parse(JSON.stringify(arr4.value))
 	} else if (index == 4) {
 		arr = JSON.parse(JSON.stringify(arr5.value))
+	} else if (index == 5) {
+		arr = JSON.parse(JSON.stringify(arr6.value))
 	}
 	let arrRes = []
 	for(let i = 0; i < 10; i++) {
@@ -397,6 +434,26 @@ function findHandle(index) {
 			fiveAmountMinLast.value = fiveAmountMin.value
 			console.log(orderNumber5.value)
 		// }, 500)
+	} else if (index == 5) {
+		if (arr[0] == sixMaxLast.value || arr[0] == sixMinLast.value || arr[0]  == sixAmountMaxLast.value || arr[0]  == sixAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
+		// setTimeout(() => {
+			sixMax.value = index1
+			sixMax2.value = index2
+			sixMax3.value = index3
+			sixMin.value = index4
+			sixMin2.value = index5
+			sixAmountMax.value = objMaxMin.max
+			sixAmountMin.value = objMaxMin.min
+			sixMaxLast.value = sixMax.value
+			sixMinLast.value = sixMin.value
+			sixAmountMaxLast.value = sixAmountMax.value
+			sixAmountMinLast.value = sixAmountMin.value
+			console.log(orderNumber6.value)
+		// }, 500)
 	}
 }
 function find(arr, item) {
@@ -468,7 +525,7 @@ function find(arr, item) {
 				width: 84%;
 				padding-left: 20rpx;
 				.item {
-					padding: 4rpx 18rpx;
+					padding: 4rpx 12rpx;
 					font-size: 24rpx;
 					border: 1px solid #3a73d9;
 					margin-right: 10rpx;
@@ -514,8 +571,8 @@ function find(arr, item) {
 					}
 				}
 			}
-			.result1, .result2, .result3, .result4, .result5 {
-				width: 18%;
+			.result1, .result2, .result3, .result4, .result5, .result6 {
+				width: 14%;
 			}
 		}
 	}
