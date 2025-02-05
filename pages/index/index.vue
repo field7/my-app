@@ -462,7 +462,7 @@ function find(arr, item) {
 				width: 84%;
 				padding-left: 20rpx;
 				.item {
-					padding: 4rpx 10rpx;
+					padding: 4rpx 18rpx;
 					font-size: 24rpx;
 					border: 1px solid #3a73d9;
 					margin-right: 10rpx;
