@@ -109,22 +109,22 @@ const fiveAmountMax = ref(-1)
 const fiveAmountMin = ref(-1)
 
 const orderNumber1 = ref(0)
-const oneMaxLast = ref('')
-const oneMinLast = ref('')
-const oneAmountMaxLast = ref('')
-const oneAmountMinLast = ref('')
+const oneMaxLast = ref(-1)
+const oneMinLast = ref(-1)
+const oneAmountMaxLast = ref(-1)
+const oneAmountMinLast = ref(-1)
 
 const orderNumber2 = ref(0)
-const twoMaxLast = ref('')
-const twoMinLast = ref('')
-const twoAmountMaxLast = ref('')
-const twoAmountMinLast = ref('')
+const twoMaxLast = ref(-1)
+const twoMinLast = ref(-1)
+const twoAmountMaxLast = ref(-1)
+const twoAmountMinLast = ref(-1)
 
 const orderNumber3 = ref(0)
-const threeMaxLast = ref('')
-const threeMinLast = ref('')
-const threeAmountMaxLast = ref('')
-const threeAmountMinLast = ref('')
+const threeMaxLast = ref(-1)
+const threeMinLast = ref(-1)
+const threeAmountMaxLast = ref(-1)
+const threeAmountMinLast = ref(-1)
 
 const orderNumber4 = ref(0)
 const fourMaxLast = ref('')
@@ -271,96 +271,107 @@ function findHandle(index) {
 	let index5 = arrRes.map(item => item).indexOf(min2)
 	arrRes[index4] = temp3
 	let objMaxMin = findMaxMin(arr)
+
 	if (index == 0) {
 		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0]  == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value ) {
 			orderNumber1.value = 0
 		} else {
 			orderNumber1.value ++
 		}
-		oneMax.value = index1
-		oneMax2.value = index2
-		oneMax3.value = index3
-		oneMin.value = index4
-		oneMin2.value = index5
-		oneAmountMax.value = objMaxMin.max
-		oneAmountMin.value = objMaxMin.min
-		oneMaxLast.value = oneMax.value
-		oneMinLast.value = oneMin.value
-		oneAmountMaxLast.value = oneAmountMax.value
-		oneAmountMinLast.value = oneAmountMin.value
-		console.log(orderNumber1.value)
+		setTimeout(() => {
+			oneMax.value = index1
+			oneMax2.value = index2
+			oneMax3.value = index3
+			oneMin.value = index4
+			oneMin2.value = index5
+			oneAmountMax.value = objMaxMin.max
+			oneAmountMin.value = objMaxMin.min
+			oneMaxLast.value = oneMax.value
+			oneMinLast.value = oneMin.value
+			oneAmountMaxLast.value = oneAmountMax.value
+			oneAmountMinLast.value = oneAmountMin.value
+			console.log(orderNumber1.value)
+		}, 500)
 	} else if (index == 1) {
 		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value ) {
 			orderNumber2.value = 0
 		} else {
 			orderNumber2.value ++
 		}
-		twoMax.value = index1
-		twoMax2.value = index2
-		twoMax3.value = index3
-		twoMin.value = index4
-		twoMin2.value = index5
-		twoAmountMax.value = objMaxMin.max
-		twoAmountMin.value = objMaxMin.min
-		twoMaxLast.value = twoMax.value
-		twoMinLast.value = twoMin.value
-		twoAmountMaxLast.value = twoAmountMax.value
-		twoAmountMinLast.value = twoAmountMin.value
-		console.log(orderNumber2.value)
+		setTimeout(()=> {
+			twoMax.value = index1
+			twoMax2.value = index2
+			twoMax3.value = index3
+			twoMin.value = index4
+			twoMin2.value = index5
+			twoAmountMax.value = objMaxMin.max
+			twoAmountMin.value = objMaxMin.min
+			twoMaxLast.value = twoMax.value
+			twoMinLast.value = twoMin.value
+			twoAmountMaxLast.value = twoAmountMax.value
+			twoAmountMinLast.value = twoAmountMin.value
+			console.log(orderNumber2.value)
+		}, 500)
 	} else if (index == 2) {
 		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value ) {
 			orderNumber3.value = 0
 		} else {
 			orderNumber3.value ++
 		}
-		threeMax.value = index1
-		threeMax2.value = index2
-		threeMax3.value = index3
-		threeMin.value = index4
-		threeMin2.value = index5
-		threeAmountMax.value = objMaxMin.max
-		threeAmountMin.value = objMaxMin.min
-		threeMaxLast.value = threeMax.value
-		threeMinLast.value = threeMin.value
-		threeAmountMaxLast.value = threeAmountMax.value
-		threeAmountMinLast.value = threeAmountMin.value
-		console.log(orderNumber3.value)
+		setTimeout(() => {
+			threeMax.value = index1
+			threeMax2.value = index2
+			threeMax3.value = index3
+			threeMin.value = index4
+			threeMin2.value = index5
+			threeAmountMax.value = objMaxMin.max
+			threeAmountMin.value = objMaxMin.min
+			threeMaxLast.value = threeMax.value
+			threeMinLast.value = threeMin.value
+			threeAmountMaxLast.value = threeAmountMax.value
+			threeAmountMinLast.value = threeAmountMin.value
+			console.log(orderNumber3.value)
+		}, 500)
 	} else if (index == 3) {
 		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0]  == fourAmountMaxLast.value || arr[0]  == fourAmountMinLast.value ) {
 			orderNumber4.value = 0
 		} else {
 			orderNumber4.value ++
 		}
-		fourMax.value = index1
-		fourMax2.value = index2
-		fourMax3.value = index3
-		fourMin.value = index4
-		fourMin2.value = index5
-		fourAmountMax.value = objMaxMin.max
-		fourAmountMin.value = objMaxMin.min
-		fourMaxLast.value = fourMax.value
-		fourMinLast.value = fourMin.value
-		fourAmountMaxLast.value = fourAmountMax.value
-		fourAmountMinLast.value = fourAmountMin.value
-		console.log(orderNumber4.value)
+		setTimeout(() => {
+			fourMax.value = index1
+			fourMax2.value = index2
+			fourMax3.value = index3
+			fourMin.value = index4
+			fourMin2.value = index5
+			fourAmountMax.value = objMaxMin.max
+			fourAmountMin.value = objMaxMin.min
+			fourMaxLast.value = fourMax.value
+			fourMinLast.value = fourMin.value
+			fourAmountMaxLast.value = fourAmountMax.value
+			fourAmountMinLast.value = fourAmountMin.value
+			console.log(orderNumber4.value)
+		}, 500)
 	} else if (index == 4) {
 		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
 			orderNumber5.value ++
 		}
-		fiveMax.value = index1
-		fiveMax2.value = index2
-		fiveMax3.value = index3
-		fiveMin.value = index4
-		fiveMin2.value = index5
-		fiveAmountMax.value = objMaxMin.max
-		fiveAmountMin.value = objMaxMin.min
-		fiveMaxLast.value = fiveMax.value
-		fiveMinLast.value = fiveMin.value
-		fiveAmountMaxLast.value = fiveAmountMax.value
-		fiveAmountMinLast.value = fiveAmountMin.value
-		console.log(orderNumber5.value)
+		setTimeout(() => {
+			fiveMax.value = index1
+			fiveMax2.value = index2
+			fiveMax3.value = index3
+			fiveMin.value = index4
+			fiveMin2.value = index5
+			fiveAmountMax.value = objMaxMin.max
+			fiveAmountMin.value = objMaxMin.min
+			fiveMaxLast.value = fiveMax.value
+			fiveMinLast.value = fiveMin.value
+			fiveAmountMaxLast.value = fiveAmountMax.value
+			fiveAmountMinLast.value = fiveAmountMin.value
+			console.log(orderNumber5.value)
+		}, 500)
 	}
 }
 function find(arr, item) {
