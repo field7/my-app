@@ -40,19 +40,19 @@
 				</div>
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneMin || index == oneAmountMin || index == oneAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin || index == twoAmountMin || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin || index == oneAmountMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == threeMax || index == threeMin || index == threeAmountMin || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax || index == threeMin || index == oneAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result4">
-						<view :class="(index == fourMax || index == fourMin || index == fourAmountMin || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fourMax || index == fourMin || index == oneAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result5">
-						<view :class="(index == fiveMax || index == fiveMin || index == fiveAmountMin || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fiveMax || index == fiveMin || index == oneAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -272,6 +272,11 @@ function findHandle(index) {
 	arrRes[index4] = temp3
 	let objMaxMin = findMaxMin(arr)
 	if (index == 0) {
+		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0]  == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value ) {
+			orderNumber1.value = 0
+		} else {
+			orderNumber1.value ++
+		}
 		oneMax.value = index1
 		oneMax2.value = index2
 		oneMax3.value = index3
@@ -279,23 +284,17 @@ function findHandle(index) {
 		oneMin2.value = index5
 		oneAmountMax.value = objMaxMin.max
 		oneAmountMin.value = objMaxMin.min
-		if (oneMin2.value == oneAmountMin.value) {
-			oneMin2.value = oneAmountMax.value
-		}
-		if (oneMax.value == oneAmountMin.value) {
-			oneMax.value = oneMax2.value
-		}
-		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0]  == oneAmountMaxLast.value || arr[0]  == oneAmountMinLast.value ) {
-			orderNumber1.value = 0
-		} else {
-			orderNumber1.value ++
-		}
 		oneMaxLast.value = oneMax.value
 		oneMinLast.value = oneMin.value
 		oneAmountMaxLast.value = oneAmountMax.value
 		oneAmountMinLast.value = oneAmountMin.value
 		console.log(orderNumber1.value)
 	} else if (index == 1) {
+		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value ) {
+			orderNumber2.value = 0
+		} else {
+			orderNumber2.value ++
+		}
 		twoMax.value = index1
 		twoMax2.value = index2
 		twoMax3.value = index3
@@ -303,23 +302,17 @@ function findHandle(index) {
 		twoMin2.value = index5
 		twoAmountMax.value = objMaxMin.max
 		twoAmountMin.value = objMaxMin.min
-		if (twoMin2.value == twoAmountMin.value) {
-			twoMin2.value = twoAmountMax.value
-		}
-		if (twoMax.value == twoAmountMin.value) {
-			twoMax.value = twoMax2.value
-		}
-		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0]  == twoAmountMaxLast.value || arr[0]  == twoAmountMinLast.value ) {
-			orderNumber2.value = 0
-		} else {
-			orderNumber2.value ++
-		}
 		twoMaxLast.value = twoMax.value
 		twoMinLast.value = twoMin.value
 		twoAmountMaxLast.value = twoAmountMax.value
 		twoAmountMinLast.value = twoAmountMin.value
 		console.log(orderNumber2.value)
 	} else if (index == 2) {
+		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value ) {
+			orderNumber3.value = 0
+		} else {
+			orderNumber3.value ++
+		}
 		threeMax.value = index1
 		threeMax2.value = index2
 		threeMax3.value = index3
@@ -327,23 +320,17 @@ function findHandle(index) {
 		threeMin2.value = index5
 		threeAmountMax.value = objMaxMin.max
 		threeAmountMin.value = objMaxMin.min
-		if (threeMin2.value == threeAmountMin.value) {
-			threeMin2.value = threeAmountMax.value
-		}
-		if (threeMax.value == threeAmountMin.value) {
-			threeMax.value = threeMax2.value
-		}
-		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0]  == threeAmountMaxLast.value || arr[0]  == threeAmountMinLast.value ) {
-			orderNumber3.value = 0
-		} else {
-			orderNumber3.value ++
-		}
 		threeMaxLast.value = threeMax.value
 		threeMinLast.value = threeMin.value
 		threeAmountMaxLast.value = threeAmountMax.value
 		threeAmountMinLast.value = threeAmountMin.value
 		console.log(orderNumber3.value)
 	} else if (index == 3) {
+		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0]  == fourAmountMaxLast.value || arr[0]  == fourAmountMinLast.value ) {
+			orderNumber4.value = 0
+		} else {
+			orderNumber4.value ++
+		}
 		fourMax.value = index1
 		fourMax2.value = index2
 		fourMax3.value = index3
@@ -351,23 +338,17 @@ function findHandle(index) {
 		fourMin2.value = index5
 		fourAmountMax.value = objMaxMin.max
 		fourAmountMin.value = objMaxMin.min
-		if (fourMin2.value == fourAmountMin.value) {
-			fourMin2.value = fourAmountMax.value
-		}
-		if (fourMax.value == fourAmountMin.value) {
-			fourMax.value = fourMax2.value
-		}
-		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0]  == fourAmountMaxLast.value || arr[0]  == fourAmountMinLast.value ) {
-			orderNumber4.value = 0
-		} else {
-			orderNumber4.value ++
-		}
 		fourMaxLast.value = fourMax.value
 		fourMinLast.value = fourMin.value
 		fourAmountMaxLast.value = fourAmountMax.value
 		fourAmountMinLast.value = fourAmountMin.value
 		console.log(orderNumber4.value)
 	} else if (index == 4) {
+		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
 		fiveMax.value = index1
 		fiveMax2.value = index2
 		fiveMax3.value = index3
@@ -375,17 +356,6 @@ function findHandle(index) {
 		fiveMin2.value = index5
 		fiveAmountMax.value = objMaxMin.max
 		fiveAmountMin.value = objMaxMin.min
-		if (fiveMin2.value == fiveAmountMin.value) {
-			fiveMin2.value = fiveAmountMax.value
-		}
-		if (fiveMax.value == fiveAmountMin.value) {
-			fiveMax.value = fiveMax2.value
-		}
-		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
-			orderNumber5.value = 0
-		} else {
-			orderNumber5.value ++
-		}
 		fiveMaxLast.value = fiveMax.value
 		fiveMinLast.value = fiveMin.value
 		fiveAmountMaxLast.value = fiveAmountMax.value
