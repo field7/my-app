@@ -492,7 +492,7 @@ function find(arr, item) {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 20rpx 10rpx;
+					padding: 15rpx 10rpx;
 					text-align: center;
 					width: 23%;
 				}
@@ -501,7 +501,7 @@ function find(arr, item) {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 20rpx 10rpx;
+					padding: 15rpx 10rpx;
 					text-align: center;
 					&.active {
 						background-color: #f00;
