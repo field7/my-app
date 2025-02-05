@@ -155,7 +155,7 @@ onLoad(() => {
 
 /* methods */
 function setValueHandle() {
-	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined') {
+	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
