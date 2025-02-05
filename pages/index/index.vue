@@ -63,7 +63,7 @@
 						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin || index == twoAmountMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin || index == twoAmountMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
 						<view :class="(index == threeMax || index == threeMin || index == threeAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
@@ -434,11 +434,11 @@ function setStorage() {
 	uni.setStorageSync('arr3', JSON.stringify(arr3.value))
 	uni.setStorageSync('arr4', JSON.stringify(arr4.value))
 	uni.setStorageSync('arr5', JSON.stringify(arr5.value))
-	uni.setStorageSync('arr5', JSON.stringify(arr6.value))
-	uni.setStorageSync('arr5', JSON.stringify(arr7.value))
-	uni.setStorageSync('arr5', JSON.stringify(arr8.value))
-	uni.setStorageSync('arr5', JSON.stringify(arr9.value))
-	uni.setStorageSync('arr5', JSON.stringify(arr10.value))
+	uni.setStorageSync('arr6', JSON.stringify(arr6.value))
+	uni.setStorageSync('arr7', JSON.stringify(arr7.value))
+	uni.setStorageSync('arr8', JSON.stringify(arr8.value))
+	uni.setStorageSync('arr9', JSON.stringify(arr9.value))
+	uni.setStorageSync('arr10', JSON.stringify(arr10.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -516,12 +516,7 @@ function findHandle(index) {
 	let index5 = arrRes.map(item => item).indexOf(min2)
 	arrRes[index4] = temp3
 	let objMaxMin = findMaxMin(arr)
-	if (index1 == objMaxMin.max || index1 == objMaxMin.min) {
-		index1 = index2
-	}
-	if (index4 == objMaxMin.max || index4 == objMaxMin.min) {
-		index4 = index5
-	}
+
 	if (index == 0) {
 		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0]  == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value ) {
 			orderNumber1.value = 0
@@ -542,7 +537,9 @@ function findHandle(index) {
 			oneAmountMinLast.value = oneAmountMin.value
 			console.log(orderNumber1.value)
 		// }, 500)
-	} else if (index == 1) {
+		return
+	}
+	if (index == 1) {
 		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value ) {
 			orderNumber2.value = 0
 		} else {
@@ -582,7 +579,9 @@ function findHandle(index) {
 			threeAmountMinLast.value = threeAmountMin.value
 			console.log(orderNumber3.value)
 		// }, 500)
-	} else if (index == 3) {
+		return
+	}
+	if (index == 3) {
 		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0]  == fourAmountMaxLast.value || arr[0]  == fourAmountMinLast.value ) {
 			orderNumber4.value = 0
 		} else {
@@ -622,7 +621,9 @@ function findHandle(index) {
 			fiveAmountMinLast.value = fiveAmountMin.value
 			console.log(orderNumber5.value)
 		// }, 500)
-	} else if (index == 5) {
+		return
+	}
+	if (index == 5) {
 		if (arr[0] == sixMaxLast.value || arr[0] == sixMinLast.value || arr[0]  == sixAmountMaxLast.value || arr[0]  == sixAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
@@ -662,7 +663,9 @@ function findHandle(index) {
 			sevenAmountMinLast.value = sevenAmountMin.value
 			console.log(orderNumber7.value)
 		// }, 500)
-	} else if (index == 7) {
+		return
+	}
+	if (index == 7) {
 		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
@@ -682,7 +685,9 @@ function findHandle(index) {
 			eightAmountMinLast.value = eightAmountMin.value
 			console.log(orderNumber8.value)
 		// }, 500)
-	} else if (index == 8) {
+		return
+	}
+	if (index == 8) {
 		if (arr[0] == nightMaxLast.value || arr[0] == nightMinLast.value || arr[0]  == nightAmountMaxLast.value || arr[0]  == nightAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
@@ -702,7 +707,9 @@ function findHandle(index) {
 			nightAmountMinLast.value = nightAmountMin.value
 			console.log(orderNumber9.value)
 		// }, 500)
-	} else if (index == 9) {
+		return
+	}
+	if (index == 9) {
 		if (arr[0] == tenMaxLast.value || arr[0] == tenMinLast.value || arr[0]  == tenAmountMaxLast.value || arr[0]  == tenAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
@@ -722,6 +729,7 @@ function findHandle(index) {
 			tenAmountMinLast.value = tenAmountMin.value
 			console.log(orderNumber10.value)
 		// }, 500)
+		return
 	}
 }
 function find(arr, item) {
