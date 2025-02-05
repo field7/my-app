@@ -141,11 +141,21 @@ const fiveAmountMinLast = ref('')
 /* 生命周期函数 */
 onLoad(() => {
 	getData()
-	findHandle(0)
-	findHandle(1)
-	findHandle(2)
-	findHandle(3)
-	findHandle(4)
+	setTimeout(() => {
+		findHandle(0)
+	}, 0)
+	setTimeout(() => {
+		findHandle(1)
+	}, 100)
+	setTimeout(() => {
+		findHandle(2)
+	}, 200)
+	setTimeout(() => {
+		findHandle(3)
+	}, 300)
+	setTimeout(() => {
+		findHandle(4)
+	}, 400)
 	// nextTick(() => {
 	//   if (oneAmountMin.value == twoAmountMin.value) {
 	//   	twoAmountMin.value = twoAmountMax.value
@@ -178,11 +188,21 @@ function setValueHandle() {
 		}
 		num.value = ''
 		setStorage()
+		setTimeout(() => {
 		findHandle(0)
-		findHandle(1)
-		findHandle(2)
-		findHandle(3)
-		findHandle(4)
+		}, 0)
+		setTimeout(() => {
+			findHandle(1)
+		}, 100)
+		setTimeout(() => {
+			findHandle(2)
+		}, 200)
+		setTimeout(() => {
+			findHandle(3)
+		}, 300)
+		setTimeout(() => {
+			findHandle(4)
+		}, 400)
 		// nextTick(() => {
 		//   if (oneAmountMin.value == twoAmountMin.value) {
 		//   	twoAmountMin.value = twoAmountMax.value
@@ -237,15 +257,15 @@ function findMaxMin(arr){
 function findHandle(index) {
 	let arr = []
 	if (index == 0) {
-		arr = arr1.value
+		arr = JSON.parse(JSON.stringify(arr1.value))
 	} else if(index == 1) {
-		arr = arr2.value
+		arr = JSON.parse(JSON.stringify(arr2.value))
 	} else if (index == 2) {
-		arr = arr3.value
+		arr = JSON.parse(JSON.stringify(arr3.value))
 	} else if (index == 3) {
-		arr = arr4.value
+		arr = JSON.parse(JSON.stringify(arr4.value))
 	} else if (index == 4) {
-		arr = arr5.value
+		arr = JSON.parse(JSON.stringify(arr5.value))
 	}
 	let arrRes = []
 	for(let i = 0; i < 10; i++) {
@@ -283,7 +303,7 @@ function findHandle(index) {
 		} else {
 			orderNumber1.value ++
 		}
-		setTimeout(() => {
+		// setTimeout(() => {
 			oneMax.value = index1
 			oneMax2.value = index2
 			oneMax3.value = index3
@@ -296,14 +316,14 @@ function findHandle(index) {
 			oneAmountMaxLast.value = oneAmountMax.value
 			oneAmountMinLast.value = oneAmountMin.value
 			console.log(orderNumber1.value)
-		}, 500)
+		// }, 500)
 	} else if (index == 1) {
 		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value ) {
 			orderNumber2.value = 0
 		} else {
 			orderNumber2.value ++
 		}
-		setTimeout(()=> {
+		// setTimeout(()=> {
 			twoMax.value = index1
 			twoMax2.value = index2
 			twoMax3.value = index3
@@ -316,14 +336,14 @@ function findHandle(index) {
 			twoAmountMaxLast.value = twoAmountMax.value
 			twoAmountMinLast.value = twoAmountMin.value
 			console.log(orderNumber2.value)
-		}, 500)
+		// }, 500)
 	} else if (index == 2) {
 		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value ) {
 			orderNumber3.value = 0
 		} else {
 			orderNumber3.value ++
 		}
-		setTimeout(() => {
+		// setTimeout(() => {
 			threeMax.value = index1
 			threeMax2.value = index2
 			threeMax3.value = index3
@@ -336,14 +356,14 @@ function findHandle(index) {
 			threeAmountMaxLast.value = threeAmountMax.value
 			threeAmountMinLast.value = threeAmountMin.value
 			console.log(orderNumber3.value)
-		}, 500)
+		// }, 500)
 	} else if (index == 3) {
 		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0]  == fourAmountMaxLast.value || arr[0]  == fourAmountMinLast.value ) {
 			orderNumber4.value = 0
 		} else {
 			orderNumber4.value ++
 		}
-		setTimeout(() => {
+		// setTimeout(() => {
 			fourMax.value = index1
 			fourMax2.value = index2
 			fourMax3.value = index3
@@ -356,14 +376,14 @@ function findHandle(index) {
 			fourAmountMaxLast.value = fourAmountMax.value
 			fourAmountMinLast.value = fourAmountMin.value
 			console.log(orderNumber4.value)
-		}, 500)
+		// }, 500)
 	} else if (index == 4) {
 		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
 			orderNumber5.value ++
 		}
-		setTimeout(() => {
+		// setTimeout(() => {
 			fiveMax.value = index1
 			fiveMax2.value = index2
 			fiveMax3.value = index3
@@ -376,7 +396,7 @@ function findHandle(index) {
 			fiveAmountMaxLast.value = fiveAmountMax.value
 			fiveAmountMinLast.value = fiveAmountMin.value
 			console.log(orderNumber5.value)
-		}, 500)
+		// }, 500)
 	}
 }
 function find(arr, item) {
