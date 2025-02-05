@@ -28,6 +28,21 @@
 					<view class="data5">
 						<view :class="index == arr5.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr5" :key="index">{{ item }}</view>
 					</view>
+					<view class="data6">
+						<view :class="index == arr6.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr6" :key="index">{{ item }}</view>
+					</view>
+					<view class="data7">
+						<view :class="index == arr7.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr7" :key="index">{{ item }}</view>
+					</view>
+					<view class="data8">
+						<view :class="index == arr8.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr8" :key="index">{{ item }}</view>
+					</view>
+					<view class="data9">
+						<view :class="index == arr9.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr9" :key="index">{{ item }}</view>
+					</view>
+					<view class="data10">
+						<view :class="index == arr10.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr10" :key="index">{{ item }}</view>
+					</view>
 				</view>
 			</view>
 			<view class="right">
@@ -37,22 +52,42 @@
 					<div class="item">{{ orderNumber3 }}</div>
 					<div class="item">{{ orderNumber4 }}</div>
 					<div class="item">{{ orderNumber5 }}</div>
+					<div class="item">{{ orderNumber6 }}</div>
+					<div class="item">{{ orderNumber7 }}</div>
+					<div class="item">{{ orderNumber8 }}</div>
+					<div class="item">{{ orderNumber9 }}</div>
+					<div class="item">{{ orderNumber10 }}</div>
 				</div>
 				<view class="result">
 					<view class="result1">
 						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin || index == oneAmountMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin || index == twoAmountMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == threeMax || index == threeMin || index == oneAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax || index == threeMin || index == threeAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result4">
-						<view :class="(index == fourMax || index == fourMin || index == oneAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fourMax || index == fourMin || index == fourAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result5">
-						<view :class="(index == fiveMax || index == fiveMin || index == oneAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fiveMax || index == fiveMin || index == fiveAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result6">
+						<view :class="(index == sixMax || index == sixMin || index == sixAmountMax || index == sixAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result7">
+						<view :class="(index == sevenMax || index == sevenMin || index == sevenAmountMax || index == sevenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result8">
+						<view :class="(index == eightMax || index == eightMin || index == eightAmountMax || index == eightAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result9">
+						<view :class="(index == nightMax || index == nightMin || index == nightAmountMax || index == nightAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+					</view>
+					<view class="result10">
+						<view :class="(index == tenMax || index == tenMin || index == tenAmountMax || index == tenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -71,6 +106,11 @@ const arr2 = ref([])
 const arr3 = ref([])
 const arr4 = ref([])
 const arr5 = ref([])
+const arr6 = ref([])
+const arr7 = ref([])
+const arr8 = ref([])
+const arr9 = ref([])
+const arr10 = ref([])
 const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const oneMax = ref(-1)
 const oneMax2 = ref(-1)
@@ -97,6 +137,37 @@ const fiveMax2 = ref(-1)
 const fiveMax3 = ref(-1)
 const fiveMin = ref(-1)
 const fiveMin2 = ref(-1)
+
+const sixMax = ref(-1)
+const sixMax2 = ref(-1)
+const sixMax3 = ref(-1)
+const sixMin = ref(-1)
+const sixMin2 = ref(-1)
+
+const sevenMax = ref(-1)
+const sevenMax2 = ref(-1)
+const sevenMax3 = ref(-1)
+const sevenMin = ref(-1)
+const sevenMin2 = ref(-1)
+
+const eightMax = ref(-1)
+const eightMax2 = ref(-1)
+const eightMax3 = ref(-1)
+const eightMin = ref(-1)
+const eightMin2 = ref(-1)
+
+const nightMax = ref(-1)
+const nightMax2 = ref(-1)
+const nightMax3 = ref(-1)
+const nightMin = ref(-1)
+const nightMin2 = ref(-1)
+
+const tenMax = ref(-1)
+const tenMax2 = ref(-1)
+const tenMax3 = ref(-1)
+const tenMin = ref(-1)
+const tenMin2 = ref(-1)
+
 const oneAmountMax = ref(-1)
 const oneAmountMin = ref(-1)
 const twoAmountMax = ref(-1)
@@ -107,6 +178,21 @@ const fourAmountMax = ref(-1)
 const fourAmountMin = ref(-1)
 const fiveAmountMax = ref(-1)
 const fiveAmountMin = ref(-1)
+
+const sixAmountMax = ref(-1)
+const sixAmountMin = ref(-1)
+
+const sevenAmountMax = ref(-1)
+const sevenAmountMin = ref(-1)
+
+const eightAmountMax = ref(-1)
+const eightAmountMin = ref(-1)
+
+const nightAmountMax = ref(-1)
+const nightAmountMin = ref(-1)
+
+const tenAmountMax = ref(-1)
+const tenAmountMin = ref(-1)
 
 const orderNumber1 = ref(0)
 const oneMaxLast = ref(-1)
@@ -127,16 +213,46 @@ const threeAmountMaxLast = ref(-1)
 const threeAmountMinLast = ref(-1)
 
 const orderNumber4 = ref(0)
-const fourMaxLast = ref('')
-const fourMinLast = ref('')
-const fourAmountMaxLast = ref('')
-const fourAmountMinLast = ref('')
+const fourMaxLast = ref(-1)
+const fourMinLast = ref(-1)
+const fourAmountMaxLast = ref(-1)
+const fourAmountMinLast = ref(-1)
 
 const orderNumber5 = ref(0)
-const fiveMaxLast = ref('')
-const fiveMinLast = ref('')
-const fiveAmountMaxLast = ref('')
-const fiveAmountMinLast = ref('')
+const fiveMaxLast = ref(-1)
+const fiveMinLast = ref(-1)
+const fiveAmountMaxLast = ref(-1)
+const fiveAmountMinLast = ref(-1)
+
+const orderNumber6 = ref(0)
+const sixMaxLast = ref(-1)
+const sixMinLast = ref(-1)
+const sixAmountMaxLast = ref(-1)
+const sixAmountMinLast = ref(-1)
+
+const orderNumber7 = ref(0)
+const sevenMaxLast = ref(-1)
+const sevenMinLast = ref(-1)
+const sevenAmountMaxLast = ref(-1)
+const sevenAmountMinLast = ref(-1)
+
+const orderNumber8 = ref(0)
+const eightMaxLast = ref(-1)
+const eightMinLast = ref(-1)
+const eightAmountMaxLast = ref(-1)
+const eightAmountMinLast = ref(-1)
+
+const orderNumber9 = ref(0)
+const nightMaxLast = ref(-1)
+const nightMinLast = ref(-1)
+const nightAmountMaxLast = ref(-1)
+const nightAmountMinLast = ref(-1)
+
+const orderNumber10 = ref(0)
+const tenMaxLast = ref(-1)
+const tenMinLast = ref(-1)
+const tenAmountMaxLast = ref(-1)
+const tenAmountMinLast = ref(-1)
 
 /* 生命周期函数 */
 onLoad(() => {
@@ -156,6 +272,24 @@ onLoad(() => {
 	setTimeout(() => {
 		findHandle(4)
 	}, 400)
+	setTimeout(() => {
+		findHandle(5)
+	}, 500)
+	setTimeout(() => {
+		findHandle(6)
+	}, 600)
+	setTimeout(() => {
+		findHandle(7)
+	}, 700)
+	setTimeout(() => {
+		findHandle(8)
+	}, 800)
+	setTimeout(() => {
+		findHandle(9)
+	}, 900)
+	setTimeout(() => {
+		findHandle(10)
+	}, 1000)
 	// nextTick(() => {
 	//   if (oneAmountMin.value == twoAmountMin.value) {
 	//   	twoAmountMin.value = twoAmountMax.value
@@ -165,12 +299,17 @@ onLoad(() => {
 
 /* methods */
 function setValueHandle() {
-	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined') {
+	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
 		arr4.value.unshift(num.value[3]);
 		arr5.value.unshift(num.value[4]);
+		arr6.value.unshift(num.value[5]);
+		arr7.value.unshift(num.value[6]);
+		arr8.value.unshift(num.value[7]);
+		arr9.value.unshift(num.value[8]);
+		arr10.value.unshift(num.value[9]);
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
 		}
@@ -186,10 +325,25 @@ function setValueHandle() {
 		if (arr5.value.length > 20) {
 			arr5.value.pop()
 		}
+		if (arr6.value.length > 20) {
+			arr6.value.pop()
+		}
+		if (arr7.value.length > 20) {
+			arr7.value.pop()
+		}
+		if (arr8.value.length > 20) {
+			arr8.value.pop()
+		}
+		if (arr9.value.length > 20) {
+			arr9.value.pop()
+		}
+		if (arr10.value.length > 20) {
+			arr10.value.pop()
+		}
 		num.value = ''
 		setStorage()
 		setTimeout(() => {
-		findHandle(0)
+			findHandle(0)
 		}, 0)
 		setTimeout(() => {
 			findHandle(1)
@@ -203,6 +357,24 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(4)
 		}, 400)
+		setTimeout(() => {
+			findHandle(5)
+		}, 500)
+		setTimeout(() => {
+			findHandle(6)
+		}, 600)
+		setTimeout(() => {
+			findHandle(7)
+		}, 700)
+		setTimeout(() => {
+			findHandle(8)
+		}, 800)
+		setTimeout(() => {
+			findHandle(9)
+		}, 900)
+		setTimeout(() => {
+			findHandle(10)
+		}, 1000)
 		// nextTick(() => {
 		//   if (oneAmountMin.value == twoAmountMin.value) {
 		//   	twoAmountMin.value = twoAmountMax.value
@@ -216,12 +388,45 @@ function clearValueHandle() {
 	arr3.value.shift()
 	arr4.value.shift()
 	arr5.value.shift()
+	arr6.value.shift()
+	arr7.value.shift()
+	arr8.value.shift()
+	arr9.value.shift()
+	arr10.value.shift()
 	setStorage()
-	findHandle(0)
-	findHandle(1)
-	findHandle(2)
-	findHandle(3)
-	findHandle(4)
+	setTimeout(() => {
+		findHandle(0)
+	}, 0)
+	setTimeout(() => {
+		findHandle(1)
+	}, 100)
+	setTimeout(() => {
+		findHandle(2)
+	}, 200)
+	setTimeout(() => {
+		findHandle(3)
+	}, 300)
+	setTimeout(() => {
+		findHandle(4)
+	}, 400)
+	setTimeout(() => {
+		findHandle(5)
+	}, 500)
+	setTimeout(() => {
+		findHandle(6)
+	}, 600)
+	setTimeout(() => {
+		findHandle(7)
+	}, 700)
+	setTimeout(() => {
+		findHandle(8)
+	}, 800)
+	setTimeout(() => {
+		findHandle(9)
+	}, 900)
+	setTimeout(() => {
+		findHandle(10)
+	}, 1000)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -229,6 +434,11 @@ function setStorage() {
 	uni.setStorageSync('arr3', JSON.stringify(arr3.value))
 	uni.setStorageSync('arr4', JSON.stringify(arr4.value))
 	uni.setStorageSync('arr5', JSON.stringify(arr5.value))
+	uni.setStorageSync('arr5', JSON.stringify(arr6.value))
+	uni.setStorageSync('arr5', JSON.stringify(arr7.value))
+	uni.setStorageSync('arr5', JSON.stringify(arr8.value))
+	uni.setStorageSync('arr5', JSON.stringify(arr9.value))
+	uni.setStorageSync('arr5', JSON.stringify(arr10.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -237,6 +447,11 @@ function getData() {
 		arr3.value = JSON.parse(uni.getStorageSync('arr3'))
 		arr4.value = JSON.parse(uni.getStorageSync('arr4'))
 		arr5.value = JSON.parse(uni.getStorageSync('arr5'))
+		arr6.value = JSON.parse(uni.getStorageSync('arr6'))
+		arr7.value = JSON.parse(uni.getStorageSync('arr7'))
+		arr8.value = JSON.parse(uni.getStorageSync('arr8'))
+		arr9.value = JSON.parse(uni.getStorageSync('arr9'))
+		arr10.value = JSON.parse(uni.getStorageSync('arr10'))
 	}
 }
 function findMaxMin(arr){
@@ -266,6 +481,16 @@ function findHandle(index) {
 		arr = JSON.parse(JSON.stringify(arr4.value))
 	} else if (index == 4) {
 		arr = JSON.parse(JSON.stringify(arr5.value))
+	} else if (index == 5) {
+		arr = JSON.parse(JSON.stringify(arr6.value))
+	} else if (index == 6) {
+		arr = JSON.parse(JSON.stringify(arr7.value))
+	} else if (index == 7) {
+		arr = JSON.parse(JSON.stringify(arr8.value))
+	} else if (index == 8) {
+		arr = JSON.parse(JSON.stringify(arr9.value))
+	} else if (index == 9) {
+		arr = JSON.parse(JSON.stringify(arr10.value))
 	}
 	let arrRes = []
 	for(let i = 0; i < 10; i++) {
@@ -397,6 +622,106 @@ function findHandle(index) {
 			fiveAmountMinLast.value = fiveAmountMin.value
 			console.log(orderNumber5.value)
 		// }, 500)
+	} else if (index == 5) {
+		if (arr[0] == sixMaxLast.value || arr[0] == sixMinLast.value || arr[0]  == sixAmountMaxLast.value || arr[0]  == sixAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
+		// setTimeout(() => {
+			sixMax.value = index1
+			sixMax2.value = index2
+			sixMax3.value = index3
+			sixMin.value = index4
+			sixMin2.value = index5
+			sixAmountMax.value = objMaxMin.max
+			sixAmountMin.value = objMaxMin.min
+			sixMaxLast.value = sixMax.value
+			sixMinLast.value = sixMin.value
+			sixAmountMaxLast.value = sixAmountMax.value
+			sixAmountMinLast.value = sixAmountMin.value
+			console.log(orderNumber6.value)
+		// }, 500)
+	} else if (index == 6) {
+		if (arr[0] == sevenMaxLast.value || arr[0] == sevenMinLast.value || arr[0]  == sevenAmountMaxLast.value || arr[0]  == sevenAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
+		// setTimeout(() => {
+			sevenMax.value = index1
+			sevenMax2.value = index2
+			sevenMax3.value = index3
+			sevenMin.value = index4
+			sevenMin2.value = index5
+			sevenAmountMax.value = objMaxMin.max
+			sevenAmountMin.value = objMaxMin.min
+			sevenMaxLast.value = sevenMax.value
+			sevenMinLast.value = sevenMin.value
+			sevenAmountMaxLast.value = sevenAmountMax.value
+			sevenAmountMinLast.value = sevenAmountMin.value
+			console.log(orderNumber7.value)
+		// }, 500)
+	} else if (index == 7) {
+		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
+		// setTimeout(() => {
+			eightMax.value = index1
+			eightMax2.value = index2
+			eightMax3.value = index3
+			eightMin.value = index4
+			eightMin2.value = index5
+			eightAmountMax.value = objMaxMin.max
+			eightAmountMin.value = objMaxMin.min
+			eightMaxLast.value = eightMax.value
+			eightMinLast.value = eightMin.value
+			eightAmountMaxLast.value = eightAmountMax.value
+			eightAmountMinLast.value = eightAmountMin.value
+			console.log(orderNumber8.value)
+		// }, 500)
+	} else if (index == 8) {
+		if (arr[0] == nightMaxLast.value || arr[0] == nightMinLast.value || arr[0]  == nightAmountMaxLast.value || arr[0]  == nightAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
+		// setTimeout(() => {
+			nightMax.value = index1
+			nightMax2.value = index2
+			nightMax3.value = index3
+			nightMin.value = index4
+			nightMin2.value = index5
+			nightAmountMax.value = objMaxMin.max
+			nightAmountMin.value = objMaxMin.min
+			nightMaxLast.value = nightMax.value
+			nightMinLast.value = nightMin.value
+			nightAmountMaxLast.value = nightAmountMax.value
+			nightAmountMinLast.value = nightAmountMin.value
+			console.log(orderNumber9.value)
+		// }, 500)
+	} else if (index == 9) {
+		if (arr[0] == tenMaxLast.value || arr[0] == tenMinLast.value || arr[0]  == tenAmountMaxLast.value || arr[0]  == tenAmountMinLast.value ) {
+			orderNumber5.value = 0
+		} else {
+			orderNumber5.value ++
+		}
+		// setTimeout(() => {
+			tenMax.value = index1
+			tenMax2.value = index2
+			tenMax3.value = index3
+			tenMin.value = index4
+			tenMin2.value = index5
+			tenAmountMax.value = objMaxMin.max
+			tenAmountMin.value = objMaxMin.min
+			tenMaxLast.value = tenMax.value
+			tenMinLast.value = tenMin.value
+			tenAmountMaxLast.value = tenAmountMax.value
+			tenAmountMinLast.value = tenAmountMin.value
+			console.log(orderNumber10.value)
+		// }, 500)
 	}
 }
 function find(arr, item) {
@@ -468,7 +793,7 @@ function find(arr, item) {
 				width: 84%;
 				padding-left: 20rpx;
 				.item {
-					padding: 4rpx 18rpx;
+					padding: 4rpx 2rpx;
 					font-size: 24rpx;
 					border: 1px solid #3a73d9;
 					margin-right: 10rpx;
@@ -514,8 +839,8 @@ function find(arr, item) {
 					}
 				}
 			}
-			.result1, .result2, .result3, .result4, .result5 {
-				width: 18%;
+			.result1, .result2, .result3, .result4, .result5, .result6, .result7, .result8, .result9, .result10 {
+				width: 10%;
 			}
 		}
 	}
