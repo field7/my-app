@@ -43,16 +43,16 @@
 						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin || index == oneAmountMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoMin || index == twoAmountMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == threeMax || index == threeMin || index == oneAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax || index == threeMin || index == threeAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result4">
-						<view :class="(index == fourMax || index == fourMin || index == oneAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fourMax || index == fourMin || index == fourAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result5">
-						<view :class="(index == fiveMax || index == fiveMin || index == oneAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fiveMax || index == fiveMin || index == fiveAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -127,16 +127,16 @@ const threeAmountMaxLast = ref(-1)
 const threeAmountMinLast = ref(-1)
 
 const orderNumber4 = ref(0)
-const fourMaxLast = ref('')
-const fourMinLast = ref('')
-const fourAmountMaxLast = ref('')
-const fourAmountMinLast = ref('')
+const fourMaxLast = ref(-1)
+const fourMinLast = ref(-1)
+const fourAmountMaxLast = ref(-1)
+const fourAmountMinLast = ref(-1)
 
 const orderNumber5 = ref(0)
-const fiveMaxLast = ref('')
-const fiveMinLast = ref('')
-const fiveAmountMaxLast = ref('')
-const fiveAmountMinLast = ref('')
+const fiveMaxLast = ref(-1)
+const fiveMinLast = ref(-1)
+const fiveAmountMaxLast = ref(-1)
+const fiveAmountMinLast = ref(-1)
 
 /* 生命周期函数 */
 onLoad(() => {
