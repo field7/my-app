@@ -354,7 +354,9 @@ function findHandle(index) {
 			oneAmountMinLast.value = oneAmountMin.value
 			console.log(orderNumber1.value)
 		// }, 500)
-	} else if (index == 1) {
+	} 
+
+	if (index == 1) {
 		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value ) {
 			orderNumber2.value = 0
 		} else {
@@ -374,7 +376,10 @@ function findHandle(index) {
 			twoAmountMinLast.value = twoAmountMin.value
 			console.log(orderNumber2.value)
 		// }, 500)
-	} else if (index == 2) {
+		return
+	} 
+	
+	if (index == 2) {
 		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value ) {
 			orderNumber3.value = 0
 		} else {
@@ -394,7 +399,9 @@ function findHandle(index) {
 			threeAmountMinLast.value = threeAmountMin.value
 			console.log(orderNumber3.value)
 		// }, 500)
-	} else if (index == 3) {
+		return
+	}
+	if (index == 3) {
 		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0]  == fourAmountMaxLast.value || arr[0]  == fourAmountMinLast.value ) {
 			orderNumber4.value = 0
 		} else {
@@ -414,7 +421,9 @@ function findHandle(index) {
 			fourAmountMinLast.value = fourAmountMin.value
 			console.log(orderNumber4.value)
 		// }, 500)
-	} else if (index == 4) {
+		return
+	} 
+	if (index == 4) {
 		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0]  == fiveAmountMaxLast.value || arr[0]  == fiveAmountMinLast.value ) {
 			orderNumber5.value = 0
 		} else {
@@ -434,11 +443,13 @@ function findHandle(index) {
 			fiveAmountMinLast.value = fiveAmountMin.value
 			console.log(orderNumber5.value)
 		// }, 500)
-	} else if (index == 5) {
+		return
+	}
+	if (index == 5) {
 		if (arr[0] == sixMaxLast.value || arr[0] == sixMinLast.value || arr[0]  == sixAmountMaxLast.value || arr[0]  == sixAmountMinLast.value ) {
-			orderNumber5.value = 0
+			orderNumber6.value = 0
 		} else {
-			orderNumber5.value ++
+			orderNumber6.value ++
 		}
 		// setTimeout(() => {
 			sixMax.value = index1
@@ -454,6 +465,7 @@ function findHandle(index) {
 			sixAmountMinLast.value = sixAmountMin.value
 			console.log(orderNumber6.value)
 		// }, 500)
+		return
 	}
 }
 function find(arr, item) {
