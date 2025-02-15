@@ -917,7 +917,7 @@ function find(arr, item) {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 10rpx 10rpx;
+					padding: 10rpx 10rpx 5px;
 					text-align: center;
 					width: 23%;
 					color: blue;
