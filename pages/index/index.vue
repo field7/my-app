@@ -671,7 +671,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 7) {
-		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0] == fiveAmountMaxLast.value || arr[0] == fiveAmountMinLast.value) {
+		if (arr[0] == eightMaxLast.value || arr[0] == eightMinLast.value || arr[0] == eightAmountMaxLast.value || arr[0] == eightAmountMinLast.value) {
 			orderNumber8.value = 0
 		} else {
 			orderNumber8.value ++
