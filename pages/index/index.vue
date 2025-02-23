@@ -46,6 +46,18 @@
 				</view>
 			</view>
 			<view class="right">
+				<div class="order">
+					<div class="item">1</div>
+					<div class="item">2</div>
+					<div class="item">3</div>
+					<div class="item">4</div>
+					<div class="item">5</div>
+					<div class="item">6</div>
+					<div class="item">7</div>
+					<div class="item">8</div>
+					<div class="item">9</div>
+					<div class="item">0</div>
+				</div>
 				<div class="times">
 					<div class="item">{{ orderNumber1 }}</div>
 					<div class="item">{{ orderNumber2 }}</div>
@@ -832,13 +844,23 @@ function find(arr, item) {
 			position: relative;
 			top: -60rpx;
 			box-sizing: border-box;
+			.order {
+				display: flex;
+				justify-content: space-around;
+				.item {
+					padding: 10rpx 10rpx 0;
+					text-align: center;
+					width: 23%;
+				}
+			}
 			.times {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 15rpx 10rpx;
+					padding: 10rpx 10rpx 5px;
 					text-align: center;
 					width: 23%;
+					color: blue;
 				}
 			}
 			.result {
