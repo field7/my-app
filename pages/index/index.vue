@@ -536,9 +536,9 @@ function findHandle(index) {
 	}
 	if (index == 0) {
 		if (arr[0] == oneMaxLast.value || arr[0] == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value) {
-			orderNumber1.value = 0
-		} else {
 			orderNumber1.value ++
+		} else {
+			orderNumber1.value = 0
 		}
 		// setTimeout(() => {
 			oneMax.value = index1
@@ -558,9 +558,9 @@ function findHandle(index) {
 	}
 	if (index == 1) {
 		if (arr[0] == twoMaxLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value) {
-			orderNumber2.value = 0
-		} else {
 			orderNumber2.value ++
+		} else {
+			orderNumber2.value = 0
 		}
 		// setTimeout(()=> {
 			twoMax.value = index1
@@ -578,9 +578,9 @@ function findHandle(index) {
 		// }, 500)
 	} else if (index == 2) {
 		if (arr[0] == threeMaxLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value) {
-			orderNumber3.value = 0
-		} else {
 			orderNumber3.value ++
+		} else {
+			orderNumber3.value = 0
 		}
 		// setTimeout(() => {
 			threeMax.value = index1
@@ -600,9 +600,9 @@ function findHandle(index) {
 	}
 	if (index == 3) {
 		if (arr[0] == fourMaxLast.value || arr[0] == fourAmountMaxLast.value || arr[0] == fourAmountMinLast.value) {
-			orderNumber4.value = 0
-		} else {
 			orderNumber4.value ++
+		} else {
+			orderNumber4.value = 0
 		}
 		// setTimeout(() => {
 			fourMax.value = index1
@@ -620,9 +620,9 @@ function findHandle(index) {
 		// }, 500)
 	} else if (index == 4) {
 		if (arr[0] == fiveMaxLast.value || arr[0] == fiveAmountMaxLast.value || arr[0] == fiveAmountMinLast.value) {
-			orderNumber5.value = 0
-		} else {
 			orderNumber5.value ++
+		} else {
+			orderNumber5.value = 0
 		}
 		// setTimeout(() => {
 			fiveMax.value = index1
@@ -642,9 +642,9 @@ function findHandle(index) {
 	}
 	if (index == 5) {
 		if (arr[0] == sixMaxLast.value || arr[0] == sixAmountMaxLast.value || arr[0] == sixAmountMinLast.value) {
-			orderNumber6.value = 0
-		} else {
 			orderNumber6.value ++
+		} else {
+			orderNumber6.value = 0
 		}
 		// setTimeout(() => {
 			sixMax.value = index1
@@ -662,9 +662,9 @@ function findHandle(index) {
 		// }, 500)
 	} else if (index == 6) {
 		if (arr[0] == sevenMaxLast.value || arr[0] == sevenAmountMaxLast.value || arr[0] == sevenAmountMinLast.value) {
-			orderNumber7.value = 0
-		} else {
 			orderNumber7.value ++
+		} else {
+			orderNumber7.value = 0
 		}
 		// setTimeout(() => {
 			sevenMax.value = index1
@@ -684,9 +684,9 @@ function findHandle(index) {
 	}
 	if (index == 7) {
 		if (arr[0] == eightMaxLast.value || arr[0] == eightAmountMaxLast.value || arr[0] == eightAmountMinLast.value) {
-			orderNumber8.value = 0
-		} else {
 			orderNumber8.value ++
+		} else {
+			orderNumber8.value = 0
 		}
 		// setTimeout(() => {
 			eightMax.value = index1
@@ -706,9 +706,9 @@ function findHandle(index) {
 	}
 	if (index == 8) {
 		if (arr[0] == nightMaxLast.value || arr[0] == nightAmountMaxLast.value || arr[0] == nightAmountMinLast.value) {
-			orderNumber9.value = 0
-		} else {
 			orderNumber9.value ++
+		} else {
+			orderNumber9.value = 0
 		}
 		// setTimeout(() => {
 			nightMax.value = index1
@@ -728,9 +728,9 @@ function findHandle(index) {
 	}
 	if (index == 9) {
 		if (arr[0] == tenMaxLast.value || arr[0] == tenAmountMaxLast.value || arr[0] == tenAmountMinLast.value) {
-			orderNumber10.value = 0
-		} else {
 			orderNumber10.value ++
+		} else {
+			orderNumber10.value = 0
 		}
 		// setTimeout(() => {
 			tenMax.value = index1
