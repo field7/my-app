@@ -70,6 +70,18 @@
 					<div class="item">{{ orderNumber9 }}</div>
 					<div class="item">{{ orderNumber10 }}</div>
 				</div>
+				<div class="times red">
+					<div class="item">{{ orderNumberNext1 }}</div>
+					<div class="item">{{ orderNumberNext2 }}</div>
+					<div class="item">{{ orderNumberNext3 }}</div>
+					<div class="item">{{ orderNumberNext4 }}</div>
+					<div class="item">{{ orderNumberNext5 }}</div>
+					<div class="item">{{ orderNumberNext6 }}</div>
+					<div class="item">{{ orderNumberNext7 }}</div>
+					<div class="item">{{ orderNumberNext8 }}</div>
+					<div class="item">{{ orderNumberNext9 }}</div>
+					<div class="item">{{ orderNumberNext10 }}</div>
+				</div>
 				<view class="result">
 					<view class="result1">
 						<view :class="(index == oneMax || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
@@ -207,60 +219,70 @@ const tenAmountMax = ref(-1)
 const tenAmountMin = ref(-1)
 
 const orderNumber1 = ref(0)
+const orderNumberNext1 = ref(0)
 const oneMaxLast = ref(-1)
 const oneMinLast = ref(-1)
 const oneAmountMaxLast = ref(-1)
 const oneAmountMinLast = ref(-1)
 
 const orderNumber2 = ref(0)
+const orderNumberNext2 = ref(0)
 const twoMaxLast = ref(-1)
 const twoMinLast = ref(-1)
 const twoAmountMaxLast = ref(-1)
 const twoAmountMinLast = ref(-1)
 
 const orderNumber3 = ref(0)
+const orderNumberNext3 = ref(0)
 const threeMaxLast = ref(-1)
 const threeMinLast = ref(-1)
 const threeAmountMaxLast = ref(-1)
 const threeAmountMinLast = ref(-1)
 
 const orderNumber4 = ref(0)
+const orderNumberNext4 = ref(0)
 const fourMaxLast = ref(-1)
 const fourMinLast = ref(-1)
 const fourAmountMaxLast = ref(-1)
 const fourAmountMinLast = ref(-1)
 
 const orderNumber5 = ref(0)
+const orderNumberNext5 = ref(0)
 const fiveMaxLast = ref(-1)
 const fiveMinLast = ref(-1)
 const fiveAmountMaxLast = ref(-1)
 const fiveAmountMinLast = ref(-1)
 
 const orderNumber6 = ref(0)
+const orderNumberNext6 = ref(0)
 const sixMaxLast = ref(-1)
 const sixMinLast = ref(-1)
 const sixAmountMaxLast = ref(-1)
 const sixAmountMinLast = ref(-1)
 
 const orderNumber7 = ref(0)
+const orderNumberNext7 = ref(0)
 const sevenMaxLast = ref(-1)
 const sevenMinLast = ref(-1)
 const sevenAmountMaxLast = ref(-1)
 const sevenAmountMinLast = ref(-1)
 
 const orderNumber8 = ref(0)
+const orderNumberNext8 = ref(0)
 const eightMaxLast = ref(-1)
 const eightMinLast = ref(-1)
 const eightAmountMaxLast = ref(-1)
 const eightAmountMinLast = ref(-1)
 
 const orderNumber9 = ref(0)
+const orderNumberNext9 = ref(0)
 const nightMaxLast = ref(-1)
 const nightMinLast = ref(-1)
 const nightAmountMaxLast = ref(-1)
 const nightAmountMinLast = ref(-1)
 
 const orderNumber10 = ref(0)
+const orderNumberNext10 = ref(0)
 const tenMaxLast = ref(-1)
 const tenMinLast = ref(-1)
 const tenAmountMaxLast = ref(-1)
@@ -536,9 +558,11 @@ function findHandle(index) {
 	}
 	if (index == 0) {
 		if (arr[0] == oneMaxLast.value || arr[0] == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value) {
-			orderNumber1.value ++
-		} else {
 			orderNumber1.value = 0
+			orderNumberNext1.value ++
+		} else {
+			orderNumber1.value ++
+			orderNumberNext1.value = 0
 		}
 		// setTimeout(() => {
 			oneMax.value = index1
@@ -558,9 +582,11 @@ function findHandle(index) {
 	}
 	if (index == 1) {
 		if (arr[0] == twoMaxLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value) {
-			orderNumber2.value ++
-		} else {
 			orderNumber2.value = 0
+			orderNumberNext2.value ++
+		} else {
+			orderNumber2.value ++
+			orderNumberNext2.value = 0
 		}
 		// setTimeout(()=> {
 			twoMax.value = index1
@@ -578,9 +604,11 @@ function findHandle(index) {
 		// }, 500)
 	} else if (index == 2) {
 		if (arr[0] == threeMaxLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value) {
-			orderNumber3.value ++
-		} else {
 			orderNumber3.value = 0
+			orderNumberNext3.value ++
+		} else {
+			orderNumber3.value ++
+			orderNumberNext3.value = 0
 		}
 		// setTimeout(() => {
 			threeMax.value = index1
@@ -600,9 +628,11 @@ function findHandle(index) {
 	}
 	if (index == 3) {
 		if (arr[0] == fourMaxLast.value || arr[0] == fourAmountMaxLast.value || arr[0] == fourAmountMinLast.value) {
-			orderNumber4.value ++
-		} else {
 			orderNumber4.value = 0
+			orderNumberNext4.value ++
+		} else {
+			orderNumber4.value ++
+			orderNumberNext4.value = 0
 		}
 		// setTimeout(() => {
 			fourMax.value = index1
@@ -620,9 +650,11 @@ function findHandle(index) {
 		// }, 500)
 	} else if (index == 4) {
 		if (arr[0] == fiveMaxLast.value || arr[0] == fiveAmountMaxLast.value || arr[0] == fiveAmountMinLast.value) {
-			orderNumber5.value ++
-		} else {
 			orderNumber5.value = 0
+			orderNumberNext5.value ++
+		} else {
+			orderNumber5.value ++
+			orderNumberNext5.value = 0
 		}
 		// setTimeout(() => {
 			fiveMax.value = index1
@@ -642,9 +674,11 @@ function findHandle(index) {
 	}
 	if (index == 5) {
 		if (arr[0] == sixMaxLast.value || arr[0] == sixAmountMaxLast.value || arr[0] == sixAmountMinLast.value) {
-			orderNumber6.value ++
-		} else {
 			orderNumber6.value = 0
+			orderNumberNext6.value ++
+		} else {
+			orderNumber6.value ++
+			orderNumberNext6.value = 0
 		}
 		// setTimeout(() => {
 			sixMax.value = index1
@@ -662,9 +696,11 @@ function findHandle(index) {
 		// }, 500)
 	} else if (index == 6) {
 		if (arr[0] == sevenMaxLast.value || arr[0] == sevenAmountMaxLast.value || arr[0] == sevenAmountMinLast.value) {
-			orderNumber7.value ++
-		} else {
 			orderNumber7.value = 0
+			orderNumberNext7.value ++
+		} else {
+			orderNumber7.value ++
+			orderNumberNext7.value = 0
 		}
 		// setTimeout(() => {
 			sevenMax.value = index1
@@ -684,9 +720,11 @@ function findHandle(index) {
 	}
 	if (index == 7) {
 		if (arr[0] == eightMaxLast.value || arr[0] == eightAmountMaxLast.value || arr[0] == eightAmountMinLast.value) {
-			orderNumber8.value ++
-		} else {
 			orderNumber8.value = 0
+			orderNumberNext8.value ++
+		} else {
+			orderNumber8.value ++
+			orderNumberNext8.value = 0
 		}
 		// setTimeout(() => {
 			eightMax.value = index1
@@ -706,9 +744,11 @@ function findHandle(index) {
 	}
 	if (index == 8) {
 		if (arr[0] == nightMaxLast.value || arr[0] == nightAmountMaxLast.value || arr[0] == nightAmountMinLast.value) {
-			orderNumber9.value ++
-		} else {
 			orderNumber9.value = 0
+			orderNumberNext9.value ++
+		} else {
+			orderNumber9.value ++
+			orderNumberNext9.value = 0
 		}
 		// setTimeout(() => {
 			nightMax.value = index1
@@ -728,9 +768,11 @@ function findHandle(index) {
 	}
 	if (index == 9) {
 		if (arr[0] == tenMaxLast.value || arr[0] == tenAmountMaxLast.value || arr[0] == tenAmountMinLast.value) {
-			orderNumber10.value ++
-		} else {
 			orderNumber10.value = 0
+			orderNumberNext10.value ++
+		} else {
+			orderNumber10.value ++
+			orderNumberNext10.value = 0
 		}
 		// setTimeout(() => {
 			tenMax.value = index1
@@ -861,6 +903,11 @@ function find(arr, item) {
 					text-align: center;
 					width: 23%;
 					color: blue;
+				}
+				&.red {
+					.item {
+						color: #f00;
+					}
 				}
 			}
 			.result {
