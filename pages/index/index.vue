@@ -13,35 +13,38 @@
 			<view class="left">
 				<view class="line"></view>
 				<view class="data">
-					<view class="data1">
+					<view class="data-item data1">
 						<view :class="index == arr1.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr1" :key="index">{{ item }}</view>
 					</view>
-					<view class="data2">
+					<view class="data-item data2">
 						<view :class="index == arr2.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr2" :key="index">{{ item }}</view>
 					</view>
-					<view class="data3">
+					<view class="data-item data3">
 						<view :class="index == arr3.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr3" :key="index">{{ item }}</view>
 					</view>
-					<view class="data4">
+					<view class="data-item data4">
 						<view :class="index == arr4.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr4" :key="index">{{ item }}</view>
 					</view>
-					<view class="data5">
+					<view class="data-item data5">
 						<view :class="index == arr5.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr5" :key="index">{{ item }}</view>
 					</view>
-					<view class="data6">
+					<view class="data-item data6">
 						<view :class="index == arr6.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr6" :key="index">{{ item }}</view>
 					</view>
-					<view class="data7">
+					<view class="data-item data7">
 						<view :class="index == arr7.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr7" :key="index">{{ item }}</view>
 					</view>
-					<view class="data8">
+					<view class="data-item data8">
 						<view :class="index == arr8.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr8" :key="index">{{ item }}</view>
 					</view>
-					<view class="data9">
+					<view class="data-item data9">
 						<view :class="index == arr9.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr9" :key="index">{{ item }}</view>
 					</view>
-					<view class="data10">
+					<view class="data-item data10">
 						<view :class="index == arr10.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr10" :key="index">{{ item }}</view>
+					</view>
+					<view class="data-item data11">
+						<view :class="index == arr11.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arr11" :key="index">{{ item }}</view>
 					</view>
 				</view>
 			</view>
@@ -59,30 +62,30 @@
 					<div class="item">0</div>
 				</div>
 				<div class="times">
-					<div class="item">{{ orderNumber1 }}</div>
-					<div class="item">{{ orderNumber2 }}</div>
-					<div class="item">{{ orderNumber3 }}</div>
-					<div class="item">{{ orderNumber4 }}</div>
-					<div class="item">{{ orderNumber5 }}</div>
-					<div class="item">{{ orderNumber6 }}</div>
-					<div class="item">{{ orderNumber7 }}</div>
-					<div class="item">{{ orderNumber8 }}</div>
-					<div class="item">{{ orderNumber9 }}</div>
-					<div class="item">{{ orderNumber10 }}</div>
+					<div class="item">{{ rightNum1 }}</div>
+					<div class="item">{{ rightNum2 }}</div>
+					<div class="item">{{ rightNum3 }}</div>
+					<div class="item">{{ rightNum4 }}</div>
+					<div class="item">{{ rightNum5 }}</div>
+					<div class="item">{{ rightNum6 }}</div>
+					<div class="item">{{ rightNum7 }}</div>
+					<div class="item">{{ rightNum8 }}</div>
+					<div class="item">{{ rightNum9 }}</div>
+					<div class="item">{{ rightNum10 }}</div>
 				</div>
 				<div class="times red">
-					<div class="item">{{ orderNumberNext1 }}</div>
-					<div class="item">{{ orderNumberNext2 }}</div>
-					<div class="item">{{ orderNumberNext3 }}</div>
-					<div class="item">{{ orderNumberNext4 }}</div>
-					<div class="item">{{ orderNumberNext5 }}</div>
-					<div class="item">{{ orderNumberNext6 }}</div>
-					<div class="item">{{ orderNumberNext7 }}</div>
-					<div class="item">{{ orderNumberNext8 }}</div>
-					<div class="item">{{ orderNumberNext9 }}</div>
-					<div class="item">{{ orderNumberNext10 }}</div>
+					<div class="item">{{ wrongNum1 }}</div>
+					<div class="item">{{ wrongNum2 }}</div>
+					<div class="item">{{ wrongNum3 }}</div>
+					<div class="item">{{ wrongNum4 }}</div>
+					<div class="item">{{ wrongNum5 }}</div>
+					<div class="item">{{ wrongNum6 }}</div>
+					<div class="item">{{ wrongNum7 }}</div>
+					<div class="item">{{ wrongNum8 }}</div>
+					<div class="item">{{ wrongNum9 }}</div>
+					<div class="item">{{ wrongNum10 }}</div>
 				</div>
-				<view class="result">
+				<!-- <view class="result">
 					<view class="result1">
 						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
@@ -113,7 +116,7 @@
 					<view class="result10">
 						<view :class="(index == tenMax || index == tenMin || index == tenAmountMax || index == tenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
-				</view>
+				</view> -->
 			</view>
 		</view>
 	</view>
@@ -135,6 +138,59 @@ const arr7 = ref([])
 const arr8 = ref([])
 const arr9 = ref([])
 const arr10 = ref([])
+const arr11 = ref([])
+
+let isRight1 = false
+let isRight1Prev = ref(true)
+let rightNum1 = ref(0)
+let wrongNum1 = ref(0)
+
+let isRight2 = false
+let isRight2Prev = false
+let rightNum2 = ref(0)
+let wrongNum2 = ref(0)
+
+let isRight3 = false
+let isRight3Prev = false
+let rightNum3 = ref(0)
+let wrongNum3 = ref(0)
+
+let isRight4 = false
+let isRight4Prev = false
+let rightNum4 = ref(0)
+let wrongNum4 = ref(0)
+
+let isRight5 = false
+let isRight5Prev = false
+let rightNum5 = ref(0)
+let wrongNum5 = ref(0)
+
+let isRight6 = false
+let isRight6Prev = false
+let rightNum6 = ref(0)
+let wrongNum6 = ref(0)
+
+let isRight7 = false
+let isRight7Prev = false
+let rightNum7 = ref(0)
+let wrongNum7 = ref(0)
+
+let isRight8 = false
+let isRight8Prev = false
+let rightNum8 = ref(0)
+let wrongNum8 = ref(0)
+
+let isRight9 = false
+let isRight9Prev = false
+let rightNum9 = ref(0)
+let wrongNum9 = ref(0)
+
+let isRight10 = false
+let isRight10Prev = false
+let rightNum10 = ref(0)
+let wrongNum10 = ref(0)
+
+
 const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const oneMax = ref(-1)
 const oneMax2 = ref(-1)
@@ -333,7 +389,7 @@ onLoad(() => {
 
 /* methods */
 function setValueHandle() {
-	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined') {
+	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
@@ -344,6 +400,7 @@ function setValueHandle() {
 		arr8.value.unshift(num.value[7]);
 		arr9.value.unshift(num.value[8]);
 		arr10.value.unshift(num.value[9]);
+		arr11.value.unshift(num.value[10]);
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
 		}
@@ -373,6 +430,9 @@ function setValueHandle() {
 		}
 		if (arr10.value.length > 20) {
 			arr10.value.pop()
+		}
+		if (arr11.value.length > 20) {
+			arr11.value.pop()
 		}
 		num.value = ''
 		setStorage()
@@ -409,11 +469,6 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(10)
 		}, 1000)
-		// nextTick(() => {
-		//   if (oneAmountMin.value == twoAmountMin.value) {
-		//   	twoAmountMin.value = twoAmountMax.value
-		//   }
-		// })
 	}
 }
 function clearValueHandle() {
@@ -427,6 +482,7 @@ function clearValueHandle() {
 	arr8.value.shift()
 	arr9.value.shift()
 	arr10.value.shift()
+	arr11.value.shift()
 	setStorage()
 	setTimeout(() => {
 		findHandle(0)
@@ -473,6 +529,7 @@ function setStorage() {
 	uni.setStorageSync('arr8', JSON.stringify(arr8.value))
 	uni.setStorageSync('arr9', JSON.stringify(arr9.value))
 	uni.setStorageSync('arr10', JSON.stringify(arr10.value))
+	uni.setStorageSync('arr11', JSON.stringify(arr11.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -486,6 +543,7 @@ function getData() {
 		arr8.value = JSON.parse(uni.getStorageSync('arr8'))
 		arr9.value = JSON.parse(uni.getStorageSync('arr9'))
 		arr10.value = JSON.parse(uni.getStorageSync('arr10'))
+		arr11.value = JSON.parse(uni.getStorageSync('arr11'))
 	}
 }
 function findMaxMin(arr){
@@ -506,289 +564,375 @@ function findMaxMin(arr){
 function findHandle(index) {
 	let arr = []
 	if (index == 0) {
-		arr = JSON.parse(JSON.stringify(arr1.value))
+		arr = JSON.parse(JSON.stringify(arr1.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum1.value = 0
+		wrongNum1.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum1.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum1.value ++
+					} else {
+						rightNum1.value = 1
+					}
+				} else {
+					rightNum1.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum1.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum1.value = 1
+					} else {
+						wrongNum1.value ++
+					}
+				} else {
+					wrongNum1.value ++
+				}
+			}
+		})
 	} else if(index == 1) {
-		arr = JSON.parse(JSON.stringify(arr2.value))
+		arr = JSON.parse(JSON.stringify(arr2.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum2.value = 0
+		wrongNum2.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum2.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum2.value ++
+					} else {
+						rightNum2.value = 1
+					}
+				} else {
+					rightNum2.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum2.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum2.value = 1
+					} else {
+						wrongNum2.value ++
+					}
+				} else {
+					wrongNum2.value ++
+				}
+			}
+		})
 	} else if (index == 2) {
-		arr = JSON.parse(JSON.stringify(arr3.value))
+		arr = JSON.parse(JSON.stringify(arr3.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum3.value = 0
+		wrongNum3.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum3.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum3.value ++
+					} else {
+						rightNum3.value = 1
+					}
+				} else {
+					rightNum3.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum3.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum3.value = 1
+					} else {
+						wrongNum3.value ++
+					}
+				} else {
+					wrongNum3.value ++
+				}
+			}
+		})
 	} else if (index == 3) {
-		arr = JSON.parse(JSON.stringify(arr4.value))
+		arr = JSON.parse(JSON.stringify(arr4.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum4.value = 0
+		wrongNum4.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum4.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum4.value ++
+					} else {
+						rightNum4.value = 1
+					}
+				} else {
+					rightNum4.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum4.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum4.value = 1
+					} else {
+						wrongNum4.value ++
+					}
+				} else {
+					wrongNum4.value ++
+				}
+			}
+		})
 	} else if (index == 4) {
-		arr = JSON.parse(JSON.stringify(arr5.value))
+		arr = JSON.parse(JSON.stringify(arr5.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum5.value = 0
+		wrongNum5.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum5.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum5.value ++
+					} else {
+						rightNum5.value = 1
+					}
+				} else {
+					rightNum5.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum5.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum5.value = 1
+					} else {
+						wrongNum5.value ++
+					}
+				} else {
+					wrongNum5.value ++
+				}
+			}
+		})
 	} else if (index == 5) {
-		arr = JSON.parse(JSON.stringify(arr6.value))
+		arr = JSON.parse(JSON.stringify(arr6.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum6.value = 0
+		wrongNum6.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum6.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum6.value ++
+					} else {
+						rightNum6.value = 1
+					}
+				} else {
+					rightNum6.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum6.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum6.value = 1
+					} else {
+						wrongNum6.value ++
+					}
+				} else {
+					wrongNum6.value ++
+				}
+			}
+		})
 	} else if (index == 6) {
-		arr = JSON.parse(JSON.stringify(arr7.value))
+		arr = JSON.parse(JSON.stringify(arr7.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum7.value = 0
+		wrongNum7.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum7.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum7.value ++
+					} else {
+						rightNum7.value = 1
+					}
+				} else {
+					rightNum7.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum7.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum7.value = 1
+					} else {
+						wrongNum7.value ++
+					}
+				} else {
+					wrongNum7.value ++
+				}
+			}
+		})
 	} else if (index == 7) {
-		arr = JSON.parse(JSON.stringify(arr8.value))
+		arr = JSON.parse(JSON.stringify(arr8.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum8.value = 0
+		wrongNum8.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum8.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum8.value ++
+					} else {
+						rightNum8.value = 1
+					}
+				} else {
+					rightNum8.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum8.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum8.value = 1
+					} else {
+						wrongNum8.value ++
+					}
+				} else {
+					wrongNum8.value ++
+				}
+			}
+		})
 	} else if (index == 8) {
-		arr = JSON.parse(JSON.stringify(arr9.value))
+		arr = JSON.parse(JSON.stringify(arr9.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum9.value = 0
+		wrongNum9.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum9.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum9.value ++
+					} else {
+						rightNum9.value = 1
+					}
+				} else {
+					rightNum9.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum9.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum9.value = 1
+					} else {
+						wrongNum9.value ++
+					}
+				} else {
+					wrongNum9.value ++
+				}
+			}
+		})
 	} else if (index == 9) {
-		arr = JSON.parse(JSON.stringify(arr10.value))
-	}
-	let arrRes = []
-	for(let i = 0; i < 10; i++) {
-		arrRes.push(find(arr, i.toString()))
-	}
-	let max = Math.max(...arrRes)
-	let index1 = arrRes.map(item => item).indexOf(max)
-	let temp = arrRes[index1]
-	arrRes[index1] = -1
-	let max2 = Math.max(...arrRes)
-	let index2 = arrRes.map(item => item).indexOf(max2)
-	let temp2 = arrRes[index2]
-	arrRes[index2] = -1
-	let max3 = Math.max(...arrRes)
-	let index3 = arrRes.map(item => item).indexOf(max3)
-	arrRes[index1] = temp
-	arrRes[index2] = temp2
-	let min = Math.min(...arrRes)
-	let index4 = arrRes.map(item => item).indexOf(min)
-	let temp3 = arrRes[index4]
-	arrRes[index4] = 21
-	let min2 = Math.min(...arrRes)
-	let index5 = arrRes.map(item => item).indexOf(min2)
-	arrRes[index4] = temp3
-	let objMaxMin = findMaxMin(arr)
-	if (index1 == objMaxMin.max || index1 == objMaxMin.min) {
-		index1 = index2
-	}
-	if (index4 == objMaxMin.max || index4 == objMaxMin.min) {
-		index4 = index5
-	}
-	if (index == 0) {
-		if (arr[0] == oneMaxLast.value || arr[0] == oneMinLast.value || arr[0] == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value) {
-			orderNumber1.value ++
-			orderNumberNext1.value = 0
-		} else {
-			orderNumber1.value = 0
-			orderNumberNext1.value ++
-		}
-		// setTimeout(() => {
-			oneMax.value = index1
-			oneMax2.value = index2
-			oneMax3.value = index3
-			oneMin.value = index4
-			oneMin2.value = index5
-			oneAmountMax.value = objMaxMin.max
-			oneAmountMin.value = objMaxMin.min
-			oneMaxLast.value = oneMax.value
-			oneMinLast.value = oneMin.value
-			oneAmountMaxLast.value = oneAmountMax.value
-			oneAmountMinLast.value = oneAmountMin.value
-			console.log(orderNumber1.value)
-		// }, 500)
-		return
-	}
-	if (index == 1) {
-		if (arr[0] == twoMaxLast.value || arr[0] == twoMinLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value) {
-			orderNumber2.value ++
-			orderNumberNext2.value = 0
-		} else {
-			orderNumber2.value = 0
-			orderNumberNext2.value ++
-		}
-		// setTimeout(()=> {
-			twoMax.value = index1
-			twoMax2.value = index2
-			twoMax3.value = index3
-			twoMin.value = index4
-			twoMin2.value = index5
-			twoAmountMax.value = objMaxMin.max
-			twoAmountMin.value = objMaxMin.min
-			twoMaxLast.value = twoMax.value
-			twoMinLast.value = twoMin.value
-			twoAmountMaxLast.value = twoAmountMax.value
-			twoAmountMinLast.value = twoAmountMin.value
-			console.log(orderNumber2.value)
-		// }, 500)
-	} else if (index == 2) {
-		if (arr[0] == threeMaxLast.value || arr[0] == threeMinLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value) {
-			orderNumber3.value ++
-			orderNumberNext3.value = 0
-		} else {
-			orderNumber3.value = 0
-			orderNumberNext3.value ++
-		}
-		// setTimeout(() => {
-			threeMax.value = index1
-			threeMax2.value = index2
-			threeMax3.value = index3
-			threeMin.value = index4
-			threeMin2.value = index5
-			threeAmountMax.value = objMaxMin.max
-			threeAmountMin.value = objMaxMin.min
-			threeMaxLast.value = threeMax.value
-			threeMinLast.value = threeMin.value
-			threeAmountMaxLast.value = threeAmountMax.value
-			threeAmountMinLast.value = threeAmountMin.value
-			console.log(orderNumber3.value)
-		// }, 500)
-		return
-	}
-	if (index == 3) {
-		if (arr[0] == fourMaxLast.value || arr[0] == fourMinLast.value || arr[0] == fourAmountMaxLast.value || arr[0] == fourAmountMinLast.value) {
-			orderNumber4.value ++
-			orderNumberNext4.value = 0
-		} else {
-			orderNumber4.value = 0
-			orderNumberNext4.value ++
-		}
-		// setTimeout(() => {
-			fourMax.value = index1
-			fourMax2.value = index2
-			fourMax3.value = index3
-			fourMin.value = index4
-			fourMin2.value = index5
-			fourAmountMax.value = objMaxMin.max
-			fourAmountMin.value = objMaxMin.min
-			fourMaxLast.value = fourMax.value
-			fourMinLast.value = fourMin.value
-			fourAmountMaxLast.value = fourAmountMax.value
-			fourAmountMinLast.value = fourAmountMin.value
-			console.log(orderNumber4.value)
-		// }, 500)
-	} else if (index == 4) {
-		if (arr[0] == fiveMaxLast.value || arr[0] == fiveMinLast.value || arr[0] == fiveAmountMaxLast.value || arr[0] == fiveAmountMinLast.value) {
-			orderNumber5.value ++
-			orderNumberNext5.value = 0
-		} else {
-			orderNumber5.value = 0
-			orderNumberNext5.value ++
-		}
-		// setTimeout(() => {
-			fiveMax.value = index1
-			fiveMax2.value = index2
-			fiveMax3.value = index3
-			fiveMin.value = index4
-			fiveMin2.value = index5
-			fiveAmountMax.value = objMaxMin.max
-			fiveAmountMin.value = objMaxMin.min
-			fiveMaxLast.value = fiveMax.value
-			fiveMinLast.value = fiveMin.value
-			fiveAmountMaxLast.value = fiveAmountMax.value
-			fiveAmountMinLast.value = fiveAmountMin.value
-			console.log(orderNumber5.value)
-		// }, 500)
-		return
-	}
-	if (index == 5) {
-		if (arr[0] == sixMaxLast.value || arr[0] == sixMinLast.value || arr[0] == sixAmountMaxLast.value || arr[0] == sixAmountMinLast.value) {
-			orderNumber6.value ++
-			orderNumberNext6.value = 0
-		} else {
-			orderNumber6.value = 0
-			orderNumberNext6.value ++
-		}
-		// setTimeout(() => {
-			sixMax.value = index1
-			sixMax2.value = index2
-			sixMax3.value = index3
-			sixMin.value = index4
-			sixMin2.value = index5
-			sixAmountMax.value = objMaxMin.max
-			sixAmountMin.value = objMaxMin.min
-			sixMaxLast.value = sixMax.value
-			sixMinLast.value = sixMin.value
-			sixAmountMaxLast.value = sixAmountMax.value
-			sixAmountMinLast.value = sixAmountMin.value
-			console.log(orderNumber6.value)
-		// }, 500)
-	} else if (index == 6) {
-		if (arr[0] == sevenMaxLast.value || arr[0] == sevenMinLast.value || arr[0] == sevenAmountMaxLast.value || arr[0] == sevenAmountMinLast.value) {
-			orderNumber7.value ++
-			orderNumberNext7.value = 0
-		} else {
-			orderNumber7.value = 0
-			orderNumberNext7.value ++
-		}
-		// setTimeout(() => {
-			sevenMax.value = index1
-			sevenMax2.value = index2
-			sevenMax3.value = index3
-			sevenMin.value = index4
-			sevenMin2.value = index5
-			sevenAmountMax.value = objMaxMin.max
-			sevenAmountMin.value = objMaxMin.min
-			sevenMaxLast.value = sevenMax.value
-			sevenMinLast.value = sevenMin.value
-			sevenAmountMaxLast.value = sevenAmountMax.value
-			sevenAmountMinLast.value = sevenAmountMin.value
-			console.log(orderNumber7.value)
-		// }, 500)
-		return
-	}
-	if (index == 7) {
-		if (arr[0] == eightMaxLast.value || arr[0] == eightMinLast.value || arr[0] == eightAmountMaxLast.value || arr[0] == eightAmountMinLast.value) {
-			orderNumber8.value ++
-			orderNumberNext8.value = 0
-		} else {
-			orderNumber8.value = 0
-			orderNumberNext8.value ++
-		}
-		// setTimeout(() => {
-			eightMax.value = index1
-			eightMax2.value = index2
-			eightMax3.value = index3
-			eightMin.value = index4
-			eightMin2.value = index5
-			eightAmountMax.value = objMaxMin.max
-			eightAmountMin.value = objMaxMin.min
-			eightMaxLast.value = eightMax.value
-			eightMinLast.value = eightMin.value
-			eightAmountMaxLast.value = eightAmountMax.value
-			eightAmountMinLast.value = eightAmountMin.value
-			console.log(orderNumber8.value)
-		// }, 500)
-		return
-	}
-	if (index == 8) {
-		if (arr[0] == nightMaxLast.value || arr[0] == nightMinLast.value || arr[0] == nightAmountMaxLast.value || arr[0] == nightAmountMinLast.value) {
-			orderNumber9.value ++
-			orderNumberNext9.value = 0
-		} else {
-			orderNumber9.value = 0
-			orderNumberNext9.value ++
-		}
-		// setTimeout(() => {
-			nightMax.value = index1
-			nightMax2.value = index2
-			nightMax3.value = index3
-			nightMin.value = index4
-			nightMin2.value = index5
-			nightAmountMax.value = objMaxMin.max
-			nightAmountMin.value = objMaxMin.min
-			nightMaxLast.value = nightMax.value
-			nightMinLast.value = nightMin.value
-			nightAmountMaxLast.value = nightAmountMax.value
-			nightAmountMinLast.value = nightAmountMin.value
-			console.log(orderNumber9.value)
-		// }, 500)
-		return
-	}
-	if (index == 9) {
-		if (arr[0] == tenMaxLast.value || arr[0] == tenMinLast.value || arr[0] == tenAmountMaxLast.value || arr[0] == tenAmountMinLast.value) {
-			orderNumber10.value ++
-			orderNumberNext10.value = 0
-		} else {
-			orderNumber10.value = 0
-			orderNumberNext10.value ++
-		}
-		// setTimeout(() => {
-			tenMax.value = index1
-			tenMax2.value = index2
-			tenMax3.value = index3
-			tenMin.value = index4
-			tenMin2.value = index5
-			tenAmountMax.value = objMaxMin.max
-			tenAmountMin.value = objMaxMin.min
-			tenMaxLast.value = tenMax.value
-			tenMinLast.value = tenMin.value
-			tenAmountMaxLast.value = tenAmountMax.value
-			tenAmountMinLast.value = tenAmountMin.value
-			console.log(orderNumber10.value)
-		// }, 500)
-		return
+		arr = JSON.parse(JSON.stringify(arr10.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		rightNum10.value = 0
+		wrongNum10.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum10.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum10.value ++
+					} else {
+						rightNum10.value = 1
+					}
+				} else {
+					rightNum10.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum10.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum10.value = 1
+					} else {
+						wrongNum10.value ++
+					}
+				} else {
+					wrongNum10.value ++
+				}
+			}
+		})
 	}
 }
 function find(arr, item) {
@@ -849,24 +993,29 @@ function find(arr, item) {
 		padding: 10rpx;
 		display: flex;
 		.left {
-			width: 50%;
-			padding: 10rpx;
+			width: 55%;
 			box-sizing: border-box;
 			position: relative;
 			.data {
 				display: flex;
-				justify-content: space-around;
 				box-sizing: border-box;
-				width: 84%;
-				padding-left: 20rpx;
+				width: 100%;
+				padding-left: 10rpx;
 				.item {
-					padding: 4rpx 2rpx;
+					width: 12px;
+					height: 20px;
+					text-align: center;
+					line-height: 20px;
+					min-width: 4px;
 					font-size: 24rpx;
 					border: 1px solid #3a73d9;
-					margin-right: 10rpx;
 					border-bottom: none;
+					margin-right: 4px;
 					&.end {
 						border-bottom: 1px solid #3a73d9;;
+					}
+					&.data-end {
+						background-color: #ccc;
 					}
 				}
 			}
@@ -875,31 +1024,31 @@ function find(arr, item) {
 				height: 600rpx;
 				background-color: #ccc;
 				position: absolute;
-				right: 25rpx;
-				top: 150rpx;
+				right: 20rpx;
+				top: 0rpx;
 				border-radius: 1rpx;
 			}
 		}
 		.right {
 			padding: 10rpx;
-			width: 50%;
+			width: 45%;
 			position: relative;
-			top: -60rpx;
+			top: -26rpx;
+			left: -5px;
 			box-sizing: border-box;
 			.order {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 10rpx 10rpx 0;
+					padding: 8rpx 8rpx 5rpx;
 					text-align: center;
-					width: 23%;
 				}
 			}
 			.times {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 10rpx 10rpx 5px;
+					padding: 8rpx 8rpx 5rpx;
 					text-align: center;
 					width: 23%;
 					color: blue;
