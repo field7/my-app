@@ -3,8 +3,22 @@
 		<view class="operate">
 			<view class="input">
 				<input type="number" v-model="num"/>
+				<!-- <div class="order">
+					<div class="order-item">1</div>
+					<div class="order-item">2</div>
+					<div class="order-item">3</div>
+					<div class="order-item">4</div>
+					<div class="order-item">5</div>
+					<div class="order-item">6</div>
+					<div class="order-item">7</div>
+					<div class="order-item">8</div>
+					<div class="order-item">9</div>
+					<div class="order-item">10</div>
+					<div class="order-item">11</div>
+				</div> -->
 			</view>
 			<view class="button">
+				<view class="btn btn3" @click="getRnd">获取</view>
 				<view class="btn btn1" @click="setValueHandle">提交</view>
 				<view class="btn btn2" @click="clearValueHandle">清除</view>
 			</view>
@@ -388,6 +402,19 @@ onLoad(() => {
 })
 
 /* methods */
+function rnd(n, m){
+	return parseInt(Math.random() * ( m - n + 1 ) + n);
+}
+
+function getRnd() {
+	let arr = []
+	for (let i = 0; i < 10; i++) {
+		let nb = rnd(0, 1)
+		arr.push(nb)
+	}
+	num.value = arr.join('')
+}
+
 function setValueHandle() {
 	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined') {
 		arr1.value.unshift(num.value[0]);
@@ -959,6 +986,16 @@ function find(arr, item) {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
 				font-size: 60rpx;
+				letter-spacing: 20px;
+			}
+			.order {
+				display: flex;
+				position: absolute;
+				left: 12px;
+				top: 0;
+				.order-item {
+					padding: 0 2px;
+				}
 			}
 		}
 		.button {
@@ -978,7 +1015,7 @@ function find(arr, item) {
 				line-height: 66rpx;
 			}
 			.btn1 {
-				width: 70%;
+				width: 35%;
 				background-color: #ff0000;
 			}
 			.btn2 {
@@ -986,6 +1023,10 @@ function find(arr, item) {
 				line-height: 54rpx;
 				width: 28%;
 				font-size: 24rpx;
+			}
+			.btn3 {
+				width: 35%;
+				background-color: #ff0000;
 			}
 		}
 	}
