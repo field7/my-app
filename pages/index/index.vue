@@ -99,6 +99,31 @@
 					<div class="item">{{ wrongNum9 }}</div>
 					<div class="item">{{ wrongNum10 }}</div>
 				</div>
+				<div style="height: 20px;"></div>
+				<div class="times">
+					<div class="item">{{ rightNum11 }}</div>
+					<div class="item">{{ rightNum12 }}</div>
+					<div class="item">{{ rightNum13 }}</div>
+					<div class="item">{{ rightNum14 }}</div>
+					<div class="item">{{ rightNum15 }}</div>
+					<div class="item">{{ rightNum16 }}</div>
+					<div class="item">{{ rightNum17 }}</div>
+					<div class="item">{{ rightNum18 }}</div>
+					<div class="item">{{ rightNum19 }}</div>
+					<div class="item">{{ rightNum20 }}</div>
+				</div>
+				<div class="times red">
+					<div class="item">{{ wrongNum11 }}</div>
+					<div class="item">{{ wrongNum12 }}</div>
+					<div class="item">{{ wrongNum13 }}</div>
+					<div class="item">{{ wrongNum14 }}</div>
+					<div class="item">{{ wrongNum15 }}</div>
+					<div class="item">{{ wrongNum16 }}</div>
+					<div class="item">{{ wrongNum17 }}</div>
+					<div class="item">{{ wrongNum18 }}</div>
+					<div class="item">{{ wrongNum19 }}</div>
+					<div class="item">{{ wrongNum20 }}</div>
+				</div>
 				<!-- <view class="result">
 					<view class="result1">
 						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
@@ -153,6 +178,16 @@ const arr8 = ref([])
 const arr9 = ref([])
 const arr10 = ref([])
 const arr11 = ref([])
+const arr12 = ref([])
+const arr13 = ref([])
+const arr14 = ref([])
+const arr15 = ref([])
+const arr16 = ref([])
+const arr17 = ref([])
+const arr18 = ref([])
+const arr19 = ref([])
+const arr20 = ref([])
+const arr21 = ref([])
 
 let isRight1 = false
 let isRight1Prev = ref(true)
@@ -203,6 +238,36 @@ let isRight10 = false
 let isRight10Prev = false
 let rightNum10 = ref(0)
 let wrongNum10 = ref(0)
+
+let rightNum11 = ref(0)
+let wrongNum11 = ref(0)
+
+let rightNum12 = ref(0)
+let wrongNum12 = ref(0)
+
+let rightNum13 = ref(0)
+let wrongNum13 = ref(0)
+
+let rightNum14 = ref(0)
+let wrongNum14 = ref(0)
+
+let rightNum15 = ref(0)
+let wrongNum15 = ref(0)
+
+let rightNum16 = ref(0)
+let wrongNum16 = ref(0)
+
+let rightNum17 = ref(0)
+let wrongNum17 = ref(0)
+
+let rightNum18 = ref(0)
+let wrongNum18 = ref(0)
+
+let rightNum19 = ref(0)
+let wrongNum19 = ref(0)
+
+let rightNum20 = ref(0)
+let wrongNum20 = ref(0)
 
 
 const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -394,6 +459,33 @@ onLoad(() => {
 	setTimeout(() => {
 		findHandle(10)
 	}, 1000)
+	setTimeout(() => {
+		findHandle(11)
+	}, 1100)
+	setTimeout(() => {
+		findHandle(12)
+	}, 1200)
+	setTimeout(() => {
+		findHandle(13)
+	}, 1300)
+	setTimeout(() => {
+		findHandle(14)
+	}, 1400)
+	setTimeout(() => {
+		findHandle(15)
+	}, 1500)
+	setTimeout(() => {
+		findHandle(16)
+	}, 1600)
+	setTimeout(() => {
+		findHandle(17)
+	}, 1700)
+	setTimeout(() => {
+		findHandle(18)
+	}, 1800)
+	setTimeout(() => {
+		findHandle(19)
+	}, 1900)
 	// nextTick(() => {
 	//   if (oneAmountMin.value == twoAmountMin.value) {
 	//   	twoAmountMin.value = twoAmountMax.value
@@ -408,7 +500,7 @@ function rnd(n, m){
 
 function getRnd() {
 	let arr = []
-	for (let i = 0; i < 10; i++) {
+	for (let i = 0; i < 20; i++) {
 		let nb = rnd(0, 1)
 		arr.push(nb)
 	}
@@ -416,7 +508,10 @@ function getRnd() {
 }
 
 function setValueHandle() {
-	if (typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined') {
+	if (
+		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
+		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined'
+	) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
@@ -428,6 +523,17 @@ function setValueHandle() {
 		arr9.value.unshift(num.value[8]);
 		arr10.value.unshift(num.value[9]);
 		arr11.value.unshift(num.value[10]);
+		arr12.value.unshift(num.value[11]);
+		arr13.value.unshift(num.value[12]);
+		arr14.value.unshift(num.value[13]);
+		arr15.value.unshift(num.value[14]);
+		arr16.value.unshift(num.value[15]);
+		arr17.value.unshift(num.value[16]);
+		arr18.value.unshift(num.value[17]);
+		arr19.value.unshift(num.value[18]);
+		arr20.value.unshift(num.value[19]);
+		arr21.value.unshift(num.value[20]);
+
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
 		}
@@ -460,6 +566,36 @@ function setValueHandle() {
 		}
 		if (arr11.value.length > 20) {
 			arr11.value.pop()
+		}
+		if (arr12.value.length > 20) {
+			arr12.value.pop()
+		}
+		if (arr13.value.length > 20) {
+			arr13.value.pop()
+		}
+		if (arr14.value.length > 20) {
+			arr14.value.pop()
+		}
+		if (arr15.value.length > 20) {
+			arr15.value.pop()
+		}
+		if (arr16.value.length > 20) {
+			arr16.value.pop()
+		}
+		if (arr17.value.length > 20) {
+			arr17.value.pop()
+		}
+		if (arr18.value.length > 20) {
+			arr18.value.pop()
+		}
+		if (arr19.value.length > 20) {
+			arr19.value.pop()
+		}
+		if (arr20.value.length > 20) {
+			arr20.value.pop()
+		}
+		if (arr21.value.length > 20) {
+			arr21.value.pop()
 		}
 		num.value = ''
 		setStorage()
@@ -496,6 +632,33 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(10)
 		}, 1000)
+		setTimeout(() => {
+			findHandle(11)
+		}, 1100)
+		setTimeout(() => {
+			findHandle(12)
+		}, 1200)
+		setTimeout(() => {
+			findHandle(13)
+		}, 1300)
+		setTimeout(() => {
+			findHandle(14)
+		}, 1400)
+		setTimeout(() => {
+			findHandle(15)
+		}, 1500)
+		setTimeout(() => {
+			findHandle(16)
+		}, 1600)
+		setTimeout(() => {
+			findHandle(17)
+		}, 1700)
+		setTimeout(() => {
+			findHandle(18)
+		}, 1800)
+		setTimeout(() => {
+			findHandle(19)
+		}, 1900)
 	}
 }
 function clearValueHandle() {
@@ -510,6 +673,16 @@ function clearValueHandle() {
 	arr9.value.shift()
 	arr10.value.shift()
 	arr11.value.shift()
+	arr12.value.shift()
+	arr13.value.shift()
+	arr14.value.shift()
+	arr15.value.shift()
+	arr16.value.shift()
+	arr17.value.shift()
+	arr18.value.shift()
+	arr19.value.shift()
+	arr20.value.shift()
+	arr21.value.shift()
 	setStorage()
 	setTimeout(() => {
 		findHandle(0)
@@ -557,6 +730,16 @@ function setStorage() {
 	uni.setStorageSync('arr9', JSON.stringify(arr9.value))
 	uni.setStorageSync('arr10', JSON.stringify(arr10.value))
 	uni.setStorageSync('arr11', JSON.stringify(arr11.value))
+	uni.setStorageSync('arr12', JSON.stringify(arr12.value))
+	uni.setStorageSync('arr13', JSON.stringify(arr13.value))
+	uni.setStorageSync('arr14', JSON.stringify(arr14.value))
+	uni.setStorageSync('arr15', JSON.stringify(arr15.value))
+	uni.setStorageSync('arr16', JSON.stringify(arr16.value))
+	uni.setStorageSync('arr17', JSON.stringify(arr17.value))
+	uni.setStorageSync('arr18', JSON.stringify(arr18.value))
+	uni.setStorageSync('arr19', JSON.stringify(arr19.value))
+	uni.setStorageSync('arr20', JSON.stringify(arr20.value))
+	uni.setStorageSync('arr21', JSON.stringify(arr21.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -571,6 +754,16 @@ function getData() {
 		arr9.value = JSON.parse(uni.getStorageSync('arr9'))
 		arr10.value = JSON.parse(uni.getStorageSync('arr10'))
 		arr11.value = JSON.parse(uni.getStorageSync('arr11'))
+		arr12.value = JSON.parse(uni.getStorageSync('arr12'))
+		arr13.value = JSON.parse(uni.getStorageSync('arr13'))
+		arr14.value = JSON.parse(uni.getStorageSync('arr14'))
+		arr15.value = JSON.parse(uni.getStorageSync('arr15'))
+		arr16.value = JSON.parse(uni.getStorageSync('arr16'))
+		arr17.value = JSON.parse(uni.getStorageSync('arr17'))
+		arr18.value = JSON.parse(uni.getStorageSync('arr18'))
+		arr19.value = JSON.parse(uni.getStorageSync('arr19'))
+		arr20.value = JSON.parse(uni.getStorageSync('arr20'))
+		arr21.value = JSON.parse(uni.getStorageSync('arr21'))
 	}
 }
 function findMaxMin(arr){
@@ -597,7 +790,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum1.value = 0
 		wrongNum1.value = 0
 		arr.forEach((item, ind) => {
@@ -634,7 +827,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum2.value = 0
 		wrongNum2.value = 0
 		arr.forEach((item, ind) => {
@@ -671,7 +864,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum3.value = 0
 		wrongNum3.value = 0
 		arr.forEach((item, ind) => {
@@ -708,7 +901,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum4.value = 0
 		wrongNum4.value = 0
 		arr.forEach((item, ind) => {
@@ -745,7 +938,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum5.value = 0
 		wrongNum5.value = 0
 		arr.forEach((item, ind) => {
@@ -782,7 +975,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum6.value = 0
 		wrongNum6.value = 0
 		arr.forEach((item, ind) => {
@@ -819,7 +1012,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum7.value = 0
 		wrongNum7.value = 0
 		arr.forEach((item, ind) => {
@@ -856,7 +1049,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum8.value = 0
 		wrongNum8.value = 0
 		arr.forEach((item, ind) => {
@@ -893,7 +1086,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum9.value = 0
 		wrongNum9.value = 0
 		arr.forEach((item, ind) => {
@@ -930,7 +1123,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr11.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
 		rightNum10.value = 0
 		wrongNum10.value = 0
 		arr.forEach((item, ind) => {
@@ -960,6 +1153,376 @@ function findHandle(index) {
 				}
 			}
 		})
+	} else if (index == 10) {
+		arr = JSON.parse(JSON.stringify(arr11.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum11.value = 0
+		wrongNum11.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum11.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum11.value ++
+					} else {
+						rightNum11.value = 1
+					}
+				} else {
+					rightNum11.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum11.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum11.value = 1
+					} else {
+						wrongNum11.value ++
+					}
+				} else {
+					wrongNum11.value ++
+				}
+			}
+		})
+	} else if (index == 11) {
+		arr = JSON.parse(JSON.stringify(arr12.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum12.value = 0
+		wrongNum12.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum12.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum12.value ++
+					} else {
+						rightNum12.value = 1
+					}
+				} else {
+					rightNum12.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum12.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum12.value = 1
+					} else {
+						wrongNum12.value ++
+					}
+				} else {
+					wrongNum12.value ++
+				}
+			}
+		})
+	} else if (index == 12) {
+		arr = JSON.parse(JSON.stringify(arr13.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum13.value = 0
+		wrongNum13.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum13.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum13.value ++
+					} else {
+						rightNum13.value = 1
+					}
+				} else {
+					rightNum13.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum13.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum13.value = 1
+					} else {
+						wrongNum13.value ++
+					}
+				} else {
+					wrongNum13.value ++
+				}
+			}
+		})
+	} else if (index == 13) {
+		arr = JSON.parse(JSON.stringify(arr14.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum14.value = 0
+		wrongNum14.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum14.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum14.value ++
+					} else {
+						rightNum14.value = 1
+					}
+				} else {
+					rightNum14.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum14.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum14.value = 1
+					} else {
+						wrongNum14.value ++
+					}
+				} else {
+					wrongNum14.value ++
+				}
+			}
+		})
+	} else if (index == 14) {
+		arr = JSON.parse(JSON.stringify(arr15.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum15.value = 0
+		wrongNum15.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum15.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum15.value ++
+					} else {
+						rightNum15.value = 1
+					}
+				} else {
+					rightNum15.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum15.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum15.value = 1
+					} else {
+						wrongNum15.value ++
+					}
+				} else {
+					wrongNum15.value ++
+				}
+			}
+		})
+	} else if (index == 15) {
+		arr = JSON.parse(JSON.stringify(arr16.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum16.value = 0
+		wrongNum16.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum16.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum16.value ++
+					} else {
+						rightNum16.value = 1
+					}
+				} else {
+					rightNum16.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum16.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum16.value = 1
+					} else {
+						wrongNum16.value ++
+					}
+				} else {
+					wrongNum16.value ++
+				}
+			}
+		})
+	} else if (index == 16) {
+		arr = JSON.parse(JSON.stringify(arr17.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum17.value = 0
+		wrongNum17.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum17.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum17.value ++
+					} else {
+						rightNum17.value = 1
+					}
+				} else {
+					rightNum17.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum17.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum17.value = 1
+					} else {
+						wrongNum17.value ++
+					}
+				} else {
+					wrongNum17.value ++
+				}
+			}
+		})
+	} else if (index == 17) {
+		arr = JSON.parse(JSON.stringify(arr18.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum18.value = 0
+		wrongNum18.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum18.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum18.value ++
+					} else {
+						rightNum18.value = 1
+					}
+				} else {
+					rightNum18.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum18.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum18.value = 1
+					} else {
+						wrongNum18.value ++
+					}
+				} else {
+					wrongNum18.value ++
+				}
+			}
+		})
+	} else if (index == 18) {
+		arr = JSON.parse(JSON.stringify(arr19.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum19.value = 0
+		wrongNum19.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum19.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum19.value ++
+					} else {
+						rightNum19.value = 1
+					}
+				} else {
+					rightNum19.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum19.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum19.value = 1
+					} else {
+						wrongNum19.value ++
+					}
+				} else {
+					wrongNum19.value ++
+				}
+			}
+		})
+	} else if (index == 19) {
+		arr = JSON.parse(JSON.stringify(arr20.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		rightNum20.value = 0
+		wrongNum20.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum20.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum20.value ++
+					} else {
+						rightNum20.value = 1
+					}
+				} else {
+					rightNum20.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum20.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum20.value = 1
+					} else {
+						wrongNum20.value ++
+					}
+				} else {
+					wrongNum20.value ++
+				}
+			}
+		})
 	}
 }
 function find(arr, item) {
@@ -985,7 +1548,7 @@ function find(arr, item) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 60rpx;
+				font-size: 50rpx;
 				letter-spacing: 20px;
 			}
 			.order {
