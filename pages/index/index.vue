@@ -3,19 +3,6 @@
 		<view class="operate">
 			<view class="input">
 				<input type="number" v-model="num"/>
-				<!-- <div class="order">
-					<div class="order-item">1</div>
-					<div class="order-item">2</div>
-					<div class="order-item">3</div>
-					<div class="order-item">4</div>
-					<div class="order-item">5</div>
-					<div class="order-item">6</div>
-					<div class="order-item">7</div>
-					<div class="order-item">8</div>
-					<div class="order-item">9</div>
-					<div class="order-item">10</div>
-					<div class="order-item">11</div>
-				</div> -->
 			</view>
 			<view class="button">
 				<view class="btn btn3" @click="getRnd">获取</view>
@@ -27,38 +14,8 @@
 			<view class="left">
 				<view class="line"></view>
 				<view class="data">
-					<view class="data-item data1">
-						<view :class="index == arr1.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr1" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data2">
-						<view :class="index == arr2.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr2" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data3">
-						<view :class="index == arr3.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr3" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data4">
-						<view :class="index == arr4.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr4" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data5">
-						<view :class="index == arr5.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr5" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data6">
-						<view :class="index == arr6.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr6" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data7">
-						<view :class="index == arr7.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr7" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data8">
-						<view :class="index == arr8.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr8" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data9">
-						<view :class="index == arr9.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr9" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data10">
-						<view :class="index == arr10.length - 1 ? 'item end' : 'item'" v-for="(item, index) in arr10" :key="index">{{ item }}</view>
-					</view>
-					<view class="data-item data11">
-						<view :class="index == arr11.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arr11" :key="index">{{ item }}</view>
+					<view class="data-item">
+						<view :class="index == arr31.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arr31" :key="index">{{ item == 1 ? '大' : '小' }}</view>
 					</view>
 				</view>
 			</view>
@@ -99,7 +56,7 @@
 					<div class="item">{{ wrongNum9 }}</div>
 					<div class="item">{{ wrongNum10 }}</div>
 				</div>
-				<div style="height: 20px;"></div>
+				<div style="height: 10px;"></div>
 				<div class="times">
 					<div class="item">{{ rightNum11 }}</div>
 					<div class="item">{{ rightNum12 }}</div>
@@ -124,45 +81,78 @@
 					<div class="item">{{ wrongNum19 }}</div>
 					<div class="item">{{ wrongNum20 }}</div>
 				</div>
-				<!-- <view class="result">
-					<view class="result1">
-						<view :class="(index == oneMax || index == oneMin || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin || index == twoAmountMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result3">
-						<view :class="(index == threeMax || index == threeMin || index == threeAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result4">
-						<view :class="(index == fourMax || index == fourMin || index == fourAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result5">
-						<view :class="(index == fiveMax || index == fiveMin || index == fiveAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result6">
-						<view :class="(index == sixMax || index == sixMin || index == sixAmountMax || index == sixAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result7">
-						<view :class="(index == sevenMax || index == sevenMin || index == sevenAmountMax || index == sevenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result8">
-						<view :class="(index == eightMax || index == eightMin || index == eightAmountMax || index == eightAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result9">
-						<view :class="(index == nightMax || index == nightMin || index == nightAmountMax || index == nightAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-					<view class="result10">
-						<view :class="(index == tenMax || index == tenMin || index == tenAmountMax || index == tenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
-					</view>
-				</view> -->
+				<div style="height: 10px;"></div>
+				<div class="times">
+					<div class="item">{{ rightNum21 }}</div>
+					<div class="item">{{ rightNum22 }}</div>
+					<div class="item">{{ rightNum23 }}</div>
+					<div class="item">{{ rightNum24 }}</div>
+					<div class="item">{{ rightNum25 }}</div>
+					<div class="item">{{ rightNum26 }}</div>
+					<div class="item">{{ rightNum27 }}</div>
+					<div class="item">{{ rightNum28 }}</div>
+					<div class="item">{{ rightNum29 }}</div>
+					<div class="item">{{ rightNum30 }}</div>
+				</div>
+				<div class="times red">
+					<div class="item">{{ wrongNum21 }}</div>
+					<div class="item">{{ wrongNum22 }}</div>
+					<div class="item">{{ wrongNum23 }}</div>
+					<div class="item">{{ wrongNum24 }}</div>
+					<div class="item">{{ wrongNum25 }}</div>
+					<div class="item">{{ wrongNum26 }}</div>
+					<div class="item">{{ wrongNum27 }}</div>
+					<div class="item">{{ wrongNum28 }}</div>
+					<div class="item">{{ wrongNum29 }}</div>
+					<div class="item">{{ wrongNum30 }}</div>
+				</div>
+				<div style="height: 20px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[0] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[1] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[2] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[3] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[4] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[5] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[6] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[7] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[8] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[9] == '1' ? '大' : '小'}}</div>
+				</div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[10] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[11] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[12] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[13] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[14] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[15] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[16] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[17] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[18] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[19] == '1' ? '大' : '小'}}</div>
+				</div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[20] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[21] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[22] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[23] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[24] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[25] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[26] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[27] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[28] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[29] == '1' ? '大' : '小'}}</div>
+				</div>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script setup>
-import { ref, reactive, nextTick } from 'vue'
+import { ref, watch, reactive, nextTick } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 
 /* data */
@@ -188,54 +178,44 @@ const arr18 = ref([])
 const arr19 = ref([])
 const arr20 = ref([])
 const arr21 = ref([])
+const arr22 = ref([])
+const arr23 = ref([])
+const arr24 = ref([])
+const arr25 = ref([])
+const arr26 = ref([])
+const arr27 = ref([])
+const arr28 = ref([])
+const arr29 = ref([])
+const arr30 = ref([])
+const arr31 = ref([])
 
-let isRight1 = false
-let isRight1Prev = ref(true)
 let rightNum1 = ref(0)
 let wrongNum1 = ref(0)
 
-let isRight2 = false
-let isRight2Prev = false
 let rightNum2 = ref(0)
 let wrongNum2 = ref(0)
 
-let isRight3 = false
-let isRight3Prev = false
 let rightNum3 = ref(0)
 let wrongNum3 = ref(0)
 
-let isRight4 = false
-let isRight4Prev = false
 let rightNum4 = ref(0)
 let wrongNum4 = ref(0)
 
-let isRight5 = false
-let isRight5Prev = false
 let rightNum5 = ref(0)
 let wrongNum5 = ref(0)
 
-let isRight6 = false
-let isRight6Prev = false
 let rightNum6 = ref(0)
 let wrongNum6 = ref(0)
 
-let isRight7 = false
-let isRight7Prev = false
 let rightNum7 = ref(0)
 let wrongNum7 = ref(0)
 
-let isRight8 = false
-let isRight8Prev = false
 let rightNum8 = ref(0)
 let wrongNum8 = ref(0)
 
-let isRight9 = false
-let isRight9Prev = false
 let rightNum9 = ref(0)
 let wrongNum9 = ref(0)
 
-let isRight10 = false
-let isRight10Prev = false
 let rightNum10 = ref(0)
 let wrongNum10 = ref(0)
 
@@ -269,159 +249,42 @@ let wrongNum19 = ref(0)
 let rightNum20 = ref(0)
 let wrongNum20 = ref(0)
 
+let rightNum21 = ref(0)
+let wrongNum21 = ref(0)
 
-const numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-const oneMax = ref(-1)
-const oneMax2 = ref(-1)
-const oneMax3 = ref(-1)
-const oneMin = ref(-1)
-const oneMin2 = ref(-1)
-const twoMax = ref(-1)
-const twoMax2 = ref(-1)
-const twoMax3 = ref(-1)
-const twoMin = ref(-1)
-const twoMin2 = ref(-1)
-const threeMax = ref(-1)
-const threeMax2 = ref(-1)
-const threeMax3 = ref(-1)
-const threeMin = ref(-1)
-const threeMin2 = ref(-1)
-const fourMax = ref(-1)
-const fourMax2 = ref(-1)
-const fourMax3 = ref(-1)
-const fourMin = ref(-1)
-const fourMin2 = ref(-1)
-const fiveMax = ref(-1)
-const fiveMax2 = ref(-1)
-const fiveMax3 = ref(-1)
-const fiveMin = ref(-1)
-const fiveMin2 = ref(-1)
+let rightNum22 = ref(0)
+let wrongNum22 = ref(0)
 
-const sixMax = ref(-1)
-const sixMax2 = ref(-1)
-const sixMax3 = ref(-1)
-const sixMin = ref(-1)
-const sixMin2 = ref(-1)
+let rightNum23 = ref(0)
+let wrongNum23 = ref(0)
 
-const sevenMax = ref(-1)
-const sevenMax2 = ref(-1)
-const sevenMax3 = ref(-1)
-const sevenMin = ref(-1)
-const sevenMin2 = ref(-1)
+let rightNum24 = ref(0)
+let wrongNum24 = ref(0)
 
-const eightMax = ref(-1)
-const eightMax2 = ref(-1)
-const eightMax3 = ref(-1)
-const eightMin = ref(-1)
-const eightMin2 = ref(-1)
+let rightNum25 = ref(0)
+let wrongNum25 = ref(0)
 
-const nightMax = ref(-1)
-const nightMax2 = ref(-1)
-const nightMax3 = ref(-1)
-const nightMin = ref(-1)
-const nightMin2 = ref(-1)
+let rightNum26 = ref(0)
+let wrongNum26 = ref(0)
 
-const tenMax = ref(-1)
-const tenMax2 = ref(-1)
-const tenMax3 = ref(-1)
-const tenMin = ref(-1)
-const tenMin2 = ref(-1)
+let rightNum27 = ref(0)
+let wrongNum27 = ref(0)
 
-const oneAmountMax = ref(-1)
-const oneAmountMin = ref(-1)
-const twoAmountMax = ref(-1)
-const twoAmountMin = ref(-1)
-const threeAmountMax = ref(-1)
-const threeAmountMin = ref(-1)
-const fourAmountMax = ref(-1)
-const fourAmountMin = ref(-1)
-const fiveAmountMax = ref(-1)
-const fiveAmountMin = ref(-1)
+let rightNum28 = ref(0)
+let wrongNum28 = ref(0)
 
-const sixAmountMax = ref(-1)
-const sixAmountMin = ref(-1)
+let rightNum29 = ref(0)
+let wrongNum29 = ref(0)
 
-const sevenAmountMax = ref(-1)
-const sevenAmountMin = ref(-1)
+let rightNum30 = ref(0)
+let wrongNum30 = ref(0)
 
-const eightAmountMax = ref(-1)
-const eightAmountMin = ref(-1)
-
-const nightAmountMax = ref(-1)
-const nightAmountMin = ref(-1)
-
-const tenAmountMax = ref(-1)
-const tenAmountMin = ref(-1)
-
-const orderNumber1 = ref(0)
-const orderNumberNext1 = ref(0)
-const oneMaxLast = ref(-1)
-const oneMinLast = ref(-1)
-const oneAmountMaxLast = ref(-1)
-const oneAmountMinLast = ref(-1)
-
-const orderNumber2 = ref(0)
-const orderNumberNext2 = ref(0)
-const twoMaxLast = ref(-1)
-const twoMinLast = ref(-1)
-const twoAmountMaxLast = ref(-1)
-const twoAmountMinLast = ref(-1)
-
-const orderNumber3 = ref(0)
-const orderNumberNext3 = ref(0)
-const threeMaxLast = ref(-1)
-const threeMinLast = ref(-1)
-const threeAmountMaxLast = ref(-1)
-const threeAmountMinLast = ref(-1)
-
-const orderNumber4 = ref(0)
-const orderNumberNext4 = ref(0)
-const fourMaxLast = ref(-1)
-const fourMinLast = ref(-1)
-const fourAmountMaxLast = ref(-1)
-const fourAmountMinLast = ref(-1)
-
-const orderNumber5 = ref(0)
-const orderNumberNext5 = ref(0)
-const fiveMaxLast = ref(-1)
-const fiveMinLast = ref(-1)
-const fiveAmountMaxLast = ref(-1)
-const fiveAmountMinLast = ref(-1)
-
-const orderNumber6 = ref(0)
-const orderNumberNext6 = ref(0)
-const sixMaxLast = ref(-1)
-const sixMinLast = ref(-1)
-const sixAmountMaxLast = ref(-1)
-const sixAmountMinLast = ref(-1)
-
-const orderNumber7 = ref(0)
-const orderNumberNext7 = ref(0)
-const sevenMaxLast = ref(-1)
-const sevenMinLast = ref(-1)
-const sevenAmountMaxLast = ref(-1)
-const sevenAmountMinLast = ref(-1)
-
-const orderNumber8 = ref(0)
-const orderNumberNext8 = ref(0)
-const eightMaxLast = ref(-1)
-const eightMinLast = ref(-1)
-const eightAmountMaxLast = ref(-1)
-const eightAmountMinLast = ref(-1)
-
-const orderNumber9 = ref(0)
-const orderNumberNext9 = ref(0)
-const nightMaxLast = ref(-1)
-const nightMinLast = ref(-1)
-const nightAmountMaxLast = ref(-1)
-const nightAmountMinLast = ref(-1)
-
-const orderNumber10 = ref(0)
-const orderNumberNext10 = ref(0)
-const tenMaxLast = ref(-1)
-const tenMinLast = ref(-1)
-const tenAmountMaxLast = ref(-1)
-const tenAmountMinLast = ref(-1)
+let str1 = ref('')
+let str2 = ref('')
+let str3 = ref('')
+let str4 = ref('')
+let str5 = ref('')
+let str6 = ref('')
 
 /* 生命周期函数 */
 onLoad(() => {
@@ -486,12 +349,47 @@ onLoad(() => {
 	setTimeout(() => {
 		findHandle(19)
 	}, 1900)
-	// nextTick(() => {
-	//   if (oneAmountMin.value == twoAmountMin.value) {
-	//   	twoAmountMin.value = twoAmountMax.value
-	//   }
-	// })
+	setTimeout(() => {
+		findHandle(20)
+	}, 2000)
+	setTimeout(() => {
+		findHandle(21)
+	}, 2100)
+	setTimeout(() => {
+		findHandle(22)
+	}, 2200)
+	setTimeout(() => {
+		findHandle(23)
+	}, 2300)
+	setTimeout(() => {
+		findHandle(24)
+	}, 2400)
+	setTimeout(() => {
+		findHandle(25)
+	}, 2500)
+	setTimeout(() => {
+		findHandle(26)
+	}, 2600)
+	setTimeout(() => {
+		findHandle(27)
+	}, 2700)
+	setTimeout(() => {
+		findHandle(28)
+	}, 2800)
+	setTimeout(() => {
+		findHandle(29)
+	}, 2900)
 })
+
+// 深度监听 user 对象的变化
+watch(num, (newValue, oldValue) => {
+	str1.value = newValue.substring(0, 5).
+	str2.value = newValue.substring(5, 10)
+	str3.value = newValue.substring(10, 15)
+	str4.value = newValue.substring(15, 20)
+	str5.value = newValue.substring(20, 25)
+	str6.value = newValue.substring(25, 30)
+}, { deep: true });
 
 /* methods */
 function rnd(n, m){
@@ -500,7 +398,7 @@ function rnd(n, m){
 
 function getRnd() {
 	let arr = []
-	for (let i = 0; i < 20; i++) {
+	for (let i = 0; i < 30; i++) {
 		let nb = rnd(0, 1)
 		arr.push(nb)
 	}
@@ -510,7 +408,8 @@ function getRnd() {
 function setValueHandle() {
 	if (
 		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
-		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined'
+		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined' &&
+		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined'
 	) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
@@ -533,6 +432,16 @@ function setValueHandle() {
 		arr19.value.unshift(num.value[18]);
 		arr20.value.unshift(num.value[19]);
 		arr21.value.unshift(num.value[20]);
+		arr22.value.unshift(num.value[21]);
+		arr23.value.unshift(num.value[22]);
+		arr24.value.unshift(num.value[23]);
+		arr25.value.unshift(num.value[24]);
+		arr26.value.unshift(num.value[25]);
+		arr27.value.unshift(num.value[26]);
+		arr28.value.unshift(num.value[27]);
+		arr29.value.unshift(num.value[28]);
+		arr30.value.unshift(num.value[29]);
+		arr31.value.unshift(num.value[30]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -597,6 +506,36 @@ function setValueHandle() {
 		if (arr21.value.length > 20) {
 			arr21.value.pop()
 		}
+		if (arr22.value.length > 20) {
+			arr22.value.pop()
+		}
+		if (arr23.value.length > 20) {
+			arr23.value.pop()
+		}
+		if (arr24.value.length > 20) {
+			arr24.value.pop()
+		}
+		if (arr25.value.length > 20) {
+			arr25.value.pop()
+		}
+		if (arr26.value.length > 20) {
+			arr26.value.pop()
+		}
+		if (arr27.value.length > 20) {
+			arr27.value.pop()
+		}
+		if (arr28.value.length > 20) {
+			arr28.value.pop()
+		}
+		if (arr29.value.length > 20) {
+			arr29.value.pop()
+		}
+		if (arr30.value.length > 20) {
+			arr30.value.pop()
+		}
+		if (arr31.value.length > 20) {
+			arr31.value.pop()
+		}
 		num.value = ''
 		setStorage()
 		setTimeout(() => {
@@ -659,6 +598,36 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(19)
 		}, 1900)
+		setTimeout(() => {
+			findHandle(20)
+		}, 2000)
+		setTimeout(() => {
+			findHandle(21)
+		}, 2100)
+		setTimeout(() => {
+			findHandle(22)
+		}, 2200)
+		setTimeout(() => {
+			findHandle(23)
+		}, 2300)
+		setTimeout(() => {
+			findHandle(24)
+		}, 2400)
+		setTimeout(() => {
+			findHandle(25)
+		}, 2500)
+		setTimeout(() => {
+			findHandle(26)
+		}, 2600)
+		setTimeout(() => {
+			findHandle(27)
+		}, 2700)
+		setTimeout(() => {
+			findHandle(28)
+		}, 2800)
+		setTimeout(() => {
+			findHandle(29)
+		}, 2900)
 	}
 }
 function clearValueHandle() {
@@ -683,6 +652,16 @@ function clearValueHandle() {
 	arr19.value.shift()
 	arr20.value.shift()
 	arr21.value.shift()
+	arr22.value.shift()
+	arr23.value.shift()
+	arr24.value.shift()
+	arr25.value.shift()
+	arr26.value.shift()
+	arr27.value.shift()
+	arr28.value.shift()
+	arr29.value.shift()
+	arr30.value.shift()
+	arr31.value.shift()
 	setStorage()
 	setTimeout(() => {
 		findHandle(0)
@@ -717,6 +696,63 @@ function clearValueHandle() {
 	setTimeout(() => {
 		findHandle(10)
 	}, 1000)
+	setTimeout(() => {
+		findHandle(11)
+	}, 1100)
+	setTimeout(() => {
+		findHandle(12)
+	}, 1200)
+	setTimeout(() => {
+		findHandle(13)
+	}, 1300)
+	setTimeout(() => {
+		findHandle(14)
+	}, 1400)
+	setTimeout(() => {
+		findHandle(15)
+	}, 1500)
+	setTimeout(() => {
+		findHandle(16)
+	}, 1600)
+	setTimeout(() => {
+		findHandle(17)
+	}, 1700)
+	setTimeout(() => {
+		findHandle(18)
+	}, 1800)
+	setTimeout(() => {
+		findHandle(19)
+	}, 1900)
+	setTimeout(() => {
+		findHandle(20)
+	}, 2000)
+	setTimeout(() => {
+		findHandle(21)
+	}, 2100)
+	setTimeout(() => {
+		findHandle(22)
+	}, 2200)
+	setTimeout(() => {
+		findHandle(23)
+	}, 2300)
+	setTimeout(() => {
+		findHandle(24)
+	}, 2400)
+	setTimeout(() => {
+		findHandle(25)
+	}, 2500)
+	setTimeout(() => {
+		findHandle(26)
+	}, 2600)
+	setTimeout(() => {
+		findHandle(27)
+	}, 2700)
+	setTimeout(() => {
+		findHandle(28)
+	}, 2800)
+	setTimeout(() => {
+		findHandle(29)
+	}, 2900)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -740,6 +776,16 @@ function setStorage() {
 	uni.setStorageSync('arr19', JSON.stringify(arr19.value))
 	uni.setStorageSync('arr20', JSON.stringify(arr20.value))
 	uni.setStorageSync('arr21', JSON.stringify(arr21.value))
+	uni.setStorageSync('arr22', JSON.stringify(arr22.value))
+	uni.setStorageSync('arr23', JSON.stringify(arr23.value))
+	uni.setStorageSync('arr24', JSON.stringify(arr24.value))
+	uni.setStorageSync('arr25', JSON.stringify(arr25.value))
+	uni.setStorageSync('arr26', JSON.stringify(arr26.value))
+	uni.setStorageSync('arr27', JSON.stringify(arr27.value))
+	uni.setStorageSync('arr28', JSON.stringify(arr28.value))
+	uni.setStorageSync('arr29', JSON.stringify(arr29.value))
+	uni.setStorageSync('arr30', JSON.stringify(arr30.value))
+	uni.setStorageSync('arr31', JSON.stringify(arr31.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -764,22 +810,17 @@ function getData() {
 		arr19.value = JSON.parse(uni.getStorageSync('arr19'))
 		arr20.value = JSON.parse(uni.getStorageSync('arr20'))
 		arr21.value = JSON.parse(uni.getStorageSync('arr21'))
+		arr22.value = JSON.parse(uni.getStorageSync('arr22'))
+		arr23.value = JSON.parse(uni.getStorageSync('arr23'))
+		arr24.value = JSON.parse(uni.getStorageSync('arr24'))
+		arr25.value = JSON.parse(uni.getStorageSync('arr25'))
+		arr26.value = JSON.parse(uni.getStorageSync('arr26'))
+		arr27.value = JSON.parse(uni.getStorageSync('arr27'))
+		arr28.value = JSON.parse(uni.getStorageSync('arr28'))
+		arr29.value = JSON.parse(uni.getStorageSync('arr29'))
+		arr30.value = JSON.parse(uni.getStorageSync('arr30'))
+		arr31.value = JSON.parse(uni.getStorageSync('arr31'))
 	}
-}
-function findMaxMin(arr){
-	let number = [...new Set(arr)] // 记录一共有几个不重复的数组项
-	let arrstr = arr.join('') // 原数组的拼接字符串，用于查找每项出现的次数。 
-	let countarr=[] // 记录每一个不重复的项 各出现了几次
-	for(let i = 0; i < number.length; i++){
-			let count = arrstr.split(number[i]).length-1;//有几个这个数就会分成次数+1个项
-			countarr.push(count)
-	}
-	return {
-		max: number[countarr.indexOf(Math.max.apply(null,countarr))],
-		min: number[countarr.indexOf(Math.min.apply(null,countarr))]
-	}
-	// console.log(number[countarr.indexOf(Math.max.apply(null,countarr))] ,"出现次数最多的")        
-	// console.log(number[countarr.indexOf(Math.min.apply(null,countarr))] ,"出现次数最少的")
 }
 function findHandle(index) {
 	let arr = []
@@ -790,7 +831,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum1.value = 0
 		wrongNum1.value = 0
 		arr.forEach((item, ind) => {
@@ -827,7 +868,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum2.value = 0
 		wrongNum2.value = 0
 		arr.forEach((item, ind) => {
@@ -864,7 +905,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum3.value = 0
 		wrongNum3.value = 0
 		arr.forEach((item, ind) => {
@@ -901,7 +942,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum4.value = 0
 		wrongNum4.value = 0
 		arr.forEach((item, ind) => {
@@ -938,7 +979,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum5.value = 0
 		wrongNum5.value = 0
 		arr.forEach((item, ind) => {
@@ -975,7 +1016,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum6.value = 0
 		wrongNum6.value = 0
 		arr.forEach((item, ind) => {
@@ -1012,7 +1053,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum7.value = 0
 		wrongNum7.value = 0
 		arr.forEach((item, ind) => {
@@ -1049,7 +1090,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum8.value = 0
 		wrongNum8.value = 0
 		arr.forEach((item, ind) => {
@@ -1086,7 +1127,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum9.value = 0
 		wrongNum9.value = 0
 		arr.forEach((item, ind) => {
@@ -1123,7 +1164,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum10.value = 0
 		wrongNum10.value = 0
 		arr.forEach((item, ind) => {
@@ -1160,7 +1201,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum11.value = 0
 		wrongNum11.value = 0
 		arr.forEach((item, ind) => {
@@ -1197,7 +1238,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum12.value = 0
 		wrongNum12.value = 0
 		arr.forEach((item, ind) => {
@@ -1234,7 +1275,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum13.value = 0
 		wrongNum13.value = 0
 		arr.forEach((item, ind) => {
@@ -1271,7 +1312,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum14.value = 0
 		wrongNum14.value = 0
 		arr.forEach((item, ind) => {
@@ -1308,7 +1349,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum15.value = 0
 		wrongNum15.value = 0
 		arr.forEach((item, ind) => {
@@ -1345,7 +1386,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum16.value = 0
 		wrongNum16.value = 0
 		arr.forEach((item, ind) => {
@@ -1382,7 +1423,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum17.value = 0
 		wrongNum17.value = 0
 		arr.forEach((item, ind) => {
@@ -1419,7 +1460,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum18.value = 0
 		wrongNum18.value = 0
 		arr.forEach((item, ind) => {
@@ -1456,7 +1497,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum19.value = 0
 		wrongNum19.value = 0
 		arr.forEach((item, ind) => {
@@ -1493,7 +1534,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr21.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
 		rightNum20.value = 0
 		wrongNum20.value = 0
 		arr.forEach((item, ind) => {
@@ -1523,14 +1564,377 @@ function findHandle(index) {
 				}
 			}
 		})
+	} else if (index == 20) {
+		arr = JSON.parse(JSON.stringify(arr21.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum21.value = 0
+		wrongNum21.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum21.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum21.value ++
+					} else {
+						rightNum21.value = 1
+					}
+				} else {
+					rightNum21.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum21.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum21.value = 1
+					} else {
+						wrongNum21.value ++
+					}
+				} else {
+					wrongNum21.value ++
+				}
+			}
+		})
+	} else if (index == 21) {
+		arr = JSON.parse(JSON.stringify(arr22.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum22.value = 0
+		wrongNum22.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum22.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum22.value ++
+					} else {
+						rightNum22.value = 1
+					}
+				} else {
+					rightNum22.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum22.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum22.value = 1
+					} else {
+						wrongNum22.value ++
+					}
+				} else {
+					wrongNum22.value ++
+				}
+			}
+		})
+	} else if (index == 22) {
+		arr = JSON.parse(JSON.stringify(arr23.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum23.value = 0
+		wrongNum23.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum23.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum23.value ++
+					} else {
+						rightNum23.value = 1
+					}
+				} else {
+					rightNum23.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum23.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum23.value = 1
+					} else {
+						wrongNum23.value ++
+					}
+				} else {
+					wrongNum23.value ++
+				}
+			}
+		})
+	} else if (index == 23) {
+		arr = JSON.parse(JSON.stringify(arr24.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum24.value = 0
+		wrongNum24.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum24.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum24.value ++
+					} else {
+						rightNum24.value = 1
+					}
+				} else {
+					rightNum24.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum24.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum24.value = 1
+					} else {
+						wrongNum24.value ++
+					}
+				} else {
+					wrongNum24.value ++
+				}
+			}
+		})
+	} else if (index == 24) {
+		arr = JSON.parse(JSON.stringify(arr25.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum25.value = 0
+		wrongNum25.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum25.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum25.value ++
+					} else {
+						rightNum25.value = 1
+					}
+				} else {
+					rightNum25.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum25.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum25.value = 1
+					} else {
+						wrongNum25.value ++
+					}
+				} else {
+					wrongNum25.value ++
+				}
+			}
+		})
+	} else if (index == 25) {
+		arr = JSON.parse(JSON.stringify(arr26.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum26.value = 0
+		wrongNum26.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum26.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum26.value ++
+					} else {
+						rightNum26.value = 1
+					}
+				} else {
+					rightNum26.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum26.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum26.value = 1
+					} else {
+						wrongNum26.value ++
+					}
+				} else {
+					wrongNum26.value ++
+				}
+			}
+		})
+	} else if (index == 26) {
+		arr = JSON.parse(JSON.stringify(arr27.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum27.value = 0
+		wrongNum27.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum27.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum27.value ++
+					} else {
+						rightNum27.value = 1
+					}
+				} else {
+					rightNum27.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum27.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum27.value = 1
+					} else {
+						wrongNum27.value ++
+					}
+				} else {
+					wrongNum27.value ++
+				}
+			}
+		})
+	} else if (index == 27) {
+		arr = JSON.parse(JSON.stringify(arr28.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum28.value = 0
+		wrongNum28.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum28.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum28.value ++
+					} else {
+						rightNum28.value = 1
+					}
+				} else {
+					rightNum28.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum28.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum28.value = 1
+					} else {
+						wrongNum28.value ++
+					}
+				} else {
+					wrongNum28.value ++
+				}
+			}
+		})
+	} else if (index == 28) {
+		arr = JSON.parse(JSON.stringify(arr29.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum29.value = 0
+		wrongNum29.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum29.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum29.value ++
+					} else {
+						rightNum29.value = 1
+					}
+				} else {
+					rightNum29.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum29.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum29.value = 1
+					} else {
+						wrongNum29.value ++
+					}
+				} else {
+					wrongNum29.value ++
+				}
+			}
+		})
+	} else if (index == 29) {
+		arr = JSON.parse(JSON.stringify(arr30.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		rightNum30.value = 0
+		wrongNum30.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum30.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum30.value ++
+					} else {
+						rightNum30.value = 1
+					}
+				} else {
+					rightNum30.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum30.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum30.value = 1
+					} else {
+						wrongNum30.value ++
+					}
+				} else {
+					wrongNum30.value ++
+				}
+			}
+		})
 	}
-}
-function find(arr, item) {
-	let res = arr.indexOf(item)
-	if(res == -1) {
-		return arr.length
-	}
-	return res
 }
 </script>
 
@@ -1548,7 +1952,7 @@ function find(arr, item) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 50rpx;
+				font-size: 30rpx;
 				letter-spacing: 20px;
 			}
 			.order {
@@ -1597,22 +2001,23 @@ function find(arr, item) {
 		padding: 10rpx;
 		display: flex;
 		.left {
-			width: 55%;
+			width: 25%;
 			box-sizing: border-box;
 			position: relative;
 			.data {
 				display: flex;
+				justify-content: center;
 				box-sizing: border-box;
 				width: 100%;
 				padding-left: 10rpx;
 				.item {
-					width: 12px;
-					height: 20px;
+					width: 30px;
+					height: 30px;
 					text-align: center;
-					line-height: 20px;
+					line-height: 30px;
 					min-width: 4px;
 					font-size: 24rpx;
-					border: 1px solid #3a73d9;
+					border: 1px solid #999;
 					border-bottom: none;
 					margin-right: 4px;
 					&.end {
@@ -1625,7 +2030,7 @@ function find(arr, item) {
 			}
 			.line {
 				width: 1rpx;
-				height: 600rpx;
+				height: 850rpx;
 				background-color: #ccc;
 				position: absolute;
 				right: 20rpx;
@@ -1635,7 +2040,7 @@ function find(arr, item) {
 		}
 		.right {
 			padding: 10rpx;
-			width: 45%;
+			width: 75%;
 			position: relative;
 			top: -26rpx;
 			left: -5px;
@@ -1643,6 +2048,7 @@ function find(arr, item) {
 			.order {
 				display: flex;
 				justify-content: space-around;
+				margin-bottom: 10px;
 				.item {
 					padding: 8rpx 8rpx 5rpx;
 					text-align: center;
@@ -1656,11 +2062,40 @@ function find(arr, item) {
 					text-align: center;
 					width: 23%;
 					color: blue;
+					background-color: #ccc;
+					border: 1px solid #999;
+					border-radius: 2px;
+					margin-right: 2px;
+					margin-bottom: 2px;
 				}
 				&.red {
 					.item {
-						color: #f00;
+						border-color: #ff0000;
+						color: #ff0000;
 					}
+				}
+			}
+			.data {
+				display: flex;
+				box-sizing: border-box;
+				width: 100%;
+				padding-left: 10rpx;
+				margin-bottom: 10px;
+				.item {
+					width: 22px;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					min-width: 4px;
+					font-size: 24rpx;
+					border: 1px solid #999;
+					background-color: #ccc;
+					margin-right: 4px;
+					border-radius: 2px;
+				}
+				.line {
+					background-color: #fff;
+					border: none;
 				}
 			}
 			.result {
