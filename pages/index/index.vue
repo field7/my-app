@@ -152,7 +152,7 @@
 </template>
 
 <script setup>
-import { ref, watch, reactive, nextTick } from 'vue'
+import { ref, reactive, nextTick } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 
 /* data */
@@ -279,13 +279,6 @@ let wrongNum29 = ref(0)
 let rightNum30 = ref(0)
 let wrongNum30 = ref(0)
 
-let str1 = ref('')
-let str2 = ref('')
-let str3 = ref('')
-let str4 = ref('')
-let str5 = ref('')
-let str6 = ref('')
-
 /* 生命周期函数 */
 onLoad(() => {
 	getData()
@@ -380,16 +373,6 @@ onLoad(() => {
 		findHandle(29)
 	}, 2900)
 })
-
-// 深度监听 user 对象的变化
-watch(num, (newValue, oldValue) => {
-	str1.value = newValue.substring(0, 5).
-	str2.value = newValue.substring(5, 10)
-	str3.value = newValue.substring(10, 15)
-	str4.value = newValue.substring(15, 20)
-	str5.value = newValue.substring(20, 25)
-	str6.value = newValue.substring(25, 30)
-}, { deep: true });
 
 /* methods */
 function rnd(n, m){
@@ -1952,7 +1935,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 30rpx;
+				font-size: 32rpx;
 				letter-spacing: 20px;
 			}
 			.order {
@@ -2021,7 +2004,7 @@ function findHandle(index) {
 					border-bottom: none;
 					margin-right: 4px;
 					&.end {
-						border-bottom: 1px solid #3a73d9;;
+						border-bottom: 1px solid #999;;
 					}
 					&.data-end {
 						background-color: #ccc;
@@ -2061,17 +2044,16 @@ function findHandle(index) {
 					padding: 8rpx 8rpx 5rpx;
 					text-align: center;
 					width: 23%;
-					color: blue;
-					background-color: #ccc;
-					border: 1px solid #999;
+					color: #0e78c7;
+					background-color: #e6e3e3;
+					border: 1px solid #ccc;
 					border-radius: 2px;
 					margin-right: 2px;
 					margin-bottom: 2px;
 				}
 				&.red {
 					.item {
-						border-color: #ff0000;
-						color: #ff0000;
+						color: #f3514a;
 					}
 				}
 			}
