@@ -15,7 +15,7 @@
 				<view class="line"></view>
 				<view class="data">
 					<view class="data-item">
-						<view :class="index == arr31.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arr31" :key="index">{{ item == 1 ? '大' : '小' }}</view>
+						<view :class="index == arr41.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arr41" :key="index">{{ item == 1 ? '大' : '小' }}</view>
 					</view>
 				</view>
 			</view>
@@ -57,6 +57,20 @@
 					<div class="item">{{ wrongNum10 }}</div>
 				</div>
 				<div style="height: 10px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[0] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[1] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[2] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[3] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[4] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[5] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[6] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[7] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[8] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[9] == '1' ? '大' : '小'}}</div>
+				</div>
+				<div style="height: 10px;"></div>
 				<div class="times">
 					<div class="item">{{ rightNum11 }}</div>
 					<div class="item">{{ rightNum12 }}</div>
@@ -80,6 +94,20 @@
 					<div class="item">{{ wrongNum18 }}</div>
 					<div class="item">{{ wrongNum19 }}</div>
 					<div class="item">{{ wrongNum20 }}</div>
+				</div>
+				<div style="height: 10px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[10] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[11] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[12] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[13] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[14] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[15] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[16] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[17] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[18] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[19] == '1' ? '大' : '小'}}</div>
 				</div>
 				<div style="height: 10px;"></div>
 				<div class="times">
@@ -106,33 +134,7 @@
 					<div class="item">{{ wrongNum29 }}</div>
 					<div class="item">{{ wrongNum30 }}</div>
 				</div>
-				<div style="height: 20px;"></div>
-				<div class="data" v-if="num">
-					<div class="item">{{ num[0] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[1] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[2] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[3] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[4] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[5] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[6] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[7] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[8] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[9] == '1' ? '大' : '小'}}</div>
-				</div>
-				<div class="data" v-if="num">
-					<div class="item">{{ num[10] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[11] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[12] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[13] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[14] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[15] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[16] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[17] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[18] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[19] == '1' ? '大' : '小'}}</div>
-				</div>
+				<div style="height: 10px;"></div>
 				<div class="data" v-if="num">
 					<div class="item">{{ num[20] == '1' ? '大' : '小'}}</div>
 					<div class="item">{{ num[21] == '1' ? '大' : '小'}}</div>
@@ -145,6 +147,45 @@
 					<div class="item">{{ num[27] == '1' ? '大' : '小'}}</div>
 					<div class="item">{{ num[28] == '1' ? '大' : '小'}}</div>
 					<div class="item">{{ num[29] == '1' ? '大' : '小'}}</div>
+				</div>
+				<div style="height: 10px;"></div>
+				<div class="times">
+					<div class="item">{{ rightNum31 }}</div>
+					<div class="item">{{ rightNum32 }}</div>
+					<div class="item">{{ rightNum33 }}</div>
+					<div class="item">{{ rightNum34 }}</div>
+					<div class="item">{{ rightNum35 }}</div>
+					<div class="item">{{ rightNum36 }}</div>
+					<div class="item">{{ rightNum37 }}</div>
+					<div class="item">{{ rightNum38 }}</div>
+					<div class="item">{{ rightNum39 }}</div>
+					<div class="item">{{ rightNum40 }}</div>
+				</div>
+				<div class="times red">
+					<div class="item">{{ wrongNum31 }}</div>
+					<div class="item">{{ wrongNum32 }}</div>
+					<div class="item">{{ wrongNum33 }}</div>
+					<div class="item">{{ wrongNum34 }}</div>
+					<div class="item">{{ wrongNum35 }}</div>
+					<div class="item">{{ wrongNum36 }}</div>
+					<div class="item">{{ wrongNum37 }}</div>
+					<div class="item">{{ wrongNum38 }}</div>
+					<div class="item">{{ wrongNum39 }}</div>
+					<div class="item">{{ wrongNum40 }}</div>
+				</div>
+				<div style="height: 10px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[30] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[31] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[32] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[33] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[34] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[35] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[36] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[37] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[38] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[39] == '1' ? '大' : '小'}}</div>
 				</div>
 			</view>
 		</view>
@@ -188,6 +229,16 @@ const arr28 = ref([])
 const arr29 = ref([])
 const arr30 = ref([])
 const arr31 = ref([])
+const arr32 = ref([])
+const arr33 = ref([])
+const arr34 = ref([])
+const arr35 = ref([])
+const arr36 = ref([])
+const arr37 = ref([])
+const arr38 = ref([])
+const arr39 = ref([])
+const arr40 = ref([])
+const arr41 = ref([])
 
 let rightNum1 = ref(0)
 let wrongNum1 = ref(0)
@@ -278,6 +329,36 @@ let wrongNum29 = ref(0)
 
 let rightNum30 = ref(0)
 let wrongNum30 = ref(0)
+
+let rightNum31 = ref(0)
+let wrongNum31 = ref(0)
+
+let rightNum32 = ref(0)
+let wrongNum32 = ref(0)
+
+let rightNum33 = ref(0)
+let wrongNum33 = ref(0)
+
+let rightNum34 = ref(0)
+let wrongNum34 = ref(0)
+
+let rightNum35 = ref(0)
+let wrongNum35 = ref(0)
+
+let rightNum36 = ref(0)
+let wrongNum36 = ref(0)
+
+let rightNum37 = ref(0)
+let wrongNum37 = ref(0)
+
+let rightNum38 = ref(0)
+let wrongNum38 = ref(0)
+
+let rightNum39 = ref(0)
+let wrongNum39 = ref(0)
+
+let rightNum40 = ref(0)
+let wrongNum40 = ref(0)
 
 /* 生命周期函数 */
 onLoad(() => {
@@ -372,6 +453,36 @@ onLoad(() => {
 	setTimeout(() => {
 		findHandle(29)
 	}, 2900)
+	setTimeout(() => {
+		findHandle(30)
+	}, 3000)
+	setTimeout(() => {
+		findHandle(31)
+	}, 3100)
+	setTimeout(() => {
+		findHandle(32)
+	}, 3200)
+	setTimeout(() => {
+		findHandle(33)
+	}, 3300)
+	setTimeout(() => {
+		findHandle(34)
+	}, 3400)
+	setTimeout(() => {
+		findHandle(35)
+	}, 3500)
+	setTimeout(() => {
+		findHandle(36)
+	}, 3600)
+	setTimeout(() => {
+		findHandle(37)
+	}, 3700)
+	setTimeout(() => {
+		findHandle(38)
+	}, 3800)
+	setTimeout(() => {
+		findHandle(39)
+	}, 3900)
 })
 
 /* methods */
@@ -381,7 +492,7 @@ function rnd(n, m){
 
 function getRnd() {
 	let arr = []
-	for (let i = 0; i < 30; i++) {
+	for (let i = 0; i < 40; i++) {
 		let nb = rnd(0, 1)
 		arr.push(nb)
 	}
@@ -392,7 +503,8 @@ function setValueHandle() {
 	if (
 		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
 		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined' &&
-		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined'
+		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined' &&
+		typeof num.value[30] != 'undefined' && typeof num.value[31] != 'undefined' && typeof num.value[32] != 'undefined' && typeof num.value[33] != 'undefined' && typeof num.value[34] != 'undefined' && typeof num.value[35] != 'undefined' && typeof num.value[36] != 'undefined' && typeof num.value[37] != 'undefined' && typeof num.value[38] != 'undefined' && typeof num.value[39] != 'undefined' && typeof num.value[40] != 'undefined'
 	) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
@@ -425,6 +537,16 @@ function setValueHandle() {
 		arr29.value.unshift(num.value[28]);
 		arr30.value.unshift(num.value[29]);
 		arr31.value.unshift(num.value[30]);
+		arr32.value.unshift(num.value[31]);
+		arr33.value.unshift(num.value[32]);
+		arr34.value.unshift(num.value[33]);
+		arr35.value.unshift(num.value[34]);
+		arr36.value.unshift(num.value[35]);
+		arr37.value.unshift(num.value[36]);
+		arr38.value.unshift(num.value[37]);
+		arr39.value.unshift(num.value[38]);
+		arr40.value.unshift(num.value[39]);
+		arr41.value.unshift(num.value[40]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -519,6 +641,36 @@ function setValueHandle() {
 		if (arr31.value.length > 20) {
 			arr31.value.pop()
 		}
+		if (arr32.value.length > 20) {
+			arr32.value.pop()
+		}
+		if (arr33.value.length > 20) {
+			arr33.value.pop()
+		}
+		if (arr34.value.length > 20) {
+			arr34.value.pop()
+		}
+		if (arr35.value.length > 20) {
+			arr35.value.pop()
+		}
+		if (arr36.value.length > 20) {
+			arr36.value.pop()
+		}
+		if (arr37.value.length > 20) {
+			arr37.value.pop()
+		}
+		if (arr38.value.length > 20) {
+			arr38.value.pop()
+		}
+		if (arr39.value.length > 20) {
+			arr39.value.pop()
+		}
+		if (arr40.value.length > 20) {
+			arr40.value.pop()
+		}
+		if (arr41.value.length > 20) {
+			arr41.value.pop()
+		}
 		num.value = ''
 		setStorage()
 		setTimeout(() => {
@@ -611,6 +763,36 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(29)
 		}, 2900)
+		setTimeout(() => {
+			findHandle(30)
+		}, 3000)
+		setTimeout(() => {
+			findHandle(31)
+		}, 3100)
+		setTimeout(() => {
+			findHandle(32)
+		}, 3200)
+		setTimeout(() => {
+			findHandle(33)
+		}, 3300)
+		setTimeout(() => {
+			findHandle(34)
+		}, 3400)
+		setTimeout(() => {
+			findHandle(35)
+		}, 3500)
+		setTimeout(() => {
+			findHandle(36)
+		}, 3600)
+		setTimeout(() => {
+			findHandle(37)
+		}, 3700)
+		setTimeout(() => {
+			findHandle(38)
+		}, 3800)
+		setTimeout(() => {
+			findHandle(39)
+		}, 3900)
 	}
 }
 function clearValueHandle() {
@@ -645,6 +827,16 @@ function clearValueHandle() {
 	arr29.value.shift()
 	arr30.value.shift()
 	arr31.value.shift()
+	arr32.value.shift()
+	arr33.value.shift()
+	arr34.value.shift()
+	arr35.value.shift()
+	arr36.value.shift()
+	arr37.value.shift()
+	arr38.value.shift()
+	arr39.value.shift()
+	arr40.value.shift()
+	arr41.value.shift()
 	setStorage()
 	setTimeout(() => {
 		findHandle(0)
@@ -736,6 +928,36 @@ function clearValueHandle() {
 	setTimeout(() => {
 		findHandle(29)
 	}, 2900)
+	setTimeout(() => {
+		findHandle(30)
+	}, 3000)
+	setTimeout(() => {
+		findHandle(31)
+	}, 3100)
+	setTimeout(() => {
+		findHandle(32)
+	}, 3200)
+	setTimeout(() => {
+		findHandle(33)
+	}, 3300)
+	setTimeout(() => {
+		findHandle(34)
+	}, 3400)
+	setTimeout(() => {
+		findHandle(35)
+	}, 3500)
+	setTimeout(() => {
+		findHandle(36)
+	}, 3600)
+	setTimeout(() => {
+		findHandle(37)
+	}, 3700)
+	setTimeout(() => {
+		findHandle(38)
+	}, 3800)
+	setTimeout(() => {
+		findHandle(39)
+	}, 3900)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -769,6 +991,16 @@ function setStorage() {
 	uni.setStorageSync('arr29', JSON.stringify(arr29.value))
 	uni.setStorageSync('arr30', JSON.stringify(arr30.value))
 	uni.setStorageSync('arr31', JSON.stringify(arr31.value))
+	uni.setStorageSync('arr32', JSON.stringify(arr32.value))
+	uni.setStorageSync('arr33', JSON.stringify(arr33.value))
+	uni.setStorageSync('arr34', JSON.stringify(arr34.value))
+	uni.setStorageSync('arr35', JSON.stringify(arr35.value))
+	uni.setStorageSync('arr36', JSON.stringify(arr36.value))
+	uni.setStorageSync('arr37', JSON.stringify(arr37.value))
+	uni.setStorageSync('arr38', JSON.stringify(arr38.value))
+	uni.setStorageSync('arr39', JSON.stringify(arr39.value))
+	uni.setStorageSync('arr40', JSON.stringify(arr40.value))
+	uni.setStorageSync('arr41', JSON.stringify(arr41.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -803,6 +1035,16 @@ function getData() {
 		arr29.value = JSON.parse(uni.getStorageSync('arr29'))
 		arr30.value = JSON.parse(uni.getStorageSync('arr30'))
 		arr31.value = JSON.parse(uni.getStorageSync('arr31'))
+		arr32.value = JSON.parse(uni.getStorageSync('arr32'))
+		arr33.value = JSON.parse(uni.getStorageSync('arr33'))
+		arr34.value = JSON.parse(uni.getStorageSync('arr34'))
+		arr35.value = JSON.parse(uni.getStorageSync('arr35'))
+		arr36.value = JSON.parse(uni.getStorageSync('arr36'))
+		arr37.value = JSON.parse(uni.getStorageSync('arr37'))
+		arr38.value = JSON.parse(uni.getStorageSync('arr38'))
+		arr39.value = JSON.parse(uni.getStorageSync('arr39'))
+		arr40.value = JSON.parse(uni.getStorageSync('arr40'))
+		arr41.value = JSON.parse(uni.getStorageSync('arr41'))
 	}
 }
 function findHandle(index) {
@@ -814,7 +1056,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum1.value = 0
 		wrongNum1.value = 0
 		arr.forEach((item, ind) => {
@@ -851,7 +1093,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum2.value = 0
 		wrongNum2.value = 0
 		arr.forEach((item, ind) => {
@@ -888,7 +1130,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum3.value = 0
 		wrongNum3.value = 0
 		arr.forEach((item, ind) => {
@@ -925,7 +1167,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum4.value = 0
 		wrongNum4.value = 0
 		arr.forEach((item, ind) => {
@@ -962,7 +1204,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum5.value = 0
 		wrongNum5.value = 0
 		arr.forEach((item, ind) => {
@@ -999,7 +1241,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum6.value = 0
 		wrongNum6.value = 0
 		arr.forEach((item, ind) => {
@@ -1036,7 +1278,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum7.value = 0
 		wrongNum7.value = 0
 		arr.forEach((item, ind) => {
@@ -1073,7 +1315,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum8.value = 0
 		wrongNum8.value = 0
 		arr.forEach((item, ind) => {
@@ -1110,7 +1352,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum9.value = 0
 		wrongNum9.value = 0
 		arr.forEach((item, ind) => {
@@ -1147,7 +1389,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum10.value = 0
 		wrongNum10.value = 0
 		arr.forEach((item, ind) => {
@@ -1184,7 +1426,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum11.value = 0
 		wrongNum11.value = 0
 		arr.forEach((item, ind) => {
@@ -1221,7 +1463,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum12.value = 0
 		wrongNum12.value = 0
 		arr.forEach((item, ind) => {
@@ -1258,7 +1500,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum13.value = 0
 		wrongNum13.value = 0
 		arr.forEach((item, ind) => {
@@ -1295,7 +1537,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum14.value = 0
 		wrongNum14.value = 0
 		arr.forEach((item, ind) => {
@@ -1332,7 +1574,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum15.value = 0
 		wrongNum15.value = 0
 		arr.forEach((item, ind) => {
@@ -1369,7 +1611,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum16.value = 0
 		wrongNum16.value = 0
 		arr.forEach((item, ind) => {
@@ -1406,7 +1648,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum17.value = 0
 		wrongNum17.value = 0
 		arr.forEach((item, ind) => {
@@ -1443,7 +1685,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum18.value = 0
 		wrongNum18.value = 0
 		arr.forEach((item, ind) => {
@@ -1480,7 +1722,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum19.value = 0
 		wrongNum19.value = 0
 		arr.forEach((item, ind) => {
@@ -1517,7 +1759,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum20.value = 0
 		wrongNum20.value = 0
 		arr.forEach((item, ind) => {
@@ -1554,7 +1796,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum21.value = 0
 		wrongNum21.value = 0
 		arr.forEach((item, ind) => {
@@ -1591,7 +1833,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum22.value = 0
 		wrongNum22.value = 0
 		arr.forEach((item, ind) => {
@@ -1628,7 +1870,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum23.value = 0
 		wrongNum23.value = 0
 		arr.forEach((item, ind) => {
@@ -1665,7 +1907,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum24.value = 0
 		wrongNum24.value = 0
 		arr.forEach((item, ind) => {
@@ -1702,7 +1944,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum25.value = 0
 		wrongNum25.value = 0
 		arr.forEach((item, ind) => {
@@ -1739,7 +1981,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum26.value = 0
 		wrongNum26.value = 0
 		arr.forEach((item, ind) => {
@@ -1776,7 +2018,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum27.value = 0
 		wrongNum27.value = 0
 		arr.forEach((item, ind) => {
@@ -1813,7 +2055,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum28.value = 0
 		wrongNum28.value = 0
 		arr.forEach((item, ind) => {
@@ -1850,7 +2092,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum29.value = 0
 		wrongNum29.value = 0
 		arr.forEach((item, ind) => {
@@ -1887,7 +2129,7 @@ function findHandle(index) {
 				isRightPrev: true
 			}
 		})
-		let arrData = JSON.parse(JSON.stringify(arr31.value)).reverse()
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
 		rightNum30.value = 0
 		wrongNum30.value = 0
 		arr.forEach((item, ind) => {
@@ -1917,6 +2159,376 @@ function findHandle(index) {
 				}
 			}
 		})
+	} else if (index == 30) {
+		arr = JSON.parse(JSON.stringify(arr31.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum31.value = 0
+		wrongNum31.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum31.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum31.value ++
+					} else {
+						rightNum31.value = 1
+					}
+				} else {
+					rightNum31.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum31.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum31.value = 1
+					} else {
+						wrongNum31.value ++
+					}
+				} else {
+					wrongNum31.value ++
+				}
+			}
+		})
+	} else if (index == 31) {
+		arr = JSON.parse(JSON.stringify(arr32.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum32.value = 0
+		wrongNum32.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum32.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum32.value ++
+					} else {
+						rightNum32.value = 1
+					}
+				} else {
+					rightNum32.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum32.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum32.value = 1
+					} else {
+						wrongNum32.value ++
+					}
+				} else {
+					wrongNum32.value ++
+				}
+			}
+		})
+	} else if (index == 32) {
+		arr = JSON.parse(JSON.stringify(arr33.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum33.value = 0
+		wrongNum33.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum33.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum33.value ++
+					} else {
+						rightNum33.value = 1
+					}
+				} else {
+					rightNum33.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum33.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum33.value = 1
+					} else {
+						wrongNum33.value ++
+					}
+				} else {
+					wrongNum33.value ++
+				}
+			}
+		})
+	} else if (index == 33) {
+		arr = JSON.parse(JSON.stringify(arr34.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum34.value = 0
+		wrongNum34.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum34.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum34.value ++
+					} else {
+						rightNum34.value = 1
+					}
+				} else {
+					rightNum34.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum34.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum34.value = 1
+					} else {
+						wrongNum34.value ++
+					}
+				} else {
+					wrongNum34.value ++
+				}
+			}
+		})
+	} else if (index == 34) {
+		arr = JSON.parse(JSON.stringify(arr35.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum35.value = 0
+		wrongNum35.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum35.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum35.value ++
+					} else {
+						rightNum35.value = 1
+					}
+				} else {
+					rightNum35.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum35.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum35.value = 1
+					} else {
+						wrongNum35.value ++
+					}
+				} else {
+					wrongNum35.value ++
+				}
+			}
+		})
+	} else if (index == 35) {
+		arr = JSON.parse(JSON.stringify(arr36.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum36.value = 0
+		wrongNum36.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum36.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum36.value ++
+					} else {
+						rightNum36.value = 1
+					}
+				} else {
+					rightNum36.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum36.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum36.value = 1
+					} else {
+						wrongNum36.value ++
+					}
+				} else {
+					wrongNum36.value ++
+				}
+			}
+		})
+	} else if (index == 36) {
+		arr = JSON.parse(JSON.stringify(arr37.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum37.value = 0
+		wrongNum37.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum37.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum37.value ++
+					} else {
+						rightNum37.value = 1
+					}
+				} else {
+					rightNum37.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum37.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum37.value = 1
+					} else {
+						wrongNum37.value ++
+					}
+				} else {
+					wrongNum37.value ++
+				}
+			}
+		})
+	} else if (index == 37) {
+		arr = JSON.parse(JSON.stringify(arr38.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum38.value = 0
+		wrongNum38.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum38.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum38.value ++
+					} else {
+						rightNum38.value = 1
+					}
+				} else {
+					rightNum38.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum38.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum38.value = 1
+					} else {
+						wrongNum38.value ++
+					}
+				} else {
+					wrongNum38.value ++
+				}
+			}
+		})
+	} else if (index == 38) {
+		arr = JSON.parse(JSON.stringify(arr39.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum39.value = 0
+		wrongNum39.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum39.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum39.value ++
+					} else {
+						rightNum39.value = 1
+					}
+				} else {
+					rightNum39.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum39.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum39.value = 1
+					} else {
+						wrongNum39.value ++
+					}
+				} else {
+					wrongNum39.value ++
+				}
+			}
+		})
+	} else if (index == 39) {
+		arr = JSON.parse(JSON.stringify(arr40.value)).reverse().map(item => {
+			return {
+				num: item,
+				isRightPrev: true
+			}
+		})
+		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
+		rightNum40.value = 0
+		wrongNum40.value = 0
+		arr.forEach((item, ind) => {
+			if (item['num'] == arrData[ind]) {
+				item['isRightPrev'] = true
+				wrongNum40.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						rightNum40.value ++
+					} else {
+						rightNum40.value = 1
+					}
+				} else {
+					rightNum40.value = 1
+				}
+			} else {
+				item['isRightPrev'] = false
+				rightNum40.value = 0
+				if (ind > 0) {
+					if (arr[ind - 1]['isRightPrev']) {
+						wrongNum40.value = 1
+					} else {
+						wrongNum40.value ++
+					}
+				} else {
+					wrongNum40.value ++
+				}
+			}
+		})
 	}
 }
 </script>
@@ -1935,7 +2547,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 32rpx;
+				font-size: 26rpx;
 				letter-spacing: 20px;
 			}
 			.order {
@@ -1976,7 +2588,6 @@ function findHandle(index) {
 			}
 			.btn3 {
 				width: 35%;
-				background-color: #ff0000;
 			}
 		}
 	}
@@ -2013,7 +2624,7 @@ function findHandle(index) {
 			}
 			.line {
 				width: 1rpx;
-				height: 850rpx;
+				height: 900rpx;
 				background-color: #ccc;
 				position: absolute;
 				right: 20rpx;
@@ -2031,7 +2642,6 @@ function findHandle(index) {
 			.order {
 				display: flex;
 				justify-content: space-around;
-				margin-bottom: 10px;
 				.item {
 					padding: 8rpx 8rpx 5rpx;
 					text-align: center;
@@ -2062,7 +2672,6 @@ function findHandle(index) {
 				box-sizing: border-box;
 				width: 100%;
 				padding-left: 10rpx;
-				margin-bottom: 10px;
 				.item {
 					width: 22px;
 					height: 30px;
