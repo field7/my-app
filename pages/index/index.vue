@@ -57,20 +57,6 @@
 					<div class="item">{{ wrongNum10 }}</div>
 				</div>
 				<div style="height: 10px;"></div>
-				<div class="data" v-if="num">
-					<div class="item">{{ num[0] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[1] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[2] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[3] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[4] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[5] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[6] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[7] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[8] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[9] == '1' ? '大' : '小'}}</div>
-				</div>
-				<div style="height: 10px;"></div>
 				<div class="times">
 					<div class="item">{{ rightNum11 }}</div>
 					<div class="item">{{ rightNum12 }}</div>
@@ -94,20 +80,6 @@
 					<div class="item">{{ wrongNum18 }}</div>
 					<div class="item">{{ wrongNum19 }}</div>
 					<div class="item">{{ wrongNum20 }}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="data" v-if="num">
-					<div class="item">{{ num[10] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[11] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[12] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[13] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[14] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[15] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[16] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[17] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[18] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[19] == '1' ? '大' : '小'}}</div>
 				</div>
 				<div style="height: 10px;"></div>
 				<div class="times">
@@ -135,20 +107,6 @@
 					<div class="item">{{ wrongNum30 }}</div>
 				</div>
 				<div style="height: 10px;"></div>
-				<div class="data" v-if="num">
-					<div class="item">{{ num[20] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[21] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[22] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[23] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[24] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[25] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[26] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[27] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[28] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[29] == '1' ? '大' : '小'}}</div>
-				</div>
-				<div style="height: 10px;"></div>
 				<div class="times">
 					<div class="item">{{ rightNum31 }}</div>
 					<div class="item">{{ rightNum32 }}</div>
@@ -172,6 +130,48 @@
 					<div class="item">{{ wrongNum38 }}</div>
 					<div class="item">{{ wrongNum39 }}</div>
 					<div class="item">{{ wrongNum40 }}</div>
+				</div>
+				<div style="height: 10px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[0] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[1] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[2] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[3] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[4] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[5] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[6] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[7] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[8] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[9] == '1' ? '大' : '小'}}</div>
+				</div>
+				<div style="height: 10px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[10] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[11] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[12] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[13] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[14] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[15] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[16] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[17] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[18] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[19] == '1' ? '大' : '小'}}</div>
+				</div>
+				<div style="height: 10px;"></div>
+				<div class="data" v-if="num">
+					<div class="item">{{ num[20] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[21] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[22] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[23] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[24] == '1' ? '大' : '小'}}</div>
+					<div class="item line">-</div>
+					<div class="item">{{ num[25] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[26] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[27] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[28] == '1' ? '大' : '小'}}</div>
+					<div class="item">{{ num[29] == '1' ? '大' : '小'}}</div>
 				</div>
 				<div style="height: 10px;"></div>
 				<div class="data" v-if="num">
