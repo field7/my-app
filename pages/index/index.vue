@@ -2654,7 +2654,7 @@ function findHandle(index) {
 					padding: 8rpx 8rpx 5rpx;
 					text-align: center;
 					width: 23%;
-					color: #0e78c7;
+					color: #4e6ef2;
 					background-color: #e6e3e3;
 					border: 1px solid #ccc;
 					border-radius: 2px;
@@ -2663,7 +2663,7 @@ function findHandle(index) {
 				}
 				&.red {
 					.item {
-						color: #f3514a;
+						color: #ca152b;
 					}
 				}
 			}
