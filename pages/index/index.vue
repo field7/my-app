@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="operate">
 			<view class="input">
-				<input type="number" v-model="num"/>
+				<input type="number" v-model="num" />
 			</view>
 			<view class="button">
 				<view class="btn btn3" @click="getRnd">获取</view>
@@ -15,178 +15,335 @@
 				<view class="line"></view>
 				<view class="data">
 					<view class="data-item">
-						<view :class="index == arrComparison.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arrComparison" :key="index">{{ item == 1 ? '大' : '小' }}</view>
+						<view :class="index == arrComparison.length - 1 ? 'item end data-end' : 'item data-end'"
+							v-for="(item, index) in arrComparison" :key="index">{{ item == 1 ? '大' : '小' }}</view>
 					</view>
 				</view>
 			</view>
 			<view class="right">
-				<div class="order">
-					<div class="item">1</div>
-					<div class="item">2</div>
-					<div class="item">3</div>
-					<div class="item">4</div>
-					<div class="item">5</div>
-					<div class="item">6</div>
-					<div class="item">7</div>
-					<div class="item">8</div>
-					<div class="item">9</div>
-					<div class="item">0</div>
-				</div>
-				<div class="times">
-					<div class="item">{{ rightNum1 }}</div>
-					<div class="item">{{ rightNum2 }}</div>
-					<div class="item">{{ rightNum3 }}</div>
-					<div class="item">{{ rightNum4 }}</div>
-					<div class="item">{{ rightNum5 }}</div>
-					<div class="item">{{ rightNum6 }}</div>
-					<div class="item">{{ rightNum7 }}</div>
-					<div class="item">{{ rightNum8 }}</div>
-					<div class="item">{{ rightNum9 }}</div>
-					<div class="item">{{ rightNum10 }}</div>
-				</div>
-				<div class="times red">
-					<div class="item">{{ wrongNum1 }}</div>
-					<div class="item">{{ wrongNum2 }}</div>
-					<div class="item">{{ wrongNum3 }}</div>
-					<div class="item">{{ wrongNum4 }}</div>
-					<div class="item">{{ wrongNum5 }}</div>
-					<div class="item">{{ wrongNum6 }}</div>
-					<div class="item">{{ wrongNum7 }}</div>
-					<div class="item">{{ wrongNum8 }}</div>
-					<div class="item">{{ wrongNum9 }}</div>
-					<div class="item">{{ wrongNum10 }}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="data" :style="{opacity: num  ? 1 : 0}">
-					<div class="item">{{ num[0] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[1] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[2] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[3] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[4] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[5] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[6] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[7] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[8] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[9] == '1' ? '大' : '小'}}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="times">
-					<div class="item">{{ rightNum11 }}</div>
-					<div class="item">{{ rightNum12 }}</div>
-					<div class="item">{{ rightNum13 }}</div>
-					<div class="item">{{ rightNum14 }}</div>
-					<div class="item">{{ rightNum15 }}</div>
-					<div class="item">{{ rightNum16 }}</div>
-					<div class="item">{{ rightNum17 }}</div>
-					<div class="item">{{ rightNum18 }}</div>
-					<div class="item">{{ rightNum19 }}</div>
-					<div class="item">{{ rightNum20 }}</div>
-				</div>
-				<div class="times red">
-					<div class="item">{{ wrongNum11 }}</div>
-					<div class="item">{{ wrongNum12 }}</div>
-					<div class="item">{{ wrongNum13 }}</div>
-					<div class="item">{{ wrongNum14 }}</div>
-					<div class="item">{{ wrongNum15 }}</div>
-					<div class="item">{{ wrongNum16 }}</div>
-					<div class="item">{{ wrongNum17 }}</div>
-					<div class="item">{{ wrongNum18 }}</div>
-					<div class="item">{{ wrongNum19 }}</div>
-					<div class="item">{{ wrongNum20 }}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="data" :style="{opacity: num  ? 1 : 0}">
-					<div class="item">{{ num[10] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[11] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[12] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[13] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[14] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[15] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[16] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[17] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[18] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[19] == '1' ? '大' : '小'}}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="times">
-					<div class="item">{{ rightNum21 }}</div>
-					<div class="item">{{ rightNum22 }}</div>
-					<div class="item">{{ rightNum23 }}</div>
-					<div class="item">{{ rightNum24 }}</div>
-					<div class="item">{{ rightNum25 }}</div>
-					<div class="item">{{ rightNum26 }}</div>
-					<div class="item">{{ rightNum27 }}</div>
-					<div class="item">{{ rightNum28 }}</div>
-					<div class="item">{{ rightNum29 }}</div>
-					<div class="item">{{ rightNum30 }}</div>
-				</div>
-				<div class="times red">
-					<div class="item">{{ wrongNum21 }}</div>
-					<div class="item">{{ wrongNum22 }}</div>
-					<div class="item">{{ wrongNum23 }}</div>
-					<div class="item">{{ wrongNum24 }}</div>
-					<div class="item">{{ wrongNum25 }}</div>
-					<div class="item">{{ wrongNum26 }}</div>
-					<div class="item">{{ wrongNum27 }}</div>
-					<div class="item">{{ wrongNum28 }}</div>
-					<div class="item">{{ wrongNum29 }}</div>
-					<div class="item">{{ wrongNum30 }}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="data" :style="{opacity: num  ? 1 : 0}">
-					<div class="item">{{ num[20] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[21] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[22] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[23] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[24] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[25] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[26] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[27] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[28] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[29] == '1' ? '大' : '小'}}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="times">
-					<div class="item">{{ rightNum31 }}</div>
-					<div class="item">{{ rightNum32 }}</div>
-					<div class="item">{{ rightNum33 }}</div>
-					<div class="item">{{ rightNum34 }}</div>
-					<div class="item">{{ rightNum35 }}</div>
-					<div class="item">{{ rightNum36 }}</div>
-					<div class="item">{{ rightNum37 }}</div>
-					<div class="item">{{ rightNum38 }}</div>
-					<div class="item">{{ rightNum39 }}</div>
-					<div class="item">{{ rightNum40 }}</div>
-				</div>
-				<div class="times red">
-					<div class="item">{{ wrongNum31 }}</div>
-					<div class="item">{{ wrongNum32 }}</div>
-					<div class="item">{{ wrongNum33 }}</div>
-					<div class="item">{{ wrongNum34 }}</div>
-					<div class="item">{{ wrongNum35 }}</div>
-					<div class="item">{{ wrongNum36 }}</div>
-					<div class="item">{{ wrongNum37 }}</div>
-					<div class="item">{{ wrongNum38 }}</div>
-					<div class="item">{{ wrongNum39 }}</div>
-					<div class="item">{{ wrongNum40 }}</div>
-				</div>
-				<div style="height: 10px;"></div>
-				<div class="data" :style="{opacity: num  ? 1 : 0}">
-					<div class="item">{{ num[30] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[31] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[32] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[33] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[34] == '1' ? '大' : '小'}}</div>
-					<div class="item line">-</div>
-					<div class="item">{{ num[35] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[36] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[37] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[38] == '1' ? '大' : '小'}}</div>
-					<div class="item">{{ num[39] == '1' ? '大' : '小'}}</div>
-				</div>
+				<view class="order">
+					<view class="item">1</view>
+					<view class="item">2</view>
+					<view class="item">3</view>
+					<view class="item">4</view>
+					<view class="item">5</view>
+					<view class="item">6</view>
+					<view class="item">7</view>
+					<view class="item">8</view>
+					<view class="item">9</view>
+					<view class="item">0</view>
+				</view>
+				<view class="times">
+					<view class="item">{{ rightNum1 }}</view>
+					<view class="item">{{ rightNum2 }}</view>
+					<view class="item">{{ rightNum3 }}</view>
+					<view class="item">{{ rightNum4 }}</view>
+					<view class="item">{{ rightNum5 }}</view>
+					<view class="item">{{ rightNum6 }}</view>
+					<view class="item">{{ rightNum7 }}</view>
+					<view class="item">{{ rightNum8 }}</view>
+					<view class="item">{{ rightNum9 }}</view>
+					<view class="item">{{ rightNum10 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum1 }}</view>
+					<view class="item">{{ wrongNum2 }}</view>
+					<view class="item">{{ wrongNum3 }}</view>
+					<view class="item">{{ wrongNum4 }}</view>
+					<view class="item">{{ wrongNum5 }}</view>
+					<view class="item">{{ wrongNum6 }}</view>
+					<view class="item">{{ wrongNum7 }}</view>
+					<view class="item">{{ wrongNum8 }}</view>
+					<view class="item">{{ wrongNum9 }}</view>
+					<view class="item">{{ wrongNum10 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum11 }}</view>
+					<view class="item">{{ rightNum12 }}</view>
+					<view class="item">{{ rightNum13 }}</view>
+					<view class="item">{{ rightNum14 }}</view>
+					<view class="item">{{ rightNum15 }}</view>
+					<view class="item">{{ rightNum16 }}</view>
+					<view class="item">{{ rightNum17 }}</view>
+					<view class="item">{{ rightNum18 }}</view>
+					<view class="item">{{ rightNum19 }}</view>
+					<view class="item">{{ rightNum20 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum11 }}</view>
+					<view class="item">{{ wrongNum12 }}</view>
+					<view class="item">{{ wrongNum13 }}</view>
+					<view class="item">{{ wrongNum14 }}</view>
+					<view class="item">{{ wrongNum15 }}</view>
+					<view class="item">{{ wrongNum16 }}</view>
+					<view class="item">{{ wrongNum17 }}</view>
+					<view class="item">{{ wrongNum18 }}</view>
+					<view class="item">{{ wrongNum19 }}</view>
+					<view class="item">{{ wrongNum20 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[10] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[11] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[12] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[13] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[14] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[15] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[16] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[17] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[18] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[19] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum21 }}</view>
+					<view class="item">{{ rightNum22 }}</view>
+					<view class="item">{{ rightNum23 }}</view>
+					<view class="item">{{ rightNum24 }}</view>
+					<view class="item">{{ rightNum25 }}</view>
+					<view class="item">{{ rightNum26 }}</view>
+					<view class="item">{{ rightNum27 }}</view>
+					<view class="item">{{ rightNum28 }}</view>
+					<view class="item">{{ rightNum29 }}</view>
+					<view class="item">{{ rightNum30 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum21 }}</view>
+					<view class="item">{{ wrongNum22 }}</view>
+					<view class="item">{{ wrongNum23 }}</view>
+					<view class="item">{{ wrongNum24 }}</view>
+					<view class="item">{{ wrongNum25 }}</view>
+					<view class="item">{{ wrongNum26 }}</view>
+					<view class="item">{{ wrongNum27 }}</view>
+					<view class="item">{{ wrongNum28 }}</view>
+					<view class="item">{{ wrongNum29 }}</view>
+					<view class="item">{{ wrongNum30 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[20] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[21] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[22] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[23] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[24] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[25] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[26] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[27] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[28] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[29] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum31 }}</view>
+					<view class="item">{{ rightNum32 }}</view>
+					<view class="item">{{ rightNum33 }}</view>
+					<view class="item">{{ rightNum34 }}</view>
+					<view class="item">{{ rightNum35 }}</view>
+					<view class="item">{{ rightNum36 }}</view>
+					<view class="item">{{ rightNum37 }}</view>
+					<view class="item">{{ rightNum38 }}</view>
+					<view class="item">{{ rightNum39 }}</view>
+					<view class="item">{{ rightNum40 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum31 }}</view>
+					<view class="item">{{ wrongNum32 }}</view>
+					<view class="item">{{ wrongNum33 }}</view>
+					<view class="item">{{ wrongNum34 }}</view>
+					<view class="item">{{ wrongNum35 }}</view>
+					<view class="item">{{ wrongNum36 }}</view>
+					<view class="item">{{ wrongNum37 }}</view>
+					<view class="item">{{ wrongNum38 }}</view>
+					<view class="item">{{ wrongNum39 }}</view>
+					<view class="item">{{ wrongNum40 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[30] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[31] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[32] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[33] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[34] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[35] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[36] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[37] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[38] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[39] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum41 }}</view>
+					<view class="item">{{ rightNum42 }}</view>
+					<view class="item">{{ rightNum43 }}</view>
+					<view class="item">{{ rightNum44 }}</view>
+					<view class="item">{{ rightNum45 }}</view>
+					<view class="item">{{ rightNum46 }}</view>
+					<view class="item">{{ rightNum47 }}</view>
+					<view class="item">{{ rightNum48 }}</view>
+					<view class="item">{{ rightNum49 }}</view>
+					<view class="item">{{ rightNum50 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum41 }}</view>
+					<view class="item">{{ wrongNum42 }}</view>
+					<view class="item">{{ wrongNum43 }}</view>
+					<view class="item">{{ wrongNum44 }}</view>
+					<view class="item">{{ wrongNum45 }}</view>
+					<view class="item">{{ wrongNum46 }}</view>
+					<view class="item">{{ wrongNum47 }}</view>
+					<view class="item">{{ wrongNum48 }}</view>
+					<view class="item">{{ wrongNum49 }}</view>
+					<view class="item">{{ wrongNum50 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[40] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[41] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[42] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[43] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[44] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[45] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[46] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[47] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[48] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[59] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum51 }}</view>
+					<view class="item">{{ rightNum52 }}</view>
+					<view class="item">{{ rightNum53 }}</view>
+					<view class="item">{{ rightNum54 }}</view>
+					<view class="item">{{ rightNum55 }}</view>
+					<view class="item">{{ rightNum56 }}</view>
+					<view class="item">{{ rightNum57 }}</view>
+					<view class="item">{{ rightNum58 }}</view>
+					<view class="item">{{ rightNum59 }}</view>
+					<view class="item">{{ rightNum60 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum51 }}</view>
+					<view class="item">{{ wrongNum52 }}</view>
+					<view class="item">{{ wrongNum53 }}</view>
+					<view class="item">{{ wrongNum54 }}</view>
+					<view class="item">{{ wrongNum55 }}</view>
+					<view class="item">{{ wrongNum56 }}</view>
+					<view class="item">{{ wrongNum57 }}</view>
+					<view class="item">{{ wrongNum58 }}</view>
+					<view class="item">{{ wrongNum59 }}</view>
+					<view class="item">{{ wrongNum60 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[50] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[51] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[52] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[53] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[54] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[55] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[56] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[57] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[58] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[59] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum61 }}</view>
+					<view class="item">{{ rightNum62 }}</view>
+					<view class="item">{{ rightNum63 }}</view>
+					<view class="item">{{ rightNum64 }}</view>
+					<view class="item">{{ rightNum65 }}</view>
+					<view class="item">{{ rightNum66 }}</view>
+					<view class="item">{{ rightNum67 }}</view>
+					<view class="item">{{ rightNum68 }}</view>
+					<view class="item">{{ rightNum69 }}</view>
+					<view class="item">{{ rightNum70 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum61 }}</view>
+					<view class="item">{{ wrongNum62 }}</view>
+					<view class="item">{{ wrongNum63 }}</view>
+					<view class="item">{{ wrongNum64 }}</view>
+					<view class="item">{{ wrongNum65 }}</view>
+					<view class="item">{{ wrongNum66 }}</view>
+					<view class="item">{{ wrongNum67 }}</view>
+					<view class="item">{{ wrongNum68 }}</view>
+					<view class="item">{{ wrongNum69 }}</view>
+					<view class="item">{{ wrongNum70 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[60] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[61] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[62] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[63] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[64] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[65] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[66] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[67] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[68] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[69] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view class="item">{{ rightNum71 }}</view>
+					<view class="item">{{ rightNum72 }}</view>
+					<view class="item">{{ rightNum73 }}</view>
+					<view class="item">{{ rightNum74 }}</view>
+					<view class="item">{{ rightNum75 }}</view>
+					<view class="item">{{ rightNum76 }}</view>
+					<view class="item">{{ rightNum77 }}</view>
+					<view class="item">{{ rightNum78 }}</view>
+					<view class="item">{{ rightNum79 }}</view>
+					<view class="item">{{ rightNum80 }}</view>
+				</view>
+				<view class="times red">
+					<view class="item">{{ wrongNum71 }}</view>
+					<view class="item">{{ wrongNum72 }}</view>
+					<view class="item">{{ wrongNum73 }}</view>
+					<view class="item">{{ wrongNum74 }}</view>
+					<view class="item">{{ wrongNum75 }}</view>
+					<view class="item">{{ wrongNum76 }}</view>
+					<view class="item">{{ wrongNum77 }}</view>
+					<view class="item">{{ wrongNum78 }}</view>
+					<view class="item">{{ wrongNum79 }}</view>
+					<view class="item">{{ wrongNum80 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[70] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[71] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[72] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[73] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[74] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[75] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[76] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[77] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[78] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[79] == '1' ? '大' : '小' }}</view>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -238,6 +395,46 @@ const arr37 = ref([])
 const arr38 = ref([])
 const arr39 = ref([])
 const arr40 = ref([])
+const arr41 = ref([])
+const arr42 = ref([])
+const arr43 = ref([])
+const arr44 = ref([])
+const arr45 = ref([])
+const arr46 = ref([])
+const arr47 = ref([])
+const arr48 = ref([])
+const arr49 = ref([])
+const arr50 = ref([])
+const arr51 = ref([])
+const arr52 = ref([])
+const arr53 = ref([])
+const arr54 = ref([])
+const arr55 = ref([])
+const arr56 = ref([])
+const arr57 = ref([])
+const arr58 = ref([])
+const arr59 = ref([])
+const arr60 = ref([])
+const arr61 = ref([])
+const arr62 = ref([])
+const arr63 = ref([])
+const arr64 = ref([])
+const arr65 = ref([])
+const arr66 = ref([])
+const arr67 = ref([])
+const arr68 = ref([])
+const arr69 = ref([])
+const arr70 = ref([])
+const arr71 = ref([])
+const arr72 = ref([])
+const arr73 = ref([])
+const arr74 = ref([])
+const arr75 = ref([])
+const arr76 = ref([])
+const arr77 = ref([])
+const arr78 = ref([])
+const arr79 = ref([])
+const arr80 = ref([])
 const arrComparison = ref([])
 
 let rightNum1 = ref(0)
@@ -360,6 +557,126 @@ let wrongNum39 = ref(0)
 let rightNum40 = ref(0)
 let wrongNum40 = ref(0)
 
+let rightNum41 = ref(0)
+let wrongNum41 = ref(0)
+
+let rightNum42 = ref(0)
+let wrongNum42 = ref(0)
+
+let rightNum43 = ref(0)
+let wrongNum43 = ref(0)
+
+let rightNum44 = ref(0)
+let wrongNum44 = ref(0)
+
+let rightNum45 = ref(0)
+let wrongNum45 = ref(0)
+
+let rightNum46 = ref(0)
+let wrongNum46 = ref(0)
+
+let rightNum47 = ref(0)
+let wrongNum47 = ref(0)
+
+let rightNum48 = ref(0)
+let wrongNum48 = ref(0)
+
+let rightNum49 = ref(0)
+let wrongNum49 = ref(0)
+
+let rightNum50 = ref(0)
+let wrongNum50 = ref(0)
+
+let rightNum51 = ref(0)
+let wrongNum51 = ref(0)
+
+let rightNum52 = ref(0)
+let wrongNum52 = ref(0)
+
+let rightNum53 = ref(0)
+let wrongNum53 = ref(0)
+
+let rightNum54 = ref(0)
+let wrongNum54 = ref(0)
+
+let rightNum55 = ref(0)
+let wrongNum55 = ref(0)
+
+let rightNum56 = ref(0)
+let wrongNum56 = ref(0)
+
+let rightNum57 = ref(0)
+let wrongNum57 = ref(0)
+
+let rightNum58 = ref(0)
+let wrongNum58 = ref(0)
+
+let rightNum59 = ref(0)
+let wrongNum59 = ref(0)
+
+let rightNum60 = ref(0)
+let wrongNum60 = ref(0)
+
+let rightNum61 = ref(0)
+let wrongNum61 = ref(0)
+
+let rightNum62 = ref(0)
+let wrongNum62 = ref(0)
+
+let rightNum63 = ref(0)
+let wrongNum63 = ref(0)
+
+let rightNum64 = ref(0)
+let wrongNum64 = ref(0)
+
+let rightNum65 = ref(0)
+let wrongNum65 = ref(0)
+
+let rightNum66 = ref(0)
+let wrongNum66 = ref(0)
+
+let rightNum67 = ref(0)
+let wrongNum67 = ref(0)
+
+let rightNum68 = ref(0)
+let wrongNum68 = ref(0)
+
+let rightNum69 = ref(0)
+let wrongNum69 = ref(0)
+
+let rightNum70 = ref(0)
+let wrongNum70 = ref(0)
+
+let rightNum71 = ref(0)
+let wrongNum71 = ref(0)
+
+let rightNum72 = ref(0)
+let wrongNum72 = ref(0)
+
+let rightNum73 = ref(0)
+let wrongNum73 = ref(0)
+
+let rightNum74 = ref(0)
+let wrongNum74 = ref(0)
+
+let rightNum75 = ref(0)
+let wrongNum75 = ref(0)
+
+let rightNum76 = ref(0)
+let wrongNum76 = ref(0)
+
+let rightNum77 = ref(0)
+let wrongNum77 = ref(0)
+
+let rightNum78 = ref(0)
+let wrongNum78 = ref(0)
+
+let rightNum79 = ref(0)
+let wrongNum79 = ref(0)
+
+let rightNum80 = ref(0)
+let wrongNum80 = ref(0)
+
 /* 生命周期函数 */
 onLoad(() => {
 	getData()
@@ -368,121 +685,241 @@ onLoad(() => {
 	}, 0)
 	setTimeout(() => {
 		findHandle(1)
-	}, 50)
+	}, 10)
 	setTimeout(() => {
 		findHandle(2)
-	}, 100)
+	}, 20)
 	setTimeout(() => {
 		findHandle(3)
-	}, 150)
+	}, 30)
 	setTimeout(() => {
 		findHandle(4)
-	}, 200)
+	}, 40)
 	setTimeout(() => {
 		findHandle(5)
-	}, 250)
+	}, 50)
 	setTimeout(() => {
 		findHandle(6)
-	}, 300)
+	}, 60)
 	setTimeout(() => {
 		findHandle(7)
-	}, 350)
+	}, 70)
 	setTimeout(() => {
 		findHandle(8)
-	}, 400)
+	}, 80)
 	setTimeout(() => {
 		findHandle(9)
-	}, 450)
+	}, 90)
 	setTimeout(() => {
 		findHandle(10)
-	}, 500)
+	}, 100)
 	setTimeout(() => {
 		findHandle(11)
-	}, 550)
+	}, 110)
 	setTimeout(() => {
 		findHandle(12)
-	}, 600)
+	}, 120)
 	setTimeout(() => {
 		findHandle(13)
-	}, 650)
+	}, 130)
 	setTimeout(() => {
 		findHandle(14)
-	}, 700)
+	}, 140)
 	setTimeout(() => {
 		findHandle(15)
-	}, 750)
+	}, 150)
 	setTimeout(() => {
 		findHandle(16)
-	}, 800)
+	}, 160)
 	setTimeout(() => {
 		findHandle(17)
-	}, 850)
+	}, 170)
 	setTimeout(() => {
 		findHandle(18)
-	}, 900)
+	}, 180)
 	setTimeout(() => {
 		findHandle(19)
-	}, 950)
+	}, 190)
 	setTimeout(() => {
 		findHandle(20)
-	}, 1000)
+	}, 200)
 	setTimeout(() => {
 		findHandle(21)
-	}, 1050)
+	}, 210)
 	setTimeout(() => {
 		findHandle(22)
-	}, 1100)
+	}, 220)
 	setTimeout(() => {
 		findHandle(23)
-	}, 1150)
+	}, 230)
 	setTimeout(() => {
 		findHandle(24)
-	}, 1200)
+	}, 240)
 	setTimeout(() => {
 		findHandle(25)
-	}, 1250)
+	}, 250)
 	setTimeout(() => {
 		findHandle(26)
-	}, 1300)
+	}, 260)
 	setTimeout(() => {
 		findHandle(27)
-	}, 1350)
+	}, 270)
 	setTimeout(() => {
 		findHandle(28)
-	}, 1400)
+	}, 280)
 	setTimeout(() => {
 		findHandle(29)
-	}, 1450)
+	}, 290)
 	setTimeout(() => {
 		findHandle(30)
-	}, 1500)
+	}, 300)
 	setTimeout(() => {
 		findHandle(31)
-	}, 1550)
+	}, 310)
 	setTimeout(() => {
 		findHandle(32)
-	}, 1600)
+	}, 320)
 	setTimeout(() => {
 		findHandle(33)
-	}, 1650)
+	}, 330)
 	setTimeout(() => {
 		findHandle(34)
-	}, 1700)
+	}, 340)
 	setTimeout(() => {
 		findHandle(35)
-	}, 1750)
+	}, 350)
 	setTimeout(() => {
 		findHandle(36)
-	}, 1800)
+	}, 360)
 	setTimeout(() => {
 		findHandle(37)
-	}, 1850)
+	}, 370)
 	setTimeout(() => {
 		findHandle(38)
-	}, 1900)
+	}, 380)
 	setTimeout(() => {
 		findHandle(39)
-	}, 1950)
+	}, 390)
+	setTimeout(() => {
+		findHandle(40)
+	}, 400)
+	setTimeout(() => {
+		findHandle(41)
+	}, 410)
+	setTimeout(() => {
+		findHandle(42)
+	}, 420)
+	setTimeout(() => {
+		findHandle(43)
+	}, 430)
+	setTimeout(() => {
+		findHandle(44)
+	}, 440)
+	setTimeout(() => {
+		findHandle(45)
+	}, 450)
+	setTimeout(() => {
+		findHandle(46)
+	}, 460)
+	setTimeout(() => {
+		findHandle(47)
+	}, 470)
+	setTimeout(() => {
+		findHandle(48)
+	}, 480)
+	setTimeout(() => {
+		findHandle(49)
+	}, 490)
+	setTimeout(() => {
+		findHandle(50)
+	}, 500)
+	setTimeout(() => {
+		findHandle(51)
+	}, 510)
+	setTimeout(() => {
+		findHandle(52)
+	}, 520)
+	setTimeout(() => {
+		findHandle(53)
+	}, 530)
+	setTimeout(() => {
+		findHandle(54)
+	}, 540)
+	setTimeout(() => {
+		findHandle(55)
+	}, 550)
+	setTimeout(() => {
+		findHandle(56)
+	}, 560)
+	setTimeout(() => {
+		findHandle(57)
+	}, 570)
+	setTimeout(() => {
+		findHandle(58)
+	}, 580)
+	setTimeout(() => {
+		findHandle(59)
+	}, 590)
+	setTimeout(() => {
+		findHandle(60)
+	}, 600)
+	setTimeout(() => {
+		findHandle(61)
+	}, 610)
+	setTimeout(() => {
+		findHandle(62)
+	}, 620)
+	setTimeout(() => {
+		findHandle(63)
+	}, 630)
+	setTimeout(() => {
+		findHandle(64)
+	}, 640)
+	setTimeout(() => {
+		findHandle(65)
+	}, 650)
+	setTimeout(() => {
+		findHandle(66)
+	}, 660)
+	setTimeout(() => {
+		findHandle(67)
+	}, 670)
+	setTimeout(() => {
+		findHandle(68)
+	}, 680)
+	setTimeout(() => {
+		findHandle(69)
+	}, 690)
+	setTimeout(() => {
+		findHandle(70)
+	}, 700)
+	setTimeout(() => {
+		findHandle(71)
+	}, 710)
+	setTimeout(() => {
+		findHandle(72)
+	}, 720)
+	setTimeout(() => {
+		findHandle(73)
+	}, 730)
+	setTimeout(() => {
+		findHandle(74)
+	}, 740)
+	setTimeout(() => {
+		findHandle(75)
+	}, 750)
+	setTimeout(() => {
+		findHandle(76)
+	}, 760)
+	setTimeout(() => {
+		findHandle(77)
+	}, 770)
+	setTimeout(() => {
+		findHandle(78)
+	}, 780)
+	setTimeout(() => {
+		findHandle(79)
+	}, 790)
 })
 
 /* methods */
@@ -492,7 +929,7 @@ function rnd(n, m){
 
 function getRnd() {
 	let arr = []
-	for (let i = 0; i < 40; i++) {
+	for (let i = 0; i < 80; i++) {
 		let nb = rnd(0, 1)
 		arr.push(nb)
 	}
@@ -504,7 +941,11 @@ function setValueHandle() {
 		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
 		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined' &&
 		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined' &&
-		typeof num.value[30] != 'undefined' && typeof num.value[31] != 'undefined' && typeof num.value[32] != 'undefined' && typeof num.value[33] != 'undefined' && typeof num.value[34] != 'undefined' && typeof num.value[35] != 'undefined' && typeof num.value[36] != 'undefined' && typeof num.value[37] != 'undefined' && typeof num.value[38] != 'undefined' && typeof num.value[39] != 'undefined' && typeof num.value[40] != 'undefined'
+		typeof num.value[30] != 'undefined' && typeof num.value[31] != 'undefined' && typeof num.value[32] != 'undefined' && typeof num.value[33] != 'undefined' && typeof num.value[34] != 'undefined' && typeof num.value[35] != 'undefined' && typeof num.value[36] != 'undefined' && typeof num.value[37] != 'undefined' && typeof num.value[38] != 'undefined' && typeof num.value[39] != 'undefined' && typeof num.value[40] != 'undefined' &&
+		typeof num.value[40] != 'undefined' && typeof num.value[41] != 'undefined' && typeof num.value[42] != 'undefined' && typeof num.value[43] != 'undefined' && typeof num.value[44] != 'undefined' && typeof num.value[45] != 'undefined' && typeof num.value[46] != 'undefined' && typeof num.value[47] != 'undefined' && typeof num.value[48] != 'undefined' && typeof num.value[49] != 'undefined' && typeof num.value[50] != 'undefined' &&
+		typeof num.value[50] != 'undefined' && typeof num.value[51] != 'undefined' && typeof num.value[52] != 'undefined' && typeof num.value[53] != 'undefined' && typeof num.value[54] != 'undefined' && typeof num.value[55] != 'undefined' && typeof num.value[56] != 'undefined' && typeof num.value[57] != 'undefined' && typeof num.value[58] != 'undefined' && typeof num.value[59] != 'undefined' && typeof num.value[60] != 'undefined' &&
+		typeof num.value[60] != 'undefined' && typeof num.value[61] != 'undefined' && typeof num.value[62] != 'undefined' && typeof num.value[63] != 'undefined' && typeof num.value[64] != 'undefined' && typeof num.value[65] != 'undefined' && typeof num.value[66] != 'undefined' && typeof num.value[67] != 'undefined' && typeof num.value[68] != 'undefined' && typeof num.value[69] != 'undefined' && typeof num.value[70] != 'undefined' &&
+		typeof num.value[70] != 'undefined' && typeof num.value[71] != 'undefined' && typeof num.value[72] != 'undefined' && typeof num.value[73] != 'undefined' && typeof num.value[74] != 'undefined' && typeof num.value[75] != 'undefined' && typeof num.value[76] != 'undefined' && typeof num.value[77] != 'undefined' && typeof num.value[78] != 'undefined' && typeof num.value[79] != 'undefined' && typeof num.value[80] != 'undefined'
 	) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
@@ -546,7 +987,47 @@ function setValueHandle() {
 		arr38.value.unshift(num.value[37]);
 		arr39.value.unshift(num.value[38]);
 		arr40.value.unshift(num.value[39]);
-		arrComparison.value.unshift(num.value[40]);
+		arr41.value.unshift(num.value[40]);
+		arr42.value.unshift(num.value[41]);
+		arr43.value.unshift(num.value[42]);
+		arr44.value.unshift(num.value[43]);
+		arr45.value.unshift(num.value[44]);
+		arr46.value.unshift(num.value[45]);
+		arr47.value.unshift(num.value[46]);
+		arr48.value.unshift(num.value[47]);
+		arr49.value.unshift(num.value[48]);
+		arr50.value.unshift(num.value[49]);
+		arr51.value.unshift(num.value[50]);
+		arr52.value.unshift(num.value[51]);
+		arr53.value.unshift(num.value[52]);
+		arr54.value.unshift(num.value[53]);
+		arr55.value.unshift(num.value[54]);
+		arr56.value.unshift(num.value[55]);
+		arr57.value.unshift(num.value[56]);
+		arr58.value.unshift(num.value[57]);
+		arr59.value.unshift(num.value[58]);
+		arr60.value.unshift(num.value[59]);
+		arr61.value.unshift(num.value[60]);
+		arr62.value.unshift(num.value[61]);
+		arr63.value.unshift(num.value[62]);
+		arr64.value.unshift(num.value[63]);
+		arr65.value.unshift(num.value[64]);
+		arr66.value.unshift(num.value[65]);
+		arr67.value.unshift(num.value[66]);
+		arr68.value.unshift(num.value[67]);
+		arr69.value.unshift(num.value[68]);
+		arr70.value.unshift(num.value[69]);
+		arr71.value.unshift(num.value[70]);
+		arr72.value.unshift(num.value[71]);
+		arr73.value.unshift(num.value[72]);
+		arr74.value.unshift(num.value[73]);
+		arr75.value.unshift(num.value[74]);
+		arr76.value.unshift(num.value[75]);
+		arr77.value.unshift(num.value[76]);
+		arr78.value.unshift(num.value[77]);
+		arr79.value.unshift(num.value[78]);
+		arr70.value.unshift(num.value[79]);
+		arrComparison.value.unshift(num.value[80]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -668,6 +1149,126 @@ function setValueHandle() {
 		if (arr40.value.length > 20) {
 			arr40.value.pop()
 		}
+		if (arr41.value.length > 20) {
+			arr41.value.pop()
+		}
+		if (arr42.value.length > 20) {
+			arr42.value.pop()
+		}
+		if (arr43.value.length > 20) {
+			arr43.value.pop()
+		}
+		if (arr44.value.length > 20) {
+			arr44.value.pop()
+		}
+		if (arr45.value.length > 20) {
+			arr45.value.pop()
+		}
+		if (arr46.value.length > 20) {
+			arr46.value.pop()
+		}
+		if (arr47.value.length > 20) {
+			arr47.value.pop()
+		}
+		if (arr48.value.length > 20) {
+			arr48.value.pop()
+		}
+		if (arr49.value.length > 20) {
+			arr49.value.pop()
+		}
+		if (arr50.value.length > 20) {
+			arr50.value.pop()
+		}
+		if (arr51.value.length > 20) {
+			arr51.value.pop()
+		}
+		if (arr52.value.length > 20) {
+			arr52.value.pop()
+		}
+		if (arr53.value.length > 20) {
+			arr53.value.pop()
+		}
+		if (arr54.value.length > 20) {
+			arr54.value.pop()
+		}
+		if (arr55.value.length > 20) {
+			arr55.value.pop()
+		}
+		if (arr56.value.length > 20) {
+			arr56.value.pop()
+		}
+		if (arr57.value.length > 20) {
+			arr57.value.pop()
+		}
+		if (arr58.value.length > 20) {
+			arr58.value.pop()
+		}
+		if (arr59.value.length > 20) {
+			arr59.value.pop()
+		}
+		if (arr60.value.length > 20) {
+			arr60.value.pop()
+		}
+		if (arr61.value.length > 20) {
+			arr61.value.pop()
+		}
+		if (arr62.value.length > 20) {
+			arr62.value.pop()
+		}
+		if (arr63.value.length > 20) {
+			arr63.value.pop()
+		}
+		if (arr64.value.length > 20) {
+			arr64.value.pop()
+		}
+		if (arr65.value.length > 20) {
+			arr65.value.pop()
+		}
+		if (arr66.value.length > 20) {
+			arr66.value.pop()
+		}
+		if (arr67.value.length > 20) {
+			arr67.value.pop()
+		}
+		if (arr68.value.length > 20) {
+			arr68.value.pop()
+		}
+		if (arr69.value.length > 20) {
+			arr69.value.pop()
+		}
+		if (arr70.value.length > 20) {
+			arr70.value.pop()
+		}
+		if (arr71.value.length > 20) {
+			arr71.value.pop()
+		}
+		if (arr72.value.length > 20) {
+			arr72.value.pop()
+		}
+		if (arr73.value.length > 20) {
+			arr73.value.pop()
+		}
+		if (arr74.value.length > 20) {
+			arr74.value.pop()
+		}
+		if (arr75.value.length > 20) {
+			arr75.value.pop()
+		}
+		if (arr76.value.length > 20) {
+			arr76.value.pop()
+		}
+		if (arr77.value.length > 20) {
+			arr77.value.pop()
+		}
+		if (arr78.value.length > 20) {
+			arr78.value.pop()
+		}
+		if (arr79.value.length > 20) {
+			arr79.value.pop()
+		}
+		if (arr80.value.length > 20) {
+			arr80.value.pop()
+		}
 		if (arrComparison.value.length > 20) {
 			arrComparison.value.pop()
 		}
@@ -678,121 +1279,241 @@ function setValueHandle() {
 		}, 0)
 		setTimeout(() => {
 			findHandle(1)
-		}, 50)
+		}, 10)
 		setTimeout(() => {
 			findHandle(2)
-		}, 100)
+		}, 20)
 		setTimeout(() => {
 			findHandle(3)
-		}, 150)
+		}, 30)
 		setTimeout(() => {
 			findHandle(4)
-		}, 200)
+		}, 40)
 		setTimeout(() => {
 			findHandle(5)
-		}, 250)
+		}, 50)
 		setTimeout(() => {
 			findHandle(6)
-		}, 300)
+		}, 60)
 		setTimeout(() => {
 			findHandle(7)
-		}, 350)
+		}, 70)
 		setTimeout(() => {
 			findHandle(8)
-		}, 400)
+		}, 80)
 		setTimeout(() => {
 			findHandle(9)
-		}, 450)
+		}, 90)
 		setTimeout(() => {
 			findHandle(10)
-		}, 500)
+		}, 100)
 		setTimeout(() => {
 			findHandle(11)
-		}, 550)
+		}, 110)
 		setTimeout(() => {
 			findHandle(12)
-		}, 600)
+		}, 120)
 		setTimeout(() => {
 			findHandle(13)
-		}, 650)
+		}, 130)
 		setTimeout(() => {
 			findHandle(14)
-		}, 700)
+		}, 140)
 		setTimeout(() => {
 			findHandle(15)
-		}, 750)
+		}, 150)
 		setTimeout(() => {
 			findHandle(16)
-		}, 800)
+		}, 160)
 		setTimeout(() => {
 			findHandle(17)
-		}, 850)
+		}, 170)
 		setTimeout(() => {
 			findHandle(18)
-		}, 900)
+		}, 180)
 		setTimeout(() => {
 			findHandle(19)
-		}, 950)
+		}, 190)
 		setTimeout(() => {
 			findHandle(20)
-		}, 1000)
+		}, 200)
 		setTimeout(() => {
 			findHandle(21)
-		}, 1050)
+		}, 210)
 		setTimeout(() => {
 			findHandle(22)
-		}, 1100)
+		}, 220)
 		setTimeout(() => {
 			findHandle(23)
-		}, 1150)
+		}, 230)
 		setTimeout(() => {
 			findHandle(24)
-		}, 1200)
+		}, 240)
 		setTimeout(() => {
 			findHandle(25)
-		}, 1250)
+		}, 250)
 		setTimeout(() => {
 			findHandle(26)
-		}, 1300)
+		}, 260)
 		setTimeout(() => {
 			findHandle(27)
-		}, 1350)
+		}, 270)
 		setTimeout(() => {
 			findHandle(28)
-		}, 1400)
+		}, 280)
 		setTimeout(() => {
 			findHandle(29)
-		}, 1450)
+		}, 290)
 		setTimeout(() => {
 			findHandle(30)
-		}, 1500)
+		}, 300)
 		setTimeout(() => {
 			findHandle(31)
-		}, 1550)
+		}, 310)
 		setTimeout(() => {
 			findHandle(32)
-		}, 1600)
+		}, 320)
 		setTimeout(() => {
 			findHandle(33)
-		}, 1650)
+		}, 330)
 		setTimeout(() => {
 			findHandle(34)
-		}, 1700)
+		}, 340)
 		setTimeout(() => {
 			findHandle(35)
-		}, 1750)
+		}, 350)
 		setTimeout(() => {
 			findHandle(36)
-		}, 1800)
+		}, 360)
 		setTimeout(() => {
 			findHandle(37)
-		}, 1850)
+		}, 370)
 		setTimeout(() => {
 			findHandle(38)
-		}, 1900)
+		}, 380)
 		setTimeout(() => {
 			findHandle(39)
-		}, 1950)
+		}, 390)
+		setTimeout(() => {
+			findHandle(40)
+		}, 400)
+		setTimeout(() => {
+			findHandle(41)
+		}, 410)
+		setTimeout(() => {
+			findHandle(42)
+		}, 420)
+		setTimeout(() => {
+			findHandle(43)
+		}, 430)
+		setTimeout(() => {
+			findHandle(44)
+		}, 440)
+		setTimeout(() => {
+			findHandle(45)
+		}, 450)
+		setTimeout(() => {
+			findHandle(46)
+		}, 460)
+		setTimeout(() => {
+			findHandle(47)
+		}, 470)
+		setTimeout(() => {
+			findHandle(48)
+		}, 480)
+		setTimeout(() => {
+			findHandle(49)
+		}, 490)
+		setTimeout(() => {
+			findHandle(50)
+		}, 500)
+		setTimeout(() => {
+			findHandle(51)
+		}, 510)
+		setTimeout(() => {
+			findHandle(52)
+		}, 520)
+		setTimeout(() => {
+			findHandle(53)
+		}, 530)
+		setTimeout(() => {
+			findHandle(54)
+		}, 540)
+		setTimeout(() => {
+			findHandle(55)
+		}, 550)
+		setTimeout(() => {
+			findHandle(56)
+		}, 560)
+		setTimeout(() => {
+			findHandle(57)
+		}, 570)
+		setTimeout(() => {
+			findHandle(58)
+		}, 580)
+		setTimeout(() => {
+			findHandle(59)
+		}, 590)
+		setTimeout(() => {
+			findHandle(60)
+		}, 600)
+		setTimeout(() => {
+			findHandle(61)
+		}, 610)
+		setTimeout(() => {
+			findHandle(62)
+		}, 620)
+		setTimeout(() => {
+			findHandle(63)
+		}, 630)
+		setTimeout(() => {
+			findHandle(64)
+		}, 640)
+		setTimeout(() => {
+			findHandle(65)
+		}, 650)
+		setTimeout(() => {
+			findHandle(66)
+		}, 660)
+		setTimeout(() => {
+			findHandle(67)
+		}, 670)
+		setTimeout(() => {
+			findHandle(68)
+		}, 680)
+		setTimeout(() => {
+			findHandle(69)
+		}, 690)
+		setTimeout(() => {
+			findHandle(70)
+		}, 700)
+		setTimeout(() => {
+			findHandle(71)
+		}, 710)
+		setTimeout(() => {
+			findHandle(72)
+		}, 720)
+		setTimeout(() => {
+			findHandle(73)
+		}, 730)
+		setTimeout(() => {
+			findHandle(74)
+		}, 740)
+		setTimeout(() => {
+			findHandle(75)
+		}, 750)
+		setTimeout(() => {
+			findHandle(76)
+		}, 760)
+		setTimeout(() => {
+			findHandle(77)
+		}, 770)
+		setTimeout(() => {
+			findHandle(78)
+		}, 780)
+		setTimeout(() => {
+			findHandle(79)
+		}, 790)
 	}
 }
 function clearValueHandle() {
@@ -836,6 +1557,46 @@ function clearValueHandle() {
 	arr38.value.shift()
 	arr39.value.shift()
 	arr40.value.shift()
+	arr41.value.shift()
+	arr42.value.shift()
+	arr43.value.shift()
+	arr44.value.shift()
+	arr45.value.shift()
+	arr46.value.shift()
+	arr47.value.shift()
+	arr48.value.shift()
+	arr49.value.shift()
+	arr50.value.shift()
+	arr51.value.shift()
+	arr52.value.shift()
+	arr53.value.shift()
+	arr54.value.shift()
+	arr55.value.shift()
+	arr56.value.shift()
+	arr57.value.shift()
+	arr58.value.shift()
+	arr59.value.shift()
+	arr60.value.shift()
+	arr61.value.shift()
+	arr62.value.shift()
+	arr63.value.shift()
+	arr64.value.shift()
+	arr65.value.shift()
+	arr66.value.shift()
+	arr67.value.shift()
+	arr68.value.shift()
+	arr69.value.shift()
+	arr70.value.shift()
+	arr71.value.shift()
+	arr72.value.shift()
+	arr73.value.shift()
+	arr74.value.shift()
+	arr75.value.shift()
+	arr76.value.shift()
+	arr77.value.shift()
+	arr78.value.shift()
+	arr79.value.shift()
+	arr80.value.shift()
 	arrComparison.value.shift()
 	setStorage()
 	setTimeout(() => {
@@ -843,121 +1604,241 @@ function clearValueHandle() {
 	}, 0)
 	setTimeout(() => {
 		findHandle(1)
-	}, 50)
+	}, 10)
 	setTimeout(() => {
 		findHandle(2)
-	}, 100)
+	}, 20)
 	setTimeout(() => {
 		findHandle(3)
-	}, 150)
+	}, 30)
 	setTimeout(() => {
 		findHandle(4)
-	}, 200)
+	}, 40)
 	setTimeout(() => {
 		findHandle(5)
-	}, 250)
+	}, 50)
 	setTimeout(() => {
 		findHandle(6)
-	}, 300)
+	}, 60)
 	setTimeout(() => {
 		findHandle(7)
-	}, 350)
+	}, 70)
 	setTimeout(() => {
 		findHandle(8)
-	}, 400)
+	}, 80)
 	setTimeout(() => {
 		findHandle(9)
-	}, 450)
+	}, 90)
 	setTimeout(() => {
 		findHandle(10)
-	}, 500)
+	}, 100)
 	setTimeout(() => {
 		findHandle(11)
-	}, 550)
+	}, 110)
 	setTimeout(() => {
 		findHandle(12)
-	}, 600)
+	}, 120)
 	setTimeout(() => {
 		findHandle(13)
-	}, 650)
+	}, 130)
 	setTimeout(() => {
 		findHandle(14)
-	}, 700)
+	}, 140)
 	setTimeout(() => {
 		findHandle(15)
-	}, 750)
+	}, 150)
 	setTimeout(() => {
 		findHandle(16)
-	}, 800)
+	}, 160)
 	setTimeout(() => {
 		findHandle(17)
-	}, 850)
+	}, 170)
 	setTimeout(() => {
 		findHandle(18)
-	}, 900)
+	}, 180)
 	setTimeout(() => {
 		findHandle(19)
-	}, 950)
+	}, 190)
 	setTimeout(() => {
 		findHandle(20)
-	}, 1000)
+	}, 200)
 	setTimeout(() => {
 		findHandle(21)
-	}, 1050)
+	}, 210)
 	setTimeout(() => {
 		findHandle(22)
-	}, 1100)
+	}, 220)
 	setTimeout(() => {
 		findHandle(23)
-	}, 1150)
+	}, 230)
 	setTimeout(() => {
 		findHandle(24)
-	}, 1200)
+	}, 240)
 	setTimeout(() => {
 		findHandle(25)
-	}, 1250)
+	}, 250)
 	setTimeout(() => {
 		findHandle(26)
-	}, 1300)
+	}, 260)
 	setTimeout(() => {
 		findHandle(27)
-	}, 1350)
+	}, 270)
 	setTimeout(() => {
 		findHandle(28)
-	}, 1400)
+	}, 280)
 	setTimeout(() => {
 		findHandle(29)
-	}, 1450)
+	}, 290)
 	setTimeout(() => {
 		findHandle(30)
-	}, 1500)
+	}, 300)
 	setTimeout(() => {
 		findHandle(31)
-	}, 1550)
+	}, 310)
 	setTimeout(() => {
 		findHandle(32)
-	}, 1600)
+	}, 320)
 	setTimeout(() => {
 		findHandle(33)
-	}, 1650)
+	}, 330)
 	setTimeout(() => {
 		findHandle(34)
-	}, 1700)
+	}, 340)
 	setTimeout(() => {
 		findHandle(35)
-	}, 1750)
+	}, 350)
 	setTimeout(() => {
 		findHandle(36)
-	}, 1800)
+	}, 360)
 	setTimeout(() => {
 		findHandle(37)
-	}, 1850)
+	}, 370)
 	setTimeout(() => {
 		findHandle(38)
-	}, 1900)
+	}, 380)
 	setTimeout(() => {
 		findHandle(39)
-	}, 1950)
+	}, 390)
+	setTimeout(() => {
+		findHandle(40)
+	}, 400)
+	setTimeout(() => {
+		findHandle(41)
+	}, 410)
+	setTimeout(() => {
+		findHandle(42)
+	}, 420)
+	setTimeout(() => {
+		findHandle(43)
+	}, 430)
+	setTimeout(() => {
+		findHandle(44)
+	}, 440)
+	setTimeout(() => {
+		findHandle(45)
+	}, 450)
+	setTimeout(() => {
+		findHandle(46)
+	}, 460)
+	setTimeout(() => {
+		findHandle(47)
+	}, 470)
+	setTimeout(() => {
+		findHandle(48)
+	}, 480)
+	setTimeout(() => {
+		findHandle(49)
+	}, 490)
+	setTimeout(() => {
+		findHandle(50)
+	}, 500)
+	setTimeout(() => {
+		findHandle(51)
+	}, 510)
+	setTimeout(() => {
+		findHandle(52)
+	}, 520)
+	setTimeout(() => {
+		findHandle(53)
+	}, 530)
+	setTimeout(() => {
+		findHandle(54)
+	}, 540)
+	setTimeout(() => {
+		findHandle(55)
+	}, 550)
+	setTimeout(() => {
+		findHandle(56)
+	}, 560)
+	setTimeout(() => {
+		findHandle(57)
+	}, 570)
+	setTimeout(() => {
+		findHandle(58)
+	}, 580)
+	setTimeout(() => {
+		findHandle(59)
+	}, 590)
+	setTimeout(() => {
+		findHandle(60)
+	}, 600)
+	setTimeout(() => {
+		findHandle(61)
+	}, 610)
+	setTimeout(() => {
+		findHandle(62)
+	}, 620)
+	setTimeout(() => {
+		findHandle(63)
+	}, 630)
+	setTimeout(() => {
+		findHandle(64)
+	}, 640)
+	setTimeout(() => {
+		findHandle(65)
+	}, 650)
+	setTimeout(() => {
+		findHandle(66)
+	}, 660)
+	setTimeout(() => {
+		findHandle(67)
+	}, 670)
+	setTimeout(() => {
+		findHandle(68)
+	}, 680)
+	setTimeout(() => {
+		findHandle(69)
+	}, 690)
+	setTimeout(() => {
+		findHandle(70)
+	}, 700)
+	setTimeout(() => {
+		findHandle(71)
+	}, 710)
+	setTimeout(() => {
+		findHandle(72)
+	}, 720)
+	setTimeout(() => {
+		findHandle(73)
+	}, 730)
+	setTimeout(() => {
+		findHandle(74)
+	}, 740)
+	setTimeout(() => {
+		findHandle(75)
+	}, 750)
+	setTimeout(() => {
+		findHandle(76)
+	}, 760)
+	setTimeout(() => {
+		findHandle(77)
+	}, 770)
+	setTimeout(() => {
+		findHandle(78)
+	}, 780)
+	setTimeout(() => {
+		findHandle(79)
+	}, 790)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -1000,6 +1881,46 @@ function setStorage() {
 	uni.setStorageSync('arr38', JSON.stringify(arr38.value))
 	uni.setStorageSync('arr39', JSON.stringify(arr39.value))
 	uni.setStorageSync('arr40', JSON.stringify(arr40.value))
+	uni.setStorageSync('arr41', JSON.stringify(arr41.value))
+	uni.setStorageSync('arr42', JSON.stringify(arr42.value))
+	uni.setStorageSync('arr43', JSON.stringify(arr43.value))
+	uni.setStorageSync('arr44', JSON.stringify(arr44.value))
+	uni.setStorageSync('arr45', JSON.stringify(arr45.value))
+	uni.setStorageSync('arr46', JSON.stringify(arr46.value))
+	uni.setStorageSync('arr47', JSON.stringify(arr47.value))
+	uni.setStorageSync('arr48', JSON.stringify(arr48.value))
+	uni.setStorageSync('arr49', JSON.stringify(arr49.value))
+	uni.setStorageSync('arr50', JSON.stringify(arr50.value))
+	uni.setStorageSync('arr51', JSON.stringify(arr51.value))
+	uni.setStorageSync('arr52', JSON.stringify(arr52.value))
+	uni.setStorageSync('arr53', JSON.stringify(arr53.value))
+	uni.setStorageSync('arr54', JSON.stringify(arr54.value))
+	uni.setStorageSync('arr55', JSON.stringify(arr55.value))
+	uni.setStorageSync('arr56', JSON.stringify(arr56.value))
+	uni.setStorageSync('arr57', JSON.stringify(arr57.value))
+	uni.setStorageSync('arr58', JSON.stringify(arr58.value))
+	uni.setStorageSync('arr59', JSON.stringify(arr59.value))
+	uni.setStorageSync('arr60', JSON.stringify(arr60.value))
+	uni.setStorageSync('arr61', JSON.stringify(arr61.value))
+	uni.setStorageSync('arr62', JSON.stringify(arr62.value))
+	uni.setStorageSync('arr63', JSON.stringify(arr63.value))
+	uni.setStorageSync('arr64', JSON.stringify(arr64.value))
+	uni.setStorageSync('arr65', JSON.stringify(arr65.value))
+	uni.setStorageSync('arr66', JSON.stringify(arr66.value))
+	uni.setStorageSync('arr67', JSON.stringify(arr67.value))
+	uni.setStorageSync('arr68', JSON.stringify(arr68.value))
+	uni.setStorageSync('arr69', JSON.stringify(arr69.value))
+	uni.setStorageSync('arr70', JSON.stringify(arr70.value))
+	uni.setStorageSync('arr71', JSON.stringify(arr71.value))
+	uni.setStorageSync('arr72', JSON.stringify(arr72.value))
+	uni.setStorageSync('arr73', JSON.stringify(arr73.value))
+	uni.setStorageSync('arr74', JSON.stringify(arr74.value))
+	uni.setStorageSync('arr75', JSON.stringify(arr75.value))
+	uni.setStorageSync('arr76', JSON.stringify(arr76.value))
+	uni.setStorageSync('arr77', JSON.stringify(arr77.value))
+	uni.setStorageSync('arr78', JSON.stringify(arr78.value))
+	uni.setStorageSync('arr79', JSON.stringify(arr79.value))
+	uni.setStorageSync('arr80', JSON.stringify(arr80.value))
 	uni.setStorageSync('arrComparison', JSON.stringify(arrComparison.value))
 }
 function getData() {
@@ -1044,6 +1965,46 @@ function getData() {
 		arr38.value = JSON.parse(uni.getStorageSync('arr38'))
 		arr39.value = JSON.parse(uni.getStorageSync('arr39'))
 		arr40.value = JSON.parse(uni.getStorageSync('arr40'))
+		arr41.value = JSON.parse(uni.getStorageSync('arr41'))
+		arr42.value = JSON.parse(uni.getStorageSync('arr42'))
+		arr43.value = JSON.parse(uni.getStorageSync('arr43'))
+		arr44.value = JSON.parse(uni.getStorageSync('arr44'))
+		arr45.value = JSON.parse(uni.getStorageSync('arr45'))
+		arr46.value = JSON.parse(uni.getStorageSync('arr46'))
+		arr47.value = JSON.parse(uni.getStorageSync('arr47'))
+		arr48.value = JSON.parse(uni.getStorageSync('arr48'))
+		arr49.value = JSON.parse(uni.getStorageSync('arr49'))
+		arr50.value = JSON.parse(uni.getStorageSync('arr50'))
+		arr51.value = JSON.parse(uni.getStorageSync('arr51'))
+		arr52.value = JSON.parse(uni.getStorageSync('arr52'))
+		arr53.value = JSON.parse(uni.getStorageSync('arr53'))
+		arr54.value = JSON.parse(uni.getStorageSync('arr54'))
+		arr55.value = JSON.parse(uni.getStorageSync('arr55'))
+		arr56.value = JSON.parse(uni.getStorageSync('arr56'))
+		arr57.value = JSON.parse(uni.getStorageSync('arr57'))
+		arr58.value = JSON.parse(uni.getStorageSync('arr58'))
+		arr59.value = JSON.parse(uni.getStorageSync('arr59'))
+		arr60.value = JSON.parse(uni.getStorageSync('arr60'))
+		arr61.value = JSON.parse(uni.getStorageSync('arr61'))
+		arr62.value = JSON.parse(uni.getStorageSync('arr62'))
+		arr63.value = JSON.parse(uni.getStorageSync('arr63'))
+		arr64.value = JSON.parse(uni.getStorageSync('arr64'))
+		arr65.value = JSON.parse(uni.getStorageSync('arr65'))
+		arr66.value = JSON.parse(uni.getStorageSync('arr66'))
+		arr67.value = JSON.parse(uni.getStorageSync('arr67'))
+		arr68.value = JSON.parse(uni.getStorageSync('arr68'))
+		arr69.value = JSON.parse(uni.getStorageSync('arr69'))
+		arr70.value = JSON.parse(uni.getStorageSync('arr70'))
+		arr71.value = JSON.parse(uni.getStorageSync('arr71'))
+		arr72.value = JSON.parse(uni.getStorageSync('arr72'))
+		arr73.value = JSON.parse(uni.getStorageSync('arr73'))
+		arr74.value = JSON.parse(uni.getStorageSync('arr74'))
+		arr75.value = JSON.parse(uni.getStorageSync('arr75'))
+		arr76.value = JSON.parse(uni.getStorageSync('arr76'))
+		arr77.value = JSON.parse(uni.getStorageSync('arr77'))
+		arr78.value = JSON.parse(uni.getStorageSync('arr78'))
+		arr79.value = JSON.parse(uni.getStorageSync('arr79'))
+		arr80.value = JSON.parse(uni.getStorageSync('arr80'))
 		arrComparison.value = JSON.parse(uni.getStorageSync('arrComparison'))
 	}
 }
@@ -1168,6 +2129,86 @@ function findHandle(index) {
 		setDataHandle(arr39, rightNum39, wrongNum39)
 	} else if (index == 39) {
 		setDataHandle(arr40, rightNum40, wrongNum40)
+	} else if (index == 40) {
+		setDataHandle(arr41, rightNum41, wrongNum41)
+	} else if (index == 41) {
+		setDataHandle(arr42, rightNum42, wrongNum42)
+	} else if (index == 42) {
+		setDataHandle(arr43, rightNum43, wrongNum43)
+	} else if (index == 43) {
+		setDataHandle(arr44, rightNum44, wrongNum44)
+	} else if (index == 44) {
+		setDataHandle(arr45, rightNum45, wrongNum45)
+	} else if (index == 45) {
+		setDataHandle(arr46, rightNum46, wrongNum46)
+	} else if (index == 46) {
+		setDataHandle(arr47, rightNum47, wrongNum47)
+	} else if (index == 47) {
+		setDataHandle(arr48, rightNum48, wrongNum48)
+	} else if (index == 48) {
+		setDataHandle(arr49, rightNum49, wrongNum49)
+	} else if (index == 49) {
+		setDataHandle(arr50, rightNum50, wrongNum50)
+	} else if (index == 50) {
+		setDataHandle(arr51, rightNum51, wrongNum51)
+	} else if (index == 51) {
+		setDataHandle(arr52, rightNum52, wrongNum52)
+	} else if (index == 52) {
+		setDataHandle(arr53, rightNum53, wrongNum53)
+	} else if (index == 53) {
+		setDataHandle(arr54, rightNum54, wrongNum54)
+	} else if (index == 54) {
+		setDataHandle(arr55, rightNum55, wrongNum55)
+	} else if (index == 55) {
+		setDataHandle(arr56, rightNum56, wrongNum56)
+	} else if (index == 56) {
+		setDataHandle(arr57, rightNum57, wrongNum57)
+	} else if (index == 57) {
+		setDataHandle(arr58, rightNum58, wrongNum58)
+	} else if (index == 58) {
+		setDataHandle(arr59, rightNum59, wrongNum59)
+	} else if (index == 59) {
+		setDataHandle(arr60, rightNum60, wrongNum60)
+	} else if (index == 60) {
+		setDataHandle(arr61, rightNum61, wrongNum61)
+	} else if (index == 61) {
+		setDataHandle(arr62, rightNum62, wrongNum62)
+	} else if (index == 62) {
+		setDataHandle(arr63, rightNum63, wrongNum63)
+	} else if (index == 63) {
+		setDataHandle(arr64, rightNum64, wrongNum64)
+	} else if (index == 64) {
+		setDataHandle(arr65, rightNum65, wrongNum65)
+	} else if (index == 65) {
+		setDataHandle(arr66, rightNum66, wrongNum66)
+	} else if (index == 66) {
+		setDataHandle(arr67, rightNum67, wrongNum67)
+	} else if (index == 67) {
+		setDataHandle(arr68, rightNum68, wrongNum68)
+	} else if (index == 68) {
+		setDataHandle(arr69, rightNum69, wrongNum69)
+	} else if (index == 69) {
+		setDataHandle(arr70, rightNum70, wrongNum70)
+	} else if (index == 70) {
+		setDataHandle(arr71, rightNum71, wrongNum71)
+	} else if (index == 71) {
+		setDataHandle(arr72, rightNum72, wrongNum72)
+	} else if (index == 72) {
+		setDataHandle(arr73, rightNum73, wrongNum73)
+	} else if (index == 73) {
+		setDataHandle(arr74, rightNum74, wrongNum74)
+	} else if (index == 74) {
+		setDataHandle(arr75, rightNum75, wrongNum75)
+	} else if (index == 75) {
+		setDataHandle(arr76, rightNum76, wrongNum76)
+	} else if (index == 76) {
+		setDataHandle(arr77, rightNum77, wrongNum77)
+	} else if (index == 77) {
+		setDataHandle(arr78, rightNum78, wrongNum78)
+	} else if (index == 78) {
+		setDataHandle(arr79, rightNum79, wrongNum79)
+	} else if (index == 79) {
+		setDataHandle(arr80, rightNum80, wrongNum80)
 	}
 }
 </script>
@@ -1186,7 +2227,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 26rpx;
+				font-size: 14rpx;
 				letter-spacing: 20px;
 			}
 			.order {
