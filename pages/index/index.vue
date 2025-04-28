@@ -1147,7 +1147,7 @@ function rnd(n, m){
 
 function getRnd() {
 	let arr = []
-	for (let i = 0; i < 80; i++) {
+	for (let i = 0; i < 100; i++) {
 		let nb = rnd(0, 1)
 		arr.push(nb)
 	}
@@ -2747,7 +2747,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 10rpx;
+				font-size: 12rpx;
 				letter-spacing: 20px;
 			}
 			.order {
