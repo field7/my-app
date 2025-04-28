@@ -344,6 +344,84 @@
 					<view class="item">{{ num[78] == '1' ? '大' : '小' }}</view>
 					<view class="item">{{ num[79] == '1' ? '大' : '小' }}</view>
 				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum81 > 6 ? 'item active' : 'item'">{{ rightNum81 }}</view>
+					<view :class="rightNum82 > 6 ? 'item active' : 'item'">{{ rightNum82 }}</view>
+					<view :class="rightNum83 > 6 ? 'item active' : 'item'">{{ rightNum83 }}</view>
+					<view :class="rightNum84 > 6 ? 'item active' : 'item'">{{ rightNum84 }}</view>
+					<view :class="rightNum85 > 6 ? 'item active' : 'item'">{{ rightNum85 }}</view>
+					<view :class="rightNum86 > 6 ? 'item active' : 'item'">{{ rightNum86 }}</view>
+					<view :class="rightNum87 > 6 ? 'item active' : 'item'">{{ rightNum87 }}</view>
+					<view :class="rightNum88 > 6 ? 'item active' : 'item'">{{ rightNum88 }}</view>
+					<view :class="rightNum89 > 6 ? 'item active' : 'item'">{{ rightNum89 }}</view>
+					<view :class="rightNum90 > 6 ? 'item active' : 'item'">{{ rightNum90 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum81 > 6 ? 'item active' : 'item'">{{ wrongNum81 }}</view>
+					<view :class="wrongNum82 > 6 ? 'item active' : 'item'">{{ wrongNum82 }}</view>
+					<view :class="wrongNum83 > 6 ? 'item active' : 'item'">{{ wrongNum83 }}</view>
+					<view :class="wrongNum84 > 6 ? 'item active' : 'item'">{{ wrongNum84 }}</view>
+					<view :class="wrongNum85 > 6 ? 'item active' : 'item'">{{ wrongNum85 }}</view>
+					<view :class="wrongNum86 > 6 ? 'item active' : 'item'">{{ wrongNum86 }}</view>
+					<view :class="wrongNum87 > 6 ? 'item active' : 'item'">{{ wrongNum87 }}</view>
+					<view :class="wrongNum88 > 6 ? 'item active' : 'item'">{{ wrongNum88 }}</view>
+					<view :class="wrongNum89 > 6 ? 'item active' : 'item'">{{ wrongNum89 }}</view>
+					<view :class="wrongNum90 > 6 ? 'item active' : 'item'">{{ wrongNum90 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[80] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[81] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[82] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[83] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[84] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[85] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[86] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[87] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[88] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[89] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum91 > 6 ? 'item active' : 'item'">{{ rightNum91 }}</view>
+					<view :class="rightNum92 > 6 ? 'item active' : 'item'">{{ rightNum92 }}</view>
+					<view :class="rightNum93 > 6 ? 'item active' : 'item'">{{ rightNum93 }}</view>
+					<view :class="rightNum94 > 6 ? 'item active' : 'item'">{{ rightNum94 }}</view>
+					<view :class="rightNum95 > 6 ? 'item active' : 'item'">{{ rightNum95 }}</view>
+					<view :class="rightNum96 > 6 ? 'item active' : 'item'">{{ rightNum96 }}</view>
+					<view :class="rightNum97 > 6 ? 'item active' : 'item'">{{ rightNum97 }}</view>
+					<view :class="rightNum98 > 6 ? 'item active' : 'item'">{{ rightNum98 }}</view>
+					<view :class="rightNum99 > 6 ? 'item active' : 'item'">{{ rightNum99 }}</view>
+					<view :class="rightNum100 > 6 ? 'item active' : 'item'">{{ rightNum100 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum91 > 6 ? 'item active' : 'item'">{{ wrongNum91 }}</view>
+					<view :class="wrongNum92 > 6 ? 'item active' : 'item'">{{ wrongNum72 }}</view>
+					<view :class="wrongNum93 > 6 ? 'item active' : 'item'">{{ wrongNum93 }}</view>
+					<view :class="wrongNum94 > 6 ? 'item active' : 'item'">{{ wrongNum94 }}</view>
+					<view :class="wrongNum95 > 6 ? 'item active' : 'item'">{{ wrongNum95 }}</view>
+					<view :class="wrongNum96 > 6 ? 'item active' : 'item'">{{ wrongNum96 }}</view>
+					<view :class="wrongNum97 > 6 ? 'item active' : 'item'">{{ wrongNum97 }}</view>
+					<view :class="wrongNum98 > 6 ? 'item active' : 'item'">{{ wrongNum98 }}</view>
+					<view :class="wrongNum99 > 6 ? 'item active' : 'item'">{{ wrongNum99 }}</view>
+					<view :class="wrongNum100 > 6 ? 'item active' : 'item'">{{ wrongNum100 }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view class="item">{{ num[90] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[91] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[92] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[93] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[94] == '1' ? '大' : '小' }}</view>
+					<view class="item line">-</view>
+					<view class="item">{{ num[95] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[96] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[97] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[98] == '1' ? '大' : '小' }}</view>
+					<view class="item">{{ num[99] == '1' ? '大' : '小' }}</view>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -435,6 +513,26 @@ const arr77 = ref([])
 const arr78 = ref([])
 const arr79 = ref([])
 const arr80 = ref([])
+const arr81 = ref([])
+const arr82 = ref([])
+const arr83 = ref([])
+const arr84 = ref([])
+const arr85 = ref([])
+const arr86 = ref([])
+const arr87 = ref([])
+const arr88 = ref([])
+const arr89 = ref([])
+const arr90 = ref([])
+const arr91 = ref([])
+const arr92 = ref([])
+const arr93 = ref([])
+const arr94 = ref([])
+const arr95 = ref([])
+const arr96 = ref([])
+const arr97 = ref([])
+const arr98 = ref([])
+const arr99 = ref([])
+const arr100 = ref([])
 const arrComparison = ref([])
 
 let rightNum1 = ref(0)
@@ -676,6 +774,66 @@ let wrongNum79 = ref(0)
 
 let rightNum80 = ref(0)
 let wrongNum80 = ref(0)
+
+let rightNum81 = ref(0)
+let wrongNum81 = ref(0)
+
+let rightNum82 = ref(0)
+let wrongNum82 = ref(0)
+
+let rightNum83 = ref(0)
+let wrongNum83 = ref(0)
+
+let rightNum84 = ref(0)
+let wrongNum84 = ref(0)
+
+let rightNum85 = ref(0)
+let wrongNum85 = ref(0)
+
+let rightNum86 = ref(0)
+let wrongNum86 = ref(0)
+
+let rightNum87 = ref(0)
+let wrongNum87 = ref(0)
+
+let rightNum88 = ref(0)
+let wrongNum88 = ref(0)
+
+let rightNum89 = ref(0)
+let wrongNum89 = ref(0)
+
+let rightNum90 = ref(0)
+let wrongNum90 = ref(0)
+
+let rightNum91 = ref(0)
+let wrongNum91 = ref(0)
+
+let rightNum92 = ref(0)
+let wrongNum92 = ref(0)
+
+let rightNum93 = ref(0)
+let wrongNum93 = ref(0)
+
+let rightNum94 = ref(0)
+let wrongNum94 = ref(0)
+
+let rightNum95 = ref(0)
+let wrongNum95 = ref(0)
+
+let rightNum96 = ref(0)
+let wrongNum96 = ref(0)
+
+let rightNum97 = ref(0)
+let wrongNum97 = ref(0)
+
+let rightNum98 = ref(0)
+let wrongNum98 = ref(0)
+
+let rightNum99 = ref(0)
+let wrongNum99 = ref(0)
+
+let rightNum100 = ref(0)
+let wrongNum100 = ref(0)
 
 /* 生命周期函数 */
 onLoad(() => {
@@ -920,6 +1078,66 @@ onLoad(() => {
 	setTimeout(() => {
 		findHandle(79)
 	}, 790)
+	setTimeout(() => {
+		findHandle(80)
+	}, 800)
+	setTimeout(() => {
+		findHandle(81)
+	}, 810)
+	setTimeout(() => {
+		findHandle(82)
+	}, 820)
+	setTimeout(() => {
+		findHandle(83)
+	}, 830)
+	setTimeout(() => {
+		findHandle(84)
+	}, 840)
+	setTimeout(() => {
+		findHandle(85)
+	}, 850)
+	setTimeout(() => {
+		findHandle(86)
+	}, 860)
+	setTimeout(() => {
+		findHandle(87)
+	}, 870)
+	setTimeout(() => {
+		findHandle(88)
+	}, 880)
+	setTimeout(() => {
+		findHandle(89)
+	}, 890)
+	setTimeout(() => {
+		findHandle(90)
+	}, 900)
+	setTimeout(() => {
+		findHandle(91)
+	}, 910)
+	setTimeout(() => {
+		findHandle(92)
+	}, 920)
+	setTimeout(() => {
+		findHandle(93)
+	}, 930)
+	setTimeout(() => {
+		findHandle(94)
+	}, 940)
+	setTimeout(() => {
+		findHandle(95)
+	}, 950)
+	setTimeout(() => {
+		findHandle(96)
+	}, 960)
+	setTimeout(() => {
+		findHandle(97)
+	}, 970)
+	setTimeout(() => {
+		findHandle(98)
+	}, 980)
+	setTimeout(() => {
+		findHandle(99)
+	}, 990)
 })
 
 /* methods */
@@ -945,7 +1163,9 @@ function setValueHandle() {
 		typeof num.value[40] != 'undefined' && typeof num.value[41] != 'undefined' && typeof num.value[42] != 'undefined' && typeof num.value[43] != 'undefined' && typeof num.value[44] != 'undefined' && typeof num.value[45] != 'undefined' && typeof num.value[46] != 'undefined' && typeof num.value[47] != 'undefined' && typeof num.value[48] != 'undefined' && typeof num.value[49] != 'undefined' && typeof num.value[50] != 'undefined' &&
 		typeof num.value[50] != 'undefined' && typeof num.value[51] != 'undefined' && typeof num.value[52] != 'undefined' && typeof num.value[53] != 'undefined' && typeof num.value[54] != 'undefined' && typeof num.value[55] != 'undefined' && typeof num.value[56] != 'undefined' && typeof num.value[57] != 'undefined' && typeof num.value[58] != 'undefined' && typeof num.value[59] != 'undefined' && typeof num.value[60] != 'undefined' &&
 		typeof num.value[60] != 'undefined' && typeof num.value[61] != 'undefined' && typeof num.value[62] != 'undefined' && typeof num.value[63] != 'undefined' && typeof num.value[64] != 'undefined' && typeof num.value[65] != 'undefined' && typeof num.value[66] != 'undefined' && typeof num.value[67] != 'undefined' && typeof num.value[68] != 'undefined' && typeof num.value[69] != 'undefined' && typeof num.value[70] != 'undefined' &&
-		typeof num.value[70] != 'undefined' && typeof num.value[71] != 'undefined' && typeof num.value[72] != 'undefined' && typeof num.value[73] != 'undefined' && typeof num.value[74] != 'undefined' && typeof num.value[75] != 'undefined' && typeof num.value[76] != 'undefined' && typeof num.value[77] != 'undefined' && typeof num.value[78] != 'undefined' && typeof num.value[79] != 'undefined' && typeof num.value[80] != 'undefined'
+		typeof num.value[70] != 'undefined' && typeof num.value[71] != 'undefined' && typeof num.value[72] != 'undefined' && typeof num.value[73] != 'undefined' && typeof num.value[74] != 'undefined' && typeof num.value[75] != 'undefined' && typeof num.value[76] != 'undefined' && typeof num.value[77] != 'undefined' && typeof num.value[78] != 'undefined' && typeof num.value[79] != 'undefined' && typeof num.value[80] != 'undefined' &&
+		typeof num.value[80] != 'undefined' && typeof num.value[81] != 'undefined' && typeof num.value[82] != 'undefined' && typeof num.value[83] != 'undefined' && typeof num.value[84] != 'undefined' && typeof num.value[85] != 'undefined' && typeof num.value[86] != 'undefined' && typeof num.value[87] != 'undefined' && typeof num.value[88] != 'undefined' && typeof num.value[89] != 'undefined' && typeof num.value[90] != 'undefined' &&
+		typeof num.value[90] != 'undefined' && typeof num.value[91] != 'undefined' && typeof num.value[92] != 'undefined' && typeof num.value[93] != 'undefined' && typeof num.value[94] != 'undefined' && typeof num.value[95] != 'undefined' && typeof num.value[96] != 'undefined' && typeof num.value[97] != 'undefined' && typeof num.value[98] != 'undefined' && typeof num.value[99] != 'undefined' && typeof num.value[100] != 'undefined'
 	) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
@@ -1027,7 +1247,27 @@ function setValueHandle() {
 		arr78.value.unshift(num.value[77]);
 		arr79.value.unshift(num.value[78]);
 		arr80.value.unshift(num.value[79]);
-		arrComparison.value.unshift(num.value[80]);
+		arr81.value.unshift(num.value[80]);
+		arr82.value.unshift(num.value[81]);
+		arr83.value.unshift(num.value[82]);
+		arr84.value.unshift(num.value[83]);
+		arr85.value.unshift(num.value[84]);
+		arr86.value.unshift(num.value[85]);
+		arr87.value.unshift(num.value[86]);
+		arr88.value.unshift(num.value[87]);
+		arr89.value.unshift(num.value[88]);
+		arr90.value.unshift(num.value[89]);
+		arr91.value.unshift(num.value[90]);
+		arr92.value.unshift(num.value[91]);
+		arr93.value.unshift(num.value[92]);
+		arr94.value.unshift(num.value[93]);
+		arr95.value.unshift(num.value[94]);
+		arr96.value.unshift(num.value[95]);
+		arr97.value.unshift(num.value[96]);
+		arr98.value.unshift(num.value[97]);
+		arr99.value.unshift(num.value[98]);
+		arr100.value.unshift(num.value[99]);
+		arrComparison.value.unshift(num.value[100]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -1268,6 +1508,66 @@ function setValueHandle() {
 		}
 		if (arr80.value.length > 20) {
 			arr80.value.pop()
+		}
+		if (arr81.value.length > 20) {
+			arr81.value.pop()
+		}
+		if (arr82.value.length > 20) {
+			arr82.value.pop()
+		}
+		if (arr83.value.length > 20) {
+			arr83.value.pop()
+		}
+		if (arr84.value.length > 20) {
+			arr84.value.pop()
+		}
+		if (arr85.value.length > 20) {
+			arr85.value.pop()
+		}
+		if (arr86.value.length > 20) {
+			arr86.value.pop()
+		}
+		if (arr87.value.length > 20) {
+			arr87.value.pop()
+		}
+		if (arr88.value.length > 20) {
+			arr88.value.pop()
+		}
+		if (arr89.value.length > 20) {
+			arr89.value.pop()
+		}
+		if (arr90.value.length > 20) {
+			arr90.value.pop()
+		}
+		if (arr91.value.length > 20) {
+			arr91.value.pop()
+		}
+		if (arr92.value.length > 20) {
+			arr92.value.pop()
+		}
+		if (arr93.value.length > 20) {
+			arr93.value.pop()
+		}
+		if (arr94.value.length > 20) {
+			arr94.value.pop()
+		}
+		if (arr95.value.length > 20) {
+			arr95.value.pop()
+		}
+		if (arr96.value.length > 20) {
+			arr96.value.pop()
+		}
+		if (arr97.value.length > 20) {
+			arr97.value.pop()
+		}
+		if (arr98.value.length > 20) {
+			arr98.value.pop()
+		}
+		if (arr99.value.length > 20) {
+			arr99.value.pop()
+		}
+		if (arr100.value.length > 20) {
+			arr100.value.pop()
 		}
 		if (arrComparison.value.length > 20) {
 			arrComparison.value.pop()
@@ -1514,6 +1814,66 @@ function setValueHandle() {
 		setTimeout(() => {
 			findHandle(79)
 		}, 790)
+		setTimeout(() => {
+			findHandle(80)
+		}, 800)
+		setTimeout(() => {
+			findHandle(81)
+		}, 810)
+		setTimeout(() => {
+			findHandle(82)
+		}, 820)
+		setTimeout(() => {
+			findHandle(83)
+		}, 830)
+		setTimeout(() => {
+			findHandle(84)
+		}, 840)
+		setTimeout(() => {
+			findHandle(85)
+		}, 850)
+		setTimeout(() => {
+			findHandle(86)
+		}, 860)
+		setTimeout(() => {
+			findHandle(87)
+		}, 870)
+		setTimeout(() => {
+			findHandle(88)
+		}, 880)
+		setTimeout(() => {
+			findHandle(89)
+		}, 890)
+		setTimeout(() => {
+			findHandle(90)
+		}, 900)
+		setTimeout(() => {
+			findHandle(91)
+		}, 910)
+		setTimeout(() => {
+			findHandle(92)
+		}, 920)
+		setTimeout(() => {
+			findHandle(93)
+		}, 930)
+		setTimeout(() => {
+			findHandle(94)
+		}, 940)
+		setTimeout(() => {
+			findHandle(95)
+		}, 950)
+		setTimeout(() => {
+			findHandle(96)
+		}, 960)
+		setTimeout(() => {
+			findHandle(97)
+		}, 970)
+		setTimeout(() => {
+			findHandle(98)
+		}, 980)
+		setTimeout(() => {
+			findHandle(99)
+		}, 990)
 	}
 }
 function clearValueHandle() {
@@ -1597,6 +1957,26 @@ function clearValueHandle() {
 	arr78.value.shift()
 	arr79.value.shift()
 	arr80.value.shift()
+	arr81.value.shift()
+	arr82.value.shift()
+	arr83.value.shift()
+	arr84.value.shift()
+	arr85.value.shift()
+	arr86.value.shift()
+	arr87.value.shift()
+	arr88.value.shift()
+	arr89.value.shift()
+	arr90.value.shift()
+	arr91.value.shift()
+	arr92.value.shift()
+	arr93.value.shift()
+	arr94.value.shift()
+	arr95.value.shift()
+	arr96.value.shift()
+	arr97.value.shift()
+	arr98.value.shift()
+	arr99.value.shift()
+	arr100.value.shift()
 	arrComparison.value.shift()
 	setStorage()
 	setTimeout(() => {
@@ -1839,6 +2219,66 @@ function clearValueHandle() {
 	setTimeout(() => {
 		findHandle(79)
 	}, 790)
+	setTimeout(() => {
+		findHandle(80)
+	}, 800)
+	setTimeout(() => {
+		findHandle(81)
+	}, 810)
+	setTimeout(() => {
+		findHandle(82)
+	}, 820)
+	setTimeout(() => {
+		findHandle(83)
+	}, 830)
+	setTimeout(() => {
+		findHandle(84)
+	}, 840)
+	setTimeout(() => {
+		findHandle(85)
+	}, 850)
+	setTimeout(() => {
+		findHandle(86)
+	}, 860)
+	setTimeout(() => {
+		findHandle(87)
+	}, 870)
+	setTimeout(() => {
+		findHandle(88)
+	}, 880)
+	setTimeout(() => {
+		findHandle(89)
+	}, 890)
+	setTimeout(() => {
+		findHandle(90)
+	}, 900)
+	setTimeout(() => {
+		findHandle(91)
+	}, 910)
+	setTimeout(() => {
+		findHandle(92)
+	}, 920)
+	setTimeout(() => {
+		findHandle(93)
+	}, 930)
+	setTimeout(() => {
+		findHandle(94)
+	}, 940)
+	setTimeout(() => {
+		findHandle(95)
+	}, 950)
+	setTimeout(() => {
+		findHandle(96)
+	}, 960)
+	setTimeout(() => {
+		findHandle(97)
+	}, 970)
+	setTimeout(() => {
+		findHandle(98)
+	}, 980)
+	setTimeout(() => {
+		findHandle(99)
+	}, 990)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -1921,6 +2361,26 @@ function setStorage() {
 	uni.setStorageSync('arr78', JSON.stringify(arr78.value))
 	uni.setStorageSync('arr79', JSON.stringify(arr79.value))
 	uni.setStorageSync('arr80', JSON.stringify(arr80.value))
+	uni.setStorageSync('arr81', JSON.stringify(arr81.value))
+	uni.setStorageSync('arr82', JSON.stringify(arr82.value))
+	uni.setStorageSync('arr83', JSON.stringify(arr83.value))
+	uni.setStorageSync('arr84', JSON.stringify(arr84.value))
+	uni.setStorageSync('arr85', JSON.stringify(arr85.value))
+	uni.setStorageSync('arr86', JSON.stringify(arr86.value))
+	uni.setStorageSync('arr87', JSON.stringify(arr87.value))
+	uni.setStorageSync('arr88', JSON.stringify(arr88.value))
+	uni.setStorageSync('arr89', JSON.stringify(arr89.value))
+	uni.setStorageSync('arr90', JSON.stringify(arr90.value))
+	uni.setStorageSync('arr91', JSON.stringify(arr91.value))
+	uni.setStorageSync('arr92', JSON.stringify(arr92.value))
+	uni.setStorageSync('arr93', JSON.stringify(arr93.value))
+	uni.setStorageSync('arr94', JSON.stringify(arr94.value))
+	uni.setStorageSync('arr95', JSON.stringify(arr95.value))
+	uni.setStorageSync('arr96', JSON.stringify(arr96.value))
+	uni.setStorageSync('arr97', JSON.stringify(arr97.value))
+	uni.setStorageSync('arr98', JSON.stringify(arr98.value))
+	uni.setStorageSync('arr99', JSON.stringify(arr99.value))
+	uni.setStorageSync('arr100', JSON.stringify(arr100.value))
 	uni.setStorageSync('arrComparison', JSON.stringify(arrComparison.value))
 }
 function getData() {
@@ -2005,6 +2465,26 @@ function getData() {
 		arr78.value = JSON.parse(uni.getStorageSync('arr78'))
 		arr79.value = JSON.parse(uni.getStorageSync('arr79'))
 		arr80.value = JSON.parse(uni.getStorageSync('arr80'))
+		arr81.value = JSON.parse(uni.getStorageSync('arr81'))
+		arr82.value = JSON.parse(uni.getStorageSync('arr82'))
+		arr83.value = JSON.parse(uni.getStorageSync('arr83'))
+		arr84.value = JSON.parse(uni.getStorageSync('arr84'))
+		arr85.value = JSON.parse(uni.getStorageSync('arr85'))
+		arr86.value = JSON.parse(uni.getStorageSync('arr86'))
+		arr87.value = JSON.parse(uni.getStorageSync('arr87'))
+		arr88.value = JSON.parse(uni.getStorageSync('arr88'))
+		arr89.value = JSON.parse(uni.getStorageSync('arr89'))
+		arr90.value = JSON.parse(uni.getStorageSync('arr90'))
+		arr91.value = JSON.parse(uni.getStorageSync('arr91'))
+		arr92.value = JSON.parse(uni.getStorageSync('arr92'))
+		arr93.value = JSON.parse(uni.getStorageSync('arr93'))
+		arr94.value = JSON.parse(uni.getStorageSync('arr94'))
+		arr95.value = JSON.parse(uni.getStorageSync('arr95'))
+		arr96.value = JSON.parse(uni.getStorageSync('arr96'))
+		arr97.value = JSON.parse(uni.getStorageSync('arr97'))
+		arr98.value = JSON.parse(uni.getStorageSync('arr98'))
+		arr99.value = JSON.parse(uni.getStorageSync('arr99'))
+		arr100.value = JSON.parse(uni.getStorageSync('arr100'))
 		arrComparison.value = JSON.parse(uni.getStorageSync('arrComparison'))
 	}
 }
@@ -2209,6 +2689,46 @@ function findHandle(index) {
 		setDataHandle(arr79, rightNum79, wrongNum79)
 	} else if (index == 79) {
 		setDataHandle(arr80, rightNum80, wrongNum80)
+	} else if (index == 80) {
+		setDataHandle(arr81, rightNum81, wrongNum81)
+	} else if (index == 81) {
+		setDataHandle(arr82, rightNum82, wrongNum82)
+	} else if (index == 82) {
+		setDataHandle(arr83, rightNum83, wrongNum83)
+	} else if (index == 83) {
+		setDataHandle(arr84, rightNum84, wrongNum84)
+	} else if (index == 84) {
+		setDataHandle(arr85, rightNum85, wrongNum85)
+	} else if (index == 85) {
+		setDataHandle(arr86, rightNum86, wrongNum86)
+	} else if (index == 86) {
+		setDataHandle(arr87, rightNum87, wrongNum87)
+	} else if (index == 87) {
+		setDataHandle(arr88, rightNum88, wrongNum88)
+	} else if (index == 88) {
+		setDataHandle(arr89, rightNum89, wrongNum89)
+	} else if (index == 89) {
+		setDataHandle(arr90, rightNum90, wrongNum90)
+	} else if (index == 90) {
+		setDataHandle(arr91, rightNum91, wrongNum91)
+	} else if (index == 91) {
+		setDataHandle(arr92, rightNum92, wrongNum92)
+	} else if (index == 92) {
+		setDataHandle(arr93, rightNum93, wrongNum93)
+	} else if (index == 93) {
+		setDataHandle(arr94, rightNum94, wrongNum94)
+	} else if (index == 94) {
+		setDataHandle(arr95, rightNum95, wrongNum95)
+	} else if (index == 95) {
+		setDataHandle(arr96, rightNum96, wrongNum96)
+	} else if (index == 96) {
+		setDataHandle(arr97, rightNum97, wrongNum97)
+	} else if (index == 97) {
+		setDataHandle(arr98, rightNum98, wrongNum98)
+	} else if (index == 98) {
+		setDataHandle(arr99, rightNum99, wrongNum99)
+	} else if (index == 99) {
+		setDataHandle(arr100, rightNum100, wrongNum100)
 	}
 }
 </script>
@@ -2227,7 +2747,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 14rpx;
+				font-size: 10rpx;
 				letter-spacing: 20px;
 			}
 			.order {
