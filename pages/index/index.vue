@@ -34,28 +34,28 @@
 					<view class="item">0</view>
 				</view>
 				<view class="times">
-					<view class="item">{{ rightNum1 }}</view>
-					<view class="item">{{ rightNum2 }}</view>
-					<view class="item">{{ rightNum3 }}</view>
-					<view class="item">{{ rightNum4 }}</view>
-					<view class="item">{{ rightNum5 }}</view>
-					<view class="item">{{ rightNum6 }}</view>
-					<view class="item">{{ rightNum7 }}</view>
-					<view class="item">{{ rightNum8 }}</view>
-					<view class="item">{{ rightNum9 }}</view>
-					<view class="item">{{ rightNum10 }}</view>
+					<view :class="rightNum1 > 6 ? 'item active' : 'item'">{{ rightNum1 }}</view>
+					<view :class="rightNum2 > 6 ? 'item active' : 'item'">{{ rightNum2 }}</view>
+					<view :class="rightNum3 > 6 ? 'item active' : 'item'">{{ rightNum3 }}</view>
+					<view :class="rightNum4 > 6 ? 'item active' : 'item'">{{ rightNum4 }}</view>
+					<view :class="rightNum5 > 6 ? 'item active' : 'item'">{{ rightNum5 }}</view>
+					<view :class="rightNum6 > 6 ? 'item active' : 'item'">{{ rightNum6 }}</view>
+					<view :class="rightNum7 > 6 ? 'item active' : 'item'">{{ rightNum7 }}</view>
+					<view :class="rightNum8 > 6 ? 'item active' : 'item'">{{ rightNum8 }}</view>
+					<view :class="rightNum9 > 6 ? 'item active' : 'item'">{{ rightNum9 }}</view>
+					<view :class="rightNum10 > 6 ? 'item active' : 'item'">{{ rightNum10 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum1 }}</view>
-					<view class="item">{{ wrongNum2 }}</view>
-					<view class="item">{{ wrongNum3 }}</view>
-					<view class="item">{{ wrongNum4 }}</view>
-					<view class="item">{{ wrongNum5 }}</view>
-					<view class="item">{{ wrongNum6 }}</view>
-					<view class="item">{{ wrongNum7 }}</view>
-					<view class="item">{{ wrongNum8 }}</view>
-					<view class="item">{{ wrongNum9 }}</view>
-					<view class="item">{{ wrongNum10 }}</view>
+					<view :class="wrongNum1 > 6 ? 'item active' : 'item'">{{ wrongNum1 }}</view>
+					<view :class="wrongNum2 > 6 ? 'item active' : 'item'">{{ wrongNum2 }}</view>
+					<view :class="wrongNum3 > 6 ? 'item active' : 'item'">{{ wrongNum3 }}</view>
+					<view :class="wrongNum4 > 6 ? 'item active' : 'item'">{{ wrongNum4 }}</view>
+					<view :class="wrongNum5 > 6 ? 'item active' : 'item'">{{ wrongNum5 }}</view>
+					<view :class="wrongNum6 > 6 ? 'item active' : 'item'">{{ wrongNum6 }}</view>
+					<view :class="wrongNum7 > 6 ? 'item active' : 'item'">{{ wrongNum7 }}</view>
+					<view :class="wrongNum8 > 6 ? 'item active' : 'item'">{{ wrongNum8 }}</view>
+					<view :class="wrongNum9 > 6 ? 'item active' : 'item'">{{ wrongNum9 }}</view>
+					<view :class="wrongNum10 > 6 ? 'item active' : 'item'">{{ wrongNum10 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -73,28 +73,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum11 }}</view>
-					<view class="item">{{ rightNum12 }}</view>
-					<view class="item">{{ rightNum13 }}</view>
-					<view class="item">{{ rightNum14 }}</view>
-					<view class="item">{{ rightNum15 }}</view>
-					<view class="item">{{ rightNum16 }}</view>
-					<view class="item">{{ rightNum17 }}</view>
-					<view class="item">{{ rightNum18 }}</view>
-					<view class="item">{{ rightNum19 }}</view>
-					<view class="item">{{ rightNum20 }}</view>
+					<view :class="rightNum11 > 6 ? 'item active' : 'item'">{{ rightNum11 }}</view>
+					<view :class="rightNum12 > 6 ? 'item active' : 'item'">{{ rightNum12 }}</view>
+					<view :class="rightNum13 > 6 ? 'item active' : 'item'">{{ rightNum13 }}</view>
+					<view :class="rightNum14 > 6 ? 'item active' : 'item'">{{ rightNum14 }}</view>
+					<view :class="rightNum15 > 6 ? 'item active' : 'item'">{{ rightNum15 }}</view>
+					<view :class="rightNum16 > 6 ? 'item active' : 'item'">{{ rightNum16 }}</view>
+					<view :class="rightNum17 > 6 ? 'item active' : 'item'">{{ rightNum17 }}</view>
+					<view :class="rightNum18 > 6 ? 'item active' : 'item'">{{ rightNum18 }}</view>
+					<view :class="rightNum19 > 6 ? 'item active' : 'item'">{{ rightNum19 }}</view>
+					<view :class="rightNum20 > 6 ? 'item active' : 'item'">{{ rightNum20 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum11 }}</view>
-					<view class="item">{{ wrongNum12 }}</view>
-					<view class="item">{{ wrongNum13 }}</view>
-					<view class="item">{{ wrongNum14 }}</view>
-					<view class="item">{{ wrongNum15 }}</view>
-					<view class="item">{{ wrongNum16 }}</view>
-					<view class="item">{{ wrongNum17 }}</view>
-					<view class="item">{{ wrongNum18 }}</view>
-					<view class="item">{{ wrongNum19 }}</view>
-					<view class="item">{{ wrongNum20 }}</view>
+					<view :class="wrongNum11 > 6 ? 'item active' : 'item'">{{ wrongNum11 }}</view>
+					<view :class="wrongNum12 > 6 ? 'item active' : 'item'">{{ wrongNum12 }}</view>
+					<view :class="wrongNum13 > 6 ? 'item active' : 'item'">{{ wrongNum13 }}</view>
+					<view :class="wrongNum14 > 6 ? 'item active' : 'item'">{{ wrongNum14 }}</view>
+					<view :class="wrongNum15 > 6 ? 'item active' : 'item'">{{ wrongNum15 }}</view>
+					<view :class="wrongNum16 > 6 ? 'item active' : 'item'">{{ wrongNum16 }}</view>
+					<view :class="wrongNum17 > 6 ? 'item active' : 'item'">{{ wrongNum17 }}</view>
+					<view :class="wrongNum18 > 6 ? 'item active' : 'item'">{{ wrongNum18 }}</view>
+					<view :class="wrongNum19 > 6 ? 'item active' : 'item'">{{ wrongNum19 }}</view>
+					<view :class="wrongNum20 > 6 ? 'item active' : 'item'">{{ wrongNum20 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -112,28 +112,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum21 }}</view>
-					<view class="item">{{ rightNum22 }}</view>
-					<view class="item">{{ rightNum23 }}</view>
-					<view class="item">{{ rightNum24 }}</view>
-					<view class="item">{{ rightNum25 }}</view>
-					<view class="item">{{ rightNum26 }}</view>
-					<view class="item">{{ rightNum27 }}</view>
-					<view class="item">{{ rightNum28 }}</view>
-					<view class="item">{{ rightNum29 }}</view>
-					<view class="item">{{ rightNum30 }}</view>
+					<view :class="rightNum21 > 6 ? 'item active' : 'item'">{{ rightNum21 }}</view>
+					<view :class="rightNum22 > 6 ? 'item active' : 'item'">{{ rightNum22 }}</view>
+					<view :class="rightNum23 > 6 ? 'item active' : 'item'">{{ rightNum23 }}</view>
+					<view :class="rightNum24 > 6 ? 'item active' : 'item'">{{ rightNum24 }}</view>
+					<view :class="rightNum25 > 6 ? 'item active' : 'item'">{{ rightNum25 }}</view>
+					<view :class="rightNum26 > 6 ? 'item active' : 'item'">{{ rightNum26 }}</view>
+					<view :class="rightNum27 > 6 ? 'item active' : 'item'">{{ rightNum27 }}</view>
+					<view :class="rightNum28 > 6 ? 'item active' : 'item'">{{ rightNum28 }}</view>
+					<view :class="rightNum29 > 6 ? 'item active' : 'item'">{{ rightNum29 }}</view>
+					<view :class="rightNum30 > 6 ? 'item active' : 'item'">{{ rightNum30 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum21 }}</view>
-					<view class="item">{{ wrongNum22 }}</view>
-					<view class="item">{{ wrongNum23 }}</view>
-					<view class="item">{{ wrongNum24 }}</view>
-					<view class="item">{{ wrongNum25 }}</view>
-					<view class="item">{{ wrongNum26 }}</view>
-					<view class="item">{{ wrongNum27 }}</view>
-					<view class="item">{{ wrongNum28 }}</view>
-					<view class="item">{{ wrongNum29 }}</view>
-					<view class="item">{{ wrongNum30 }}</view>
+					<view :class="wrongNum21 > 6 ? 'item active' : 'item'">{{ wrongNum21 }}</view>
+					<view :class="wrongNum22 > 6 ? 'item active' : 'item'">{{ wrongNum22 }}</view>
+					<view :class="wrongNum23 > 6 ? 'item active' : 'item'">{{ wrongNum23 }}</view>
+					<view :class="wrongNum24 > 6 ? 'item active' : 'item'">{{ wrongNum24 }}</view>
+					<view :class="wrongNum25 > 6 ? 'item active' : 'item'">{{ wrongNum25 }}</view>
+					<view :class="wrongNum26 > 6 ? 'item active' : 'item'">{{ wrongNum26 }}</view>
+					<view :class="wrongNum27 > 6 ? 'item active' : 'item'">{{ wrongNum27 }}</view>
+					<view :class="wrongNum28 > 6 ? 'item active' : 'item'">{{ wrongNum28 }}</view>
+					<view :class="wrongNum29 > 6 ? 'item active' : 'item'">{{ wrongNum29 }}</view>
+					<view :class="wrongNum30 > 6 ? 'item active' : 'item'">{{ wrongNum30 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -151,28 +151,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum31 }}</view>
-					<view class="item">{{ rightNum32 }}</view>
-					<view class="item">{{ rightNum33 }}</view>
-					<view class="item">{{ rightNum34 }}</view>
-					<view class="item">{{ rightNum35 }}</view>
-					<view class="item">{{ rightNum36 }}</view>
-					<view class="item">{{ rightNum37 }}</view>
-					<view class="item">{{ rightNum38 }}</view>
-					<view class="item">{{ rightNum39 }}</view>
-					<view class="item">{{ rightNum40 }}</view>
+					<view :class="rightNum31 > 6 ? 'item active' : 'item'">{{ rightNum31 }}</view>
+					<view :class="rightNum32 > 6 ? 'item active' : 'item'">{{ rightNum32 }}</view>
+					<view :class="rightNum33 > 6 ? 'item active' : 'item'">{{ rightNum33 }}</view>
+					<view :class="rightNum34 > 6 ? 'item active' : 'item'">{{ rightNum34 }}</view>
+					<view :class="rightNum35 > 6 ? 'item active' : 'item'">{{ rightNum35 }}</view>
+					<view :class="rightNum36 > 6 ? 'item active' : 'item'">{{ rightNum36 }}</view>
+					<view :class="rightNum37 > 6 ? 'item active' : 'item'">{{ rightNum37 }}</view>
+					<view :class="rightNum38 > 6 ? 'item active' : 'item'">{{ rightNum38 }}</view>
+					<view :class="rightNum39 > 6 ? 'item active' : 'item'">{{ rightNum39 }}</view>
+					<view :class="rightNum40 > 6 ? 'item active' : 'item'">{{ rightNum40 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum31 }}</view>
-					<view class="item">{{ wrongNum32 }}</view>
-					<view class="item">{{ wrongNum33 }}</view>
-					<view class="item">{{ wrongNum34 }}</view>
-					<view class="item">{{ wrongNum35 }}</view>
-					<view class="item">{{ wrongNum36 }}</view>
-					<view class="item">{{ wrongNum37 }}</view>
-					<view class="item">{{ wrongNum38 }}</view>
-					<view class="item">{{ wrongNum39 }}</view>
-					<view class="item">{{ wrongNum40 }}</view>
+					<view :class="wrongNum31 > 6 ? 'item active' : 'item'">{{ wrongNum31 }}</view>
+					<view :class="wrongNum32 > 6 ? 'item active' : 'item'">{{ wrongNum32 }}</view>
+					<view :class="wrongNum33 > 6 ? 'item active' : 'item'">{{ wrongNum33 }}</view>
+					<view :class="wrongNum34 > 6 ? 'item active' : 'item'">{{ wrongNum34 }}</view>
+					<view :class="wrongNum35 > 6 ? 'item active' : 'item'">{{ wrongNum35 }}</view>
+					<view :class="wrongNum36 > 6 ? 'item active' : 'item'">{{ wrongNum36 }}</view>
+					<view :class="wrongNum37 > 6 ? 'item active' : 'item'">{{ wrongNum37 }}</view>
+					<view :class="wrongNum38 > 6 ? 'item active' : 'item'">{{ wrongNum38 }}</view>
+					<view :class="wrongNum39 > 6 ? 'item active' : 'item'">{{ wrongNum39 }}</view>
+					<view :class="wrongNum40 > 6 ? 'item active' : 'item'">{{ wrongNum40 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -190,28 +190,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum41 }}</view>
-					<view class="item">{{ rightNum42 }}</view>
-					<view class="item">{{ rightNum43 }}</view>
-					<view class="item">{{ rightNum44 }}</view>
-					<view class="item">{{ rightNum45 }}</view>
-					<view class="item">{{ rightNum46 }}</view>
-					<view class="item">{{ rightNum47 }}</view>
-					<view class="item">{{ rightNum48 }}</view>
-					<view class="item">{{ rightNum49 }}</view>
-					<view class="item">{{ rightNum50 }}</view>
+					<view :class="rightNum41 > 6 ? 'item active' : 'item'">{{ rightNum41 }}</view>
+					<view :class="rightNum42 > 6 ? 'item active' : 'item'">{{ rightNum42 }}</view>
+					<view :class="rightNum43 > 6 ? 'item active' : 'item'">{{ rightNum43 }}</view>
+					<view :class="rightNum44 > 6 ? 'item active' : 'item'">{{ rightNum44 }}</view>
+					<view :class="rightNum45 > 6 ? 'item active' : 'item'">{{ rightNum45 }}</view>
+					<view :class="rightNum46 > 6 ? 'item active' : 'item'">{{ rightNum46 }}</view>
+					<view :class="rightNum47 > 6 ? 'item active' : 'item'">{{ rightNum47 }}</view>
+					<view :class="rightNum48 > 6 ? 'item active' : 'item'">{{ rightNum48 }}</view>
+					<view :class="rightNum49 > 6 ? 'item active' : 'item'">{{ rightNum49 }}</view>
+					<view :class="rightNum50 > 6 ? 'item active' : 'item'">{{ rightNum50 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum41 }}</view>
-					<view class="item">{{ wrongNum42 }}</view>
-					<view class="item">{{ wrongNum43 }}</view>
-					<view class="item">{{ wrongNum44 }}</view>
-					<view class="item">{{ wrongNum45 }}</view>
-					<view class="item">{{ wrongNum46 }}</view>
-					<view class="item">{{ wrongNum47 }}</view>
-					<view class="item">{{ wrongNum48 }}</view>
-					<view class="item">{{ wrongNum49 }}</view>
-					<view class="item">{{ wrongNum50 }}</view>
+					<view :class="wrongNum41 > 6 ? 'item active' : 'item'">{{ wrongNum41 }}</view>
+					<view :class="wrongNum42 > 6 ? 'item active' : 'item'">{{ wrongNum42 }}</view>
+					<view :class="wrongNum43 > 6 ? 'item active' : 'item'">{{ wrongNum43 }}</view>
+					<view :class="wrongNum44 > 6 ? 'item active' : 'item'">{{ wrongNum44 }}</view>
+					<view :class="wrongNum45 > 6 ? 'item active' : 'item'">{{ wrongNum45 }}</view>
+					<view :class="wrongNum46 > 6 ? 'item active' : 'item'">{{ wrongNum46 }}</view>
+					<view :class="wrongNum47 > 6 ? 'item active' : 'item'">{{ wrongNum47 }}</view>
+					<view :class="wrongNum48 > 6 ? 'item active' : 'item'">{{ wrongNum48 }}</view>
+					<view :class="wrongNum49 > 6 ? 'item active' : 'item'">{{ wrongNum49 }}</view>
+					<view :class="wrongNum50 > 6 ? 'item active' : 'item'">{{ wrongNum50 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -229,28 +229,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum51 }}</view>
-					<view class="item">{{ rightNum52 }}</view>
-					<view class="item">{{ rightNum53 }}</view>
-					<view class="item">{{ rightNum54 }}</view>
-					<view class="item">{{ rightNum55 }}</view>
-					<view class="item">{{ rightNum56 }}</view>
-					<view class="item">{{ rightNum57 }}</view>
-					<view class="item">{{ rightNum58 }}</view>
-					<view class="item">{{ rightNum59 }}</view>
-					<view class="item">{{ rightNum60 }}</view>
+					<view :class="rightNum51 > 6 ? 'item active' : 'item'">{{ rightNum51 }}</view>
+					<view :class="rightNum52 > 6 ? 'item active' : 'item'">{{ rightNum52 }}</view>
+					<view :class="rightNum53 > 6 ? 'item active' : 'item'">{{ rightNum53 }}</view>
+					<view :class="rightNum54 > 6 ? 'item active' : 'item'">{{ rightNum54 }}</view>
+					<view :class="rightNum55 > 6 ? 'item active' : 'item'">{{ rightNum55 }}</view>
+					<view :class="rightNum56 > 6 ? 'item active' : 'item'">{{ rightNum56 }}</view>
+					<view :class="rightNum57 > 6 ? 'item active' : 'item'">{{ rightNum57 }}</view>
+					<view :class="rightNum58 > 6 ? 'item active' : 'item'">{{ rightNum58 }}</view>
+					<view :class="rightNum59 > 6 ? 'item active' : 'item'">{{ rightNum59 }}</view>
+					<view :class="rightNum60 > 6 ? 'item active' : 'item'">{{ rightNum60 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum51 }}</view>
-					<view class="item">{{ wrongNum52 }}</view>
-					<view class="item">{{ wrongNum53 }}</view>
-					<view class="item">{{ wrongNum54 }}</view>
-					<view class="item">{{ wrongNum55 }}</view>
-					<view class="item">{{ wrongNum56 }}</view>
-					<view class="item">{{ wrongNum57 }}</view>
-					<view class="item">{{ wrongNum58 }}</view>
-					<view class="item">{{ wrongNum59 }}</view>
-					<view class="item">{{ wrongNum60 }}</view>
+					<view :class="wrongNum51 > 6 ? 'item active' : 'item'">{{ wrongNum51 }}</view>
+					<view :class="wrongNum52 > 6 ? 'item active' : 'item'">{{ wrongNum52 }}</view>
+					<view :class="wrongNum53 > 6 ? 'item active' : 'item'">{{ wrongNum53 }}</view>
+					<view :class="wrongNum54 > 6 ? 'item active' : 'item'">{{ wrongNum54 }}</view>
+					<view :class="wrongNum55 > 6 ? 'item active' : 'item'">{{ wrongNum55 }}</view>
+					<view :class="wrongNum56 > 6 ? 'item active' : 'item'">{{ wrongNum56 }}</view>
+					<view :class="wrongNum57 > 6 ? 'item active' : 'item'">{{ wrongNum57 }}</view>
+					<view :class="wrongNum58 > 6 ? 'item active' : 'item'">{{ wrongNum58 }}</view>
+					<view :class="wrongNum59 > 6 ? 'item active' : 'item'">{{ wrongNum59 }}</view>
+					<view :class="wrongNum60 > 6 ? 'item active' : 'item'">{{ wrongNum60 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -268,28 +268,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum61 }}</view>
-					<view class="item">{{ rightNum62 }}</view>
-					<view class="item">{{ rightNum63 }}</view>
-					<view class="item">{{ rightNum64 }}</view>
-					<view class="item">{{ rightNum65 }}</view>
-					<view class="item">{{ rightNum66 }}</view>
-					<view class="item">{{ rightNum67 }}</view>
-					<view class="item">{{ rightNum68 }}</view>
-					<view class="item">{{ rightNum69 }}</view>
-					<view class="item">{{ rightNum70 }}</view>
+					<view :class="rightNum61 > 6 ? 'item active' : 'item'">{{ rightNum61 }}</view>
+					<view :class="rightNum62 > 6 ? 'item active' : 'item'">{{ rightNum62 }}</view>
+					<view :class="rightNum63 > 6 ? 'item active' : 'item'">{{ rightNum63 }}</view>
+					<view :class="rightNum64 > 6 ? 'item active' : 'item'">{{ rightNum64 }}</view>
+					<view :class="rightNum65 > 6 ? 'item active' : 'item'">{{ rightNum65 }}</view>
+					<view :class="rightNum66 > 6 ? 'item active' : 'item'">{{ rightNum66 }}</view>
+					<view :class="rightNum67 > 6 ? 'item active' : 'item'">{{ rightNum67 }}</view>
+					<view :class="rightNum68 > 6 ? 'item active' : 'item'">{{ rightNum68 }}</view>
+					<view :class="rightNum69 > 6 ? 'item active' : 'item'">{{ rightNum69 }}</view>
+					<view :class="rightNum70 > 6 ? 'item active' : 'item'">{{ rightNum70 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum61 }}</view>
-					<view class="item">{{ wrongNum62 }}</view>
-					<view class="item">{{ wrongNum63 }}</view>
-					<view class="item">{{ wrongNum64 }}</view>
-					<view class="item">{{ wrongNum65 }}</view>
-					<view class="item">{{ wrongNum66 }}</view>
-					<view class="item">{{ wrongNum67 }}</view>
-					<view class="item">{{ wrongNum68 }}</view>
-					<view class="item">{{ wrongNum69 }}</view>
-					<view class="item">{{ wrongNum70 }}</view>
+					<view :class="wrongNum61 > 6 ? 'item active' : 'item'">{{ wrongNum61 }}</view>
+					<view :class="wrongNum62 > 6 ? 'item active' : 'item'">{{ wrongNum62 }}</view>
+					<view :class="wrongNum63 > 6 ? 'item active' : 'item'">{{ wrongNum63 }}</view>
+					<view :class="wrongNum64 > 6 ? 'item active' : 'item'">{{ wrongNum64 }}</view>
+					<view :class="wrongNum65 > 6 ? 'item active' : 'item'">{{ wrongNum65 }}</view>
+					<view :class="wrongNum66 > 6 ? 'item active' : 'item'">{{ wrongNum66 }}</view>
+					<view :class="wrongNum67 > 6 ? 'item active' : 'item'">{{ wrongNum67 }}</view>
+					<view :class="wrongNum68 > 6 ? 'item active' : 'item'">{{ wrongNum68 }}</view>
+					<view :class="wrongNum69 > 6 ? 'item active' : 'item'">{{ wrongNum69 }}</view>
+					<view :class="wrongNum70 > 6 ? 'item active' : 'item'">{{ wrongNum70 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -307,28 +307,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view class="item">{{ rightNum71 }}</view>
-					<view class="item">{{ rightNum72 }}</view>
-					<view class="item">{{ rightNum73 }}</view>
-					<view class="item">{{ rightNum74 }}</view>
-					<view class="item">{{ rightNum75 }}</view>
-					<view class="item">{{ rightNum76 }}</view>
-					<view class="item">{{ rightNum77 }}</view>
-					<view class="item">{{ rightNum78 }}</view>
-					<view class="item">{{ rightNum79 }}</view>
-					<view class="item">{{ rightNum80 }}</view>
+					<view :class="rightNum71 > 6 ? 'item active' : 'item'">{{ rightNum71 }}</view>
+					<view :class="rightNum72 > 6 ? 'item active' : 'item'">{{ rightNum72 }}</view>
+					<view :class="rightNum73 > 6 ? 'item active' : 'item'">{{ rightNum73 }}</view>
+					<view :class="rightNum74 > 6 ? 'item active' : 'item'">{{ rightNum74 }}</view>
+					<view :class="rightNum75 > 6 ? 'item active' : 'item'">{{ rightNum75 }}</view>
+					<view :class="rightNum76 > 6 ? 'item active' : 'item'">{{ rightNum76 }}</view>
+					<view :class="rightNum77 > 6 ? 'item active' : 'item'">{{ rightNum77 }}</view>
+					<view :class="rightNum78 > 6 ? 'item active' : 'item'">{{ rightNum78 }}</view>
+					<view :class="rightNum79 > 6 ? 'item active' : 'item'">{{ rightNum79 }}</view>
+					<view :class="rightNum80 > 6 ? 'item active' : 'item'">{{ rightNum80 }}</view>
 				</view>
 				<view class="times red">
-					<view class="item">{{ wrongNum71 }}</view>
-					<view class="item">{{ wrongNum72 }}</view>
-					<view class="item">{{ wrongNum73 }}</view>
-					<view class="item">{{ wrongNum74 }}</view>
-					<view class="item">{{ wrongNum75 }}</view>
-					<view class="item">{{ wrongNum76 }}</view>
-					<view class="item">{{ wrongNum77 }}</view>
-					<view class="item">{{ wrongNum78 }}</view>
-					<view class="item">{{ wrongNum79 }}</view>
-					<view class="item">{{ wrongNum80 }}</view>
+					<view :class="wrongNum71 > 6 ? 'item active' : 'item'">{{ wrongNum71 }}</view>
+					<view :class="wrongNum72 > 6 ? 'item active' : 'item'">{{ wrongNum72 }}</view>
+					<view :class="wrongNum73 > 6 ? 'item active' : 'item'">{{ wrongNum73 }}</view>
+					<view :class="wrongNum74 > 6 ? 'item active' : 'item'">{{ wrongNum74 }}</view>
+					<view :class="wrongNum75 > 6 ? 'item active' : 'item'">{{ wrongNum75 }}</view>
+					<view :class="wrongNum76 > 6 ? 'item active' : 'item'">{{ wrongNum76 }}</view>
+					<view :class="wrongNum77 > 6 ? 'item active' : 'item'">{{ wrongNum77 }}</view>
+					<view :class="wrongNum78 > 6 ? 'item active' : 'item'">{{ wrongNum78 }}</view>
+					<view :class="wrongNum79 > 6 ? 'item active' : 'item'">{{ wrongNum79 }}</view>
+					<view :class="wrongNum80 > 6 ? 'item active' : 'item'">{{ wrongNum80 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -1026,7 +1026,7 @@ function setValueHandle() {
 		arr77.value.unshift(num.value[76]);
 		arr78.value.unshift(num.value[77]);
 		arr79.value.unshift(num.value[78]);
-		arr70.value.unshift(num.value[79]);
+		arr80.value.unshift(num.value[79]);
 		arrComparison.value.unshift(num.value[80]);
 
 		if (arr1.value.length > 20) {
@@ -2340,10 +2340,18 @@ function findHandle(index) {
 					border-radius: 2px;
 					margin-right: 2px;
 					margin-bottom: 2px;
+					&.active {
+						color: #01321b;
+						font-weight: bold
+					}
 				}
 				&.red {
 					.item {
 						color: #ca152b;
+						&.active {
+							color: #01321b;
+							font-weight: bold
+						}
 					}
 				}
 			}
