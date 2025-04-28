@@ -2747,7 +2747,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 12rpx;
+				font-size: 11rpx;
 				letter-spacing: 20px;
 			}
 			.order {
