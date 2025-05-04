@@ -98,16 +98,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum11 > 5 || wrongNum11 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum12 > 5 || wrongNum12 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum13 > 5 || wrongNum13 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum14 > 5 || wrongNum14 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum15 > 5 || wrongNum15 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum16 > 5 || wrongNum16 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum17 > 5 || wrongNum17 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum18 > 5 || wrongNum18 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum19 > 5 || wrongNum19 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum20 > 5 || wrongNum20 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum11 > 5 || wrongNum11 > 5 ? 'item active' : 'item'">{{ num[10] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum12 > 5 || wrongNum12 > 5 ? 'item active' : 'item'">{{ num[11] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum13 > 5 || wrongNum13 > 5 ? 'item active' : 'item'">{{ num[12] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum14 > 5 || wrongNum14 > 5 ? 'item active' : 'item'">{{ num[13] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum15 > 5 || wrongNum15 > 5 ? 'item active' : 'item'">{{ num[14] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum16 > 5 || wrongNum16 > 5 ? 'item active' : 'item'">{{ num[15] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum17 > 5 || wrongNum17 > 5 ? 'item active' : 'item'">{{ num[16] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum18 > 5 || wrongNum18 > 5 ? 'item active' : 'item'">{{ num[17] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum19 > 5 || wrongNum19 > 5 ? 'item active' : 'item'">{{ num[18] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum20 > 5 || wrongNum20 > 5 ? 'item active' : 'item'">{{ num[19] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -136,16 +136,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum21 > 5 || wrongNum21 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum22 > 5 || wrongNum22 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum23 > 5 || wrongNum23 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum24 > 5 || wrongNum24 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum25 > 5 || wrongNum25 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum26 > 5 || wrongNum26 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum27 > 5 || wrongNum27 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum28 > 5 || wrongNum28 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum29 > 5 || wrongNum29 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum30 > 5 || wrongNum30 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum21 > 5 || wrongNum21 > 5 ? 'item active' : 'item'">{{ num[20] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum22 > 5 || wrongNum22 > 5 ? 'item active' : 'item'">{{ num[21] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum23 > 5 || wrongNum23 > 5 ? 'item active' : 'item'">{{ num[22] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum24 > 5 || wrongNum24 > 5 ? 'item active' : 'item'">{{ num[23] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum25 > 5 || wrongNum25 > 5 ? 'item active' : 'item'">{{ num[24] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum26 > 5 || wrongNum26 > 5 ? 'item active' : 'item'">{{ num[25] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum27 > 5 || wrongNum27 > 5 ? 'item active' : 'item'">{{ num[26] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum28 > 5 || wrongNum28 > 5 ? 'item active' : 'item'">{{ num[27] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum29 > 5 || wrongNum29 > 5 ? 'item active' : 'item'">{{ num[28] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum30 > 5 || wrongNum30 > 5 ? 'item active' : 'item'">{{ num[29] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -174,16 +174,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum31 > 5 || wrongNum31 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum32 > 5 || wrongNum32 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum33 > 5 || wrongNum33 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum34 > 5 || wrongNum34 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum35 > 5 || wrongNum35 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum36 > 5 || wrongNum36 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum37 > 5 || wrongNum37 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum38 > 5 || wrongNum38 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum39 > 5 || wrongNum39 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum40 > 5 || wrongNum40 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum31 > 5 || wrongNum31 > 5 ? 'item active' : 'item'">{{ num[30] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum32 > 5 || wrongNum32 > 5 ? 'item active' : 'item'">{{ num[31] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum33 > 5 || wrongNum33 > 5 ? 'item active' : 'item'">{{ num[32] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum34 > 5 || wrongNum34 > 5 ? 'item active' : 'item'">{{ num[33] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum35 > 5 || wrongNum35 > 5 ? 'item active' : 'item'">{{ num[34] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum36 > 5 || wrongNum36 > 5 ? 'item active' : 'item'">{{ num[35] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum37 > 5 || wrongNum37 > 5 ? 'item active' : 'item'">{{ num[36] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum38 > 5 || wrongNum38 > 5 ? 'item active' : 'item'">{{ num[37] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum39 > 5 || wrongNum39 > 5 ? 'item active' : 'item'">{{ num[38] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum40 > 5 || wrongNum40 > 5 ? 'item active' : 'item'">{{ num[39] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -212,16 +212,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum41 > 5 || wrongNum41 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum42 > 5 || wrongNum42 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum43 > 5 || wrongNum43 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum44 > 5 || wrongNum44 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum45 > 5 || wrongNum45 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum46 > 5 || wrongNum46 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum47 > 5 || wrongNum47 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum48 > 5 || wrongNum48 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum49 > 5 || wrongNum49 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum50 > 5 || wrongNum50 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum41 > 5 || wrongNum41 > 5 ? 'item active' : 'item'">{{ num[40] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum42 > 5 || wrongNum42 > 5 ? 'item active' : 'item'">{{ num[41] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum43 > 5 || wrongNum43 > 5 ? 'item active' : 'item'">{{ num[42] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum44 > 5 || wrongNum44 > 5 ? 'item active' : 'item'">{{ num[43] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum45 > 5 || wrongNum45 > 5 ? 'item active' : 'item'">{{ num[44] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum46 > 5 || wrongNum46 > 5 ? 'item active' : 'item'">{{ num[45] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum47 > 5 || wrongNum47 > 5 ? 'item active' : 'item'">{{ num[46] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum48 > 5 || wrongNum48 > 5 ? 'item active' : 'item'">{{ num[47] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum49 > 5 || wrongNum49 > 5 ? 'item active' : 'item'">{{ num[48] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum50 > 5 || wrongNum50 > 5 ? 'item active' : 'item'">{{ num[49] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -250,16 +250,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum51 > 5 || wrongNum51 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum52 > 5 || wrongNum52 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum53 > 5 || wrongNum53 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum54 > 5 || wrongNum54 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum55 > 5 || wrongNum55 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum56 > 5 || wrongNum56 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum57 > 5 || wrongNum57 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum58 > 5 || wrongNum58 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum59 > 5 || wrongNum59 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum60 > 5 || wrongNum60 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum51 > 5 || wrongNum51 > 5 ? 'item active' : 'item'">{{ num[50] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum52 > 5 || wrongNum52 > 5 ? 'item active' : 'item'">{{ num[51] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum53 > 5 || wrongNum53 > 5 ? 'item active' : 'item'">{{ num[52] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum54 > 5 || wrongNum54 > 5 ? 'item active' : 'item'">{{ num[53] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum55 > 5 || wrongNum55 > 5 ? 'item active' : 'item'">{{ num[54] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum56 > 5 || wrongNum56 > 5 ? 'item active' : 'item'">{{ num[55] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum57 > 5 || wrongNum57 > 5 ? 'item active' : 'item'">{{ num[56] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum58 > 5 || wrongNum58 > 5 ? 'item active' : 'item'">{{ num[57] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum59 > 5 || wrongNum59 > 5 ? 'item active' : 'item'">{{ num[58] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum60 > 5 || wrongNum60 > 5 ? 'item active' : 'item'">{{ num[59] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -288,16 +288,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum61 > 5 || wrongNum61 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum62 > 5 || wrongNum62 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum63 > 5 || wrongNum63 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum64 > 5 || wrongNum64 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum65 > 5 || wrongNum65 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum66 > 5 || wrongNum66 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum67 > 5 || wrongNum67 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum68 > 5 || wrongNum68 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum69 > 5 || wrongNum69 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum70 > 5 || wrongNum70 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum61 > 5 || wrongNum61 > 5 ? 'item active' : 'item'">{{ num[60] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum62 > 5 || wrongNum62 > 5 ? 'item active' : 'item'">{{ num[61] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum63 > 5 || wrongNum63 > 5 ? 'item active' : 'item'">{{ num[62] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum64 > 5 || wrongNum64 > 5 ? 'item active' : 'item'">{{ num[63] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum65 > 5 || wrongNum65 > 5 ? 'item active' : 'item'">{{ num[64] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum66 > 5 || wrongNum66 > 5 ? 'item active' : 'item'">{{ num[65] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum67 > 5 || wrongNum67 > 5 ? 'item active' : 'item'">{{ num[66] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum68 > 5 || wrongNum68 > 5 ? 'item active' : 'item'">{{ num[67] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum69 > 5 || wrongNum69 > 5 ? 'item active' : 'item'">{{ num[68] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum70 > 5 || wrongNum70 > 5 ? 'item active' : 'item'">{{ num[69] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -326,16 +326,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum71 > 5 || wrongNum71 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum72 > 5 || wrongNum72 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum73 > 5 || wrongNum73 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum74 > 5 || wrongNum74 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum75 > 5 || wrongNum75 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum76 > 5 || wrongNum76 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum77 > 5 || wrongNum77 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum78 > 5 || wrongNum78 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum79 > 5 || wrongNum79 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum80 > 5 || wrongNum80 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum71 > 5 || wrongNum71 > 5 ? 'item active' : 'item'">{{ num[70] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum72 > 5 || wrongNum72 > 5 ? 'item active' : 'item'">{{ num[71] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum73 > 5 || wrongNum73 > 5 ? 'item active' : 'item'">{{ num[72] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum74 > 5 || wrongNum74 > 5 ? 'item active' : 'item'">{{ num[73] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum75 > 5 || wrongNum75 > 5 ? 'item active' : 'item'">{{ num[74] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum76 > 5 || wrongNum76 > 5 ? 'item active' : 'item'">{{ num[75] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum77 > 5 || wrongNum77 > 5 ? 'item active' : 'item'">{{ num[76] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum78 > 5 || wrongNum78 > 5 ? 'item active' : 'item'">{{ num[77] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum79 > 5 || wrongNum79 > 5 ? 'item active' : 'item'">{{ num[78] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum80 > 5 || wrongNum80 > 5 ? 'item active' : 'item'">{{ num[79] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -364,16 +364,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum81 > 5 || wrongNum81 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum82 > 5 || wrongNum82 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum83 > 5 || wrongNum83 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum84 > 5 || wrongNum84 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum85 > 5 || wrongNum85 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum86 > 5 || wrongNum86 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum87 > 5 || wrongNum87 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum88 > 5 || wrongNum88 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum89 > 5 || wrongNum89 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum90 > 5 || wrongNum90 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum81 > 5 || wrongNum81 > 5 ? 'item active' : 'item'">{{ num[80] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum82 > 5 || wrongNum82 > 5 ? 'item active' : 'item'">{{ num[81] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum83 > 5 || wrongNum83 > 5 ? 'item active' : 'item'">{{ num[82] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum84 > 5 || wrongNum84 > 5 ? 'item active' : 'item'">{{ num[83] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum85 > 5 || wrongNum85 > 5 ? 'item active' : 'item'">{{ num[84] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum86 > 5 || wrongNum86 > 5 ? 'item active' : 'item'">{{ num[85] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum87 > 5 || wrongNum87 > 5 ? 'item active' : 'item'">{{ num[86] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum88 > 5 || wrongNum88 > 5 ? 'item active' : 'item'">{{ num[87] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum89 > 5 || wrongNum89 > 5 ? 'item active' : 'item'">{{ num[88] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum90 > 5 || wrongNum90 > 5 ? 'item active' : 'item'">{{ num[89] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -402,16 +402,16 @@
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum91 > 5 || wrongNum91 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum92 > 5 || wrongNum92 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum93 > 5 || wrongNum93 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum94 > 5 || wrongNum94 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum95 > 5 || wrongNum95 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum96 > 5 || wrongNum96 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum97 > 5 || wrongNum97 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum98 > 5 || wrongNum98 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum99 > 5 || wrongNum99 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum100 > 5 || wrongNum100 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum91 > 5 || wrongNum91 > 5 ? 'item active' : 'item'">{{ num[90] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum92 > 5 || wrongNum92 > 5 ? 'item active' : 'item'">{{ num[91] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum93 > 5 || wrongNum93 > 5 ? 'item active' : 'item'">{{ num[92] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum94 > 5 || wrongNum94 > 5 ? 'item active' : 'item'">{{ num[93] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum95 > 5 || wrongNum95 > 5 ? 'item active' : 'item'">{{ num[94] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum96 > 5 || wrongNum96 > 5 ? 'item active' : 'item'">{{ num[95] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum97 > 5 || wrongNum97 > 5 ? 'item active' : 'item'">{{ num[96] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum98 > 5 || wrongNum98 > 5 ? 'item active' : 'item'">{{ num[97] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum99 > 5 || wrongNum99 > 5 ? 'item active' : 'item'">{{ num[98] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum100 > 5 || wrongNum100 > 5 ? 'item active' : 'item'">{{ num[99] == '1' ? '大' : '小' }}</view>
 				</view>
 			</view>
 			<view class="right">
@@ -428,383 +428,383 @@
 					<view class="item">0</view>
 				</view>
 				<view class="times">
-					<view :class="rightNum1 > 5 ? 'item active' : 'item'">{{ rightNum1 }}</view>
-					<view :class="rightNum2 > 5 ? 'item active' : 'item'">{{ rightNum2 }}</view>
-					<view :class="rightNum3 > 5 ? 'item active' : 'item'">{{ rightNum3 }}</view>
-					<view :class="rightNum4 > 5 ? 'item active' : 'item'">{{ rightNum4 }}</view>
-					<view :class="rightNum5 > 5 ? 'item active' : 'item'">{{ rightNum5 }}</view>
-					<view :class="rightNum6 > 5 ? 'item active' : 'item'">{{ rightNum6 }}</view>
-					<view :class="rightNum7 > 5 ? 'item active' : 'item'">{{ rightNum7 }}</view>
-					<view :class="rightNum8 > 5 ? 'item active' : 'item'">{{ rightNum8 }}</view>
-					<view :class="rightNum9 > 5 ? 'item active' : 'item'">{{ rightNum9 }}</view>
-					<view :class="rightNum10 > 5 ? 'item active' : 'item'">{{ rightNum10 }}</view>
+					<view :class="rightNum101 > 5 ? 'item active' : 'item'">{{ rightNum101 }}</view>
+					<view :class="rightNum102 > 5 ? 'item active' : 'item'">{{ rightNum102 }}</view>
+					<view :class="rightNum103 > 5 ? 'item active' : 'item'">{{ rightNum103 }}</view>
+					<view :class="rightNum104 > 5 ? 'item active' : 'item'">{{ rightNum104 }}</view>
+					<view :class="rightNum105 > 5 ? 'item active' : 'item'">{{ rightNum105 }}</view>
+					<view :class="rightNum106 > 5 ? 'item active' : 'item'">{{ rightNum106 }}</view>
+					<view :class="rightNum107 > 5 ? 'item active' : 'item'">{{ rightNum107 }}</view>
+					<view :class="rightNum108 > 5 ? 'item active' : 'item'">{{ rightNum108 }}</view>
+					<view :class="rightNum109 > 5 ? 'item active' : 'item'">{{ rightNum109 }}</view>
+					<view :class="rightNum110 > 5 ? 'item active' : 'item'">{{ rightNum110 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum1 > 5 ? 'item active' : 'item'">{{ wrongNum1 }}</view>
-					<view :class="wrongNum2 > 5 ? 'item active' : 'item'">{{ wrongNum2 }}</view>
-					<view :class="wrongNum3 > 5 ? 'item active' : 'item'">{{ wrongNum3 }}</view>
-					<view :class="wrongNum4 > 5 ? 'item active' : 'item'">{{ wrongNum4 }}</view>
-					<view :class="wrongNum5 > 5 ? 'item active' : 'item'">{{ wrongNum5 }}</view>
-					<view :class="wrongNum6 > 5 ? 'item active' : 'item'">{{ wrongNum6 }}</view>
-					<view :class="wrongNum7 > 5 ? 'item active' : 'item'">{{ wrongNum7 }}</view>
-					<view :class="wrongNum8 > 5 ? 'item active' : 'item'">{{ wrongNum8 }}</view>
-					<view :class="wrongNum9 > 5 ? 'item active' : 'item'">{{ wrongNum9 }}</view>
-					<view :class="wrongNum10 > 5 ? 'item active' : 'item'">{{ wrongNum10 }}</view>
+					<view :class="wrongNum101 > 5 ? 'item active' : 'item'">{{ wrongNum101 }}</view>
+					<view :class="wrongNum102 > 5 ? 'item active' : 'item'">{{ wrongNum102 }}</view>
+					<view :class="wrongNum103 > 5 ? 'item active' : 'item'">{{ wrongNum103 }}</view>
+					<view :class="wrongNum104 > 5 ? 'item active' : 'item'">{{ wrongNum104 }}</view>
+					<view :class="wrongNum105 > 5 ? 'item active' : 'item'">{{ wrongNum105 }}</view>
+					<view :class="wrongNum106 > 5 ? 'item active' : 'item'">{{ wrongNum106 }}</view>
+					<view :class="wrongNum107 > 5 ? 'item active' : 'item'">{{ wrongNum107 }}</view>
+					<view :class="wrongNum108 > 5 ? 'item active' : 'item'">{{ wrongNum108 }}</view>
+					<view :class="wrongNum109 > 5 ? 'item active' : 'item'">{{ wrongNum109 }}</view>
+					<view :class="wrongNum110 > 5 ? 'item active' : 'item'">{{ wrongNum110 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum1 > 5 || wrongNum1 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum2 > 5 || wrongNum2 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum3 > 5 || wrongNum3 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum4 > 5 || wrongNum4 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum5 > 5 || wrongNum5 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum6 > 5 || wrongNum6 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum7 > 5 || wrongNum7 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum8 > 5 || wrongNum8 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum9 > 5 || wrongNum9 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum10 > 5 || wrongNum10 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum101 > 5 || wrongNum101 > 5 ? 'item active' : 'item'">{{ num[100] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum102 > 5 || wrongNum102 > 5 ? 'item active' : 'item'">{{ num[101] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum103 > 5 || wrongNum103 > 5 ? 'item active' : 'item'">{{ num[102] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum104 > 5 || wrongNum104 > 5 ? 'item active' : 'item'">{{ num[103] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum105 > 5 || wrongNum105 > 5 ? 'item active' : 'item'">{{ num[104] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum106 > 5 || wrongNum106 > 5 ? 'item active' : 'item'">{{ num[105] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum107 > 5 || wrongNum107 > 5 ? 'item active' : 'item'">{{ num[106] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum108 > 5 || wrongNum108 > 5 ? 'item active' : 'item'">{{ num[107] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum109 > 5 || wrongNum109 > 5 ? 'item active' : 'item'">{{ num[108] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum110 > 5 || wrongNum110 > 5 ? 'item active' : 'item'">{{ num[109] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum11 > 5 ? 'item active' : 'item'">{{ rightNum11 }}</view>
-					<view :class="rightNum12 > 5 ? 'item active' : 'item'">{{ rightNum12 }}</view>
-					<view :class="rightNum13 > 5 ? 'item active' : 'item'">{{ rightNum13 }}</view>
-					<view :class="rightNum14 > 5 ? 'item active' : 'item'">{{ rightNum14 }}</view>
-					<view :class="rightNum15 > 5 ? 'item active' : 'item'">{{ rightNum15 }}</view>
-					<view :class="rightNum16 > 5 ? 'item active' : 'item'">{{ rightNum16 }}</view>
-					<view :class="rightNum17 > 5 ? 'item active' : 'item'">{{ rightNum17 }}</view>
-					<view :class="rightNum18 > 5 ? 'item active' : 'item'">{{ rightNum18 }}</view>
-					<view :class="rightNum19 > 5 ? 'item active' : 'item'">{{ rightNum19 }}</view>
-					<view :class="rightNum20 > 5 ? 'item active' : 'item'">{{ rightNum20 }}</view>
+					<view :class="rightNum111 > 5 ? 'item active' : 'item'">{{ rightNum111 }}</view>
+					<view :class="rightNum112 > 5 ? 'item active' : 'item'">{{ rightNum112 }}</view>
+					<view :class="rightNum113 > 5 ? 'item active' : 'item'">{{ rightNum113 }}</view>
+					<view :class="rightNum114 > 5 ? 'item active' : 'item'">{{ rightNum114 }}</view>
+					<view :class="rightNum115 > 5 ? 'item active' : 'item'">{{ rightNum115 }}</view>
+					<view :class="rightNum116 > 5 ? 'item active' : 'item'">{{ rightNum116 }}</view>
+					<view :class="rightNum117 > 5 ? 'item active' : 'item'">{{ rightNum117 }}</view>
+					<view :class="rightNum118 > 5 ? 'item active' : 'item'">{{ rightNum118 }}</view>
+					<view :class="rightNum119 > 5 ? 'item active' : 'item'">{{ rightNum119 }}</view>
+					<view :class="rightNum120 > 5 ? 'item active' : 'item'">{{ rightNum120 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum11 > 5 ? 'item active' : 'item'">{{ wrongNum11 }}</view>
-					<view :class="wrongNum12 > 5 ? 'item active' : 'item'">{{ wrongNum12 }}</view>
-					<view :class="wrongNum13 > 5 ? 'item active' : 'item'">{{ wrongNum13 }}</view>
-					<view :class="wrongNum14 > 5 ? 'item active' : 'item'">{{ wrongNum14 }}</view>
-					<view :class="wrongNum15 > 5 ? 'item active' : 'item'">{{ wrongNum15 }}</view>
-					<view :class="wrongNum16 > 5 ? 'item active' : 'item'">{{ wrongNum16 }}</view>
-					<view :class="wrongNum17 > 5 ? 'item active' : 'item'">{{ wrongNum17 }}</view>
-					<view :class="wrongNum18 > 5 ? 'item active' : 'item'">{{ wrongNum18 }}</view>
-					<view :class="wrongNum19 > 5 ? 'item active' : 'item'">{{ wrongNum19 }}</view>
-					<view :class="wrongNum20 > 5 ? 'item active' : 'item'">{{ wrongNum20 }}</view>
+					<view :class="wrongNum111 > 5 ? 'item active' : 'item'">{{ wrongNum111 }}</view>
+					<view :class="wrongNum112 > 5 ? 'item active' : 'item'">{{ wrongNum112 }}</view>
+					<view :class="wrongNum113 > 5 ? 'item active' : 'item'">{{ wrongNum113 }}</view>
+					<view :class="wrongNum114 > 5 ? 'item active' : 'item'">{{ wrongNum114 }}</view>
+					<view :class="wrongNum115 > 5 ? 'item active' : 'item'">{{ wrongNum115 }}</view>
+					<view :class="wrongNum116 > 5 ? 'item active' : 'item'">{{ wrongNum116 }}</view>
+					<view :class="wrongNum117 > 5 ? 'item active' : 'item'">{{ wrongNum117 }}</view>
+					<view :class="wrongNum118 > 5 ? 'item active' : 'item'">{{ wrongNum118 }}</view>
+					<view :class="wrongNum119 > 5 ? 'item active' : 'item'">{{ wrongNum119 }}</view>
+					<view :class="wrongNum120 > 5 ? 'item active' : 'item'">{{ wrongNum120 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum11 > 5 || wrongNum11 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum12 > 5 || wrongNum12 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum13 > 5 || wrongNum13 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum14 > 5 || wrongNum14 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum15 > 5 || wrongNum15 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum16 > 5 || wrongNum16 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum17 > 5 || wrongNum17 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum18 > 5 || wrongNum18 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum19 > 5 || wrongNum19 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum20 > 5 || wrongNum20 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum111 > 5 || wrongNum111 > 5 ? 'item active' : 'item'">{{ num[110] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum112 > 5 || wrongNum112 > 5 ? 'item active' : 'item'">{{ num[111] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum113 > 5 || wrongNum113 > 5 ? 'item active' : 'item'">{{ num[112] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum114 > 5 || wrongNum114 > 5 ? 'item active' : 'item'">{{ num[113] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum115 > 5 || wrongNum115 > 5 ? 'item active' : 'item'">{{ num[114] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum116 > 5 || wrongNum116 > 5 ? 'item active' : 'item'">{{ num[115] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum117 > 5 || wrongNum117 > 5 ? 'item active' : 'item'">{{ num[116] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum118 > 5 || wrongNum118 > 5 ? 'item active' : 'item'">{{ num[117] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum119 > 5 || wrongNum119 > 5 ? 'item active' : 'item'">{{ num[118] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum120 > 5 || wrongNum120 > 5 ? 'item active' : 'item'">{{ num[119] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum21 > 5 ? 'item active' : 'item'">{{ rightNum21 }}</view>
-					<view :class="rightNum22 > 5 ? 'item active' : 'item'">{{ rightNum22 }}</view>
-					<view :class="rightNum23 > 5 ? 'item active' : 'item'">{{ rightNum23 }}</view>
-					<view :class="rightNum24 > 5 ? 'item active' : 'item'">{{ rightNum24 }}</view>
-					<view :class="rightNum25 > 5 ? 'item active' : 'item'">{{ rightNum25 }}</view>
-					<view :class="rightNum26 > 5 ? 'item active' : 'item'">{{ rightNum26 }}</view>
-					<view :class="rightNum27 > 5 ? 'item active' : 'item'">{{ rightNum27 }}</view>
-					<view :class="rightNum28 > 5 ? 'item active' : 'item'">{{ rightNum28 }}</view>
-					<view :class="rightNum29 > 5 ? 'item active' : 'item'">{{ rightNum29 }}</view>
-					<view :class="rightNum30 > 5 ? 'item active' : 'item'">{{ rightNum30 }}</view>
+					<view :class="rightNum121 > 5 ? 'item active' : 'item'">{{ rightNum121 }}</view>
+					<view :class="rightNum122 > 5 ? 'item active' : 'item'">{{ rightNum122 }}</view>
+					<view :class="rightNum123 > 5 ? 'item active' : 'item'">{{ rightNum123 }}</view>
+					<view :class="rightNum124 > 5 ? 'item active' : 'item'">{{ rightNum124 }}</view>
+					<view :class="rightNum125 > 5 ? 'item active' : 'item'">{{ rightNum125 }}</view>
+					<view :class="rightNum126 > 5 ? 'item active' : 'item'">{{ rightNum126 }}</view>
+					<view :class="rightNum127 > 5 ? 'item active' : 'item'">{{ rightNum127 }}</view>
+					<view :class="rightNum128 > 5 ? 'item active' : 'item'">{{ rightNum128 }}</view>
+					<view :class="rightNum129 > 5 ? 'item active' : 'item'">{{ rightNum129 }}</view>
+					<view :class="rightNum130 > 5 ? 'item active' : 'item'">{{ rightNum130 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum21 > 5 ? 'item active' : 'item'">{{ wrongNum21 }}</view>
-					<view :class="wrongNum22 > 5 ? 'item active' : 'item'">{{ wrongNum22 }}</view>
-					<view :class="wrongNum23 > 5 ? 'item active' : 'item'">{{ wrongNum23 }}</view>
-					<view :class="wrongNum24 > 5 ? 'item active' : 'item'">{{ wrongNum24 }}</view>
-					<view :class="wrongNum25 > 5 ? 'item active' : 'item'">{{ wrongNum25 }}</view>
-					<view :class="wrongNum26 > 5 ? 'item active' : 'item'">{{ wrongNum26 }}</view>
-					<view :class="wrongNum27 > 5 ? 'item active' : 'item'">{{ wrongNum27 }}</view>
-					<view :class="wrongNum28 > 5 ? 'item active' : 'item'">{{ wrongNum28 }}</view>
-					<view :class="wrongNum29 > 5 ? 'item active' : 'item'">{{ wrongNum29 }}</view>
-					<view :class="wrongNum30 > 5 ? 'item active' : 'item'">{{ wrongNum30 }}</view>
+					<view :class="wrongNum121 > 5 ? 'item active' : 'item'">{{ wrongNum121 }}</view>
+					<view :class="wrongNum122 > 5 ? 'item active' : 'item'">{{ wrongNum122 }}</view>
+					<view :class="wrongNum123 > 5 ? 'item active' : 'item'">{{ wrongNum123 }}</view>
+					<view :class="wrongNum124 > 5 ? 'item active' : 'item'">{{ wrongNum124 }}</view>
+					<view :class="wrongNum125 > 5 ? 'item active' : 'item'">{{ wrongNum125 }}</view>
+					<view :class="wrongNum126 > 5 ? 'item active' : 'item'">{{ wrongNum126 }}</view>
+					<view :class="wrongNum127 > 5 ? 'item active' : 'item'">{{ wrongNum127 }}</view>
+					<view :class="wrongNum128 > 5 ? 'item active' : 'item'">{{ wrongNum128 }}</view>
+					<view :class="wrongNum129 > 5 ? 'item active' : 'item'">{{ wrongNum129 }}</view>
+					<view :class="wrongNum130 > 5 ? 'item active' : 'item'">{{ wrongNum130 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum21 > 5 || wrongNum21 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum22 > 5 || wrongNum22 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum23 > 5 || wrongNum23 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum24 > 5 || wrongNum24 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum25 > 5 || wrongNum25 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum26 > 5 || wrongNum26 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum27 > 5 || wrongNum27 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum28 > 5 || wrongNum28 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum29 > 5 || wrongNum29 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum30 > 5 || wrongNum30 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum121 > 5 || wrongNum121 > 5 ? 'item active' : 'item'">{{ num[120] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum122 > 5 || wrongNum122 > 5 ? 'item active' : 'item'">{{ num[121] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum123 > 5 || wrongNum123 > 5 ? 'item active' : 'item'">{{ num[122] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum124 > 5 || wrongNum124 > 5 ? 'item active' : 'item'">{{ num[123] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum125 > 5 || wrongNum125 > 5 ? 'item active' : 'item'">{{ num[124] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum126 > 5 || wrongNum126 > 5 ? 'item active' : 'item'">{{ num[125] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum127 > 5 || wrongNum127 > 5 ? 'item active' : 'item'">{{ num[126] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum128 > 5 || wrongNum128 > 5 ? 'item active' : 'item'">{{ num[127] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum129 > 5 || wrongNum129 > 5 ? 'item active' : 'item'">{{ num[128] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum130 > 5 || wrongNum130 > 5 ? 'item active' : 'item'">{{ num[129] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum31 > 5 ? 'item active' : 'item'">{{ rightNum31 }}</view>
-					<view :class="rightNum32 > 5 ? 'item active' : 'item'">{{ rightNum32 }}</view>
-					<view :class="rightNum33 > 5 ? 'item active' : 'item'">{{ rightNum33 }}</view>
-					<view :class="rightNum34 > 5 ? 'item active' : 'item'">{{ rightNum34 }}</view>
-					<view :class="rightNum35 > 5 ? 'item active' : 'item'">{{ rightNum35 }}</view>
-					<view :class="rightNum36 > 5 ? 'item active' : 'item'">{{ rightNum36 }}</view>
-					<view :class="rightNum37 > 5 ? 'item active' : 'item'">{{ rightNum37 }}</view>
-					<view :class="rightNum38 > 5 ? 'item active' : 'item'">{{ rightNum38 }}</view>
-					<view :class="rightNum39 > 5 ? 'item active' : 'item'">{{ rightNum39 }}</view>
-					<view :class="rightNum40 > 5 ? 'item active' : 'item'">{{ rightNum40 }}</view>
+					<view :class="rightNum131 > 5 ? 'item active' : 'item'">{{ rightNum131 }}</view>
+					<view :class="rightNum132 > 5 ? 'item active' : 'item'">{{ rightNum132 }}</view>
+					<view :class="rightNum133 > 5 ? 'item active' : 'item'">{{ rightNum133 }}</view>
+					<view :class="rightNum134 > 5 ? 'item active' : 'item'">{{ rightNum134 }}</view>
+					<view :class="rightNum135 > 5 ? 'item active' : 'item'">{{ rightNum135 }}</view>
+					<view :class="rightNum136 > 5 ? 'item active' : 'item'">{{ rightNum136 }}</view>
+					<view :class="rightNum137 > 5 ? 'item active' : 'item'">{{ rightNum137 }}</view>
+					<view :class="rightNum138 > 5 ? 'item active' : 'item'">{{ rightNum138 }}</view>
+					<view :class="rightNum139 > 5 ? 'item active' : 'item'">{{ rightNum139 }}</view>
+					<view :class="rightNum140 > 5 ? 'item active' : 'item'">{{ rightNum140 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum31 > 5 ? 'item active' : 'item'">{{ wrongNum31 }}</view>
-					<view :class="wrongNum32 > 5 ? 'item active' : 'item'">{{ wrongNum32 }}</view>
-					<view :class="wrongNum33 > 5 ? 'item active' : 'item'">{{ wrongNum33 }}</view>
-					<view :class="wrongNum34 > 5 ? 'item active' : 'item'">{{ wrongNum34 }}</view>
-					<view :class="wrongNum35 > 5 ? 'item active' : 'item'">{{ wrongNum35 }}</view>
-					<view :class="wrongNum36 > 5 ? 'item active' : 'item'">{{ wrongNum36 }}</view>
-					<view :class="wrongNum37 > 5 ? 'item active' : 'item'">{{ wrongNum37 }}</view>
-					<view :class="wrongNum38 > 5 ? 'item active' : 'item'">{{ wrongNum38 }}</view>
-					<view :class="wrongNum39 > 5 ? 'item active' : 'item'">{{ wrongNum39 }}</view>
-					<view :class="wrongNum40 > 5 ? 'item active' : 'item'">{{ wrongNum40 }}</view>
+					<view :class="wrongNum131 > 5 ? 'item active' : 'item'">{{ wrongNum131 }}</view>
+					<view :class="wrongNum132 > 5 ? 'item active' : 'item'">{{ wrongNum132 }}</view>
+					<view :class="wrongNum133 > 5 ? 'item active' : 'item'">{{ wrongNum133 }}</view>
+					<view :class="wrongNum134 > 5 ? 'item active' : 'item'">{{ wrongNum134 }}</view>
+					<view :class="wrongNum135 > 5 ? 'item active' : 'item'">{{ wrongNum135 }}</view>
+					<view :class="wrongNum136 > 5 ? 'item active' : 'item'">{{ wrongNum136 }}</view>
+					<view :class="wrongNum137 > 5 ? 'item active' : 'item'">{{ wrongNum137 }}</view>
+					<view :class="wrongNum138 > 5 ? 'item active' : 'item'">{{ wrongNum138 }}</view>
+					<view :class="wrongNum139 > 5 ? 'item active' : 'item'">{{ wrongNum139 }}</view>
+					<view :class="wrongNum140 > 5 ? 'item active' : 'item'">{{ wrongNum140 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum31 > 5 || wrongNum31 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum32 > 5 || wrongNum32 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum33 > 5 || wrongNum33 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum34 > 5 || wrongNum34 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum35 > 5 || wrongNum35 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum36 > 5 || wrongNum36 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum37 > 5 || wrongNum37 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum38 > 5 || wrongNum38 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum39 > 5 || wrongNum39 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum40 > 5 || wrongNum40 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum131 > 5 || wrongNum131 > 5 ? 'item active' : 'item'">{{ num[130] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum132 > 5 || wrongNum132 > 5 ? 'item active' : 'item'">{{ num[131] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum133 > 5 || wrongNum133 > 5 ? 'item active' : 'item'">{{ num[132] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum134 > 5 || wrongNum134 > 5 ? 'item active' : 'item'">{{ num[133] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum135 > 5 || wrongNum135 > 5 ? 'item active' : 'item'">{{ num[134] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum136 > 5 || wrongNum136 > 5 ? 'item active' : 'item'">{{ num[135] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum137 > 5 || wrongNum137 > 5 ? 'item active' : 'item'">{{ num[136] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum138 > 5 || wrongNum138 > 5 ? 'item active' : 'item'">{{ num[137] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum139 > 5 || wrongNum139 > 5 ? 'item active' : 'item'">{{ num[138] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum140 > 5 || wrongNum140 > 5 ? 'item active' : 'item'">{{ num[139] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum41 > 5 ? 'item active' : 'item'">{{ rightNum41 }}</view>
-					<view :class="rightNum42 > 5 ? 'item active' : 'item'">{{ rightNum42 }}</view>
-					<view :class="rightNum43 > 5 ? 'item active' : 'item'">{{ rightNum43 }}</view>
-					<view :class="rightNum44 > 5 ? 'item active' : 'item'">{{ rightNum44 }}</view>
-					<view :class="rightNum45 > 5 ? 'item active' : 'item'">{{ rightNum45 }}</view>
-					<view :class="rightNum46 > 5 ? 'item active' : 'item'">{{ rightNum46 }}</view>
-					<view :class="rightNum47 > 5 ? 'item active' : 'item'">{{ rightNum47 }}</view>
-					<view :class="rightNum48 > 5 ? 'item active' : 'item'">{{ rightNum48 }}</view>
-					<view :class="rightNum49 > 5 ? 'item active' : 'item'">{{ rightNum49 }}</view>
-					<view :class="rightNum50 > 5 ? 'item active' : 'item'">{{ rightNum50 }}</view>
+					<view :class="rightNum141 > 5 ? 'item active' : 'item'">{{ rightNum141 }}</view>
+					<view :class="rightNum142 > 5 ? 'item active' : 'item'">{{ rightNum142 }}</view>
+					<view :class="rightNum143 > 5 ? 'item active' : 'item'">{{ rightNum143 }}</view>
+					<view :class="rightNum144 > 5 ? 'item active' : 'item'">{{ rightNum144 }}</view>
+					<view :class="rightNum145 > 5 ? 'item active' : 'item'">{{ rightNum145 }}</view>
+					<view :class="rightNum146 > 5 ? 'item active' : 'item'">{{ rightNum146 }}</view>
+					<view :class="rightNum147 > 5 ? 'item active' : 'item'">{{ rightNum147 }}</view>
+					<view :class="rightNum148 > 5 ? 'item active' : 'item'">{{ rightNum148 }}</view>
+					<view :class="rightNum149 > 5 ? 'item active' : 'item'">{{ rightNum149 }}</view>
+					<view :class="rightNum150 > 5 ? 'item active' : 'item'">{{ rightNum150 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum41 > 5 ? 'item active' : 'item'">{{ wrongNum41 }}</view>
-					<view :class="wrongNum42 > 5 ? 'item active' : 'item'">{{ wrongNum42 }}</view>
-					<view :class="wrongNum43 > 5 ? 'item active' : 'item'">{{ wrongNum43 }}</view>
-					<view :class="wrongNum44 > 5 ? 'item active' : 'item'">{{ wrongNum44 }}</view>
-					<view :class="wrongNum45 > 5 ? 'item active' : 'item'">{{ wrongNum45 }}</view>
-					<view :class="wrongNum46 > 5 ? 'item active' : 'item'">{{ wrongNum46 }}</view>
-					<view :class="wrongNum47 > 5 ? 'item active' : 'item'">{{ wrongNum47 }}</view>
-					<view :class="wrongNum48 > 5 ? 'item active' : 'item'">{{ wrongNum48 }}</view>
-					<view :class="wrongNum49 > 5 ? 'item active' : 'item'">{{ wrongNum49 }}</view>
-					<view :class="wrongNum50 > 5 ? 'item active' : 'item'">{{ wrongNum50 }}</view>
+					<view :class="wrongNum141 > 5 ? 'item active' : 'item'">{{ wrongNum141 }}</view>
+					<view :class="wrongNum142 > 5 ? 'item active' : 'item'">{{ wrongNum142 }}</view>
+					<view :class="wrongNum143 > 5 ? 'item active' : 'item'">{{ wrongNum143 }}</view>
+					<view :class="wrongNum144 > 5 ? 'item active' : 'item'">{{ wrongNum144 }}</view>
+					<view :class="wrongNum145 > 5 ? 'item active' : 'item'">{{ wrongNum145 }}</view>
+					<view :class="wrongNum146 > 5 ? 'item active' : 'item'">{{ wrongNum146 }}</view>
+					<view :class="wrongNum147 > 5 ? 'item active' : 'item'">{{ wrongNum147 }}</view>
+					<view :class="wrongNum148 > 5 ? 'item active' : 'item'">{{ wrongNum148 }}</view>
+					<view :class="wrongNum149 > 5 ? 'item active' : 'item'">{{ wrongNum149 }}</view>
+					<view :class="wrongNum150 > 5 ? 'item active' : 'item'">{{ wrongNum150 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum41 > 5 || wrongNum41 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum42 > 5 || wrongNum42 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum43 > 5 || wrongNum43 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum44 > 5 || wrongNum44 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum45 > 5 || wrongNum45 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum46 > 5 || wrongNum46 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum47 > 5 || wrongNum47 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum48 > 5 || wrongNum48 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum49 > 5 || wrongNum49 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum50 > 5 || wrongNum50 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum141 > 5 || wrongNum141 > 5 ? 'item active' : 'item'">{{ num[140] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum142 > 5 || wrongNum142 > 5 ? 'item active' : 'item'">{{ num[141] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum143 > 5 || wrongNum143 > 5 ? 'item active' : 'item'">{{ num[142] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum144 > 5 || wrongNum144 > 5 ? 'item active' : 'item'">{{ num[143] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum145 > 5 || wrongNum145 > 5 ? 'item active' : 'item'">{{ num[144] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum146 > 5 || wrongNum146 > 5 ? 'item active' : 'item'">{{ num[145] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum147 > 5 || wrongNum147 > 5 ? 'item active' : 'item'">{{ num[146] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum148 > 5 || wrongNum148 > 5 ? 'item active' : 'item'">{{ num[147] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum149 > 5 || wrongNum149 > 5 ? 'item active' : 'item'">{{ num[148] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum150 > 5 || wrongNum150 > 5 ? 'item active' : 'item'">{{ num[149] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum51 > 5 ? 'item active' : 'item'">{{ rightNum51 }}</view>
-					<view :class="rightNum52 > 5 ? 'item active' : 'item'">{{ rightNum52 }}</view>
-					<view :class="rightNum53 > 5 ? 'item active' : 'item'">{{ rightNum53 }}</view>
-					<view :class="rightNum54 > 5 ? 'item active' : 'item'">{{ rightNum54 }}</view>
-					<view :class="rightNum55 > 5 ? 'item active' : 'item'">{{ rightNum55 }}</view>
-					<view :class="rightNum56 > 5 ? 'item active' : 'item'">{{ rightNum56 }}</view>
-					<view :class="rightNum57 > 5 ? 'item active' : 'item'">{{ rightNum57 }}</view>
-					<view :class="rightNum58 > 5 ? 'item active' : 'item'">{{ rightNum58 }}</view>
-					<view :class="rightNum59 > 5 ? 'item active' : 'item'">{{ rightNum59 }}</view>
-					<view :class="rightNum60 > 5 ? 'item active' : 'item'">{{ rightNum60 }}</view>
+					<view :class="rightNum151 > 5 ? 'item active' : 'item'">{{ rightNum151 }}</view>
+					<view :class="rightNum152 > 5 ? 'item active' : 'item'">{{ rightNum152 }}</view>
+					<view :class="rightNum153 > 5 ? 'item active' : 'item'">{{ rightNum153 }}</view>
+					<view :class="rightNum154 > 5 ? 'item active' : 'item'">{{ rightNum154 }}</view>
+					<view :class="rightNum155 > 5 ? 'item active' : 'item'">{{ rightNum155 }}</view>
+					<view :class="rightNum156 > 5 ? 'item active' : 'item'">{{ rightNum156 }}</view>
+					<view :class="rightNum157 > 5 ? 'item active' : 'item'">{{ rightNum157 }}</view>
+					<view :class="rightNum158 > 5 ? 'item active' : 'item'">{{ rightNum158 }}</view>
+					<view :class="rightNum159 > 5 ? 'item active' : 'item'">{{ rightNum159 }}</view>
+					<view :class="rightNum160 > 5 ? 'item active' : 'item'">{{ rightNum160 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum51 > 5 ? 'item active' : 'item'">{{ wrongNum51 }}</view>
-					<view :class="wrongNum52 > 5 ? 'item active' : 'item'">{{ wrongNum52 }}</view>
-					<view :class="wrongNum53 > 5 ? 'item active' : 'item'">{{ wrongNum53 }}</view>
-					<view :class="wrongNum54 > 5 ? 'item active' : 'item'">{{ wrongNum54 }}</view>
-					<view :class="wrongNum55 > 5 ? 'item active' : 'item'">{{ wrongNum55 }}</view>
-					<view :class="wrongNum56 > 5 ? 'item active' : 'item'">{{ wrongNum56 }}</view>
-					<view :class="wrongNum57 > 5 ? 'item active' : 'item'">{{ wrongNum57 }}</view>
-					<view :class="wrongNum58 > 5 ? 'item active' : 'item'">{{ wrongNum58 }}</view>
-					<view :class="wrongNum59 > 5 ? 'item active' : 'item'">{{ wrongNum59 }}</view>
-					<view :class="wrongNum60 > 5 ? 'item active' : 'item'">{{ wrongNum60 }}</view>
+					<view :class="wrongNum151 > 5 ? 'item active' : 'item'">{{ wrongNum151 }}</view>
+					<view :class="wrongNum152 > 5 ? 'item active' : 'item'">{{ wrongNum152 }}</view>
+					<view :class="wrongNum153 > 5 ? 'item active' : 'item'">{{ wrongNum153 }}</view>
+					<view :class="wrongNum154 > 5 ? 'item active' : 'item'">{{ wrongNum154 }}</view>
+					<view :class="wrongNum155 > 5 ? 'item active' : 'item'">{{ wrongNum155 }}</view>
+					<view :class="wrongNum156 > 5 ? 'item active' : 'item'">{{ wrongNum156 }}</view>
+					<view :class="wrongNum157 > 5 ? 'item active' : 'item'">{{ wrongNum157 }}</view>
+					<view :class="wrongNum158 > 5 ? 'item active' : 'item'">{{ wrongNum158 }}</view>
+					<view :class="wrongNum159 > 5 ? 'item active' : 'item'">{{ wrongNum159 }}</view>
+					<view :class="wrongNum160 > 5 ? 'item active' : 'item'">{{ wrongNum160 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum51 > 5 || wrongNum51 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum52 > 5 || wrongNum52 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum53 > 5 || wrongNum53 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum54 > 5 || wrongNum54 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum55 > 5 || wrongNum55 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum56 > 5 || wrongNum56 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum57 > 5 || wrongNum57 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum58 > 5 || wrongNum58 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum59 > 5 || wrongNum59 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum60 > 5 || wrongNum60 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum151 > 5 || wrongNum151 > 5 ? 'item active' : 'item'">{{ num[150] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum152 > 5 || wrongNum152 > 5 ? 'item active' : 'item'">{{ num[151] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum153 > 5 || wrongNum153 > 5 ? 'item active' : 'item'">{{ num[152] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum154 > 5 || wrongNum154 > 5 ? 'item active' : 'item'">{{ num[153] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum155 > 5 || wrongNum155 > 5 ? 'item active' : 'item'">{{ num[154] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum156 > 5 || wrongNum156 > 5 ? 'item active' : 'item'">{{ num[155] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum157 > 5 || wrongNum157 > 5 ? 'item active' : 'item'">{{ num[156] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum158 > 5 || wrongNum158 > 5 ? 'item active' : 'item'">{{ num[157] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum159 > 5 || wrongNum159 > 5 ? 'item active' : 'item'">{{ num[158] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum160 > 5 || wrongNum160 > 5 ? 'item active' : 'item'">{{ num[159] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum61 > 5 ? 'item active' : 'item'">{{ rightNum61 }}</view>
-					<view :class="rightNum62 > 5 ? 'item active' : 'item'">{{ rightNum62 }}</view>
-					<view :class="rightNum63 > 5 ? 'item active' : 'item'">{{ rightNum63 }}</view>
-					<view :class="rightNum64 > 5 ? 'item active' : 'item'">{{ rightNum64 }}</view>
-					<view :class="rightNum65 > 5 ? 'item active' : 'item'">{{ rightNum65 }}</view>
-					<view :class="rightNum66 > 5 ? 'item active' : 'item'">{{ rightNum66 }}</view>
-					<view :class="rightNum67 > 5 ? 'item active' : 'item'">{{ rightNum67 }}</view>
-					<view :class="rightNum68 > 5 ? 'item active' : 'item'">{{ rightNum68 }}</view>
-					<view :class="rightNum69 > 5 ? 'item active' : 'item'">{{ rightNum69 }}</view>
-					<view :class="rightNum70 > 5 ? 'item active' : 'item'">{{ rightNum70 }}</view>
+					<view :class="rightNum161 > 5 ? 'item active' : 'item'">{{ rightNum161 }}</view>
+					<view :class="rightNum162 > 5 ? 'item active' : 'item'">{{ rightNum162 }}</view>
+					<view :class="rightNum163 > 5 ? 'item active' : 'item'">{{ rightNum163 }}</view>
+					<view :class="rightNum164 > 5 ? 'item active' : 'item'">{{ rightNum164 }}</view>
+					<view :class="rightNum165 > 5 ? 'item active' : 'item'">{{ rightNum165 }}</view>
+					<view :class="rightNum166 > 5 ? 'item active' : 'item'">{{ rightNum166 }}</view>
+					<view :class="rightNum167 > 5 ? 'item active' : 'item'">{{ rightNum167 }}</view>
+					<view :class="rightNum168 > 5 ? 'item active' : 'item'">{{ rightNum168 }}</view>
+					<view :class="rightNum169 > 5 ? 'item active' : 'item'">{{ rightNum169 }}</view>
+					<view :class="rightNum170 > 5 ? 'item active' : 'item'">{{ rightNum170 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum61 > 5 ? 'item active' : 'item'">{{ wrongNum61 }}</view>
-					<view :class="wrongNum62 > 5 ? 'item active' : 'item'">{{ wrongNum62 }}</view>
-					<view :class="wrongNum63 > 5 ? 'item active' : 'item'">{{ wrongNum63 }}</view>
-					<view :class="wrongNum64 > 5 ? 'item active' : 'item'">{{ wrongNum64 }}</view>
-					<view :class="wrongNum65 > 5 ? 'item active' : 'item'">{{ wrongNum65 }}</view>
-					<view :class="wrongNum66 > 5 ? 'item active' : 'item'">{{ wrongNum66 }}</view>
-					<view :class="wrongNum67 > 5 ? 'item active' : 'item'">{{ wrongNum67 }}</view>
-					<view :class="wrongNum68 > 5 ? 'item active' : 'item'">{{ wrongNum68 }}</view>
-					<view :class="wrongNum69 > 5 ? 'item active' : 'item'">{{ wrongNum69 }}</view>
-					<view :class="wrongNum70 > 5 ? 'item active' : 'item'">{{ wrongNum70 }}</view>
+					<view :class="wrongNum161 > 5 ? 'item active' : 'item'">{{ wrongNum161 }}</view>
+					<view :class="wrongNum162 > 5 ? 'item active' : 'item'">{{ wrongNum162 }}</view>
+					<view :class="wrongNum163 > 5 ? 'item active' : 'item'">{{ wrongNum163 }}</view>
+					<view :class="wrongNum164 > 5 ? 'item active' : 'item'">{{ wrongNum164 }}</view>
+					<view :class="wrongNum165 > 5 ? 'item active' : 'item'">{{ wrongNum165 }}</view>
+					<view :class="wrongNum166 > 5 ? 'item active' : 'item'">{{ wrongNum166 }}</view>
+					<view :class="wrongNum167 > 5 ? 'item active' : 'item'">{{ wrongNum167 }}</view>
+					<view :class="wrongNum168 > 5 ? 'item active' : 'item'">{{ wrongNum168 }}</view>
+					<view :class="wrongNum169 > 5 ? 'item active' : 'item'">{{ wrongNum169 }}</view>
+					<view :class="wrongNum170 > 5 ? 'item active' : 'item'">{{ wrongNum170 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum61 > 5 || wrongNum61 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum62 > 5 || wrongNum62 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum63 > 5 || wrongNum63 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum64 > 5 || wrongNum64 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum65 > 5 || wrongNum65 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum66 > 5 || wrongNum66 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum67 > 5 || wrongNum67 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum68 > 5 || wrongNum68 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum69 > 5 || wrongNum69 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum70 > 5 || wrongNum70 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum161 > 5 || wrongNum161 > 5 ? 'item active' : 'item'">{{ num[160] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum162 > 5 || wrongNum162 > 5 ? 'item active' : 'item'">{{ num[161] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum163 > 5 || wrongNum163 > 5 ? 'item active' : 'item'">{{ num[162] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum164 > 5 || wrongNum164 > 5 ? 'item active' : 'item'">{{ num[163] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum165 > 5 || wrongNum165 > 5 ? 'item active' : 'item'">{{ num[164] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum166 > 5 || wrongNum166 > 5 ? 'item active' : 'item'">{{ num[165] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum167 > 5 || wrongNum167 > 5 ? 'item active' : 'item'">{{ num[166] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum168 > 5 || wrongNum168 > 5 ? 'item active' : 'item'">{{ num[167] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum169 > 5 || wrongNum169 > 5 ? 'item active' : 'item'">{{ num[168] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum170 > 5 || wrongNum170 > 5 ? 'item active' : 'item'">{{ num[169] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum71 > 5 ? 'item active' : 'item'">{{ rightNum71 }}</view>
-					<view :class="rightNum72 > 5 ? 'item active' : 'item'">{{ rightNum72 }}</view>
-					<view :class="rightNum73 > 5 ? 'item active' : 'item'">{{ rightNum73 }}</view>
-					<view :class="rightNum74 > 5 ? 'item active' : 'item'">{{ rightNum74 }}</view>
-					<view :class="rightNum75 > 5 ? 'item active' : 'item'">{{ rightNum75 }}</view>
-					<view :class="rightNum76 > 5 ? 'item active' : 'item'">{{ rightNum76 }}</view>
-					<view :class="rightNum77 > 5 ? 'item active' : 'item'">{{ rightNum77 }}</view>
-					<view :class="rightNum78 > 5 ? 'item active' : 'item'">{{ rightNum78 }}</view>
-					<view :class="rightNum79 > 5 ? 'item active' : 'item'">{{ rightNum79 }}</view>
-					<view :class="rightNum80 > 5 ? 'item active' : 'item'">{{ rightNum80 }}</view>
+					<view :class="rightNum171 > 5 ? 'item active' : 'item'">{{ rightNum171 }}</view>
+					<view :class="rightNum172 > 5 ? 'item active' : 'item'">{{ rightNum172 }}</view>
+					<view :class="rightNum173 > 5 ? 'item active' : 'item'">{{ rightNum173 }}</view>
+					<view :class="rightNum174 > 5 ? 'item active' : 'item'">{{ rightNum174 }}</view>
+					<view :class="rightNum175 > 5 ? 'item active' : 'item'">{{ rightNum175 }}</view>
+					<view :class="rightNum176 > 5 ? 'item active' : 'item'">{{ rightNum176 }}</view>
+					<view :class="rightNum177 > 5 ? 'item active' : 'item'">{{ rightNum177 }}</view>
+					<view :class="rightNum178 > 5 ? 'item active' : 'item'">{{ rightNum178 }}</view>
+					<view :class="rightNum179 > 5 ? 'item active' : 'item'">{{ rightNum179 }}</view>
+					<view :class="rightNum180 > 5 ? 'item active' : 'item'">{{ rightNum180 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum71 > 5 ? 'item active' : 'item'">{{ wrongNum71 }}</view>
-					<view :class="wrongNum72 > 5 ? 'item active' : 'item'">{{ wrongNum72 }}</view>
-					<view :class="wrongNum73 > 5 ? 'item active' : 'item'">{{ wrongNum73 }}</view>
-					<view :class="wrongNum74 > 5 ? 'item active' : 'item'">{{ wrongNum74 }}</view>
-					<view :class="wrongNum75 > 5 ? 'item active' : 'item'">{{ wrongNum75 }}</view>
-					<view :class="wrongNum76 > 5 ? 'item active' : 'item'">{{ wrongNum76 }}</view>
-					<view :class="wrongNum77 > 5 ? 'item active' : 'item'">{{ wrongNum77 }}</view>
-					<view :class="wrongNum78 > 5 ? 'item active' : 'item'">{{ wrongNum78 }}</view>
-					<view :class="wrongNum79 > 5 ? 'item active' : 'item'">{{ wrongNum79 }}</view>
-					<view :class="wrongNum80 > 5 ? 'item active' : 'item'">{{ wrongNum80 }}</view>
+					<view :class="wrongNum171 > 5 ? 'item active' : 'item'">{{ wrongNum171 }}</view>
+					<view :class="wrongNum172 > 5 ? 'item active' : 'item'">{{ wrongNum172 }}</view>
+					<view :class="wrongNum173 > 5 ? 'item active' : 'item'">{{ wrongNum173 }}</view>
+					<view :class="wrongNum174 > 5 ? 'item active' : 'item'">{{ wrongNum174 }}</view>
+					<view :class="wrongNum175 > 5 ? 'item active' : 'item'">{{ wrongNum175 }}</view>
+					<view :class="wrongNum176 > 5 ? 'item active' : 'item'">{{ wrongNum176 }}</view>
+					<view :class="wrongNum177 > 5 ? 'item active' : 'item'">{{ wrongNum177 }}</view>
+					<view :class="wrongNum178 > 5 ? 'item active' : 'item'">{{ wrongNum178 }}</view>
+					<view :class="wrongNum179 > 5 ? 'item active' : 'item'">{{ wrongNum179 }}</view>
+					<view :class="wrongNum180 > 5 ? 'item active' : 'item'">{{ wrongNum180 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum71 > 5 || wrongNum71 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum72 > 5 || wrongNum72 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum73 > 5 || wrongNum73 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum74 > 5 || wrongNum74 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum75 > 5 || wrongNum75 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum76 > 5 || wrongNum76 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum77 > 5 || wrongNum77 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum78 > 5 || wrongNum78 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum79 > 5 || wrongNum79 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum80 > 5 || wrongNum80 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum171 > 5 || wrongNum171 > 5 ? 'item active' : 'item'">{{ num[170] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum172 > 5 || wrongNum172 > 5 ? 'item active' : 'item'">{{ num[171] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum173 > 5 || wrongNum173 > 5 ? 'item active' : 'item'">{{ num[172] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum174 > 5 || wrongNum174 > 5 ? 'item active' : 'item'">{{ num[173] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum175 > 5 || wrongNum175 > 5 ? 'item active' : 'item'">{{ num[174] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum176 > 5 || wrongNum176 > 5 ? 'item active' : 'item'">{{ num[175] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum177 > 5 || wrongNum177 > 5 ? 'item active' : 'item'">{{ num[176] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum178 > 5 || wrongNum178 > 5 ? 'item active' : 'item'">{{ num[177] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum179 > 5 || wrongNum179 > 5 ? 'item active' : 'item'">{{ num[178] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum180 > 5 || wrongNum180 > 5 ? 'item active' : 'item'">{{ num[179] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum81 > 5 ? 'item active' : 'item'">{{ rightNum81 }}</view>
-					<view :class="rightNum82 > 5 ? 'item active' : 'item'">{{ rightNum82 }}</view>
-					<view :class="rightNum83 > 5 ? 'item active' : 'item'">{{ rightNum83 }}</view>
-					<view :class="rightNum84 > 5 ? 'item active' : 'item'">{{ rightNum84 }}</view>
-					<view :class="rightNum85 > 5 ? 'item active' : 'item'">{{ rightNum85 }}</view>
-					<view :class="rightNum86 > 5 ? 'item active' : 'item'">{{ rightNum86 }}</view>
-					<view :class="rightNum87 > 5 ? 'item active' : 'item'">{{ rightNum87 }}</view>
-					<view :class="rightNum88 > 5 ? 'item active' : 'item'">{{ rightNum88 }}</view>
-					<view :class="rightNum89 > 5 ? 'item active' : 'item'">{{ rightNum89 }}</view>
-					<view :class="rightNum90 > 5 ? 'item active' : 'item'">{{ rightNum90 }}</view>
+					<view :class="rightNum181 > 5 ? 'item active' : 'item'">{{ rightNum181 }}</view>
+					<view :class="rightNum182 > 5 ? 'item active' : 'item'">{{ rightNum182 }}</view>
+					<view :class="rightNum183 > 5 ? 'item active' : 'item'">{{ rightNum183 }}</view>
+					<view :class="rightNum184 > 5 ? 'item active' : 'item'">{{ rightNum184 }}</view>
+					<view :class="rightNum185 > 5 ? 'item active' : 'item'">{{ rightNum185 }}</view>
+					<view :class="rightNum186 > 5 ? 'item active' : 'item'">{{ rightNum186 }}</view>
+					<view :class="rightNum187 > 5 ? 'item active' : 'item'">{{ rightNum187 }}</view>
+					<view :class="rightNum188 > 5 ? 'item active' : 'item'">{{ rightNum188 }}</view>
+					<view :class="rightNum189 > 5 ? 'item active' : 'item'">{{ rightNum189 }}</view>
+					<view :class="rightNum190 > 5 ? 'item active' : 'item'">{{ rightNum190 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum81 > 5 ? 'item active' : 'item'">{{ wrongNum81 }}</view>
-					<view :class="wrongNum82 > 5 ? 'item active' : 'item'">{{ wrongNum82 }}</view>
-					<view :class="wrongNum83 > 5 ? 'item active' : 'item'">{{ wrongNum83 }}</view>
-					<view :class="wrongNum84 > 5 ? 'item active' : 'item'">{{ wrongNum84 }}</view>
-					<view :class="wrongNum85 > 5 ? 'item active' : 'item'">{{ wrongNum85 }}</view>
-					<view :class="wrongNum86 > 5 ? 'item active' : 'item'">{{ wrongNum86 }}</view>
-					<view :class="wrongNum87 > 5 ? 'item active' : 'item'">{{ wrongNum87 }}</view>
-					<view :class="wrongNum88 > 5 ? 'item active' : 'item'">{{ wrongNum88 }}</view>
-					<view :class="wrongNum89 > 5 ? 'item active' : 'item'">{{ wrongNum89 }}</view>
-					<view :class="wrongNum90 > 5 ? 'item active' : 'item'">{{ wrongNum90 }}</view>
+					<view :class="wrongNum181 > 5 ? 'item active' : 'item'">{{ wrongNum181 }}</view>
+					<view :class="wrongNum182 > 5 ? 'item active' : 'item'">{{ wrongNum182 }}</view>
+					<view :class="wrongNum183 > 5 ? 'item active' : 'item'">{{ wrongNum183 }}</view>
+					<view :class="wrongNum184 > 5 ? 'item active' : 'item'">{{ wrongNum184 }}</view>
+					<view :class="wrongNum185 > 5 ? 'item active' : 'item'">{{ wrongNum185 }}</view>
+					<view :class="wrongNum186 > 5 ? 'item active' : 'item'">{{ wrongNum186 }}</view>
+					<view :class="wrongNum187 > 5 ? 'item active' : 'item'">{{ wrongNum187 }}</view>
+					<view :class="wrongNum188 > 5 ? 'item active' : 'item'">{{ wrongNum188 }}</view>
+					<view :class="wrongNum189 > 5 ? 'item active' : 'item'">{{ wrongNum189 }}</view>
+					<view :class="wrongNum190 > 5 ? 'item active' : 'item'">{{ wrongNum190 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum81 > 5 || wrongNum81 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum82 > 5 || wrongNum82 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum83 > 5 || wrongNum83 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum84 > 5 || wrongNum84 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum85 > 5 || wrongNum85 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum86 > 5 || wrongNum86 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum87 > 5 || wrongNum87 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum88 > 5 || wrongNum88 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum89 > 5 || wrongNum89 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum90 > 5 || wrongNum90 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum181 > 5 || wrongNum181 > 5 ? 'item active' : 'item'">{{ num[180] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum182 > 5 || wrongNum182 > 5 ? 'item active' : 'item'">{{ num[181] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum183 > 5 || wrongNum183 > 5 ? 'item active' : 'item'">{{ num[182] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum184 > 5 || wrongNum184 > 5 ? 'item active' : 'item'">{{ num[183] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum185 > 5 || wrongNum185 > 5 ? 'item active' : 'item'">{{ num[184] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum186 > 5 || wrongNum186 > 5 ? 'item active' : 'item'">{{ num[185] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum187 > 5 || wrongNum187 > 5 ? 'item active' : 'item'">{{ num[186] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum188 > 5 || wrongNum188 > 5 ? 'item active' : 'item'">{{ num[187] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum189 > 5 || wrongNum189 > 5 ? 'item active' : 'item'">{{ num[188] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum190 > 5 || wrongNum190 > 5 ? 'item active' : 'item'">{{ num[189] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum91 > 5 ? 'item active' : 'item'">{{ rightNum91 }}</view>
-					<view :class="rightNum92 > 5 ? 'item active' : 'item'">{{ rightNum92 }}</view>
-					<view :class="rightNum93 > 5 ? 'item active' : 'item'">{{ rightNum93 }}</view>
-					<view :class="rightNum94 > 5 ? 'item active' : 'item'">{{ rightNum94 }}</view>
-					<view :class="rightNum95 > 5 ? 'item active' : 'item'">{{ rightNum95 }}</view>
-					<view :class="rightNum96 > 5 ? 'item active' : 'item'">{{ rightNum96 }}</view>
-					<view :class="rightNum97 > 5 ? 'item active' : 'item'">{{ rightNum97 }}</view>
-					<view :class="rightNum98 > 5 ? 'item active' : 'item'">{{ rightNum98 }}</view>
-					<view :class="rightNum99 > 5 ? 'item active' : 'item'">{{ rightNum99 }}</view>
-					<view :class="rightNum100 > 5 ? 'item active' : 'item'">{{ rightNum100 }}</view>
+					<view :class="rightNum191 > 5 ? 'item active' : 'item'">{{ rightNum191 }}</view>
+					<view :class="rightNum192 > 5 ? 'item active' : 'item'">{{ rightNum192 }}</view>
+					<view :class="rightNum193 > 5 ? 'item active' : 'item'">{{ rightNum193 }}</view>
+					<view :class="rightNum194 > 5 ? 'item active' : 'item'">{{ rightNum194 }}</view>
+					<view :class="rightNum195 > 5 ? 'item active' : 'item'">{{ rightNum195 }}</view>
+					<view :class="rightNum196 > 5 ? 'item active' : 'item'">{{ rightNum196 }}</view>
+					<view :class="rightNum197 > 5 ? 'item active' : 'item'">{{ rightNum197 }}</view>
+					<view :class="rightNum198 > 5 ? 'item active' : 'item'">{{ rightNum198 }}</view>
+					<view :class="rightNum199 > 5 ? 'item active' : 'item'">{{ rightNum199 }}</view>
+					<view :class="rightNum200 > 5 ? 'item active' : 'item'">{{ rightNum200 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum91 > 5 ? 'item active' : 'item'">{{ wrongNum91 }}</view>
-					<view :class="wrongNum92 > 5 ? 'item active' : 'item'">{{ wrongNum92 }}</view>
-					<view :class="wrongNum93 > 5 ? 'item active' : 'item'">{{ wrongNum93 }}</view>
-					<view :class="wrongNum94 > 5 ? 'item active' : 'item'">{{ wrongNum94 }}</view>
-					<view :class="wrongNum95 > 5 ? 'item active' : 'item'">{{ wrongNum95 }}</view>
-					<view :class="wrongNum96 > 5 ? 'item active' : 'item'">{{ wrongNum96 }}</view>
-					<view :class="wrongNum97 > 5 ? 'item active' : 'item'">{{ wrongNum97 }}</view>
-					<view :class="wrongNum98 > 5 ? 'item active' : 'item'">{{ wrongNum98 }}</view>
-					<view :class="wrongNum99 > 5 ? 'item active' : 'item'">{{ wrongNum99 }}</view>
-					<view :class="wrongNum100 > 5 ? 'item active' : 'item'">{{ wrongNum100 }}</view>
+					<view :class="wrongNum191 > 5 ? 'item active' : 'item'">{{ wrongNum191 }}</view>
+					<view :class="wrongNum192 > 5 ? 'item active' : 'item'">{{ wrongNum192 }}</view>
+					<view :class="wrongNum193 > 5 ? 'item active' : 'item'">{{ wrongNum193 }}</view>
+					<view :class="wrongNum194 > 5 ? 'item active' : 'item'">{{ wrongNum194 }}</view>
+					<view :class="wrongNum195 > 5 ? 'item active' : 'item'">{{ wrongNum195 }}</view>
+					<view :class="wrongNum196 > 5 ? 'item active' : 'item'">{{ wrongNum196 }}</view>
+					<view :class="wrongNum197 > 5 ? 'item active' : 'item'">{{ wrongNum197 }}</view>
+					<view :class="wrongNum198 > 5 ? 'item active' : 'item'">{{ wrongNum198 }}</view>
+					<view :class="wrongNum199 > 5 ? 'item active' : 'item'">{{ wrongNum199 }}</view>
+					<view :class="wrongNum200 > 5 ? 'item active' : 'item'">{{ wrongNum200 }}</view>
 				</view>
 				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view :class="rightNum91 > 5 || wrongNum91 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum92 > 5 || wrongNum92 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum93 > 5 || wrongNum93 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum94 > 5 || wrongNum94 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum95 > 5 || wrongNum95 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum96 > 5 || wrongNum96 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum97 > 5 || wrongNum97 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum98 > 5 || wrongNum98 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum99 > 5 || wrongNum99 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view :class="rightNum100 > 5 || wrongNum100 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum191 > 5 || wrongNum191 > 5 ? 'item active' : 'item'">{{ num[190] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum192 > 5 || wrongNum192 > 5 ? 'item active' : 'item'">{{ num[191] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum193 > 5 || wrongNum193 > 5 ? 'item active' : 'item'">{{ num[192] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum194 > 5 || wrongNum194 > 5 ? 'item active' : 'item'">{{ num[193] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum195 > 5 || wrongNum195 > 5 ? 'item active' : 'item'">{{ num[194] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum196 > 5 || wrongNum196 > 5 ? 'item active' : 'item'">{{ num[195] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum197 > 5 || wrongNum197 > 5 ? 'item active' : 'item'">{{ num[196] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum198 > 5 || wrongNum198 > 5 ? 'item active' : 'item'">{{ num[197] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum199 > 5 || wrongNum199 > 5 ? 'item active' : 'item'">{{ num[198] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum200 > 5 || wrongNum200 > 5 ? 'item active' : 'item'">{{ num[199] == '1' ? '大' : '小' }}</view>
 				</view>
 			</view>
 		</view>
@@ -1621,14 +1621,19 @@ let rightNum200 = ref(0)
 let wrongNum200 = ref(0)
 
 /* 生命周期函数 */
-onLoad(() => {
+onLoad(async () => {
 	getData()
 	for(let i = 0; i < 100; i++) {
 		findHandle(i)
+		await sleep(100)
 	}
 })
 
 /* methods */
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function rnd(n, m){
 	return parseInt(Math.random() * ( m - n + 1 ) + n);
 }
@@ -2771,7 +2776,7 @@ function setStorage() {
 	uni.setStorageSync('arr99', JSON.stringify(arr99.value))
 	uni.setStorageSync('arr100', JSON.stringify(arr100.value))
 
-	uni.setStorageSync('arr100', JSON.stringify(arr101.value))
+	uni.setStorageSync('arr101', JSON.stringify(arr101.value))
 	uni.setStorageSync('arr102', JSON.stringify(arr102.value))
 	uni.setStorageSync('arr103', JSON.stringify(arr103.value))
 	uni.setStorageSync('arr104', JSON.stringify(arr104.value))
