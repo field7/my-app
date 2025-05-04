@@ -2,8 +2,9 @@
 	<view class="content">
 		<view class="operate">
 			<view class="input">
-				<input type="number" v-model="num" />
+				<input type="number" v-model="numType" />
 			</view>
+			<view class="num">{{ num }}</view>
 			<view class="button">
 				<view class="btn btn3" @click="getRnd">获取</view>
 				<view class="btn btn1" @click="setValueHandle">提交</view>
@@ -57,19 +58,18 @@
 					<view :class="wrongNum9 > 5 ? 'item active' : 'item'">{{ wrongNum9 }}</view>
 					<view :class="wrongNum10 > 5 ? 'item active' : 'item'">{{ wrongNum10 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[0] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[1] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[2] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[3] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[4] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[5] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[6] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[7] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[8] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[9] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum1 > 5 || wrongNum1 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum2 > 5 || wrongNum2 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum3 > 5 || wrongNum3 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum4 > 5 || wrongNum4 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum5 > 5 || wrongNum5 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum6 > 5 || wrongNum6 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum7 > 5 || wrongNum7 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum8 > 5 || wrongNum8 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum9 > 5 || wrongNum9 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum10 > 5 || wrongNum10 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -96,19 +96,18 @@
 					<view :class="wrongNum19 > 5 ? 'item active' : 'item'">{{ wrongNum19 }}</view>
 					<view :class="wrongNum20 > 5 ? 'item active' : 'item'">{{ wrongNum20 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[10] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[11] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[12] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[13] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[14] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[15] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[16] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[17] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[18] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[19] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum11 > 5 || wrongNum11 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum12 > 5 || wrongNum12 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum13 > 5 || wrongNum13 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum14 > 5 || wrongNum14 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum15 > 5 || wrongNum15 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum16 > 5 || wrongNum16 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum17 > 5 || wrongNum17 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum18 > 5 || wrongNum18 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum19 > 5 || wrongNum19 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum20 > 5 || wrongNum20 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -135,19 +134,18 @@
 					<view :class="wrongNum29 > 5 ? 'item active' : 'item'">{{ wrongNum29 }}</view>
 					<view :class="wrongNum30 > 5 ? 'item active' : 'item'">{{ wrongNum30 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[20] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[21] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[22] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[23] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[24] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[25] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[26] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[27] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[28] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[29] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum21 > 5 || wrongNum21 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum22 > 5 || wrongNum22 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum23 > 5 || wrongNum23 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum24 > 5 || wrongNum24 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum25 > 5 || wrongNum25 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum26 > 5 || wrongNum26 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum27 > 5 || wrongNum27 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum28 > 5 || wrongNum28 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum29 > 5 || wrongNum29 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum30 > 5 || wrongNum30 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -174,19 +172,18 @@
 					<view :class="wrongNum39 > 5 ? 'item active' : 'item'">{{ wrongNum39 }}</view>
 					<view :class="wrongNum40 > 5 ? 'item active' : 'item'">{{ wrongNum40 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[30] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[31] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[32] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[33] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[34] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[35] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[36] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[37] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[38] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[39] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum31 > 5 || wrongNum31 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum32 > 5 || wrongNum32 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum33 > 5 || wrongNum33 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum34 > 5 || wrongNum34 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum35 > 5 || wrongNum35 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum36 > 5 || wrongNum36 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum37 > 5 || wrongNum37 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum38 > 5 || wrongNum38 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum39 > 5 || wrongNum39 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum40 > 5 || wrongNum40 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -213,19 +210,18 @@
 					<view :class="wrongNum49 > 5 ? 'item active' : 'item'">{{ wrongNum49 }}</view>
 					<view :class="wrongNum50 > 5 ? 'item active' : 'item'">{{ wrongNum50 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[40] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[41] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[42] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[43] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[44] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[45] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[46] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[47] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[48] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[59] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum41 > 5 || wrongNum41 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum42 > 5 || wrongNum42 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum43 > 5 || wrongNum43 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum44 > 5 || wrongNum44 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum45 > 5 || wrongNum45 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum46 > 5 || wrongNum46 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum47 > 5 || wrongNum47 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum48 > 5 || wrongNum48 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum49 > 5 || wrongNum49 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum50 > 5 || wrongNum50 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -252,19 +248,18 @@
 					<view :class="wrongNum59 > 5 ? 'item active' : 'item'">{{ wrongNum59 }}</view>
 					<view :class="wrongNum60 > 5 ? 'item active' : 'item'">{{ wrongNum60 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[50] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[51] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[52] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[53] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[54] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[55] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[56] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[57] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[58] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[59] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum51 > 5 || wrongNum51 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum52 > 5 || wrongNum52 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum53 > 5 || wrongNum53 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum54 > 5 || wrongNum54 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum55 > 5 || wrongNum55 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum56 > 5 || wrongNum56 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum57 > 5 || wrongNum57 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum58 > 5 || wrongNum58 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum59 > 5 || wrongNum59 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum60 > 5 || wrongNum60 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -291,19 +286,18 @@
 					<view :class="wrongNum69 > 5 ? 'item active' : 'item'">{{ wrongNum69 }}</view>
 					<view :class="wrongNum70 > 5 ? 'item active' : 'item'">{{ wrongNum70 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[60] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[61] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[62] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[63] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[64] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[65] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[66] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[67] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[68] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[69] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum61 > 5 || wrongNum61 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum62 > 5 || wrongNum62 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum63 > 5 || wrongNum63 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum64 > 5 || wrongNum64 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum65 > 5 || wrongNum65 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum66 > 5 || wrongNum66 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum67 > 5 || wrongNum67 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum68 > 5 || wrongNum68 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum69 > 5 || wrongNum69 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum70 > 5 || wrongNum70 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -330,19 +324,18 @@
 					<view :class="wrongNum79 > 5 ? 'item active' : 'item'">{{ wrongNum79 }}</view>
 					<view :class="wrongNum80 > 5 ? 'item active' : 'item'">{{ wrongNum80 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[70] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[71] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[72] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[73] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[74] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[75] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[76] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[77] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[78] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[79] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum71 > 5 || wrongNum71 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum72 > 5 || wrongNum72 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum73 > 5 || wrongNum73 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum74 > 5 || wrongNum74 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum75 > 5 || wrongNum75 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum76 > 5 || wrongNum76 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum77 > 5 || wrongNum77 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum78 > 5 || wrongNum78 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum79 > 5 || wrongNum79 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum80 > 5 || wrongNum80 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -369,19 +362,18 @@
 					<view :class="wrongNum89 > 5 ? 'item active' : 'item'">{{ wrongNum89 }}</view>
 					<view :class="wrongNum90 > 5 ? 'item active' : 'item'">{{ wrongNum90 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[80] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[81] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[82] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[83] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[84] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[85] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[86] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[87] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[88] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[89] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum81 > 5 || wrongNum81 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum82 > 5 || wrongNum82 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum83 > 5 || wrongNum83 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum84 > 5 || wrongNum84 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum85 > 5 || wrongNum85 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum86 > 5 || wrongNum86 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum87 > 5 || wrongNum87 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum88 > 5 || wrongNum88 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum89 > 5 || wrongNum89 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum90 > 5 || wrongNum90 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
@@ -408,19 +400,411 @@
 					<view :class="wrongNum99 > 5 ? 'item active' : 'item'">{{ wrongNum99 }}</view>
 					<view :class="wrongNum100 > 5 ? 'item active' : 'item'">{{ wrongNum100 }}</view>
 				</view>
-				<view style="height: 10px;"></view>
+				<view style="height: 4px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
-					<view class="item">{{ num[90] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[91] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[92] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[93] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[94] == '1' ? '大' : '小' }}</view>
-					<view class="item line">-</view>
-					<view class="item">{{ num[95] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[96] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[97] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[98] == '1' ? '大' : '小' }}</view>
-					<view class="item">{{ num[99] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum91 > 5 || wrongNum91 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum92 > 5 || wrongNum92 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum93 > 5 || wrongNum93 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum94 > 5 || wrongNum94 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum95 > 5 || wrongNum95 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum96 > 5 || wrongNum96 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum97 > 5 || wrongNum97 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum98 > 5 || wrongNum98 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum99 > 5 || wrongNum99 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum100 > 5 || wrongNum100 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+			</view>
+			<view class="right">
+				<view class="order">
+					<view class="item">1</view>
+					<view class="item">2</view>
+					<view class="item">3</view>
+					<view class="item">4</view>
+					<view class="item">5</view>
+					<view class="item">6</view>
+					<view class="item">7</view>
+					<view class="item">8</view>
+					<view class="item">9</view>
+					<view class="item">0</view>
+				</view>
+				<view class="times">
+					<view :class="rightNum1 > 5 ? 'item active' : 'item'">{{ rightNum1 }}</view>
+					<view :class="rightNum2 > 5 ? 'item active' : 'item'">{{ rightNum2 }}</view>
+					<view :class="rightNum3 > 5 ? 'item active' : 'item'">{{ rightNum3 }}</view>
+					<view :class="rightNum4 > 5 ? 'item active' : 'item'">{{ rightNum4 }}</view>
+					<view :class="rightNum5 > 5 ? 'item active' : 'item'">{{ rightNum5 }}</view>
+					<view :class="rightNum6 > 5 ? 'item active' : 'item'">{{ rightNum6 }}</view>
+					<view :class="rightNum7 > 5 ? 'item active' : 'item'">{{ rightNum7 }}</view>
+					<view :class="rightNum8 > 5 ? 'item active' : 'item'">{{ rightNum8 }}</view>
+					<view :class="rightNum9 > 5 ? 'item active' : 'item'">{{ rightNum9 }}</view>
+					<view :class="rightNum10 > 5 ? 'item active' : 'item'">{{ rightNum10 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum1 > 5 ? 'item active' : 'item'">{{ wrongNum1 }}</view>
+					<view :class="wrongNum2 > 5 ? 'item active' : 'item'">{{ wrongNum2 }}</view>
+					<view :class="wrongNum3 > 5 ? 'item active' : 'item'">{{ wrongNum3 }}</view>
+					<view :class="wrongNum4 > 5 ? 'item active' : 'item'">{{ wrongNum4 }}</view>
+					<view :class="wrongNum5 > 5 ? 'item active' : 'item'">{{ wrongNum5 }}</view>
+					<view :class="wrongNum6 > 5 ? 'item active' : 'item'">{{ wrongNum6 }}</view>
+					<view :class="wrongNum7 > 5 ? 'item active' : 'item'">{{ wrongNum7 }}</view>
+					<view :class="wrongNum8 > 5 ? 'item active' : 'item'">{{ wrongNum8 }}</view>
+					<view :class="wrongNum9 > 5 ? 'item active' : 'item'">{{ wrongNum9 }}</view>
+					<view :class="wrongNum10 > 5 ? 'item active' : 'item'">{{ wrongNum10 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum1 > 5 || wrongNum1 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum2 > 5 || wrongNum2 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum3 > 5 || wrongNum3 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum4 > 5 || wrongNum4 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum5 > 5 || wrongNum5 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum6 > 5 || wrongNum6 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum7 > 5 || wrongNum7 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum8 > 5 || wrongNum8 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum9 > 5 || wrongNum9 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum10 > 5 || wrongNum10 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum11 > 5 ? 'item active' : 'item'">{{ rightNum11 }}</view>
+					<view :class="rightNum12 > 5 ? 'item active' : 'item'">{{ rightNum12 }}</view>
+					<view :class="rightNum13 > 5 ? 'item active' : 'item'">{{ rightNum13 }}</view>
+					<view :class="rightNum14 > 5 ? 'item active' : 'item'">{{ rightNum14 }}</view>
+					<view :class="rightNum15 > 5 ? 'item active' : 'item'">{{ rightNum15 }}</view>
+					<view :class="rightNum16 > 5 ? 'item active' : 'item'">{{ rightNum16 }}</view>
+					<view :class="rightNum17 > 5 ? 'item active' : 'item'">{{ rightNum17 }}</view>
+					<view :class="rightNum18 > 5 ? 'item active' : 'item'">{{ rightNum18 }}</view>
+					<view :class="rightNum19 > 5 ? 'item active' : 'item'">{{ rightNum19 }}</view>
+					<view :class="rightNum20 > 5 ? 'item active' : 'item'">{{ rightNum20 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum11 > 5 ? 'item active' : 'item'">{{ wrongNum11 }}</view>
+					<view :class="wrongNum12 > 5 ? 'item active' : 'item'">{{ wrongNum12 }}</view>
+					<view :class="wrongNum13 > 5 ? 'item active' : 'item'">{{ wrongNum13 }}</view>
+					<view :class="wrongNum14 > 5 ? 'item active' : 'item'">{{ wrongNum14 }}</view>
+					<view :class="wrongNum15 > 5 ? 'item active' : 'item'">{{ wrongNum15 }}</view>
+					<view :class="wrongNum16 > 5 ? 'item active' : 'item'">{{ wrongNum16 }}</view>
+					<view :class="wrongNum17 > 5 ? 'item active' : 'item'">{{ wrongNum17 }}</view>
+					<view :class="wrongNum18 > 5 ? 'item active' : 'item'">{{ wrongNum18 }}</view>
+					<view :class="wrongNum19 > 5 ? 'item active' : 'item'">{{ wrongNum19 }}</view>
+					<view :class="wrongNum20 > 5 ? 'item active' : 'item'">{{ wrongNum20 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum11 > 5 || wrongNum11 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum12 > 5 || wrongNum12 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum13 > 5 || wrongNum13 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum14 > 5 || wrongNum14 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum15 > 5 || wrongNum15 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum16 > 5 || wrongNum16 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum17 > 5 || wrongNum17 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum18 > 5 || wrongNum18 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum19 > 5 || wrongNum19 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum20 > 5 || wrongNum20 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum21 > 5 ? 'item active' : 'item'">{{ rightNum21 }}</view>
+					<view :class="rightNum22 > 5 ? 'item active' : 'item'">{{ rightNum22 }}</view>
+					<view :class="rightNum23 > 5 ? 'item active' : 'item'">{{ rightNum23 }}</view>
+					<view :class="rightNum24 > 5 ? 'item active' : 'item'">{{ rightNum24 }}</view>
+					<view :class="rightNum25 > 5 ? 'item active' : 'item'">{{ rightNum25 }}</view>
+					<view :class="rightNum26 > 5 ? 'item active' : 'item'">{{ rightNum26 }}</view>
+					<view :class="rightNum27 > 5 ? 'item active' : 'item'">{{ rightNum27 }}</view>
+					<view :class="rightNum28 > 5 ? 'item active' : 'item'">{{ rightNum28 }}</view>
+					<view :class="rightNum29 > 5 ? 'item active' : 'item'">{{ rightNum29 }}</view>
+					<view :class="rightNum30 > 5 ? 'item active' : 'item'">{{ rightNum30 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum21 > 5 ? 'item active' : 'item'">{{ wrongNum21 }}</view>
+					<view :class="wrongNum22 > 5 ? 'item active' : 'item'">{{ wrongNum22 }}</view>
+					<view :class="wrongNum23 > 5 ? 'item active' : 'item'">{{ wrongNum23 }}</view>
+					<view :class="wrongNum24 > 5 ? 'item active' : 'item'">{{ wrongNum24 }}</view>
+					<view :class="wrongNum25 > 5 ? 'item active' : 'item'">{{ wrongNum25 }}</view>
+					<view :class="wrongNum26 > 5 ? 'item active' : 'item'">{{ wrongNum26 }}</view>
+					<view :class="wrongNum27 > 5 ? 'item active' : 'item'">{{ wrongNum27 }}</view>
+					<view :class="wrongNum28 > 5 ? 'item active' : 'item'">{{ wrongNum28 }}</view>
+					<view :class="wrongNum29 > 5 ? 'item active' : 'item'">{{ wrongNum29 }}</view>
+					<view :class="wrongNum30 > 5 ? 'item active' : 'item'">{{ wrongNum30 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum21 > 5 || wrongNum21 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum22 > 5 || wrongNum22 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum23 > 5 || wrongNum23 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum24 > 5 || wrongNum24 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum25 > 5 || wrongNum25 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum26 > 5 || wrongNum26 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum27 > 5 || wrongNum27 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum28 > 5 || wrongNum28 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum29 > 5 || wrongNum29 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum30 > 5 || wrongNum30 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum31 > 5 ? 'item active' : 'item'">{{ rightNum31 }}</view>
+					<view :class="rightNum32 > 5 ? 'item active' : 'item'">{{ rightNum32 }}</view>
+					<view :class="rightNum33 > 5 ? 'item active' : 'item'">{{ rightNum33 }}</view>
+					<view :class="rightNum34 > 5 ? 'item active' : 'item'">{{ rightNum34 }}</view>
+					<view :class="rightNum35 > 5 ? 'item active' : 'item'">{{ rightNum35 }}</view>
+					<view :class="rightNum36 > 5 ? 'item active' : 'item'">{{ rightNum36 }}</view>
+					<view :class="rightNum37 > 5 ? 'item active' : 'item'">{{ rightNum37 }}</view>
+					<view :class="rightNum38 > 5 ? 'item active' : 'item'">{{ rightNum38 }}</view>
+					<view :class="rightNum39 > 5 ? 'item active' : 'item'">{{ rightNum39 }}</view>
+					<view :class="rightNum40 > 5 ? 'item active' : 'item'">{{ rightNum40 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum31 > 5 ? 'item active' : 'item'">{{ wrongNum31 }}</view>
+					<view :class="wrongNum32 > 5 ? 'item active' : 'item'">{{ wrongNum32 }}</view>
+					<view :class="wrongNum33 > 5 ? 'item active' : 'item'">{{ wrongNum33 }}</view>
+					<view :class="wrongNum34 > 5 ? 'item active' : 'item'">{{ wrongNum34 }}</view>
+					<view :class="wrongNum35 > 5 ? 'item active' : 'item'">{{ wrongNum35 }}</view>
+					<view :class="wrongNum36 > 5 ? 'item active' : 'item'">{{ wrongNum36 }}</view>
+					<view :class="wrongNum37 > 5 ? 'item active' : 'item'">{{ wrongNum37 }}</view>
+					<view :class="wrongNum38 > 5 ? 'item active' : 'item'">{{ wrongNum38 }}</view>
+					<view :class="wrongNum39 > 5 ? 'item active' : 'item'">{{ wrongNum39 }}</view>
+					<view :class="wrongNum40 > 5 ? 'item active' : 'item'">{{ wrongNum40 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum31 > 5 || wrongNum31 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum32 > 5 || wrongNum32 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum33 > 5 || wrongNum33 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum34 > 5 || wrongNum34 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum35 > 5 || wrongNum35 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum36 > 5 || wrongNum36 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum37 > 5 || wrongNum37 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum38 > 5 || wrongNum38 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum39 > 5 || wrongNum39 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum40 > 5 || wrongNum40 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum41 > 5 ? 'item active' : 'item'">{{ rightNum41 }}</view>
+					<view :class="rightNum42 > 5 ? 'item active' : 'item'">{{ rightNum42 }}</view>
+					<view :class="rightNum43 > 5 ? 'item active' : 'item'">{{ rightNum43 }}</view>
+					<view :class="rightNum44 > 5 ? 'item active' : 'item'">{{ rightNum44 }}</view>
+					<view :class="rightNum45 > 5 ? 'item active' : 'item'">{{ rightNum45 }}</view>
+					<view :class="rightNum46 > 5 ? 'item active' : 'item'">{{ rightNum46 }}</view>
+					<view :class="rightNum47 > 5 ? 'item active' : 'item'">{{ rightNum47 }}</view>
+					<view :class="rightNum48 > 5 ? 'item active' : 'item'">{{ rightNum48 }}</view>
+					<view :class="rightNum49 > 5 ? 'item active' : 'item'">{{ rightNum49 }}</view>
+					<view :class="rightNum50 > 5 ? 'item active' : 'item'">{{ rightNum50 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum41 > 5 ? 'item active' : 'item'">{{ wrongNum41 }}</view>
+					<view :class="wrongNum42 > 5 ? 'item active' : 'item'">{{ wrongNum42 }}</view>
+					<view :class="wrongNum43 > 5 ? 'item active' : 'item'">{{ wrongNum43 }}</view>
+					<view :class="wrongNum44 > 5 ? 'item active' : 'item'">{{ wrongNum44 }}</view>
+					<view :class="wrongNum45 > 5 ? 'item active' : 'item'">{{ wrongNum45 }}</view>
+					<view :class="wrongNum46 > 5 ? 'item active' : 'item'">{{ wrongNum46 }}</view>
+					<view :class="wrongNum47 > 5 ? 'item active' : 'item'">{{ wrongNum47 }}</view>
+					<view :class="wrongNum48 > 5 ? 'item active' : 'item'">{{ wrongNum48 }}</view>
+					<view :class="wrongNum49 > 5 ? 'item active' : 'item'">{{ wrongNum49 }}</view>
+					<view :class="wrongNum50 > 5 ? 'item active' : 'item'">{{ wrongNum50 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum41 > 5 || wrongNum41 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum42 > 5 || wrongNum42 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum43 > 5 || wrongNum43 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum44 > 5 || wrongNum44 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum45 > 5 || wrongNum45 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum46 > 5 || wrongNum46 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum47 > 5 || wrongNum47 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum48 > 5 || wrongNum48 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum49 > 5 || wrongNum49 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum50 > 5 || wrongNum50 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum51 > 5 ? 'item active' : 'item'">{{ rightNum51 }}</view>
+					<view :class="rightNum52 > 5 ? 'item active' : 'item'">{{ rightNum52 }}</view>
+					<view :class="rightNum53 > 5 ? 'item active' : 'item'">{{ rightNum53 }}</view>
+					<view :class="rightNum54 > 5 ? 'item active' : 'item'">{{ rightNum54 }}</view>
+					<view :class="rightNum55 > 5 ? 'item active' : 'item'">{{ rightNum55 }}</view>
+					<view :class="rightNum56 > 5 ? 'item active' : 'item'">{{ rightNum56 }}</view>
+					<view :class="rightNum57 > 5 ? 'item active' : 'item'">{{ rightNum57 }}</view>
+					<view :class="rightNum58 > 5 ? 'item active' : 'item'">{{ rightNum58 }}</view>
+					<view :class="rightNum59 > 5 ? 'item active' : 'item'">{{ rightNum59 }}</view>
+					<view :class="rightNum60 > 5 ? 'item active' : 'item'">{{ rightNum60 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum51 > 5 ? 'item active' : 'item'">{{ wrongNum51 }}</view>
+					<view :class="wrongNum52 > 5 ? 'item active' : 'item'">{{ wrongNum52 }}</view>
+					<view :class="wrongNum53 > 5 ? 'item active' : 'item'">{{ wrongNum53 }}</view>
+					<view :class="wrongNum54 > 5 ? 'item active' : 'item'">{{ wrongNum54 }}</view>
+					<view :class="wrongNum55 > 5 ? 'item active' : 'item'">{{ wrongNum55 }}</view>
+					<view :class="wrongNum56 > 5 ? 'item active' : 'item'">{{ wrongNum56 }}</view>
+					<view :class="wrongNum57 > 5 ? 'item active' : 'item'">{{ wrongNum57 }}</view>
+					<view :class="wrongNum58 > 5 ? 'item active' : 'item'">{{ wrongNum58 }}</view>
+					<view :class="wrongNum59 > 5 ? 'item active' : 'item'">{{ wrongNum59 }}</view>
+					<view :class="wrongNum60 > 5 ? 'item active' : 'item'">{{ wrongNum60 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum51 > 5 || wrongNum51 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum52 > 5 || wrongNum52 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum53 > 5 || wrongNum53 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum54 > 5 || wrongNum54 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum55 > 5 || wrongNum55 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum56 > 5 || wrongNum56 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum57 > 5 || wrongNum57 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum58 > 5 || wrongNum58 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum59 > 5 || wrongNum59 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum60 > 5 || wrongNum60 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum61 > 5 ? 'item active' : 'item'">{{ rightNum61 }}</view>
+					<view :class="rightNum62 > 5 ? 'item active' : 'item'">{{ rightNum62 }}</view>
+					<view :class="rightNum63 > 5 ? 'item active' : 'item'">{{ rightNum63 }}</view>
+					<view :class="rightNum64 > 5 ? 'item active' : 'item'">{{ rightNum64 }}</view>
+					<view :class="rightNum65 > 5 ? 'item active' : 'item'">{{ rightNum65 }}</view>
+					<view :class="rightNum66 > 5 ? 'item active' : 'item'">{{ rightNum66 }}</view>
+					<view :class="rightNum67 > 5 ? 'item active' : 'item'">{{ rightNum67 }}</view>
+					<view :class="rightNum68 > 5 ? 'item active' : 'item'">{{ rightNum68 }}</view>
+					<view :class="rightNum69 > 5 ? 'item active' : 'item'">{{ rightNum69 }}</view>
+					<view :class="rightNum70 > 5 ? 'item active' : 'item'">{{ rightNum70 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum61 > 5 ? 'item active' : 'item'">{{ wrongNum61 }}</view>
+					<view :class="wrongNum62 > 5 ? 'item active' : 'item'">{{ wrongNum62 }}</view>
+					<view :class="wrongNum63 > 5 ? 'item active' : 'item'">{{ wrongNum63 }}</view>
+					<view :class="wrongNum64 > 5 ? 'item active' : 'item'">{{ wrongNum64 }}</view>
+					<view :class="wrongNum65 > 5 ? 'item active' : 'item'">{{ wrongNum65 }}</view>
+					<view :class="wrongNum66 > 5 ? 'item active' : 'item'">{{ wrongNum66 }}</view>
+					<view :class="wrongNum67 > 5 ? 'item active' : 'item'">{{ wrongNum67 }}</view>
+					<view :class="wrongNum68 > 5 ? 'item active' : 'item'">{{ wrongNum68 }}</view>
+					<view :class="wrongNum69 > 5 ? 'item active' : 'item'">{{ wrongNum69 }}</view>
+					<view :class="wrongNum70 > 5 ? 'item active' : 'item'">{{ wrongNum70 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum61 > 5 || wrongNum61 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum62 > 5 || wrongNum62 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum63 > 5 || wrongNum63 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum64 > 5 || wrongNum64 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum65 > 5 || wrongNum65 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum66 > 5 || wrongNum66 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum67 > 5 || wrongNum67 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum68 > 5 || wrongNum68 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum69 > 5 || wrongNum69 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum70 > 5 || wrongNum70 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum71 > 5 ? 'item active' : 'item'">{{ rightNum71 }}</view>
+					<view :class="rightNum72 > 5 ? 'item active' : 'item'">{{ rightNum72 }}</view>
+					<view :class="rightNum73 > 5 ? 'item active' : 'item'">{{ rightNum73 }}</view>
+					<view :class="rightNum74 > 5 ? 'item active' : 'item'">{{ rightNum74 }}</view>
+					<view :class="rightNum75 > 5 ? 'item active' : 'item'">{{ rightNum75 }}</view>
+					<view :class="rightNum76 > 5 ? 'item active' : 'item'">{{ rightNum76 }}</view>
+					<view :class="rightNum77 > 5 ? 'item active' : 'item'">{{ rightNum77 }}</view>
+					<view :class="rightNum78 > 5 ? 'item active' : 'item'">{{ rightNum78 }}</view>
+					<view :class="rightNum79 > 5 ? 'item active' : 'item'">{{ rightNum79 }}</view>
+					<view :class="rightNum80 > 5 ? 'item active' : 'item'">{{ rightNum80 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum71 > 5 ? 'item active' : 'item'">{{ wrongNum71 }}</view>
+					<view :class="wrongNum72 > 5 ? 'item active' : 'item'">{{ wrongNum72 }}</view>
+					<view :class="wrongNum73 > 5 ? 'item active' : 'item'">{{ wrongNum73 }}</view>
+					<view :class="wrongNum74 > 5 ? 'item active' : 'item'">{{ wrongNum74 }}</view>
+					<view :class="wrongNum75 > 5 ? 'item active' : 'item'">{{ wrongNum75 }}</view>
+					<view :class="wrongNum76 > 5 ? 'item active' : 'item'">{{ wrongNum76 }}</view>
+					<view :class="wrongNum77 > 5 ? 'item active' : 'item'">{{ wrongNum77 }}</view>
+					<view :class="wrongNum78 > 5 ? 'item active' : 'item'">{{ wrongNum78 }}</view>
+					<view :class="wrongNum79 > 5 ? 'item active' : 'item'">{{ wrongNum79 }}</view>
+					<view :class="wrongNum80 > 5 ? 'item active' : 'item'">{{ wrongNum80 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum71 > 5 || wrongNum71 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum72 > 5 || wrongNum72 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum73 > 5 || wrongNum73 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum74 > 5 || wrongNum74 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum75 > 5 || wrongNum75 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum76 > 5 || wrongNum76 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum77 > 5 || wrongNum77 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum78 > 5 || wrongNum78 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum79 > 5 || wrongNum79 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum80 > 5 || wrongNum80 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum81 > 5 ? 'item active' : 'item'">{{ rightNum81 }}</view>
+					<view :class="rightNum82 > 5 ? 'item active' : 'item'">{{ rightNum82 }}</view>
+					<view :class="rightNum83 > 5 ? 'item active' : 'item'">{{ rightNum83 }}</view>
+					<view :class="rightNum84 > 5 ? 'item active' : 'item'">{{ rightNum84 }}</view>
+					<view :class="rightNum85 > 5 ? 'item active' : 'item'">{{ rightNum85 }}</view>
+					<view :class="rightNum86 > 5 ? 'item active' : 'item'">{{ rightNum86 }}</view>
+					<view :class="rightNum87 > 5 ? 'item active' : 'item'">{{ rightNum87 }}</view>
+					<view :class="rightNum88 > 5 ? 'item active' : 'item'">{{ rightNum88 }}</view>
+					<view :class="rightNum89 > 5 ? 'item active' : 'item'">{{ rightNum89 }}</view>
+					<view :class="rightNum90 > 5 ? 'item active' : 'item'">{{ rightNum90 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum81 > 5 ? 'item active' : 'item'">{{ wrongNum81 }}</view>
+					<view :class="wrongNum82 > 5 ? 'item active' : 'item'">{{ wrongNum82 }}</view>
+					<view :class="wrongNum83 > 5 ? 'item active' : 'item'">{{ wrongNum83 }}</view>
+					<view :class="wrongNum84 > 5 ? 'item active' : 'item'">{{ wrongNum84 }}</view>
+					<view :class="wrongNum85 > 5 ? 'item active' : 'item'">{{ wrongNum85 }}</view>
+					<view :class="wrongNum86 > 5 ? 'item active' : 'item'">{{ wrongNum86 }}</view>
+					<view :class="wrongNum87 > 5 ? 'item active' : 'item'">{{ wrongNum87 }}</view>
+					<view :class="wrongNum88 > 5 ? 'item active' : 'item'">{{ wrongNum88 }}</view>
+					<view :class="wrongNum89 > 5 ? 'item active' : 'item'">{{ wrongNum89 }}</view>
+					<view :class="wrongNum90 > 5 ? 'item active' : 'item'">{{ wrongNum90 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum81 > 5 || wrongNum81 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum82 > 5 || wrongNum82 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum83 > 5 || wrongNum83 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum84 > 5 || wrongNum84 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum85 > 5 || wrongNum85 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum86 > 5 || wrongNum86 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum87 > 5 || wrongNum87 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum88 > 5 || wrongNum88 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum89 > 5 || wrongNum89 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum90 > 5 || wrongNum90 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
+				</view>
+				<view style="height: 10px;"></view>
+				<view class="times">
+					<view :class="rightNum91 > 5 ? 'item active' : 'item'">{{ rightNum91 }}</view>
+					<view :class="rightNum92 > 5 ? 'item active' : 'item'">{{ rightNum92 }}</view>
+					<view :class="rightNum93 > 5 ? 'item active' : 'item'">{{ rightNum93 }}</view>
+					<view :class="rightNum94 > 5 ? 'item active' : 'item'">{{ rightNum94 }}</view>
+					<view :class="rightNum95 > 5 ? 'item active' : 'item'">{{ rightNum95 }}</view>
+					<view :class="rightNum96 > 5 ? 'item active' : 'item'">{{ rightNum96 }}</view>
+					<view :class="rightNum97 > 5 ? 'item active' : 'item'">{{ rightNum97 }}</view>
+					<view :class="rightNum98 > 5 ? 'item active' : 'item'">{{ rightNum98 }}</view>
+					<view :class="rightNum99 > 5 ? 'item active' : 'item'">{{ rightNum99 }}</view>
+					<view :class="rightNum100 > 5 ? 'item active' : 'item'">{{ rightNum100 }}</view>
+				</view>
+				<view class="times red">
+					<view :class="wrongNum91 > 5 ? 'item active' : 'item'">{{ wrongNum91 }}</view>
+					<view :class="wrongNum92 > 5 ? 'item active' : 'item'">{{ wrongNum92 }}</view>
+					<view :class="wrongNum93 > 5 ? 'item active' : 'item'">{{ wrongNum93 }}</view>
+					<view :class="wrongNum94 > 5 ? 'item active' : 'item'">{{ wrongNum94 }}</view>
+					<view :class="wrongNum95 > 5 ? 'item active' : 'item'">{{ wrongNum95 }}</view>
+					<view :class="wrongNum96 > 5 ? 'item active' : 'item'">{{ wrongNum96 }}</view>
+					<view :class="wrongNum97 > 5 ? 'item active' : 'item'">{{ wrongNum97 }}</view>
+					<view :class="wrongNum98 > 5 ? 'item active' : 'item'">{{ wrongNum98 }}</view>
+					<view :class="wrongNum99 > 5 ? 'item active' : 'item'">{{ wrongNum99 }}</view>
+					<view :class="wrongNum100 > 5 ? 'item active' : 'item'">{{ wrongNum100 }}</view>
+				</view>
+				<view style="height: 4px;"></view>
+				<view class="data" :style="{ opacity: num ? 1 : 0 }">
+					<view :class="rightNum91 > 5 || wrongNum91 > 5 ? 'item active' : 'item'">{{ num[0] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum92 > 5 || wrongNum92 > 5 ? 'item active' : 'item'">{{ num[1] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum93 > 5 || wrongNum93 > 5 ? 'item active' : 'item'">{{ num[2] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum94 > 5 || wrongNum94 > 5 ? 'item active' : 'item'">{{ num[3] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum95 > 5 || wrongNum95 > 5 ? 'item active' : 'item'">{{ num[4] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum96 > 5 || wrongNum96 > 5 ? 'item active' : 'item'">{{ num[5] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum97 > 5 || wrongNum97 > 5 ? 'item active' : 'item'">{{ num[6] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum98 > 5 || wrongNum98 > 5 ? 'item active' : 'item'">{{ num[7] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum99 > 5 || wrongNum99 > 5 ? 'item active' : 'item'">{{ num[8] == '1' ? '大' : '小' }}</view>
+					<view :class="rightNum100 > 5 || wrongNum100 > 5 ? 'item active' : 'item'">{{ num[9] == '1' ? '大' : '小' }}</view>
 				</view>
 			</view>
 		</view>
@@ -433,6 +817,7 @@ import { onLoad } from '@dcloudio/uni-app'
 
 /* data */
 const num = ref('')
+const numType = ref('')
 const arr1 = ref([])
 const arr2 = ref([])
 const arr3 = ref([])
@@ -533,6 +918,106 @@ const arr97 = ref([])
 const arr98 = ref([])
 const arr99 = ref([])
 const arr100 = ref([])
+const arr101 = ref([])
+const arr102 = ref([])
+const arr103 = ref([])
+const arr104 = ref([])
+const arr105 = ref([])
+const arr106 = ref([])
+const arr107 = ref([])
+const arr108 = ref([])
+const arr109 = ref([])
+const arr110 = ref([])
+const arr111 = ref([])
+const arr112 = ref([])
+const arr113 = ref([])
+const arr114 = ref([])
+const arr115 = ref([])
+const arr116 = ref([])
+const arr117 = ref([])
+const arr118 = ref([])
+const arr119 = ref([])
+const arr120 = ref([])
+const arr121 = ref([])
+const arr122 = ref([])
+const arr123 = ref([])
+const arr124 = ref([])
+const arr125 = ref([])
+const arr126 = ref([])
+const arr127 = ref([])
+const arr128 = ref([])
+const arr129 = ref([])
+const arr130 = ref([])
+const arr131 = ref([])
+const arr132 = ref([])
+const arr133 = ref([])
+const arr134 = ref([])
+const arr135 = ref([])
+const arr136 = ref([])
+const arr137 = ref([])
+const arr138 = ref([])
+const arr139 = ref([])
+const arr140 = ref([])
+const arr141 = ref([])
+const arr142 = ref([])
+const arr143 = ref([])
+const arr144 = ref([])
+const arr145 = ref([])
+const arr146 = ref([])
+const arr147 = ref([])
+const arr148 = ref([])
+const arr149 = ref([])
+const arr150 = ref([])
+const arr151 = ref([])
+const arr152 = ref([])
+const arr153 = ref([])
+const arr154 = ref([])
+const arr155 = ref([])
+const arr156 = ref([])
+const arr157 = ref([])
+const arr158 = ref([])
+const arr159 = ref([])
+const arr160 = ref([])
+const arr161 = ref([])
+const arr162 = ref([])
+const arr163 = ref([])
+const arr164 = ref([])
+const arr165 = ref([])
+const arr166 = ref([])
+const arr167 = ref([])
+const arr168 = ref([])
+const arr169 = ref([])
+const arr170 = ref([])
+const arr171 = ref([])
+const arr172 = ref([])
+const arr173 = ref([])
+const arr174 = ref([])
+const arr175 = ref([])
+const arr176 = ref([])
+const arr177 = ref([])
+const arr178 = ref([])
+const arr179 = ref([])
+const arr180 = ref([])
+const arr181 = ref([])
+const arr182 = ref([])
+const arr183 = ref([])
+const arr184 = ref([])
+const arr185 = ref([])
+const arr186 = ref([])
+const arr187 = ref([])
+const arr188 = ref([])
+const arr189 = ref([])
+const arr190 = ref([])
+const arr191 = ref([])
+const arr192 = ref([])
+const arr193 = ref([])
+const arr194 = ref([])
+const arr195 = ref([])
+const arr196 = ref([])
+const arr197 = ref([])
+const arr198 = ref([])
+const arr199 = ref([])
+const arr200 = ref([])
 const arrComparison = ref([])
 
 let rightNum1 = ref(0)
@@ -835,309 +1320,312 @@ let wrongNum99 = ref(0)
 let rightNum100 = ref(0)
 let wrongNum100 = ref(0)
 
+let rightNum101 = ref(0)
+let wrongNum101 = ref(0)
+
+let rightNum102 = ref(0)
+let wrongNum102 = ref(0)
+
+let rightNum103 = ref(0)
+let wrongNum103 = ref(0)
+
+let rightNum104 = ref(0)
+let wrongNum104 = ref(0)
+
+let rightNum105 = ref(0)
+let wrongNum105 = ref(0)
+
+let rightNum106 = ref(0)
+let wrongNum106 = ref(0)
+
+let rightNum107 = ref(0)
+let wrongNum107 = ref(0)
+
+let rightNum108 = ref(0)
+let wrongNum108 = ref(0)
+
+let rightNum109 = ref(0)
+let wrongNum109 = ref(0)
+
+let rightNum110 = ref(0)
+let wrongNum110 = ref(0)
+
+let rightNum111 = ref(0)
+let wrongNum111 = ref(0)
+
+let rightNum112 = ref(0)
+let wrongNum112 = ref(0)
+
+let rightNum113 = ref(0)
+let wrongNum113 = ref(0)
+
+let rightNum114 = ref(0)
+let wrongNum114 = ref(0)
+
+let rightNum115 = ref(0)
+let wrongNum115 = ref(0)
+
+let rightNum116 = ref(0)
+let wrongNum116 = ref(0)
+
+let rightNum117 = ref(0)
+let wrongNum117 = ref(0)
+
+let rightNum118 = ref(0)
+let wrongNum118 = ref(0)
+
+let rightNum119 = ref(0)
+let wrongNum119 = ref(0)
+
+let rightNum120 = ref(0)
+let wrongNum120 = ref(0)
+
+let rightNum121 = ref(0)
+let wrongNum121 = ref(0)
+
+let rightNum122 = ref(0)
+let wrongNum122 = ref(0)
+
+let rightNum123 = ref(0)
+let wrongNum123 = ref(0)
+
+let rightNum124 = ref(0)
+let wrongNum124 = ref(0)
+
+let rightNum125 = ref(0)
+let wrongNum125 = ref(0)
+
+let rightNum126 = ref(0)
+let wrongNum126 = ref(0)
+
+let rightNum127 = ref(0)
+let wrongNum127 = ref(0)
+
+let rightNum128 = ref(0)
+let wrongNum128 = ref(0)
+
+let rightNum129 = ref(0)
+let wrongNum129 = ref(0)
+
+let rightNum130 = ref(0)
+let wrongNum130 = ref(0)
+
+let rightNum131 = ref(0)
+let wrongNum131 = ref(0)
+
+let rightNum132 = ref(0)
+let wrongNum132 = ref(0)
+
+let rightNum133 = ref(0)
+let wrongNum133 = ref(0)
+
+let rightNum134 = ref(0)
+let wrongNum134 = ref(0)
+
+let rightNum135 = ref(0)
+let wrongNum135 = ref(0)
+
+let rightNum136 = ref(0)
+let wrongNum136 = ref(0)
+
+let rightNum137 = ref(0)
+let wrongNum137 = ref(0)
+
+let rightNum138 = ref(0)
+let wrongNum138 = ref(0)
+
+let rightNum139 = ref(0)
+let wrongNum139 = ref(0)
+
+let rightNum140 = ref(0)
+let wrongNum140 = ref(0)
+
+let rightNum141 = ref(0)
+let wrongNum141 = ref(0)
+
+let rightNum142 = ref(0)
+let wrongNum142 = ref(0)
+
+let rightNum143 = ref(0)
+let wrongNum143 = ref(0)
+
+let rightNum144 = ref(0)
+let wrongNum144 = ref(0)
+
+let rightNum145 = ref(0)
+let wrongNum145 = ref(0)
+
+let rightNum146 = ref(0)
+let wrongNum146 = ref(0)
+
+let rightNum147 = ref(0)
+let wrongNum147 = ref(0)
+
+let rightNum148 = ref(0)
+let wrongNum148 = ref(0)
+
+let rightNum149 = ref(0)
+let wrongNum149 = ref(0)
+
+let rightNum150 = ref(0)
+let wrongNum150 = ref(0)
+
+let rightNum151 = ref(0)
+let wrongNum151 = ref(0)
+
+let rightNum152 = ref(0)
+let wrongNum152 = ref(0)
+
+let rightNum153 = ref(0)
+let wrongNum153 = ref(0)
+
+let rightNum154 = ref(0)
+let wrongNum154 = ref(0)
+
+let rightNum155 = ref(0)
+let wrongNum155 = ref(0)
+
+let rightNum156 = ref(0)
+let wrongNum156 = ref(0)
+
+let rightNum157 = ref(0)
+let wrongNum157 = ref(0)
+
+let rightNum158 = ref(0)
+let wrongNum158 = ref(0)
+
+let rightNum159 = ref(0)
+let wrongNum159 = ref(0)
+
+let rightNum160 = ref(0)
+let wrongNum160 = ref(0)
+
+let rightNum161 = ref(0)
+let wrongNum161 = ref(0)
+
+let rightNum162 = ref(0)
+let wrongNum162 = ref(0)
+
+let rightNum163 = ref(0)
+let wrongNum163 = ref(0)
+
+let rightNum164 = ref(0)
+let wrongNum164 = ref(0)
+
+let rightNum165 = ref(0)
+let wrongNum165 = ref(0)
+
+let rightNum166 = ref(0)
+let wrongNum166 = ref(0)
+
+let rightNum167 = ref(0)
+let wrongNum167 = ref(0)
+
+let rightNum168 = ref(0)
+let wrongNum168 = ref(0)
+
+let rightNum169 = ref(0)
+let wrongNum169 = ref(0)
+
+let rightNum170 = ref(0)
+let wrongNum170 = ref(0)
+
+let rightNum171 = ref(0)
+let wrongNum171 = ref(0)
+
+let rightNum172 = ref(0)
+let wrongNum172 = ref(0)
+
+let rightNum173 = ref(0)
+let wrongNum173 = ref(0)
+
+let rightNum174 = ref(0)
+let wrongNum174 = ref(0)
+
+let rightNum175 = ref(0)
+let wrongNum175 = ref(0)
+
+let rightNum176 = ref(0)
+let wrongNum176 = ref(0)
+
+let rightNum177 = ref(0)
+let wrongNum177 = ref(0)
+
+let rightNum178 = ref(0)
+let wrongNum178 = ref(0)
+
+let rightNum179 = ref(0)
+let wrongNum179 = ref(0)
+
+let rightNum180 = ref(0)
+let wrongNum180 = ref(0)
+
+let rightNum181 = ref(0)
+let wrongNum181 = ref(0)
+
+let rightNum182 = ref(0)
+let wrongNum182 = ref(0)
+
+let rightNum183 = ref(0)
+let wrongNum183 = ref(0)
+
+let rightNum184 = ref(0)
+let wrongNum184 = ref(0)
+
+let rightNum185 = ref(0)
+let wrongNum185 = ref(0)
+
+let rightNum186 = ref(0)
+let wrongNum186 = ref(0)
+
+let rightNum187 = ref(0)
+let wrongNum187 = ref(0)
+
+let rightNum188 = ref(0)
+let wrongNum188 = ref(0)
+
+let rightNum189 = ref(0)
+let wrongNum189 = ref(0)
+
+let rightNum190 = ref(0)
+let wrongNum190 = ref(0)
+
+let rightNum191 = ref(0)
+let wrongNum191 = ref(0)
+
+let rightNum192 = ref(0)
+let wrongNum192 = ref(0)
+
+let rightNum193 = ref(0)
+let wrongNum193 = ref(0)
+
+let rightNum194 = ref(0)
+let wrongNum194 = ref(0)
+
+let rightNum195 = ref(0)
+let wrongNum195 = ref(0)
+
+let rightNum196 = ref(0)
+let wrongNum196 = ref(0)
+
+let rightNum197 = ref(0)
+let wrongNum197 = ref(0)
+
+let rightNum198 = ref(0)
+let wrongNum198 = ref(0)
+
+let rightNum199 = ref(0)
+let wrongNum199 = ref(0)
+
+let rightNum200 = ref(0)
+let wrongNum200 = ref(0)
+
 /* 生命周期函数 */
 onLoad(() => {
 	getData()
-	setTimeout(() => {
-		findHandle(0)
-	}, 0)
-	setTimeout(() => {
-		findHandle(1)
-	}, 10)
-	setTimeout(() => {
-		findHandle(2)
-	}, 20)
-	setTimeout(() => {
-		findHandle(3)
-	}, 30)
-	setTimeout(() => {
-		findHandle(4)
-	}, 40)
-	setTimeout(() => {
-		findHandle(5)
-	}, 50)
-	setTimeout(() => {
-		findHandle(6)
-	}, 60)
-	setTimeout(() => {
-		findHandle(7)
-	}, 70)
-	setTimeout(() => {
-		findHandle(8)
-	}, 80)
-	setTimeout(() => {
-		findHandle(9)
-	}, 90)
-	setTimeout(() => {
-		findHandle(10)
-	}, 100)
-	setTimeout(() => {
-		findHandle(11)
-	}, 110)
-	setTimeout(() => {
-		findHandle(12)
-	}, 120)
-	setTimeout(() => {
-		findHandle(13)
-	}, 130)
-	setTimeout(() => {
-		findHandle(14)
-	}, 140)
-	setTimeout(() => {
-		findHandle(15)
-	}, 150)
-	setTimeout(() => {
-		findHandle(16)
-	}, 160)
-	setTimeout(() => {
-		findHandle(17)
-	}, 170)
-	setTimeout(() => {
-		findHandle(18)
-	}, 180)
-	setTimeout(() => {
-		findHandle(19)
-	}, 190)
-	setTimeout(() => {
-		findHandle(20)
-	}, 200)
-	setTimeout(() => {
-		findHandle(21)
-	}, 210)
-	setTimeout(() => {
-		findHandle(22)
-	}, 220)
-	setTimeout(() => {
-		findHandle(23)
-	}, 230)
-	setTimeout(() => {
-		findHandle(24)
-	}, 240)
-	setTimeout(() => {
-		findHandle(25)
-	}, 250)
-	setTimeout(() => {
-		findHandle(26)
-	}, 260)
-	setTimeout(() => {
-		findHandle(27)
-	}, 270)
-	setTimeout(() => {
-		findHandle(28)
-	}, 280)
-	setTimeout(() => {
-		findHandle(29)
-	}, 290)
-	setTimeout(() => {
-		findHandle(30)
-	}, 300)
-	setTimeout(() => {
-		findHandle(31)
-	}, 310)
-	setTimeout(() => {
-		findHandle(32)
-	}, 320)
-	setTimeout(() => {
-		findHandle(33)
-	}, 330)
-	setTimeout(() => {
-		findHandle(34)
-	}, 340)
-	setTimeout(() => {
-		findHandle(35)
-	}, 350)
-	setTimeout(() => {
-		findHandle(36)
-	}, 360)
-	setTimeout(() => {
-		findHandle(37)
-	}, 370)
-	setTimeout(() => {
-		findHandle(38)
-	}, 380)
-	setTimeout(() => {
-		findHandle(39)
-	}, 390)
-	setTimeout(() => {
-		findHandle(40)
-	}, 400)
-	setTimeout(() => {
-		findHandle(41)
-	}, 410)
-	setTimeout(() => {
-		findHandle(42)
-	}, 420)
-	setTimeout(() => {
-		findHandle(43)
-	}, 430)
-	setTimeout(() => {
-		findHandle(44)
-	}, 440)
-	setTimeout(() => {
-		findHandle(45)
-	}, 450)
-	setTimeout(() => {
-		findHandle(46)
-	}, 460)
-	setTimeout(() => {
-		findHandle(47)
-	}, 470)
-	setTimeout(() => {
-		findHandle(48)
-	}, 480)
-	setTimeout(() => {
-		findHandle(49)
-	}, 490)
-	setTimeout(() => {
-		findHandle(50)
-	}, 500)
-	setTimeout(() => {
-		findHandle(51)
-	}, 510)
-	setTimeout(() => {
-		findHandle(52)
-	}, 520)
-	setTimeout(() => {
-		findHandle(53)
-	}, 530)
-	setTimeout(() => {
-		findHandle(54)
-	}, 540)
-	setTimeout(() => {
-		findHandle(55)
-	}, 550)
-	setTimeout(() => {
-		findHandle(56)
-	}, 560)
-	setTimeout(() => {
-		findHandle(57)
-	}, 570)
-	setTimeout(() => {
-		findHandle(58)
-	}, 580)
-	setTimeout(() => {
-		findHandle(59)
-	}, 590)
-	setTimeout(() => {
-		findHandle(60)
-	}, 600)
-	setTimeout(() => {
-		findHandle(61)
-	}, 610)
-	setTimeout(() => {
-		findHandle(62)
-	}, 620)
-	setTimeout(() => {
-		findHandle(63)
-	}, 630)
-	setTimeout(() => {
-		findHandle(64)
-	}, 640)
-	setTimeout(() => {
-		findHandle(65)
-	}, 650)
-	setTimeout(() => {
-		findHandle(66)
-	}, 660)
-	setTimeout(() => {
-		findHandle(67)
-	}, 670)
-	setTimeout(() => {
-		findHandle(68)
-	}, 680)
-	setTimeout(() => {
-		findHandle(69)
-	}, 690)
-	setTimeout(() => {
-		findHandle(70)
-	}, 700)
-	setTimeout(() => {
-		findHandle(71)
-	}, 710)
-	setTimeout(() => {
-		findHandle(72)
-	}, 720)
-	setTimeout(() => {
-		findHandle(73)
-	}, 730)
-	setTimeout(() => {
-		findHandle(74)
-	}, 740)
-	setTimeout(() => {
-		findHandle(75)
-	}, 750)
-	setTimeout(() => {
-		findHandle(76)
-	}, 760)
-	setTimeout(() => {
-		findHandle(77)
-	}, 770)
-	setTimeout(() => {
-		findHandle(78)
-	}, 780)
-	setTimeout(() => {
-		findHandle(79)
-	}, 790)
-	setTimeout(() => {
-		findHandle(80)
-	}, 800)
-	setTimeout(() => {
-		findHandle(81)
-	}, 810)
-	setTimeout(() => {
-		findHandle(82)
-	}, 820)
-	setTimeout(() => {
-		findHandle(83)
-	}, 830)
-	setTimeout(() => {
-		findHandle(84)
-	}, 840)
-	setTimeout(() => {
-		findHandle(85)
-	}, 850)
-	setTimeout(() => {
-		findHandle(86)
-	}, 860)
-	setTimeout(() => {
-		findHandle(87)
-	}, 870)
-	setTimeout(() => {
-		findHandle(88)
-	}, 880)
-	setTimeout(() => {
-		findHandle(89)
-	}, 890)
-	setTimeout(() => {
-		findHandle(90)
-	}, 900)
-	setTimeout(() => {
-		findHandle(91)
-	}, 910)
-	setTimeout(() => {
-		findHandle(92)
-	}, 920)
-	setTimeout(() => {
-		findHandle(93)
-	}, 930)
-	setTimeout(() => {
-		findHandle(94)
-	}, 940)
-	setTimeout(() => {
-		findHandle(95)
-	}, 950)
-	setTimeout(() => {
-		findHandle(96)
-	}, 960)
-	setTimeout(() => {
-		findHandle(97)
-	}, 970)
-	setTimeout(() => {
-		findHandle(98)
-	}, 980)
-	setTimeout(() => {
-		findHandle(99)
-	}, 990)
+	for(let i = 0; i < 100; i++) {
+		findHandle(i)
+	}
 })
 
 /* methods */
@@ -1148,7 +1636,7 @@ function rnd(n, m){
 function getRnd() {
 	if (num.value) return
 	let arr = []
-	for (let i = 0; i < 100; i++) {
+	for (let i = 0; i < 200; i++) {
 		let nb = rnd(0, 1)
 		arr.push(nb)
 	}
@@ -1156,18 +1644,7 @@ function getRnd() {
 }
 
 function setValueHandle() {
-	if (
-		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
-		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined' &&
-		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined' &&
-		typeof num.value[30] != 'undefined' && typeof num.value[31] != 'undefined' && typeof num.value[32] != 'undefined' && typeof num.value[33] != 'undefined' && typeof num.value[34] != 'undefined' && typeof num.value[35] != 'undefined' && typeof num.value[36] != 'undefined' && typeof num.value[37] != 'undefined' && typeof num.value[38] != 'undefined' && typeof num.value[39] != 'undefined' && typeof num.value[40] != 'undefined' &&
-		typeof num.value[40] != 'undefined' && typeof num.value[41] != 'undefined' && typeof num.value[42] != 'undefined' && typeof num.value[43] != 'undefined' && typeof num.value[44] != 'undefined' && typeof num.value[45] != 'undefined' && typeof num.value[46] != 'undefined' && typeof num.value[47] != 'undefined' && typeof num.value[48] != 'undefined' && typeof num.value[49] != 'undefined' && typeof num.value[50] != 'undefined' &&
-		typeof num.value[50] != 'undefined' && typeof num.value[51] != 'undefined' && typeof num.value[52] != 'undefined' && typeof num.value[53] != 'undefined' && typeof num.value[54] != 'undefined' && typeof num.value[55] != 'undefined' && typeof num.value[56] != 'undefined' && typeof num.value[57] != 'undefined' && typeof num.value[58] != 'undefined' && typeof num.value[59] != 'undefined' && typeof num.value[60] != 'undefined' &&
-		typeof num.value[60] != 'undefined' && typeof num.value[61] != 'undefined' && typeof num.value[62] != 'undefined' && typeof num.value[63] != 'undefined' && typeof num.value[64] != 'undefined' && typeof num.value[65] != 'undefined' && typeof num.value[66] != 'undefined' && typeof num.value[67] != 'undefined' && typeof num.value[68] != 'undefined' && typeof num.value[69] != 'undefined' && typeof num.value[70] != 'undefined' &&
-		typeof num.value[70] != 'undefined' && typeof num.value[71] != 'undefined' && typeof num.value[72] != 'undefined' && typeof num.value[73] != 'undefined' && typeof num.value[74] != 'undefined' && typeof num.value[75] != 'undefined' && typeof num.value[76] != 'undefined' && typeof num.value[77] != 'undefined' && typeof num.value[78] != 'undefined' && typeof num.value[79] != 'undefined' && typeof num.value[80] != 'undefined' &&
-		typeof num.value[80] != 'undefined' && typeof num.value[81] != 'undefined' && typeof num.value[82] != 'undefined' && typeof num.value[83] != 'undefined' && typeof num.value[84] != 'undefined' && typeof num.value[85] != 'undefined' && typeof num.value[86] != 'undefined' && typeof num.value[87] != 'undefined' && typeof num.value[88] != 'undefined' && typeof num.value[89] != 'undefined' && typeof num.value[90] != 'undefined' &&
-		typeof num.value[90] != 'undefined' && typeof num.value[91] != 'undefined' && typeof num.value[92] != 'undefined' && typeof num.value[93] != 'undefined' && typeof num.value[94] != 'undefined' && typeof num.value[95] != 'undefined' && typeof num.value[96] != 'undefined' && typeof num.value[97] != 'undefined' && typeof num.value[98] != 'undefined' && typeof num.value[99] != 'undefined' && typeof num.value[100] != 'undefined'
-	) {
+	if (num.value && numType.value) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
@@ -1268,7 +1745,108 @@ function setValueHandle() {
 		arr98.value.unshift(num.value[97]);
 		arr99.value.unshift(num.value[98]);
 		arr100.value.unshift(num.value[99]);
-		arrComparison.value.unshift(num.value[100]);
+
+		arr101.value.unshift(num.value[100]);
+		arr102.value.unshift(num.value[101]);
+		arr103.value.unshift(num.value[102]);
+		arr104.value.unshift(num.value[103]);
+		arr105.value.unshift(num.value[104]);
+		arr106.value.unshift(num.value[105]);
+		arr107.value.unshift(num.value[106]);
+		arr108.value.unshift(num.value[107]);
+		arr109.value.unshift(num.value[108]);
+		arr110.value.unshift(num.value[109]);
+		arr111.value.unshift(num.value[110]);
+		arr112.value.unshift(num.value[111]);
+		arr113.value.unshift(num.value[112]);
+		arr114.value.unshift(num.value[113]);
+		arr115.value.unshift(num.value[114]);
+		arr116.value.unshift(num.value[115]);
+		arr117.value.unshift(num.value[116]);
+		arr118.value.unshift(num.value[117]);
+		arr119.value.unshift(num.value[118]);
+		arr120.value.unshift(num.value[119]);
+		arr121.value.unshift(num.value[120]);
+		arr122.value.unshift(num.value[121]);
+		arr123.value.unshift(num.value[122]);
+		arr124.value.unshift(num.value[123]);
+		arr125.value.unshift(num.value[124]);
+		arr126.value.unshift(num.value[125]);
+		arr127.value.unshift(num.value[126]);
+		arr128.value.unshift(num.value[127]);
+		arr129.value.unshift(num.value[128]);
+		arr130.value.unshift(num.value[129]);
+		arr131.value.unshift(num.value[130]);
+		arr132.value.unshift(num.value[131]);
+		arr133.value.unshift(num.value[132]);
+		arr134.value.unshift(num.value[133]);
+		arr135.value.unshift(num.value[134]);
+		arr136.value.unshift(num.value[135]);
+		arr137.value.unshift(num.value[136]);
+		arr138.value.unshift(num.value[137]);
+		arr139.value.unshift(num.value[138]);
+		arr140.value.unshift(num.value[139]);
+		arr141.value.unshift(num.value[140]);
+		arr142.value.unshift(num.value[141]);
+		arr143.value.unshift(num.value[142]);
+		arr144.value.unshift(num.value[143]);
+		arr145.value.unshift(num.value[144]);
+		arr146.value.unshift(num.value[145]);
+		arr147.value.unshift(num.value[146]);
+		arr148.value.unshift(num.value[147]);
+		arr149.value.unshift(num.value[148]);
+		arr150.value.unshift(num.value[149]);
+		arr151.value.unshift(num.value[150]);
+		arr152.value.unshift(num.value[151]);
+		arr153.value.unshift(num.value[152]);
+		arr154.value.unshift(num.value[153]);
+		arr155.value.unshift(num.value[154]);
+		arr156.value.unshift(num.value[155]);
+		arr157.value.unshift(num.value[156]);
+		arr158.value.unshift(num.value[157]);
+		arr159.value.unshift(num.value[158]);
+		arr160.value.unshift(num.value[159]);
+		arr161.value.unshift(num.value[160]);
+		arr162.value.unshift(num.value[161]);
+		arr163.value.unshift(num.value[162]);
+		arr164.value.unshift(num.value[163]);
+		arr165.value.unshift(num.value[164]);
+		arr166.value.unshift(num.value[165]);
+		arr167.value.unshift(num.value[166]);
+		arr168.value.unshift(num.value[167]);
+		arr169.value.unshift(num.value[168]);
+		arr170.value.unshift(num.value[169]);
+		arr171.value.unshift(num.value[170]);
+		arr172.value.unshift(num.value[171]);
+		arr173.value.unshift(num.value[172]);
+		arr174.value.unshift(num.value[173]);
+		arr175.value.unshift(num.value[174]);
+		arr176.value.unshift(num.value[175]);
+		arr177.value.unshift(num.value[176]);
+		arr178.value.unshift(num.value[177]);
+		arr179.value.unshift(num.value[178]);
+		arr180.value.unshift(num.value[179]);
+		arr181.value.unshift(num.value[180]);
+		arr182.value.unshift(num.value[181]);
+		arr183.value.unshift(num.value[182]);
+		arr184.value.unshift(num.value[183]);
+		arr185.value.unshift(num.value[184]);
+		arr186.value.unshift(num.value[185]);
+		arr187.value.unshift(num.value[186]);
+		arr188.value.unshift(num.value[187]);
+		arr189.value.unshift(num.value[188]);
+		arr190.value.unshift(num.value[189]);
+		arr191.value.unshift(num.value[190]);
+		arr192.value.unshift(num.value[191]);
+		arr193.value.unshift(num.value[192]);
+		arr194.value.unshift(num.value[193]);
+		arr195.value.unshift(num.value[194]);
+		arr196.value.unshift(num.value[195]);
+		arr197.value.unshift(num.value[196]);
+		arr198.value.unshift(num.value[197]);
+		arr199.value.unshift(num.value[198]);
+		arr200.value.unshift(num.value[199]);
+		arrComparison.value.unshift(numType.value[0]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -1570,311 +2148,317 @@ function setValueHandle() {
 		if (arr100.value.length > 20) {
 			arr100.value.pop()
 		}
+
+		if (arr101.value.length > 20) {
+			arr101.value.pop()
+		}
+		if (arr102.value.length > 20) {
+			arr102.value.pop()
+		}
+		if (arr103.value.length > 20) {
+			arr103.value.pop()
+		}
+		if (arr104.value.length > 20) {
+			arr104.value.pop()
+		}
+		if (arr105.value.length > 20) {
+			arr105.value.pop()
+		}
+		if (arr106.value.length > 20) {
+			arr106.value.pop()
+		}
+		if (arr107.value.length > 20) {
+			arr107.value.pop()
+		}
+		if (arr108.value.length > 20) {
+			arr108.value.pop()
+		}
+		if (arr109.value.length > 20) {
+			arr109.value.pop()
+		}
+		if (arr110.value.length > 20) {
+			arr110.value.pop()
+		}
+		if (arr111.value.length > 20) {
+			arr111.value.pop()
+		}
+		if (arr112.value.length > 20) {
+			arr112.value.pop()
+		}
+		if (arr113.value.length > 20) {
+			arr113.value.pop()
+		}
+		if (arr114.value.length > 20) {
+			arr114.value.pop()
+		}
+		if (arr115.value.length > 20) {
+			arr115.value.pop()
+		}
+		if (arr116.value.length > 20) {
+			arr116.value.pop()
+		}
+		if (arr117.value.length > 20) {
+			arr117.value.pop()
+		}
+		if (arr118.value.length > 20) {
+			arr118.value.pop()
+		}
+		if (arr119.value.length > 20) {
+			arr119.value.pop()
+		}
+		if (arr120.value.length > 20) {
+			arr120.value.pop()
+		}
+		if (arr121.value.length > 20) {
+			arr121.value.pop()
+		}
+		if (arr122.value.length > 20) {
+			arr122.value.pop()
+		}
+		if (arr123.value.length > 20) {
+			arr123.value.pop()
+		}
+		if (arr124.value.length > 20) {
+			arr124.value.pop()
+		}
+		if (arr125.value.length > 20) {
+			arr125.value.pop()
+		}
+		if (arr126.value.length > 20) {
+			arr126.value.pop()
+		}
+		if (arr127.value.length > 20) {
+			arr127.value.pop()
+		}
+		if (arr128.value.length > 20) {
+			arr128.value.pop()
+		}
+		if (arr129.value.length > 20) {
+			arr129.value.pop()
+		}
+		if (arr130.value.length > 20) {
+			arr130.value.pop()
+		}
+		if (arr131.value.length > 20) {
+			arr131.value.pop()
+		}
+		if (arr132.value.length > 20) {
+			arr132.value.pop()
+		}
+		if (arr133.value.length > 20) {
+			arr133.value.pop()
+		}
+		if (arr134.value.length > 20) {
+			arr134.value.pop()
+		}
+		if (arr135.value.length > 20) {
+			arr135.value.pop()
+		}
+		if (arr136.value.length > 20) {
+			arr136.value.pop()
+		}
+		if (arr137.value.length > 20) {
+			arr137.value.pop()
+		}
+		if (arr138.value.length > 20) {
+			arr138.value.pop()
+		}
+		if (arr139.value.length > 20) {
+			arr139.value.pop()
+		}
+		if (arr140.value.length > 20) {
+			arr140.value.pop()
+		}
+		if (arr141.value.length > 20) {
+			arr141.value.pop()
+		}
+		if (arr142.value.length > 20) {
+			arr142.value.pop()
+		}
+		if (arr143.value.length > 20) {
+			arr143.value.pop()
+		}
+		if (arr144.value.length > 20) {
+			arr144.value.pop()
+		}
+		if (arr145.value.length > 20) {
+			arr145.value.pop()
+		}
+		if (arr146.value.length > 20) {
+			arr146.value.pop()
+		}
+		if (arr147.value.length > 20) {
+			arr147.value.pop()
+		}
+		if (arr148.value.length > 20) {
+			arr148.value.pop()
+		}
+		if (arr149.value.length > 20) {
+			arr149.value.pop()
+		}
+		if (arr150.value.length > 20) {
+			arr150.value.pop()
+		}
+		if (arr151.value.length > 20) {
+			arr151.value.pop()
+		}
+		if (arr152.value.length > 20) {
+			arr152.value.pop()
+		}
+		if (arr153.value.length > 20) {
+			arr153.value.pop()
+		}
+		if (arr154.value.length > 20) {
+			arr154.value.pop()
+		}
+		if (arr155.value.length > 20) {
+			arr155.value.pop()
+		}
+		if (arr156.value.length > 20) {
+			arr156.value.pop()
+		}
+		if (arr157.value.length > 20) {
+			arr157.value.pop()
+		}
+		if (arr158.value.length > 20) {
+			arr158.value.pop()
+		}
+		if (arr159.value.length > 20) {
+			arr159.value.pop()
+		}
+		if (arr160.value.length > 20) {
+			arr160.value.pop()
+		}
+		if (arr161.value.length > 20) {
+			arr161.value.pop()
+		}
+		if (arr162.value.length > 20) {
+			arr162.value.pop()
+		}
+		if (arr163.value.length > 20) {
+			arr163.value.pop()
+		}
+		if (arr164.value.length > 20) {
+			arr164.value.pop()
+		}
+		if (arr165.value.length > 20) {
+			arr165.value.pop()
+		}
+		if (arr166.value.length > 20) {
+			arr166.value.pop()
+		}
+		if (arr167.value.length > 20) {
+			arr167.value.pop()
+		}
+		if (arr168.value.length > 20) {
+			arr168.value.pop()
+		}
+		if (arr169.value.length > 20) {
+			arr169.value.pop()
+		}
+		if (arr170.value.length > 20) {
+			arr170.value.pop()
+		}
+		if (arr171.value.length > 20) {
+			arr171.value.pop()
+		}
+		if (arr172.value.length > 20) {
+			arr172.value.pop()
+		}
+		if (arr173.value.length > 20) {
+			arr173.value.pop()
+		}
+		if (arr174.value.length > 20) {
+			arr174.value.pop()
+		}
+		if (arr175.value.length > 20) {
+			arr175.value.pop()
+		}
+		if (arr176.value.length > 20) {
+			arr176.value.pop()
+		}
+		if (arr177.value.length > 20) {
+			arr177.value.pop()
+		}
+		if (arr178.value.length > 20) {
+			arr178.value.pop()
+		}
+		if (arr179.value.length > 20) {
+			arr179.value.pop()
+		}
+		if (arr180.value.length > 20) {
+			arr180.value.pop()
+		}
+		if (arr181.value.length > 20) {
+			arr181.value.pop()
+		}
+		if (arr182.value.length > 20) {
+			arr182.value.pop()
+		}
+		if (arr183.value.length > 20) {
+			arr183.value.pop()
+		}
+		if (arr184.value.length > 20) {
+			arr184.value.pop()
+		}
+		if (arr185.value.length > 20) {
+			arr185.value.pop()
+		}
+		if (arr186.value.length > 20) {
+			arr186.value.pop()
+		}
+		if (arr187.value.length > 20) {
+			arr187.value.pop()
+		}
+		if (arr188.value.length > 20) {
+			arr188.value.pop()
+		}
+		if (arr189.value.length > 20) {
+			arr189.value.pop()
+		}
+		if (arr190.value.length > 20) {
+			arr190.value.pop()
+		}
+		if (arr191.value.length > 20) {
+			arr191.value.pop()
+		}
+		if (arr192.value.length > 20) {
+			arr192.value.pop()
+		}
+		if (arr193.value.length > 20) {
+			arr193.value.pop()
+		}
+		if (arr194.value.length > 20) {
+			arr194.value.pop()
+		}
+		if (arr195.value.length > 20) {
+			arr195.value.pop()
+		}
+		if (arr196.value.length > 20) {
+			arr196.value.pop()
+		}
+		if (arr197.value.length > 20) {
+			arr197.value.pop()
+		}
+		if (arr198.value.length > 20) {
+			arr198.value.pop()
+		}
+		if (arr199.value.length > 20) {
+			arr199.value.pop()
+		}
+		if (arr200.value.length > 20) {
+			arr200.value.pop()
+		}
+
 		if (arrComparison.value.length > 20) {
 			arrComparison.value.pop()
 		}
 		num.value = ''
+		numType.value = ''
 		setStorage()
-		setTimeout(() => {
-			findHandle(0)
-		}, 0)
-		setTimeout(() => {
-			findHandle(1)
-		}, 10)
-		setTimeout(() => {
-			findHandle(2)
-		}, 20)
-		setTimeout(() => {
-			findHandle(3)
-		}, 30)
-		setTimeout(() => {
-			findHandle(4)
-		}, 40)
-		setTimeout(() => {
-			findHandle(5)
-		}, 50)
-		setTimeout(() => {
-			findHandle(6)
-		}, 60)
-		setTimeout(() => {
-			findHandle(7)
-		}, 70)
-		setTimeout(() => {
-			findHandle(8)
-		}, 80)
-		setTimeout(() => {
-			findHandle(9)
-		}, 90)
-		setTimeout(() => {
-			findHandle(10)
-		}, 100)
-		setTimeout(() => {
-			findHandle(11)
-		}, 110)
-		setTimeout(() => {
-			findHandle(12)
-		}, 120)
-		setTimeout(() => {
-			findHandle(13)
-		}, 130)
-		setTimeout(() => {
-			findHandle(14)
-		}, 140)
-		setTimeout(() => {
-			findHandle(15)
-		}, 150)
-		setTimeout(() => {
-			findHandle(16)
-		}, 160)
-		setTimeout(() => {
-			findHandle(17)
-		}, 170)
-		setTimeout(() => {
-			findHandle(18)
-		}, 180)
-		setTimeout(() => {
-			findHandle(19)
-		}, 190)
-		setTimeout(() => {
-			findHandle(20)
-		}, 200)
-		setTimeout(() => {
-			findHandle(21)
-		}, 210)
-		setTimeout(() => {
-			findHandle(22)
-		}, 220)
-		setTimeout(() => {
-			findHandle(23)
-		}, 230)
-		setTimeout(() => {
-			findHandle(24)
-		}, 240)
-		setTimeout(() => {
-			findHandle(25)
-		}, 250)
-		setTimeout(() => {
-			findHandle(26)
-		}, 260)
-		setTimeout(() => {
-			findHandle(27)
-		}, 270)
-		setTimeout(() => {
-			findHandle(28)
-		}, 280)
-		setTimeout(() => {
-			findHandle(29)
-		}, 290)
-		setTimeout(() => {
-			findHandle(30)
-		}, 300)
-		setTimeout(() => {
-			findHandle(31)
-		}, 310)
-		setTimeout(() => {
-			findHandle(32)
-		}, 320)
-		setTimeout(() => {
-			findHandle(33)
-		}, 330)
-		setTimeout(() => {
-			findHandle(34)
-		}, 340)
-		setTimeout(() => {
-			findHandle(35)
-		}, 350)
-		setTimeout(() => {
-			findHandle(36)
-		}, 360)
-		setTimeout(() => {
-			findHandle(37)
-		}, 370)
-		setTimeout(() => {
-			findHandle(38)
-		}, 380)
-		setTimeout(() => {
-			findHandle(39)
-		}, 390)
-		setTimeout(() => {
-			findHandle(40)
-		}, 400)
-		setTimeout(() => {
-			findHandle(41)
-		}, 410)
-		setTimeout(() => {
-			findHandle(42)
-		}, 420)
-		setTimeout(() => {
-			findHandle(43)
-		}, 430)
-		setTimeout(() => {
-			findHandle(44)
-		}, 440)
-		setTimeout(() => {
-			findHandle(45)
-		}, 450)
-		setTimeout(() => {
-			findHandle(46)
-		}, 460)
-		setTimeout(() => {
-			findHandle(47)
-		}, 470)
-		setTimeout(() => {
-			findHandle(48)
-		}, 480)
-		setTimeout(() => {
-			findHandle(49)
-		}, 490)
-		setTimeout(() => {
-			findHandle(50)
-		}, 500)
-		setTimeout(() => {
-			findHandle(51)
-		}, 510)
-		setTimeout(() => {
-			findHandle(52)
-		}, 520)
-		setTimeout(() => {
-			findHandle(53)
-		}, 530)
-		setTimeout(() => {
-			findHandle(54)
-		}, 540)
-		setTimeout(() => {
-			findHandle(55)
-		}, 550)
-		setTimeout(() => {
-			findHandle(56)
-		}, 560)
-		setTimeout(() => {
-			findHandle(57)
-		}, 570)
-		setTimeout(() => {
-			findHandle(58)
-		}, 580)
-		setTimeout(() => {
-			findHandle(59)
-		}, 590)
-		setTimeout(() => {
-			findHandle(60)
-		}, 600)
-		setTimeout(() => {
-			findHandle(61)
-		}, 610)
-		setTimeout(() => {
-			findHandle(62)
-		}, 620)
-		setTimeout(() => {
-			findHandle(63)
-		}, 630)
-		setTimeout(() => {
-			findHandle(64)
-		}, 640)
-		setTimeout(() => {
-			findHandle(65)
-		}, 650)
-		setTimeout(() => {
-			findHandle(66)
-		}, 660)
-		setTimeout(() => {
-			findHandle(67)
-		}, 670)
-		setTimeout(() => {
-			findHandle(68)
-		}, 680)
-		setTimeout(() => {
-			findHandle(69)
-		}, 690)
-		setTimeout(() => {
-			findHandle(70)
-		}, 700)
-		setTimeout(() => {
-			findHandle(71)
-		}, 710)
-		setTimeout(() => {
-			findHandle(72)
-		}, 720)
-		setTimeout(() => {
-			findHandle(73)
-		}, 730)
-		setTimeout(() => {
-			findHandle(74)
-		}, 740)
-		setTimeout(() => {
-			findHandle(75)
-		}, 750)
-		setTimeout(() => {
-			findHandle(76)
-		}, 760)
-		setTimeout(() => {
-			findHandle(77)
-		}, 770)
-		setTimeout(() => {
-			findHandle(78)
-		}, 780)
-		setTimeout(() => {
-			findHandle(79)
-		}, 790)
-		setTimeout(() => {
-			findHandle(80)
-		}, 800)
-		setTimeout(() => {
-			findHandle(81)
-		}, 810)
-		setTimeout(() => {
-			findHandle(82)
-		}, 820)
-		setTimeout(() => {
-			findHandle(83)
-		}, 830)
-		setTimeout(() => {
-			findHandle(84)
-		}, 840)
-		setTimeout(() => {
-			findHandle(85)
-		}, 850)
-		setTimeout(() => {
-			findHandle(86)
-		}, 860)
-		setTimeout(() => {
-			findHandle(87)
-		}, 870)
-		setTimeout(() => {
-			findHandle(88)
-		}, 880)
-		setTimeout(() => {
-			findHandle(89)
-		}, 890)
-		setTimeout(() => {
-			findHandle(90)
-		}, 900)
-		setTimeout(() => {
-			findHandle(91)
-		}, 910)
-		setTimeout(() => {
-			findHandle(92)
-		}, 920)
-		setTimeout(() => {
-			findHandle(93)
-		}, 930)
-		setTimeout(() => {
-			findHandle(94)
-		}, 940)
-		setTimeout(() => {
-			findHandle(95)
-		}, 950)
-		setTimeout(() => {
-			findHandle(96)
-		}, 960)
-		setTimeout(() => {
-			findHandle(97)
-		}, 970)
-		setTimeout(() => {
-			findHandle(98)
-		}, 980)
-		setTimeout(() => {
-			findHandle(99)
-		}, 990)
+		for(let i = 0; i < 200; i++) {
+			findHandle(i)
+		}
 	}
 }
 function clearValueHandle() {
@@ -1978,308 +2562,112 @@ function clearValueHandle() {
 	arr98.value.shift()
 	arr99.value.shift()
 	arr100.value.shift()
+
+	arr101.value.shift()
+	arr102.value.shift()
+	arr103.value.shift()
+	arr104.value.shift()
+	arr105.value.shift()
+	arr106.value.shift()
+	arr107.value.shift()
+	arr108.value.shift()
+	arr109.value.shift()
+	arr110.value.shift()
+	arr111.value.shift()
+	arr112.value.shift()
+	arr113.value.shift()
+	arr114.value.shift()
+	arr115.value.shift()
+	arr116.value.shift()
+	arr117.value.shift()
+	arr118.value.shift()
+	arr119.value.shift()
+	arr120.value.shift()
+	arr121.value.shift()
+	arr122.value.shift()
+	arr123.value.shift()
+	arr124.value.shift()
+	arr125.value.shift()
+	arr126.value.shift()
+	arr127.value.shift()
+	arr128.value.shift()
+	arr129.value.shift()
+	arr130.value.shift()
+	arr131.value.shift()
+	arr132.value.shift()
+	arr133.value.shift()
+	arr134.value.shift()
+	arr135.value.shift()
+	arr136.value.shift()
+	arr137.value.shift()
+	arr138.value.shift()
+	arr139.value.shift()
+	arr140.value.shift()
+	arr141.value.shift()
+	arr142.value.shift()
+	arr143.value.shift()
+	arr144.value.shift()
+	arr145.value.shift()
+	arr146.value.shift()
+	arr147.value.shift()
+	arr148.value.shift()
+	arr149.value.shift()
+	arr150.value.shift()
+	arr151.value.shift()
+	arr152.value.shift()
+	arr153.value.shift()
+	arr154.value.shift()
+	arr155.value.shift()
+	arr156.value.shift()
+	arr157.value.shift()
+	arr158.value.shift()
+	arr159.value.shift()
+	arr160.value.shift()
+	arr161.value.shift()
+	arr162.value.shift()
+	arr163.value.shift()
+	arr164.value.shift()
+	arr165.value.shift()
+	arr166.value.shift()
+	arr167.value.shift()
+	arr168.value.shift()
+	arr169.value.shift()
+	arr170.value.shift()
+	arr171.value.shift()
+	arr172.value.shift()
+	arr173.value.shift()
+	arr174.value.shift()
+	arr175.value.shift()
+	arr176.value.shift()
+	arr177.value.shift()
+	arr178.value.shift()
+	arr179.value.shift()
+	arr180.value.shift()
+	arr181.value.shift()
+	arr182.value.shift()
+	arr183.value.shift()
+	arr184.value.shift()
+	arr185.value.shift()
+	arr186.value.shift()
+	arr187.value.shift()
+	arr188.value.shift()
+	arr189.value.shift()
+	arr190.value.shift()
+	arr191.value.shift()
+	arr192.value.shift()
+	arr193.value.shift()
+	arr194.value.shift()
+	arr195.value.shift()
+	arr196.value.shift()
+	arr197.value.shift()
+	arr198.value.shift()
+	arr199.value.shift()
+	arr200.value.shift()
 	arrComparison.value.shift()
 	setStorage()
-	setTimeout(() => {
-		findHandle(0)
-	}, 0)
-	setTimeout(() => {
-		findHandle(1)
-	}, 10)
-	setTimeout(() => {
-		findHandle(2)
-	}, 20)
-	setTimeout(() => {
-		findHandle(3)
-	}, 30)
-	setTimeout(() => {
-		findHandle(4)
-	}, 40)
-	setTimeout(() => {
-		findHandle(5)
-	}, 50)
-	setTimeout(() => {
-		findHandle(6)
-	}, 60)
-	setTimeout(() => {
-		findHandle(7)
-	}, 70)
-	setTimeout(() => {
-		findHandle(8)
-	}, 80)
-	setTimeout(() => {
-		findHandle(9)
-	}, 90)
-	setTimeout(() => {
-		findHandle(10)
-	}, 100)
-	setTimeout(() => {
-		findHandle(11)
-	}, 110)
-	setTimeout(() => {
-		findHandle(12)
-	}, 120)
-	setTimeout(() => {
-		findHandle(13)
-	}, 130)
-	setTimeout(() => {
-		findHandle(14)
-	}, 140)
-	setTimeout(() => {
-		findHandle(15)
-	}, 150)
-	setTimeout(() => {
-		findHandle(16)
-	}, 160)
-	setTimeout(() => {
-		findHandle(17)
-	}, 170)
-	setTimeout(() => {
-		findHandle(18)
-	}, 180)
-	setTimeout(() => {
-		findHandle(19)
-	}, 190)
-	setTimeout(() => {
-		findHandle(20)
-	}, 200)
-	setTimeout(() => {
-		findHandle(21)
-	}, 210)
-	setTimeout(() => {
-		findHandle(22)
-	}, 220)
-	setTimeout(() => {
-		findHandle(23)
-	}, 230)
-	setTimeout(() => {
-		findHandle(24)
-	}, 240)
-	setTimeout(() => {
-		findHandle(25)
-	}, 250)
-	setTimeout(() => {
-		findHandle(26)
-	}, 260)
-	setTimeout(() => {
-		findHandle(27)
-	}, 270)
-	setTimeout(() => {
-		findHandle(28)
-	}, 280)
-	setTimeout(() => {
-		findHandle(29)
-	}, 290)
-	setTimeout(() => {
-		findHandle(30)
-	}, 300)
-	setTimeout(() => {
-		findHandle(31)
-	}, 310)
-	setTimeout(() => {
-		findHandle(32)
-	}, 320)
-	setTimeout(() => {
-		findHandle(33)
-	}, 330)
-	setTimeout(() => {
-		findHandle(34)
-	}, 340)
-	setTimeout(() => {
-		findHandle(35)
-	}, 350)
-	setTimeout(() => {
-		findHandle(36)
-	}, 360)
-	setTimeout(() => {
-		findHandle(37)
-	}, 370)
-	setTimeout(() => {
-		findHandle(38)
-	}, 380)
-	setTimeout(() => {
-		findHandle(39)
-	}, 390)
-	setTimeout(() => {
-		findHandle(40)
-	}, 400)
-	setTimeout(() => {
-		findHandle(41)
-	}, 410)
-	setTimeout(() => {
-		findHandle(42)
-	}, 420)
-	setTimeout(() => {
-		findHandle(43)
-	}, 430)
-	setTimeout(() => {
-		findHandle(44)
-	}, 440)
-	setTimeout(() => {
-		findHandle(45)
-	}, 450)
-	setTimeout(() => {
-		findHandle(46)
-	}, 460)
-	setTimeout(() => {
-		findHandle(47)
-	}, 470)
-	setTimeout(() => {
-		findHandle(48)
-	}, 480)
-	setTimeout(() => {
-		findHandle(49)
-	}, 490)
-	setTimeout(() => {
-		findHandle(50)
-	}, 500)
-	setTimeout(() => {
-		findHandle(51)
-	}, 510)
-	setTimeout(() => {
-		findHandle(52)
-	}, 520)
-	setTimeout(() => {
-		findHandle(53)
-	}, 530)
-	setTimeout(() => {
-		findHandle(54)
-	}, 540)
-	setTimeout(() => {
-		findHandle(55)
-	}, 550)
-	setTimeout(() => {
-		findHandle(56)
-	}, 560)
-	setTimeout(() => {
-		findHandle(57)
-	}, 570)
-	setTimeout(() => {
-		findHandle(58)
-	}, 580)
-	setTimeout(() => {
-		findHandle(59)
-	}, 590)
-	setTimeout(() => {
-		findHandle(60)
-	}, 600)
-	setTimeout(() => {
-		findHandle(61)
-	}, 610)
-	setTimeout(() => {
-		findHandle(62)
-	}, 620)
-	setTimeout(() => {
-		findHandle(63)
-	}, 630)
-	setTimeout(() => {
-		findHandle(64)
-	}, 640)
-	setTimeout(() => {
-		findHandle(65)
-	}, 650)
-	setTimeout(() => {
-		findHandle(66)
-	}, 660)
-	setTimeout(() => {
-		findHandle(67)
-	}, 670)
-	setTimeout(() => {
-		findHandle(68)
-	}, 680)
-	setTimeout(() => {
-		findHandle(69)
-	}, 690)
-	setTimeout(() => {
-		findHandle(70)
-	}, 700)
-	setTimeout(() => {
-		findHandle(71)
-	}, 710)
-	setTimeout(() => {
-		findHandle(72)
-	}, 720)
-	setTimeout(() => {
-		findHandle(73)
-	}, 730)
-	setTimeout(() => {
-		findHandle(74)
-	}, 740)
-	setTimeout(() => {
-		findHandle(75)
-	}, 750)
-	setTimeout(() => {
-		findHandle(76)
-	}, 760)
-	setTimeout(() => {
-		findHandle(77)
-	}, 770)
-	setTimeout(() => {
-		findHandle(78)
-	}, 780)
-	setTimeout(() => {
-		findHandle(79)
-	}, 790)
-	setTimeout(() => {
-		findHandle(80)
-	}, 800)
-	setTimeout(() => {
-		findHandle(81)
-	}, 810)
-	setTimeout(() => {
-		findHandle(82)
-	}, 820)
-	setTimeout(() => {
-		findHandle(83)
-	}, 830)
-	setTimeout(() => {
-		findHandle(84)
-	}, 840)
-	setTimeout(() => {
-		findHandle(85)
-	}, 850)
-	setTimeout(() => {
-		findHandle(86)
-	}, 860)
-	setTimeout(() => {
-		findHandle(87)
-	}, 870)
-	setTimeout(() => {
-		findHandle(88)
-	}, 880)
-	setTimeout(() => {
-		findHandle(89)
-	}, 890)
-	setTimeout(() => {
-		findHandle(90)
-	}, 900)
-	setTimeout(() => {
-		findHandle(91)
-	}, 910)
-	setTimeout(() => {
-		findHandle(92)
-	}, 920)
-	setTimeout(() => {
-		findHandle(93)
-	}, 930)
-	setTimeout(() => {
-		findHandle(94)
-	}, 940)
-	setTimeout(() => {
-		findHandle(95)
-	}, 950)
-	setTimeout(() => {
-		findHandle(96)
-	}, 960)
-	setTimeout(() => {
-		findHandle(97)
-	}, 970)
-	setTimeout(() => {
-		findHandle(98)
-	}, 980)
-	setTimeout(() => {
-		findHandle(99)
-	}, 990)
+	for(let i = 0; i < 200; i++) {
+		findHandle(i)
+	}
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -2382,6 +2770,107 @@ function setStorage() {
 	uni.setStorageSync('arr98', JSON.stringify(arr98.value))
 	uni.setStorageSync('arr99', JSON.stringify(arr99.value))
 	uni.setStorageSync('arr100', JSON.stringify(arr100.value))
+
+	uni.setStorageSync('arr100', JSON.stringify(arr101.value))
+	uni.setStorageSync('arr102', JSON.stringify(arr102.value))
+	uni.setStorageSync('arr103', JSON.stringify(arr103.value))
+	uni.setStorageSync('arr104', JSON.stringify(arr104.value))
+	uni.setStorageSync('arr105', JSON.stringify(arr105.value))
+	uni.setStorageSync('arr106', JSON.stringify(arr106.value))
+	uni.setStorageSync('arr107', JSON.stringify(arr107.value))
+	uni.setStorageSync('arr108', JSON.stringify(arr108.value))
+	uni.setStorageSync('arr109', JSON.stringify(arr109.value))
+	uni.setStorageSync('arr110', JSON.stringify(arr110.value))
+	uni.setStorageSync('arr111', JSON.stringify(arr111.value))
+	uni.setStorageSync('arr112', JSON.stringify(arr112.value))
+	uni.setStorageSync('arr113', JSON.stringify(arr113.value))
+	uni.setStorageSync('arr114', JSON.stringify(arr114.value))
+	uni.setStorageSync('arr115', JSON.stringify(arr115.value))
+	uni.setStorageSync('arr116', JSON.stringify(arr116.value))
+	uni.setStorageSync('arr117', JSON.stringify(arr117.value))
+	uni.setStorageSync('arr118', JSON.stringify(arr118.value))
+	uni.setStorageSync('arr119', JSON.stringify(arr119.value))
+	uni.setStorageSync('arr120', JSON.stringify(arr120.value))
+	uni.setStorageSync('arr121', JSON.stringify(arr121.value))
+	uni.setStorageSync('arr122', JSON.stringify(arr122.value))
+	uni.setStorageSync('arr123', JSON.stringify(arr123.value))
+	uni.setStorageSync('arr124', JSON.stringify(arr124.value))
+	uni.setStorageSync('arr125', JSON.stringify(arr125.value))
+	uni.setStorageSync('arr126', JSON.stringify(arr126.value))
+	uni.setStorageSync('arr127', JSON.stringify(arr127.value))
+	uni.setStorageSync('arr128', JSON.stringify(arr128.value))
+	uni.setStorageSync('arr129', JSON.stringify(arr129.value))
+	uni.setStorageSync('arr130', JSON.stringify(arr130.value))
+	uni.setStorageSync('arr131', JSON.stringify(arr131.value))
+	uni.setStorageSync('arr132', JSON.stringify(arr132.value))
+	uni.setStorageSync('arr133', JSON.stringify(arr133.value))
+	uni.setStorageSync('arr134', JSON.stringify(arr134.value))
+	uni.setStorageSync('arr135', JSON.stringify(arr135.value))
+	uni.setStorageSync('arr136', JSON.stringify(arr136.value))
+	uni.setStorageSync('arr137', JSON.stringify(arr137.value))
+	uni.setStorageSync('arr138', JSON.stringify(arr138.value))
+	uni.setStorageSync('arr139', JSON.stringify(arr139.value))
+	uni.setStorageSync('arr140', JSON.stringify(arr140.value))
+	uni.setStorageSync('arr141', JSON.stringify(arr141.value))
+	uni.setStorageSync('arr142', JSON.stringify(arr142.value))
+	uni.setStorageSync('arr143', JSON.stringify(arr143.value))
+	uni.setStorageSync('arr144', JSON.stringify(arr144.value))
+	uni.setStorageSync('arr145', JSON.stringify(arr145.value))
+	uni.setStorageSync('arr146', JSON.stringify(arr146.value))
+	uni.setStorageSync('arr147', JSON.stringify(arr147.value))
+	uni.setStorageSync('arr148', JSON.stringify(arr148.value))
+	uni.setStorageSync('arr149', JSON.stringify(arr149.value))
+	uni.setStorageSync('arr150', JSON.stringify(arr150.value))
+	uni.setStorageSync('arr151', JSON.stringify(arr151.value))
+	uni.setStorageSync('arr152', JSON.stringify(arr152.value))
+	uni.setStorageSync('arr153', JSON.stringify(arr153.value))
+	uni.setStorageSync('arr154', JSON.stringify(arr154.value))
+	uni.setStorageSync('arr155', JSON.stringify(arr155.value))
+	uni.setStorageSync('arr156', JSON.stringify(arr156.value))
+	uni.setStorageSync('arr157', JSON.stringify(arr157.value))
+	uni.setStorageSync('arr158', JSON.stringify(arr158.value))
+	uni.setStorageSync('arr159', JSON.stringify(arr159.value))
+	uni.setStorageSync('arr160', JSON.stringify(arr160.value))
+	uni.setStorageSync('arr161', JSON.stringify(arr161.value))
+	uni.setStorageSync('arr162', JSON.stringify(arr162.value))
+	uni.setStorageSync('arr163', JSON.stringify(arr163.value))
+	uni.setStorageSync('arr164', JSON.stringify(arr164.value))
+	uni.setStorageSync('arr165', JSON.stringify(arr165.value))
+	uni.setStorageSync('arr166', JSON.stringify(arr166.value))
+	uni.setStorageSync('arr167', JSON.stringify(arr167.value))
+	uni.setStorageSync('arr168', JSON.stringify(arr168.value))
+	uni.setStorageSync('arr169', JSON.stringify(arr169.value))
+	uni.setStorageSync('arr170', JSON.stringify(arr170.value))
+	uni.setStorageSync('arr171', JSON.stringify(arr171.value))
+	uni.setStorageSync('arr172', JSON.stringify(arr172.value))
+	uni.setStorageSync('arr173', JSON.stringify(arr173.value))
+	uni.setStorageSync('arr174', JSON.stringify(arr174.value))
+	uni.setStorageSync('arr175', JSON.stringify(arr175.value))
+	uni.setStorageSync('arr176', JSON.stringify(arr176.value))
+	uni.setStorageSync('arr177', JSON.stringify(arr177.value))
+	uni.setStorageSync('arr178', JSON.stringify(arr178.value))
+	uni.setStorageSync('arr179', JSON.stringify(arr179.value))
+	uni.setStorageSync('arr180', JSON.stringify(arr180.value))
+	uni.setStorageSync('arr181', JSON.stringify(arr181.value))
+	uni.setStorageSync('arr182', JSON.stringify(arr182.value))
+	uni.setStorageSync('arr183', JSON.stringify(arr183.value))
+	uni.setStorageSync('arr184', JSON.stringify(arr184.value))
+	uni.setStorageSync('arr185', JSON.stringify(arr185.value))
+	uni.setStorageSync('arr186', JSON.stringify(arr186.value))
+	uni.setStorageSync('arr187', JSON.stringify(arr187.value))
+	uni.setStorageSync('arr188', JSON.stringify(arr188.value))
+	uni.setStorageSync('arr189', JSON.stringify(arr189.value))
+	uni.setStorageSync('arr190', JSON.stringify(arr190.value))
+	uni.setStorageSync('arr191', JSON.stringify(arr191.value))
+	uni.setStorageSync('arr192', JSON.stringify(arr192.value))
+	uni.setStorageSync('arr193', JSON.stringify(arr193.value))
+	uni.setStorageSync('arr194', JSON.stringify(arr194.value))
+	uni.setStorageSync('arr195', JSON.stringify(arr195.value))
+	uni.setStorageSync('arr196', JSON.stringify(arr196.value))
+	uni.setStorageSync('arr197', JSON.stringify(arr197.value))
+	uni.setStorageSync('arr198', JSON.stringify(arr198.value))
+	uni.setStorageSync('arr199', JSON.stringify(arr199.value))
+	uni.setStorageSync('arr200', JSON.stringify(arr200.value))
 	uni.setStorageSync('arrComparison', JSON.stringify(arrComparison.value))
 }
 function getData() {
@@ -2486,6 +2975,107 @@ function getData() {
 		arr98.value = JSON.parse(uni.getStorageSync('arr98'))
 		arr99.value = JSON.parse(uni.getStorageSync('arr99'))
 		arr100.value = JSON.parse(uni.getStorageSync('arr100'))
+
+		arr101.value = JSON.parse(uni.getStorageSync('arr101'))
+		arr102.value = JSON.parse(uni.getStorageSync('arr102'))
+		arr103.value = JSON.parse(uni.getStorageSync('arr103'))
+		arr104.value = JSON.parse(uni.getStorageSync('arr104'))
+		arr105.value = JSON.parse(uni.getStorageSync('arr105'))
+		arr106.value = JSON.parse(uni.getStorageSync('arr106'))
+		arr107.value = JSON.parse(uni.getStorageSync('arr107'))
+		arr108.value = JSON.parse(uni.getStorageSync('arr108'))
+		arr109.value = JSON.parse(uni.getStorageSync('arr109'))
+		arr110.value = JSON.parse(uni.getStorageSync('arr110'))
+		arr111.value = JSON.parse(uni.getStorageSync('arr111'))
+		arr112.value = JSON.parse(uni.getStorageSync('arr112'))
+		arr113.value = JSON.parse(uni.getStorageSync('arr113'))
+		arr114.value = JSON.parse(uni.getStorageSync('arr114'))
+		arr115.value = JSON.parse(uni.getStorageSync('arr115'))
+		arr116.value = JSON.parse(uni.getStorageSync('arr116'))
+		arr117.value = JSON.parse(uni.getStorageSync('arr117'))
+		arr118.value = JSON.parse(uni.getStorageSync('arr118'))
+		arr119.value = JSON.parse(uni.getStorageSync('arr119'))
+		arr120.value = JSON.parse(uni.getStorageSync('arr120'))
+		arr121.value = JSON.parse(uni.getStorageSync('arr121'))
+		arr122.value = JSON.parse(uni.getStorageSync('arr122'))
+		arr123.value = JSON.parse(uni.getStorageSync('arr123'))
+		arr124.value = JSON.parse(uni.getStorageSync('arr124'))
+		arr125.value = JSON.parse(uni.getStorageSync('arr125'))
+		arr126.value = JSON.parse(uni.getStorageSync('arr126'))
+		arr127.value = JSON.parse(uni.getStorageSync('arr127'))
+		arr128.value = JSON.parse(uni.getStorageSync('arr128'))
+		arr129.value = JSON.parse(uni.getStorageSync('arr129'))
+		arr130.value = JSON.parse(uni.getStorageSync('arr130'))
+		arr131.value = JSON.parse(uni.getStorageSync('arr131'))
+		arr132.value = JSON.parse(uni.getStorageSync('arr132'))
+		arr133.value = JSON.parse(uni.getStorageSync('arr133'))
+		arr134.value = JSON.parse(uni.getStorageSync('arr134'))
+		arr135.value = JSON.parse(uni.getStorageSync('arr135'))
+		arr136.value = JSON.parse(uni.getStorageSync('arr136'))
+		arr137.value = JSON.parse(uni.getStorageSync('arr137'))
+		arr138.value = JSON.parse(uni.getStorageSync('arr138'))
+		arr139.value = JSON.parse(uni.getStorageSync('arr139'))
+		arr140.value = JSON.parse(uni.getStorageSync('arr140'))
+		arr141.value = JSON.parse(uni.getStorageSync('arr141'))
+		arr142.value = JSON.parse(uni.getStorageSync('arr142'))
+		arr143.value = JSON.parse(uni.getStorageSync('arr143'))
+		arr144.value = JSON.parse(uni.getStorageSync('arr144'))
+		arr145.value = JSON.parse(uni.getStorageSync('arr145'))
+		arr146.value = JSON.parse(uni.getStorageSync('arr146'))
+		arr147.value = JSON.parse(uni.getStorageSync('arr147'))
+		arr148.value = JSON.parse(uni.getStorageSync('arr148'))
+		arr149.value = JSON.parse(uni.getStorageSync('arr149'))
+		arr150.value = JSON.parse(uni.getStorageSync('arr150'))
+		arr151.value = JSON.parse(uni.getStorageSync('arr151'))
+		arr152.value = JSON.parse(uni.getStorageSync('arr152'))
+		arr153.value = JSON.parse(uni.getStorageSync('arr153'))
+		arr154.value = JSON.parse(uni.getStorageSync('arr154'))
+		arr155.value = JSON.parse(uni.getStorageSync('arr155'))
+		arr156.value = JSON.parse(uni.getStorageSync('arr156'))
+		arr157.value = JSON.parse(uni.getStorageSync('arr157'))
+		arr158.value = JSON.parse(uni.getStorageSync('arr158'))
+		arr159.value = JSON.parse(uni.getStorageSync('arr159'))
+		arr160.value = JSON.parse(uni.getStorageSync('arr160'))
+		arr161.value = JSON.parse(uni.getStorageSync('arr161'))
+		arr162.value = JSON.parse(uni.getStorageSync('arr162'))
+		arr163.value = JSON.parse(uni.getStorageSync('arr163'))
+		arr164.value = JSON.parse(uni.getStorageSync('arr164'))
+		arr165.value = JSON.parse(uni.getStorageSync('arr165'))
+		arr166.value = JSON.parse(uni.getStorageSync('arr166'))
+		arr167.value = JSON.parse(uni.getStorageSync('arr167'))
+		arr168.value = JSON.parse(uni.getStorageSync('arr168'))
+		arr169.value = JSON.parse(uni.getStorageSync('arr169'))
+		arr170.value = JSON.parse(uni.getStorageSync('arr170'))
+		arr171.value = JSON.parse(uni.getStorageSync('arr171'))
+		arr172.value = JSON.parse(uni.getStorageSync('arr172'))
+		arr173.value = JSON.parse(uni.getStorageSync('arr173'))
+		arr174.value = JSON.parse(uni.getStorageSync('arr174'))
+		arr175.value = JSON.parse(uni.getStorageSync('arr175'))
+		arr176.value = JSON.parse(uni.getStorageSync('arr176'))
+		arr177.value = JSON.parse(uni.getStorageSync('arr177'))
+		arr178.value = JSON.parse(uni.getStorageSync('arr178'))
+		arr179.value = JSON.parse(uni.getStorageSync('arr179'))
+		arr180.value = JSON.parse(uni.getStorageSync('arr180'))
+		arr181.value = JSON.parse(uni.getStorageSync('arr181'))
+		arr182.value = JSON.parse(uni.getStorageSync('arr182'))
+		arr183.value = JSON.parse(uni.getStorageSync('arr183'))
+		arr184.value = JSON.parse(uni.getStorageSync('arr184'))
+		arr185.value = JSON.parse(uni.getStorageSync('arr185'))
+		arr186.value = JSON.parse(uni.getStorageSync('arr186'))
+		arr187.value = JSON.parse(uni.getStorageSync('arr187'))
+		arr188.value = JSON.parse(uni.getStorageSync('arr188'))
+		arr189.value = JSON.parse(uni.getStorageSync('arr189'))
+		arr190.value = JSON.parse(uni.getStorageSync('arr190'))
+		arr191.value = JSON.parse(uni.getStorageSync('arr191'))
+		arr192.value = JSON.parse(uni.getStorageSync('arr192'))
+		arr193.value = JSON.parse(uni.getStorageSync('arr193'))
+		arr194.value = JSON.parse(uni.getStorageSync('arr194'))
+		arr195.value = JSON.parse(uni.getStorageSync('arr195'))
+		arr196.value = JSON.parse(uni.getStorageSync('arr196'))
+		arr197.value = JSON.parse(uni.getStorageSync('arr197'))
+		arr198.value = JSON.parse(uni.getStorageSync('arr198'))
+		arr199.value = JSON.parse(uni.getStorageSync('arr199'))
+		arr200.value = JSON.parse(uni.getStorageSync('arr200'))
 		arrComparison.value = JSON.parse(uni.getStorageSync('arrComparison'))
 	}
 }
@@ -2730,6 +3320,206 @@ function findHandle(index) {
 		setDataHandle(arr99, rightNum99, wrongNum99)
 	} else if (index == 99) {
 		setDataHandle(arr100, rightNum100, wrongNum100)
+	} if (index == 100) {
+		setDataHandle(arr1, rightNum1, wrongNum1)
+	} else if(index == 101) {
+		setDataHandle(arr102, rightNum102, wrongNum102)
+	} else if (index == 102) {
+		setDataHandle(arr103, rightNum103, wrongNum103)
+	} else if (index == 103) {
+		setDataHandle(arr104, rightNum104, wrongNum104)
+	} else if (index == 104) {
+		setDataHandle(arr105, rightNum105, wrongNum105)
+	} else if (index == 105) {
+		setDataHandle(arr106, rightNum106, wrongNum106)
+	} else if (index == 106) {
+		setDataHandle(arr107, rightNum107, wrongNum107)
+	} else if (index == 107) {
+		setDataHandle(arr108, rightNum108, wrongNum108)
+	} else if (index == 108) {
+		setDataHandle(arr109, rightNum109, wrongNum109)
+	} else if (index == 109) {
+		setDataHandle(arr110, rightNum110, wrongNum110)
+	} else if (index == 110) {
+		setDataHandle(arr111, rightNum111, wrongNum111)
+	} else if (index == 111) {
+		setDataHandle(arr112, rightNum112, wrongNum112)
+	} else if (index == 112) {
+		setDataHandle(arr113, rightNum113, wrongNum113)
+	} else if (index == 113) {
+		setDataHandle(arr114, rightNum114, wrongNum114)
+	} else if (index == 114) {
+		setDataHandle(arr115, rightNum115, wrongNum115)
+	} else if (index == 115) {
+		setDataHandle(arr116, rightNum116, wrongNum116)
+	} else if (index == 116) {
+		setDataHandle(arr117, rightNum117, wrongNum117)
+	} else if (index == 117) {
+		setDataHandle(arr118, rightNum118, wrongNum118)
+	} else if (index == 118) {
+		setDataHandle(arr119, rightNum119, wrongNum119)
+	} else if (index == 119) {
+		setDataHandle(arr120, rightNum120, wrongNum120)
+	} else if (index == 120) {
+		setDataHandle(arr121, rightNum121, wrongNum121)
+	} else if (index == 121) {
+		setDataHandle(arr122, rightNum122, wrongNum122)
+	} else if (index == 122) {
+		setDataHandle(arr123, rightNum123, wrongNum123)
+	} else if (index == 123) {
+		setDataHandle(arr124, rightNum124, wrongNum124)
+	} else if (index == 124) {
+		setDataHandle(arr125, rightNum125, wrongNum125)
+	} else if (index == 125) {
+		setDataHandle(arr126, rightNum126, wrongNum126)
+	} else if (index == 126) {
+		setDataHandle(arr127, rightNum127, wrongNum127)
+	} else if (index == 127) {
+		setDataHandle(arr128, rightNum128, wrongNum128)
+	} else if (index == 128) {
+		setDataHandle(arr129, rightNum129, wrongNum129)
+	} else if (index == 129) {
+		setDataHandle(arr130, rightNum130, wrongNum130)
+	} else if (index == 130) {
+		setDataHandle(arr131, rightNum131, wrongNum131)
+	} else if (index == 131) {
+		setDataHandle(arr132, rightNum132, wrongNum132)
+	} else if (index == 132) {
+		setDataHandle(arr133, rightNum133, wrongNum133)
+	} else if (index == 133) {
+		setDataHandle(arr134, rightNum134, wrongNum134)
+	} else if (index == 134) {
+		setDataHandle(arr135, rightNum135, wrongNum135)
+	} else if (index == 135) {
+		setDataHandle(arr136, rightNum136, wrongNum136)
+	} else if (index == 136) {
+		setDataHandle(arr137, rightNum137, wrongNum137)
+	} else if (index == 137) {
+		setDataHandle(arr138, rightNum138, wrongNum138)
+	} else if (index == 138) {
+		setDataHandle(arr139, rightNum139, wrongNum139)
+	} else if (index == 139) {
+		setDataHandle(arr140, rightNum140, wrongNum140)
+	} else if (index == 140) {
+		setDataHandle(arr141, rightNum141, wrongNum141)
+	} else if (index == 141) {
+		setDataHandle(arr142, rightNum142, wrongNum142)
+	} else if (index == 142) {
+		setDataHandle(arr143, rightNum143, wrongNum143)
+	} else if (index == 143) {
+		setDataHandle(arr144, rightNum144, wrongNum144)
+	} else if (index == 144) {
+		setDataHandle(arr145, rightNum145, wrongNum145)
+	} else if (index == 145) {
+		setDataHandle(arr146, rightNum146, wrongNum146)
+	} else if (index == 146) {
+		setDataHandle(arr147, rightNum147, wrongNum147)
+	} else if (index == 147) {
+		setDataHandle(arr148, rightNum148, wrongNum148)
+	} else if (index == 148) {
+		setDataHandle(arr149, rightNum149, wrongNum149)
+	} else if (index == 149) {
+		setDataHandle(arr150, rightNum150, wrongNum150)
+	} else if (index == 150) {
+		setDataHandle(arr151, rightNum151, wrongNum151)
+	} else if (index == 151) {
+		setDataHandle(arr152, rightNum152, wrongNum152)
+	} else if (index == 152) {
+		setDataHandle(arr153, rightNum153, wrongNum153)
+	} else if (index == 153) {
+		setDataHandle(arr154, rightNum154, wrongNum154)
+	} else if (index == 154) {
+		setDataHandle(arr155, rightNum155, wrongNum155)
+	} else if (index == 155) {
+		setDataHandle(arr156, rightNum156, wrongNum156)
+	} else if (index == 156) {
+		setDataHandle(arr157, rightNum157, wrongNum157)
+	} else if (index == 157) {
+		setDataHandle(arr158, rightNum158, wrongNum158)
+	} else if (index == 158) {
+		setDataHandle(arr159, rightNum159, wrongNum159)
+	} else if (index == 159) {
+		setDataHandle(arr160, rightNum160, wrongNum160)
+	} else if (index == 160) {
+		setDataHandle(arr161, rightNum161, wrongNum161)
+	} else if (index == 161) {
+		setDataHandle(arr162, rightNum162, wrongNum162)
+	} else if (index == 162) {
+		setDataHandle(arr163, rightNum163, wrongNum163)
+	} else if (index == 163) {
+		setDataHandle(arr164, rightNum164, wrongNum164)
+	} else if (index == 164) {
+		setDataHandle(arr165, rightNum165, wrongNum165)
+	} else if (index == 165) {
+		setDataHandle(arr166, rightNum166, wrongNum166)
+	} else if (index == 166) {
+		setDataHandle(arr167, rightNum167, wrongNum167)
+	} else if (index == 167) {
+		setDataHandle(arr168, rightNum168, wrongNum168)
+	} else if (index == 168) {
+		setDataHandle(arr169, rightNum169, wrongNum169)
+	} else if (index == 169) {
+		setDataHandle(arr170, rightNum170, wrongNum170)
+	} else if (index == 170) {
+		setDataHandle(arr171, rightNum171, wrongNum171)
+	} else if (index == 171) {
+		setDataHandle(arr172, rightNum172, wrongNum172)
+	} else if (index == 172) {
+		setDataHandle(arr173, rightNum173, wrongNum173)
+	} else if (index == 173) {
+		setDataHandle(arr174, rightNum174, wrongNum174)
+	} else if (index == 174) {
+		setDataHandle(arr175, rightNum175, wrongNum175)
+	} else if (index == 175) {
+		setDataHandle(arr176, rightNum176, wrongNum176)
+	} else if (index == 176) {
+		setDataHandle(arr177, rightNum177, wrongNum177)
+	} else if (index == 177) {
+		setDataHandle(arr178, rightNum178, wrongNum178)
+	} else if (index == 178) {
+		setDataHandle(arr179, rightNum179, wrongNum179)
+	} else if (index == 179) {
+		setDataHandle(arr180, rightNum180, wrongNum180)
+	} else if (index == 180) {
+		setDataHandle(arr181, rightNum181, wrongNum181)
+	} else if (index == 181) {
+		setDataHandle(arr182, rightNum182, wrongNum182)
+	} else if (index == 182) {
+		setDataHandle(arr183, rightNum183, wrongNum183)
+	} else if (index == 183) {
+		setDataHandle(arr184, rightNum184, wrongNum184)
+	} else if (index == 184) {
+		setDataHandle(arr185, rightNum185, wrongNum185)
+	} else if (index == 185) {
+		setDataHandle(arr186, rightNum186, wrongNum186)
+	} else if (index == 186) {
+		setDataHandle(arr187, rightNum187, wrongNum187)
+	} else if (index == 187) {
+		setDataHandle(arr188, rightNum188, wrongNum188)
+	} else if (index == 188) {
+		setDataHandle(arr189, rightNum189, wrongNum189)
+	} else if (index == 189) {
+		setDataHandle(arr190, rightNum190, wrongNum190)
+	} else if (index == 190) {
+		setDataHandle(arr191, rightNum191, wrongNum191)
+	} else if (index == 191) {
+		setDataHandle(arr192, rightNum192, wrongNum192)
+	} else if (index == 192) {
+		setDataHandle(arr193, rightNum193, wrongNum193)
+	} else if (index == 193) {
+		setDataHandle(arr194, rightNum194, wrongNum194)
+	} else if (index == 194) {
+		setDataHandle(arr195, rightNum195, wrongNum195)
+	} else if (index == 195) {
+		setDataHandle(arr196, rightNum196, wrongNum196)
+	} else if (index == 196) {
+		setDataHandle(arr197, rightNum197, wrongNum197)
+	} else if (index == 197) {
+		setDataHandle(arr198, rightNum198, wrongNum198)
+	} else if (index == 198) {
+		setDataHandle(arr199, rightNum199, wrongNum199)
+	} else if (index == 199) {
+		setDataHandle(arr200, rightNum200, wrongNum200)
 	}
 }
 </script>
@@ -2748,7 +3538,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 10rpx;
+				font-size: 38rpx;
 				letter-spacing: 20px;
 			}
 			.order {
@@ -2760,6 +3550,12 @@ function findHandle(index) {
 					padding: 0 2px;
 				}
 			}
+		}
+		.num {
+			height: 40rpx;
+			width: 100%;
+			word-wrap: break-word;
+			font-size: 12rpx;
 		}
 		.button {
 			display: flex;
@@ -2793,10 +3589,10 @@ function findHandle(index) {
 		}
 	}
 	.data-box {
-		padding: 10rpx;
+		padding: 10rpx 0;
 		display: flex;
 		.left {
-			width: 25%;
+			width: 10%;
 			box-sizing: border-box;
 			position: relative;
 			.data {
@@ -2804,17 +3600,18 @@ function findHandle(index) {
 				justify-content: center;
 				box-sizing: border-box;
 				width: 100%;
-				padding-left: 10rpx;
+				padding-left: 2rpx;
 				.item {
-					width: 30px;
-					height: 30px;
+					width: 14px;
+					height: 18px;
 					text-align: center;
-					line-height: 30px;
+					line-height: 18px;
 					min-width: 4px;
 					font-size: 24rpx;
 					border: 1px solid #999;
 					border-bottom: none;
 					margin-right: 4px;
+					color: blue;
 					&.end {
 						border-bottom: 1px solid #999;;
 					}
@@ -2835,7 +3632,7 @@ function findHandle(index) {
 		}
 		.right {
 			padding: 10rpx;
-			width: 75%;
+			width: 44%;
 			position: relative;
 			top: -26rpx;
 			left: -5px;
@@ -2844,7 +3641,7 @@ function findHandle(index) {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 8rpx 8rpx 5rpx;
+					padding: 1rpx 2rpx;
 					text-align: center;
 				}
 			}
@@ -2852,7 +3649,7 @@ function findHandle(index) {
 				display: flex;
 				justify-content: space-around;
 				.item {
-					padding: 8rpx 8rpx 5rpx;
+					padding: 1rpx 2rpx;
 					text-align: center;
 					width: 23%;
 					color: #4e6ef2;
@@ -2880,18 +3677,19 @@ function findHandle(index) {
 				display: flex;
 				box-sizing: border-box;
 				width: 100%;
-				padding-left: 10rpx;
 				.item {
-					width: 22px;
-					height: 30px;
+					padding: 1rpx 2rpx;
 					text-align: center;
-					line-height: 30px;
-					min-width: 4px;
-					font-size: 24rpx;
+					min-width: 10px;
+					font-size: 22rpx;
 					border: 1px solid #999;
 					background-color: #ccc;
-					margin-right: 4px;
+					margin-right: 2px;
 					border-radius: 2px;
+					&.active {
+						color: blue;
+						font-weight: bold
+					}
 				}
 				.line {
 					background-color: #fff;
