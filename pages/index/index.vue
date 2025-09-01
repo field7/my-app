@@ -553,9 +553,9 @@ function findHandle(index) {
 	if (index1 == objMaxMin.max || index1 == objMaxMin.min) {
 		index1 = index2
 	}
-	if (index4 == objMaxMin.max || index4 == objMaxMin.min) {
-		index4 = index5
-	}
+	// if (index4 == objMaxMin.max || index4 == objMaxMin.min) {
+	// 	index4 = index5
+	// }
 	if (index == 0) {
 		if (arr[0] == oneMaxLast.value) {
 			orderNumber1.value ++
