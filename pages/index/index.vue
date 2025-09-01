@@ -84,34 +84,34 @@
 				</div>
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneAmountMax || index == oneAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoAmountMax || index == twoAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == threeMax || index == threeAmountMax || index == threeAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result4">
-						<view :class="(index == fourMax || index == fourAmountMax || index == fourAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fourMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result5">
-						<view :class="(index == fiveMax || index == fiveAmountMax || index == fiveAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fiveMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result6">
-						<view :class="(index == sixMax || index == sixAmountMax || index == sixAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == sixMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result7">
-						<view :class="(index == sevenMax || index == sevenAmountMax || index == sevenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == sevenMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result8">
-						<view :class="(index == eightMax || index == eightAmountMax || index == eightAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == eightMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result9">
-						<view :class="(index == nightMax || index == nightAmountMax || index == nightAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == nightMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result10">
-						<view :class="(index == tenMax || index == tenAmountMax || index == tenAmountMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == tenMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
@@ -557,7 +557,7 @@ function findHandle(index) {
 		index4 = index5
 	}
 	if (index == 0) {
-		if (arr[0] == oneMaxLast.value || arr[0] == oneAmountMaxLast.value || arr[0] == oneAmountMinLast.value) {
+		if (arr[0] == oneMaxLast.value || arr[0] == oneAmountMaxLast.value) {
 			orderNumber1.value ++
 			orderNumberNext1.value = 0
 		} else {
@@ -581,7 +581,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 1) {
-		if (arr[0] == twoMaxLast.value || arr[0] == twoAmountMaxLast.value || arr[0] == twoAmountMinLast.value) {
+		if (arr[0] == twoMaxLast.value) {
 			orderNumber2.value ++
 			orderNumberNext2.value = 0
 		} else {
@@ -603,7 +603,7 @@ function findHandle(index) {
 			console.log(orderNumber2.value)
 		// }, 500)
 	} else if (index == 2) {
-		if (arr[0] == threeMaxLast.value || arr[0] == threeAmountMaxLast.value || arr[0] == threeAmountMinLast.value) {
+		if (arr[0] == threeMaxLast.value) {
 			orderNumber3.value ++
 			orderNumberNext3.value = 0
 		} else {
@@ -627,7 +627,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 3) {
-		if (arr[0] == fourMaxLast.value || arr[0] == fourAmountMaxLast.value || arr[0] == fourAmountMinLast.value) {
+		if (arr[0] == fourMaxLast.value) {
 			orderNumber4.value ++
 			orderNumberNext4.value = 0
 		} else {
@@ -649,7 +649,7 @@ function findHandle(index) {
 			console.log(orderNumber4.value)
 		// }, 500)
 	} else if (index == 4) {
-		if (arr[0] == fiveMaxLast.value || arr[0] == fiveAmountMaxLast.value || arr[0] == fiveAmountMinLast.value) {
+		if (arr[0] == fiveMaxLast.value) {
 			orderNumber5.value ++
 			orderNumberNext5.value = 0
 		} else {
@@ -673,7 +673,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 5) {
-		if (arr[0] == sixMaxLast.value || arr[0] == sixAmountMaxLast.value || arr[0] == sixAmountMinLast.value) {
+		if (arr[0] == sixMaxLast.value) {
 			orderNumber6.value ++
 			orderNumberNext6.value = 0
 		} else {
@@ -695,7 +695,7 @@ function findHandle(index) {
 			console.log(orderNumber6.value)
 		// }, 500)
 	} else if (index == 6) {
-		if (arr[0] == sevenMaxLast.value || arr[0] == sevenAmountMaxLast.value || arr[0] == sevenAmountMinLast.value) {
+		if (arr[0] == sevenMaxLast.value) {
 			orderNumber7.value ++
 			orderNumberNext7.value = 0
 		} else {
@@ -719,7 +719,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 7) {
-		if (arr[0] == eightMaxLast.value || arr[0] == eightAmountMaxLast.value || arr[0] == eightAmountMinLast.value) {
+		if (arr[0] == eightMaxLast.value) {
 			orderNumber8.value ++
 			orderNumberNext8.value = 0
 		} else {
@@ -743,7 +743,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 8) {
-		if (arr[0] == nightMaxLast.value || arr[0] == nightAmountMaxLast.value || arr[0] == nightAmountMinLast.value) {
+		if (arr[0] == nightMaxLast.value) {
 			orderNumber9.value ++
 			orderNumberNext9.value = 0
 		} else {
@@ -767,7 +767,7 @@ function findHandle(index) {
 		return
 	}
 	if (index == 9) {
-		if (arr[0] == tenMaxLast.value || arr[0] == tenAmountMaxLast.value || arr[0] == tenAmountMinLast.value) {
+		if (arr[0] == tenMaxLast.value) {
 			orderNumber10.value ++
 			orderNumberNext10.value = 0
 		} else {
