@@ -557,7 +557,7 @@ function findHandle(index) {
 		index4 = index5
 	}
 	if (index == 0) {
-		if (arr[0] == oneMaxLast.value || arr[0] == oneAmountMaxLast.value) {
+		if (arr[0] == oneMaxLast.value) {
 			orderNumber1.value ++
 			orderNumberNext1.value = 0
 		} else {
