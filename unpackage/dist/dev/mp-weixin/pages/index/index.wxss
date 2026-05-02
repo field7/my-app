@@ -84,7 +84,7 @@
   padding-left: 20rpx;
 }
 .content .data-box .left .data .item {
-  padding: 4rpx 30rpx;
+  padding: 4rpx 12rpx;
   font-size: 24rpx;
   border: 1px solid #3a73d9;
   margin-right: 10rpx;
@@ -105,19 +105,30 @@
 .content .data-box .right {
   padding: 10rpx;
   width: 50%;
+  position: relative;
+  top: -60rpx;
   box-sizing: border-box;
+}
+.content .data-box .right .times {
+  display: flex;
+  justify-content: space-around;
+}
+.content .data-box .right .times .item {
+  padding: 15rpx 10rpx;
+  text-align: center;
+  width: 23%;
 }
 .content .data-box .right .result {
   display: flex;
   justify-content: space-around;
 }
 .content .data-box .right .result .item {
-  padding: 20rpx 10rpx;
+  padding: 15rpx 10rpx;
   text-align: center;
 }
 .content .data-box .right .result .item.active {
   background-color: #f00;
 }
-.content .data-box .right .result1, .content .data-box .right .result2, .content .data-box .right .result3 {
-  width: 23%;
+.content .data-box .right .result1, .content .data-box .right .result2, .content .data-box .right .result3, .content .data-box .right .result4, .content .data-box .right .result5, .content .data-box .right .result6 {
+  width: 14%;
 }
