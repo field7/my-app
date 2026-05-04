@@ -2,8 +2,9 @@
 	<view class="content">
 		<view class="operate">
 			<view class="input">
-				<input type="number" v-model="num" />
+				<input type="number" v-model="numType" />
 			</view>
+			<view class="num">{{ num }}</view>
 			<view class="button">
 				<view class="btn btn3" @click="getRnd">获取</view>
 				<view class="btn btn1" @click="setValueHandle">提交</view>
@@ -433,6 +434,7 @@ import { onLoad } from '@dcloudio/uni-app'
 
 /* data */
 const num = ref('')
+const numType = ref('')
 const arr1 = ref([])
 const arr2 = ref([])
 const arr3 = ref([])
@@ -1156,18 +1158,7 @@ function getRnd() {
 }
 
 function setValueHandle() {
-	if (
-		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
-		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined' &&
-		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined' &&
-		typeof num.value[30] != 'undefined' && typeof num.value[31] != 'undefined' && typeof num.value[32] != 'undefined' && typeof num.value[33] != 'undefined' && typeof num.value[34] != 'undefined' && typeof num.value[35] != 'undefined' && typeof num.value[36] != 'undefined' && typeof num.value[37] != 'undefined' && typeof num.value[38] != 'undefined' && typeof num.value[39] != 'undefined' && typeof num.value[40] != 'undefined' &&
-		typeof num.value[40] != 'undefined' && typeof num.value[41] != 'undefined' && typeof num.value[42] != 'undefined' && typeof num.value[43] != 'undefined' && typeof num.value[44] != 'undefined' && typeof num.value[45] != 'undefined' && typeof num.value[46] != 'undefined' && typeof num.value[47] != 'undefined' && typeof num.value[48] != 'undefined' && typeof num.value[49] != 'undefined' && typeof num.value[50] != 'undefined' &&
-		typeof num.value[50] != 'undefined' && typeof num.value[51] != 'undefined' && typeof num.value[52] != 'undefined' && typeof num.value[53] != 'undefined' && typeof num.value[54] != 'undefined' && typeof num.value[55] != 'undefined' && typeof num.value[56] != 'undefined' && typeof num.value[57] != 'undefined' && typeof num.value[58] != 'undefined' && typeof num.value[59] != 'undefined' && typeof num.value[60] != 'undefined' &&
-		typeof num.value[60] != 'undefined' && typeof num.value[61] != 'undefined' && typeof num.value[62] != 'undefined' && typeof num.value[63] != 'undefined' && typeof num.value[64] != 'undefined' && typeof num.value[65] != 'undefined' && typeof num.value[66] != 'undefined' && typeof num.value[67] != 'undefined' && typeof num.value[68] != 'undefined' && typeof num.value[69] != 'undefined' && typeof num.value[70] != 'undefined' &&
-		typeof num.value[70] != 'undefined' && typeof num.value[71] != 'undefined' && typeof num.value[72] != 'undefined' && typeof num.value[73] != 'undefined' && typeof num.value[74] != 'undefined' && typeof num.value[75] != 'undefined' && typeof num.value[76] != 'undefined' && typeof num.value[77] != 'undefined' && typeof num.value[78] != 'undefined' && typeof num.value[79] != 'undefined' && typeof num.value[80] != 'undefined' &&
-		typeof num.value[80] != 'undefined' && typeof num.value[81] != 'undefined' && typeof num.value[82] != 'undefined' && typeof num.value[83] != 'undefined' && typeof num.value[84] != 'undefined' && typeof num.value[85] != 'undefined' && typeof num.value[86] != 'undefined' && typeof num.value[87] != 'undefined' && typeof num.value[88] != 'undefined' && typeof num.value[89] != 'undefined' && typeof num.value[90] != 'undefined' &&
-		typeof num.value[90] != 'undefined' && typeof num.value[91] != 'undefined' && typeof num.value[92] != 'undefined' && typeof num.value[93] != 'undefined' && typeof num.value[94] != 'undefined' && typeof num.value[95] != 'undefined' && typeof num.value[96] != 'undefined' && typeof num.value[97] != 'undefined' && typeof num.value[98] != 'undefined' && typeof num.value[99] != 'undefined' && typeof num.value[100] != 'undefined'
-	) {
+	if (num.value && numType.value) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
@@ -1268,7 +1259,7 @@ function setValueHandle() {
 		arr98.value.unshift(num.value[97]);
 		arr99.value.unshift(num.value[98]);
 		arr100.value.unshift(num.value[99]);
-		arrComparison.value.unshift(num.value[100]);
+		arrComparison.value.unshift(numType.value[0]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -1574,6 +1565,7 @@ function setValueHandle() {
 			arrComparison.value.pop()
 		}
 		num.value = ''
+		numType.value = ''
 		setStorage()
 		setTimeout(() => {
 			findHandle(0)
@@ -2748,7 +2740,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 10rpx;
+				font-size: 38rpx;
 				letter-spacing: 20px;
 			}
 			.order {
@@ -2760,6 +2752,12 @@ function findHandle(index) {
 					padding: 0 2px;
 				}
 			}
+		}
+		.num {
+			height: 40rpx;
+			width: 100%;
+			word-wrap: break-word;
+			font-size: 12rpx;
 		}
 		.button {
 			display: flex;
