@@ -2,8 +2,9 @@
 	<view class="content">
 		<view class="operate">
 			<view class="input">
-				<input type="number" v-model="num"/>
+				<input type="number" v-model="numType" />
 			</view>
+			<view class="num">{{ num }}</view>
 			<view class="button">
 				<view class="btn btn3" @click="getRnd">获取</view>
 				<view class="btn btn1" @click="setValueHandle">提交</view>
@@ -15,7 +16,8 @@
 				<view class="line"></view>
 				<view class="data">
 					<view class="data-item">
-						<view :class="index == arr41.length - 1 ? 'item end data-end' : 'item data-end'" v-for="(item, index) in arr41" :key="index">{{ item == 1 ? '大' : '小' }}</view>
+						<view :class="index == arrComparison.length - 1 ? 'item end data-end' : 'item data-end'"
+							v-for="(item, index) in arrComparison" :key="index">{{ item == 1 ? '大' : '小' }}</view>
 					</view>
 				</view>
 			</view>
@@ -33,28 +35,28 @@
 					<view class="item">0</view>
 				</view>
 				<view class="times">
-					<view :class="rightNum1 > 4 ? 'item active' : 'item'">{{ rightNum1 }}</view>
-					<view :class="rightNum2 > 4 ? 'item active' : 'item'">{{ rightNum2 }}</view>
-					<view :class="rightNum3 > 4 ? 'item active' : 'item'">{{ rightNum3 }}</view>
-					<view :class="rightNum4 > 4 ? 'item active' : 'item'">{{ rightNum4 }}</view>
-					<view :class="rightNum5 > 4 ? 'item active' : 'item'">{{ rightNum5 }}</view>
-					<view :class="rightNum6 > 4 ? 'item active' : 'item'">{{ rightNum6 }}</view>
-					<view :class="rightNum7 > 4 ? 'item active' : 'item'">{{ rightNum7 }}</view>
-					<view :class="rightNum8 > 4 ? 'item active' : 'item'">{{ rightNum8 }}</view>
-					<view :class="rightNum9 > 4 ? 'item active' : 'item'">{{ rightNum9 }}</view>
-					<view :class="rightNum10 > 4 ? 'item active' : 'item'">{{ rightNum10 }}</view>
+					<view :class="rightNum1 > 5 ? 'item active' : 'item'">{{ rightNum1 }}</view>
+					<view :class="rightNum2 > 5 ? 'item active' : 'item'">{{ rightNum2 }}</view>
+					<view :class="rightNum3 > 5 ? 'item active' : 'item'">{{ rightNum3 }}</view>
+					<view :class="rightNum4 > 5 ? 'item active' : 'item'">{{ rightNum4 }}</view>
+					<view :class="rightNum5 > 5 ? 'item active' : 'item'">{{ rightNum5 }}</view>
+					<view :class="rightNum6 > 5 ? 'item active' : 'item'">{{ rightNum6 }}</view>
+					<view :class="rightNum7 > 5 ? 'item active' : 'item'">{{ rightNum7 }}</view>
+					<view :class="rightNum8 > 5 ? 'item active' : 'item'">{{ rightNum8 }}</view>
+					<view :class="rightNum9 > 5 ? 'item active' : 'item'">{{ rightNum9 }}</view>
+					<view :class="rightNum10 > 5 ? 'item active' : 'item'">{{ rightNum10 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum1 > 4 ? 'item active' : 'item'">{{ wrongNum1 }}</view>
-					<view :class="wrongNum2 > 4 ? 'item active' : 'item'">{{ wrongNum2 }}</view>
-					<view :class="wrongNum3 > 4 ? 'item active' : 'item'">{{ wrongNum3 }}</view>
-					<view :class="wrongNum4 > 4 ? 'item active' : 'item'">{{ wrongNum4 }}</view>
-					<view :class="wrongNum5 > 4 ? 'item active' : 'item'">{{ wrongNum5 }}</view>
-					<view :class="wrongNum6 > 4 ? 'item active' : 'item'">{{ wrongNum6 }}</view>
-					<view :class="wrongNum7 > 4 ? 'item active' : 'item'">{{ wrongNum7 }}</view>
-					<view :class="wrongNum8 > 4 ? 'item active' : 'item'">{{ wrongNum8 }}</view>
-					<view :class="wrongNum9 > 4 ? 'item active' : 'item'">{{ wrongNum9 }}</view>
-					<view :class="wrongNum10 > 4 ? 'item active' : 'item'">{{ wrongNum10 }}</view>
+					<view :class="wrongNum1 > 5 ? 'item active' : 'item'">{{ wrongNum1 }}</view>
+					<view :class="wrongNum2 > 5 ? 'item active' : 'item'">{{ wrongNum2 }}</view>
+					<view :class="wrongNum3 > 5 ? 'item active' : 'item'">{{ wrongNum3 }}</view>
+					<view :class="wrongNum4 > 5 ? 'item active' : 'item'">{{ wrongNum4 }}</view>
+					<view :class="wrongNum5 > 5 ? 'item active' : 'item'">{{ wrongNum5 }}</view>
+					<view :class="wrongNum6 > 5 ? 'item active' : 'item'">{{ wrongNum6 }}</view>
+					<view :class="wrongNum7 > 5 ? 'item active' : 'item'">{{ wrongNum7 }}</view>
+					<view :class="wrongNum8 > 5 ? 'item active' : 'item'">{{ wrongNum8 }}</view>
+					<view :class="wrongNum9 > 5 ? 'item active' : 'item'">{{ wrongNum9 }}</view>
+					<view :class="wrongNum10 > 5 ? 'item active' : 'item'">{{ wrongNum10 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -72,28 +74,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum11 > 4 ? 'item active' : 'item'">{{ rightNum11 }}</view>
-					<view :class="rightNum12 > 4 ? 'item active' : 'item'">{{ rightNum12 }}</view>
-					<view :class="rightNum13 > 4 ? 'item active' : 'item'">{{ rightNum13 }}</view>
-					<view :class="rightNum14 > 4 ? 'item active' : 'item'">{{ rightNum14 }}</view>
-					<view :class="rightNum15 > 4 ? 'item active' : 'item'">{{ rightNum15 }}</view>
-					<view :class="rightNum16 > 4 ? 'item active' : 'item'">{{ rightNum16 }}</view>
-					<view :class="rightNum17 > 4 ? 'item active' : 'item'">{{ rightNum17 }}</view>
-					<view :class="rightNum18 > 4 ? 'item active' : 'item'">{{ rightNum18 }}</view>
-					<view :class="rightNum19 > 4 ? 'item active' : 'item'">{{ rightNum19 }}</view>
-					<view :class="rightNum20 > 4 ? 'item active' : 'item'">{{ rightNum20 }}</view>
+					<view :class="rightNum11 > 5 ? 'item active' : 'item'">{{ rightNum11 }}</view>
+					<view :class="rightNum12 > 5 ? 'item active' : 'item'">{{ rightNum12 }}</view>
+					<view :class="rightNum13 > 5 ? 'item active' : 'item'">{{ rightNum13 }}</view>
+					<view :class="rightNum14 > 5 ? 'item active' : 'item'">{{ rightNum14 }}</view>
+					<view :class="rightNum15 > 5 ? 'item active' : 'item'">{{ rightNum15 }}</view>
+					<view :class="rightNum16 > 5 ? 'item active' : 'item'">{{ rightNum16 }}</view>
+					<view :class="rightNum17 > 5 ? 'item active' : 'item'">{{ rightNum17 }}</view>
+					<view :class="rightNum18 > 5 ? 'item active' : 'item'">{{ rightNum18 }}</view>
+					<view :class="rightNum19 > 5 ? 'item active' : 'item'">{{ rightNum19 }}</view>
+					<view :class="rightNum20 > 5 ? 'item active' : 'item'">{{ rightNum20 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum11 > 4 ? 'item active' : 'item'">{{ wrongNum11 }}</view>
-					<view :class="wrongNum12 > 4 ? 'item active' : 'item'">{{ wrongNum12 }}</view>
-					<view :class="wrongNum13 > 4 ? 'item active' : 'item'">{{ wrongNum13 }}</view>
-					<view :class="wrongNum14 > 4 ? 'item active' : 'item'">{{ wrongNum14 }}</view>
-					<view :class="wrongNum15 > 4 ? 'item active' : 'item'">{{ wrongNum15 }}</view>
-					<view :class="wrongNum16 > 4 ? 'item active' : 'item'">{{ wrongNum16 }}</view>
-					<view :class="wrongNum17 > 4 ? 'item active' : 'item'">{{ wrongNum17 }}</view>
-					<view :class="wrongNum18 > 4 ? 'item active' : 'item'">{{ wrongNum18 }}</view>
-					<view :class="wrongNum19 > 4 ? 'item active' : 'item'">{{ wrongNum19 }}</view>
-					<view :class="wrongNum20 > 4 ? 'item active' : 'item'">{{ wrongNum20 }}</view>
+					<view :class="wrongNum11 > 5 ? 'item active' : 'item'">{{ wrongNum11 }}</view>
+					<view :class="wrongNum12 > 5 ? 'item active' : 'item'">{{ wrongNum12 }}</view>
+					<view :class="wrongNum13 > 5 ? 'item active' : 'item'">{{ wrongNum13 }}</view>
+					<view :class="wrongNum14 > 5 ? 'item active' : 'item'">{{ wrongNum14 }}</view>
+					<view :class="wrongNum15 > 5 ? 'item active' : 'item'">{{ wrongNum15 }}</view>
+					<view :class="wrongNum16 > 5 ? 'item active' : 'item'">{{ wrongNum16 }}</view>
+					<view :class="wrongNum17 > 5 ? 'item active' : 'item'">{{ wrongNum17 }}</view>
+					<view :class="wrongNum18 > 5 ? 'item active' : 'item'">{{ wrongNum18 }}</view>
+					<view :class="wrongNum19 > 5 ? 'item active' : 'item'">{{ wrongNum19 }}</view>
+					<view :class="wrongNum20 > 5 ? 'item active' : 'item'">{{ wrongNum20 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -111,28 +113,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum21 > 4 ? 'item active' : 'item'">{{ rightNum21 }}</view>
-					<view :class="rightNum22 > 4 ? 'item active' : 'item'">{{ rightNum22 }}</view>
-					<view :class="rightNum23 > 4 ? 'item active' : 'item'">{{ rightNum23 }}</view>
-					<view :class="rightNum24 > 4 ? 'item active' : 'item'">{{ rightNum24 }}</view>
-					<view :class="rightNum25 > 4 ? 'item active' : 'item'">{{ rightNum25 }}</view>
-					<view :class="rightNum26 > 4 ? 'item active' : 'item'">{{ rightNum26 }}</view>
-					<view :class="rightNum27 > 4 ? 'item active' : 'item'">{{ rightNum27 }}</view>
-					<view :class="rightNum28 > 4 ? 'item active' : 'item'">{{ rightNum28 }}</view>
-					<view :class="rightNum29 > 4 ? 'item active' : 'item'">{{ rightNum29 }}</view>
-					<view :class="rightNum30 > 4 ? 'item active' : 'item'">{{ rightNum30 }}</view>
+					<view :class="rightNum21 > 5 ? 'item active' : 'item'">{{ rightNum21 }}</view>
+					<view :class="rightNum22 > 5 ? 'item active' : 'item'">{{ rightNum22 }}</view>
+					<view :class="rightNum23 > 5 ? 'item active' : 'item'">{{ rightNum23 }}</view>
+					<view :class="rightNum24 > 5 ? 'item active' : 'item'">{{ rightNum24 }}</view>
+					<view :class="rightNum25 > 5 ? 'item active' : 'item'">{{ rightNum25 }}</view>
+					<view :class="rightNum26 > 5 ? 'item active' : 'item'">{{ rightNum26 }}</view>
+					<view :class="rightNum27 > 5 ? 'item active' : 'item'">{{ rightNum27 }}</view>
+					<view :class="rightNum28 > 5 ? 'item active' : 'item'">{{ rightNum28 }}</view>
+					<view :class="rightNum29 > 5 ? 'item active' : 'item'">{{ rightNum29 }}</view>
+					<view :class="rightNum30 > 5 ? 'item active' : 'item'">{{ rightNum30 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum21 > 4 ? 'item active' : 'item'">{{ wrongNum21 }}</view>
-					<view :class="wrongNum22 > 4 ? 'item active' : 'item'">{{ wrongNum22 }}</view>
-					<view :class="wrongNum23 > 4 ? 'item active' : 'item'">{{ wrongNum23 }}</view>
-					<view :class="wrongNum24 > 4 ? 'item active' : 'item'">{{ wrongNum24 }}</view>
-					<view :class="wrongNum25 > 4 ? 'item active' : 'item'">{{ wrongNum25 }}</view>
-					<view :class="wrongNum26 > 4 ? 'item active' : 'item'">{{ wrongNum26 }}</view>
-					<view :class="wrongNum27 > 4 ? 'item active' : 'item'">{{ wrongNum27 }}</view>
-					<view :class="wrongNum28 > 4 ? 'item active' : 'item'">{{ wrongNum28 }}</view>
-					<view :class="wrongNum29 > 4 ? 'item active' : 'item'">{{ wrongNum29 }}</view>
-					<view :class="wrongNum30 > 4 ? 'item active' : 'item'">{{ wrongNum30 }}</view>
+					<view :class="wrongNum21 > 5 ? 'item active' : 'item'">{{ wrongNum21 }}</view>
+					<view :class="wrongNum22 > 5 ? 'item active' : 'item'">{{ wrongNum22 }}</view>
+					<view :class="wrongNum23 > 5 ? 'item active' : 'item'">{{ wrongNum23 }}</view>
+					<view :class="wrongNum24 > 5 ? 'item active' : 'item'">{{ wrongNum24 }}</view>
+					<view :class="wrongNum25 > 5 ? 'item active' : 'item'">{{ wrongNum25 }}</view>
+					<view :class="wrongNum26 > 5 ? 'item active' : 'item'">{{ wrongNum26 }}</view>
+					<view :class="wrongNum27 > 5 ? 'item active' : 'item'">{{ wrongNum27 }}</view>
+					<view :class="wrongNum28 > 5 ? 'item active' : 'item'">{{ wrongNum28 }}</view>
+					<view :class="wrongNum29 > 5 ? 'item active' : 'item'">{{ wrongNum29 }}</view>
+					<view :class="wrongNum30 > 5 ? 'item active' : 'item'">{{ wrongNum30 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -150,28 +152,28 @@
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="times">
-					<view :class="rightNum31 > 4 ? 'item active' : 'item'">{{ rightNum31 }}</view>
-					<view :class="rightNum32 > 4 ? 'item active' : 'item'">{{ rightNum32 }}</view>
-					<view :class="rightNum33 > 4 ? 'item active' : 'item'">{{ rightNum33 }}</view>
-					<view :class="rightNum34 > 4 ? 'item active' : 'item'">{{ rightNum34 }}</view>
-					<view :class="rightNum35 > 4 ? 'item active' : 'item'">{{ rightNum35 }}</view>
-					<view :class="rightNum36 > 4 ? 'item active' : 'item'">{{ rightNum36 }}</view>
-					<view :class="rightNum37 > 4 ? 'item active' : 'item'">{{ rightNum37 }}</view>
-					<view :class="rightNum38 > 4 ? 'item active' : 'item'">{{ rightNum38 }}</view>
-					<view :class="rightNum39 > 4 ? 'item active' : 'item'">{{ rightNum39 }}</view>
-					<view :class="rightNum40 > 4 ? 'item active' : 'item'">{{ rightNum40 }}</view>
+					<view :class="rightNum31 > 5 ? 'item active' : 'item'">{{ rightNum31 }}</view>
+					<view :class="rightNum32 > 5 ? 'item active' : 'item'">{{ rightNum32 }}</view>
+					<view :class="rightNum33 > 5 ? 'item active' : 'item'">{{ rightNum33 }}</view>
+					<view :class="rightNum34 > 5 ? 'item active' : 'item'">{{ rightNum34 }}</view>
+					<view :class="rightNum35 > 5 ? 'item active' : 'item'">{{ rightNum35 }}</view>
+					<view :class="rightNum36 > 5 ? 'item active' : 'item'">{{ rightNum36 }}</view>
+					<view :class="rightNum37 > 5 ? 'item active' : 'item'">{{ rightNum37 }}</view>
+					<view :class="rightNum38 > 5 ? 'item active' : 'item'">{{ rightNum38 }}</view>
+					<view :class="rightNum39 > 5 ? 'item active' : 'item'">{{ rightNum39 }}</view>
+					<view :class="rightNum40 > 5 ? 'item active' : 'item'">{{ rightNum40 }}</view>
 				</view>
 				<view class="times red">
-					<view :class="wrongNum31 > 4 ? 'item active' : 'item'">{{ wrongNum31 }}</view>
-					<view :class="wrongNum32 > 4 ? 'item active' : 'item'">{{ wrongNum32 }}</view>
-					<view :class="wrongNum33 > 4 ? 'item active' : 'item'">{{ wrongNum33 }}</view>
-					<view :class="wrongNum34 > 4 ? 'item active' : 'item'">{{ wrongNum34 }}</view>
-					<view :class="wrongNum35 > 4 ? 'item active' : 'item'">{{ wrongNum35 }}</view>
-					<view :class="wrongNum36 > 4 ? 'item active' : 'item'">{{ wrongNum36 }}</view>
-					<view :class="wrongNum37 > 4 ? 'item active' : 'item'">{{ wrongNum37 }}</view>
-					<view :class="wrongNum38 > 4 ? 'item active' : 'item'">{{ wrongNum38 }}</view>
-					<view :class="wrongNum39 > 4 ? 'item active' : 'item'">{{ wrongNum39 }}</view>
-					<view :class="wrongNum40 > 4 ? 'item active' : 'item'">{{ wrongNum40 }}</view>
+					<view :class="wrongNum31 > 5 ? 'item active' : 'item'">{{ wrongNum31 }}</view>
+					<view :class="wrongNum32 > 5 ? 'item active' : 'item'">{{ wrongNum32 }}</view>
+					<view :class="wrongNum33 > 5 ? 'item active' : 'item'">{{ wrongNum33 }}</view>
+					<view :class="wrongNum34 > 5 ? 'item active' : 'item'">{{ wrongNum34 }}</view>
+					<view :class="wrongNum35 > 5 ? 'item active' : 'item'">{{ wrongNum35 }}</view>
+					<view :class="wrongNum36 > 5 ? 'item active' : 'item'">{{ wrongNum36 }}</view>
+					<view :class="wrongNum37 > 5 ? 'item active' : 'item'">{{ wrongNum37 }}</view>
+					<view :class="wrongNum38 > 5 ? 'item active' : 'item'">{{ wrongNum38 }}</view>
+					<view :class="wrongNum39 > 5 ? 'item active' : 'item'">{{ wrongNum39 }}</view>
+					<view :class="wrongNum40 > 5 ? 'item active' : 'item'">{{ wrongNum40 }}</view>
 				</view>
 				<view style="height: 10px;"></view>
 				<view class="data" :style="{ opacity: num ? 1 : 0 }">
@@ -198,6 +200,7 @@ import { onLoad } from '@dcloudio/uni-app'
 
 /* data */
 const num = ref('')
+const numType = ref('')
 const arr1 = ref([])
 const arr2 = ref([])
 const arr3 = ref([])
@@ -238,7 +241,7 @@ const arr37 = ref([])
 const arr38 = ref([])
 const arr39 = ref([])
 const arr40 = ref([])
-const arr41 = ref([])
+const arrComparison = ref([])
 
 let rightNum1 = ref(0)
 let wrongNum1 = ref(0)
@@ -368,121 +371,121 @@ onLoad(() => {
 	}, 0)
 	setTimeout(() => {
 		findHandle(1)
-	}, 100)
+	}, 10)
 	setTimeout(() => {
 		findHandle(2)
-	}, 200)
+	}, 20)
 	setTimeout(() => {
 		findHandle(3)
-	}, 300)
+	}, 30)
 	setTimeout(() => {
 		findHandle(4)
-	}, 400)
+	}, 40)
 	setTimeout(() => {
 		findHandle(5)
-	}, 500)
+	}, 50)
 	setTimeout(() => {
 		findHandle(6)
-	}, 600)
+	}, 60)
 	setTimeout(() => {
 		findHandle(7)
-	}, 700)
+	}, 70)
 	setTimeout(() => {
 		findHandle(8)
-	}, 800)
+	}, 80)
 	setTimeout(() => {
 		findHandle(9)
-	}, 900)
+	}, 90)
 	setTimeout(() => {
 		findHandle(10)
-	}, 1000)
+	}, 100)
 	setTimeout(() => {
 		findHandle(11)
-	}, 1100)
+	}, 110)
 	setTimeout(() => {
 		findHandle(12)
-	}, 1200)
+	}, 120)
 	setTimeout(() => {
 		findHandle(13)
-	}, 1300)
+	}, 130)
 	setTimeout(() => {
 		findHandle(14)
-	}, 1400)
+	}, 140)
 	setTimeout(() => {
 		findHandle(15)
-	}, 1500)
+	}, 150)
 	setTimeout(() => {
 		findHandle(16)
-	}, 1600)
+	}, 160)
 	setTimeout(() => {
 		findHandle(17)
-	}, 1700)
+	}, 170)
 	setTimeout(() => {
 		findHandle(18)
-	}, 1800)
+	}, 180)
 	setTimeout(() => {
 		findHandle(19)
-	}, 1900)
+	}, 190)
 	setTimeout(() => {
 		findHandle(20)
-	}, 2000)
+	}, 200)
 	setTimeout(() => {
 		findHandle(21)
-	}, 2100)
+	}, 210)
 	setTimeout(() => {
 		findHandle(22)
-	}, 2200)
+	}, 220)
 	setTimeout(() => {
 		findHandle(23)
-	}, 2300)
+	}, 230)
 	setTimeout(() => {
 		findHandle(24)
-	}, 2400)
+	}, 240)
 	setTimeout(() => {
 		findHandle(25)
-	}, 2500)
+	}, 250)
 	setTimeout(() => {
 		findHandle(26)
-	}, 2600)
+	}, 260)
 	setTimeout(() => {
 		findHandle(27)
-	}, 2700)
+	}, 270)
 	setTimeout(() => {
 		findHandle(28)
-	}, 2800)
+	}, 280)
 	setTimeout(() => {
 		findHandle(29)
-	}, 2900)
+	}, 290)
 	setTimeout(() => {
 		findHandle(30)
-	}, 3000)
+	}, 300)
 	setTimeout(() => {
 		findHandle(31)
-	}, 3100)
+	}, 310)
 	setTimeout(() => {
 		findHandle(32)
-	}, 3200)
+	}, 320)
 	setTimeout(() => {
 		findHandle(33)
-	}, 3300)
+	}, 330)
 	setTimeout(() => {
 		findHandle(34)
-	}, 3400)
+	}, 340)
 	setTimeout(() => {
 		findHandle(35)
-	}, 3500)
+	}, 350)
 	setTimeout(() => {
 		findHandle(36)
-	}, 3600)
+	}, 360)
 	setTimeout(() => {
 		findHandle(37)
-	}, 3700)
+	}, 370)
 	setTimeout(() => {
 		findHandle(38)
-	}, 3800)
+	}, 380)
 	setTimeout(() => {
 		findHandle(39)
-	}, 3900)
+	}, 390)
 })
 
 /* methods */
@@ -501,12 +504,7 @@ function getRnd() {
 }
 
 function setValueHandle() {
-	if (
-		typeof num.value[0] != 'undefined' && typeof num.value[1] != 'undefined' && typeof num.value[2] != 'undefined' && typeof num.value[3] != 'undefined' && typeof num.value[4] != 'undefined' && typeof num.value[5] != 'undefined' && typeof num.value[6] != 'undefined' && typeof num.value[7] != 'undefined' && typeof num.value[8] != 'undefined' && typeof num.value[9] != 'undefined' && typeof num.value[10] != 'undefined' &&
-		typeof num.value[10] != 'undefined' && typeof num.value[11] != 'undefined' && typeof num.value[12] != 'undefined' && typeof num.value[13] != 'undefined' && typeof num.value[14] != 'undefined' && typeof num.value[15] != 'undefined' && typeof num.value[16] != 'undefined' && typeof num.value[17] != 'undefined' && typeof num.value[18] != 'undefined' && typeof num.value[19] != 'undefined' && typeof num.value[20] != 'undefined' &&
-		typeof num.value[20] != 'undefined' && typeof num.value[21] != 'undefined' && typeof num.value[22] != 'undefined' && typeof num.value[23] != 'undefined' && typeof num.value[24] != 'undefined' && typeof num.value[25] != 'undefined' && typeof num.value[26] != 'undefined' && typeof num.value[27] != 'undefined' && typeof num.value[28] != 'undefined' && typeof num.value[29] != 'undefined' && typeof num.value[30] != 'undefined' &&
-		typeof num.value[30] != 'undefined' && typeof num.value[31] != 'undefined' && typeof num.value[32] != 'undefined' && typeof num.value[33] != 'undefined' && typeof num.value[34] != 'undefined' && typeof num.value[35] != 'undefined' && typeof num.value[36] != 'undefined' && typeof num.value[37] != 'undefined' && typeof num.value[38] != 'undefined' && typeof num.value[39] != 'undefined' && typeof num.value[40] != 'undefined'
-	) {
+	if (num.value && numType.value) {
 		arr1.value.unshift(num.value[0]);
 		arr2.value.unshift(num.value[1]);
 		arr3.value.unshift(num.value[2]);
@@ -547,7 +545,7 @@ function setValueHandle() {
 		arr38.value.unshift(num.value[37]);
 		arr39.value.unshift(num.value[38]);
 		arr40.value.unshift(num.value[39]);
-		arr41.value.unshift(num.value[40]);
+		arrComparison.value.unshift(numType.value[0]);
 
 		if (arr1.value.length > 20) {
 			arr1.value.pop()
@@ -669,131 +667,132 @@ function setValueHandle() {
 		if (arr40.value.length > 20) {
 			arr40.value.pop()
 		}
-		if (arr41.value.length > 20) {
-			arr41.value.pop()
+		if (arrComparison.value.length > 20) {
+			arrComparison.value.pop()
 		}
 		num.value = ''
+		numType.value = ''
 		setStorage()
 		setTimeout(() => {
 			findHandle(0)
 		}, 0)
 		setTimeout(() => {
 			findHandle(1)
-		}, 100)
+		}, 10)
 		setTimeout(() => {
 			findHandle(2)
-		}, 200)
+		}, 20)
 		setTimeout(() => {
 			findHandle(3)
-		}, 300)
+		}, 30)
 		setTimeout(() => {
 			findHandle(4)
-		}, 400)
+		}, 40)
 		setTimeout(() => {
 			findHandle(5)
-		}, 500)
+		}, 50)
 		setTimeout(() => {
 			findHandle(6)
-		}, 600)
+		}, 60)
 		setTimeout(() => {
 			findHandle(7)
-		}, 700)
+		}, 70)
 		setTimeout(() => {
 			findHandle(8)
-		}, 800)
+		}, 80)
 		setTimeout(() => {
 			findHandle(9)
-		}, 900)
+		}, 90)
 		setTimeout(() => {
 			findHandle(10)
-		}, 1000)
+		}, 100)
 		setTimeout(() => {
 			findHandle(11)
-		}, 1100)
+		}, 110)
 		setTimeout(() => {
 			findHandle(12)
-		}, 1200)
+		}, 120)
 		setTimeout(() => {
 			findHandle(13)
-		}, 1300)
+		}, 130)
 		setTimeout(() => {
 			findHandle(14)
-		}, 1400)
+		}, 140)
 		setTimeout(() => {
 			findHandle(15)
-		}, 1500)
+		}, 150)
 		setTimeout(() => {
 			findHandle(16)
-		}, 1600)
+		}, 160)
 		setTimeout(() => {
 			findHandle(17)
-		}, 1700)
+		}, 170)
 		setTimeout(() => {
 			findHandle(18)
-		}, 1800)
+		}, 180)
 		setTimeout(() => {
 			findHandle(19)
-		}, 1900)
+		}, 190)
 		setTimeout(() => {
 			findHandle(20)
-		}, 2000)
+		}, 200)
 		setTimeout(() => {
 			findHandle(21)
-		}, 2100)
+		}, 210)
 		setTimeout(() => {
 			findHandle(22)
-		}, 2200)
+		}, 220)
 		setTimeout(() => {
 			findHandle(23)
-		}, 2300)
+		}, 230)
 		setTimeout(() => {
 			findHandle(24)
-		}, 2400)
+		}, 240)
 		setTimeout(() => {
 			findHandle(25)
-		}, 2500)
+		}, 250)
 		setTimeout(() => {
 			findHandle(26)
-		}, 2600)
+		}, 260)
 		setTimeout(() => {
 			findHandle(27)
-		}, 2700)
+		}, 270)
 		setTimeout(() => {
 			findHandle(28)
-		}, 2800)
+		}, 280)
 		setTimeout(() => {
 			findHandle(29)
-		}, 2900)
+		}, 290)
 		setTimeout(() => {
 			findHandle(30)
-		}, 3000)
+		}, 300)
 		setTimeout(() => {
 			findHandle(31)
-		}, 3100)
+		}, 310)
 		setTimeout(() => {
 			findHandle(32)
-		}, 3200)
+		}, 320)
 		setTimeout(() => {
 			findHandle(33)
-		}, 3300)
+		}, 330)
 		setTimeout(() => {
 			findHandle(34)
-		}, 3400)
+		}, 340)
 		setTimeout(() => {
 			findHandle(35)
-		}, 3500)
+		}, 350)
 		setTimeout(() => {
 			findHandle(36)
-		}, 3600)
+		}, 360)
 		setTimeout(() => {
 			findHandle(37)
-		}, 3700)
+		}, 370)
 		setTimeout(() => {
 			findHandle(38)
-		}, 3800)
+		}, 380)
 		setTimeout(() => {
 			findHandle(39)
-		}, 3900)
+		}, 390)
 	}
 }
 function clearValueHandle() {
@@ -837,128 +836,125 @@ function clearValueHandle() {
 	arr38.value.shift()
 	arr39.value.shift()
 	arr40.value.shift()
-	arr41.value.shift()
+	arrComparison.value.shift()
 	setStorage()
 	setTimeout(() => {
 		findHandle(0)
 	}, 0)
 	setTimeout(() => {
 		findHandle(1)
-	}, 100)
+	}, 10)
 	setTimeout(() => {
 		findHandle(2)
-	}, 200)
+	}, 20)
 	setTimeout(() => {
 		findHandle(3)
-	}, 300)
+	}, 30)
 	setTimeout(() => {
 		findHandle(4)
-	}, 400)
+	}, 40)
 	setTimeout(() => {
 		findHandle(5)
-	}, 500)
+	}, 50)
 	setTimeout(() => {
 		findHandle(6)
-	}, 600)
+	}, 60)
 	setTimeout(() => {
 		findHandle(7)
-	}, 700)
+	}, 70)
 	setTimeout(() => {
 		findHandle(8)
-	}, 800)
+	}, 80)
 	setTimeout(() => {
 		findHandle(9)
-	}, 900)
+	}, 90)
 	setTimeout(() => {
 		findHandle(10)
-	}, 1000)
+	}, 100)
 	setTimeout(() => {
 		findHandle(11)
-	}, 1100)
+	}, 110)
 	setTimeout(() => {
 		findHandle(12)
-	}, 1200)
+	}, 120)
 	setTimeout(() => {
 		findHandle(13)
-	}, 1300)
+	}, 130)
 	setTimeout(() => {
 		findHandle(14)
-	}, 1400)
+	}, 140)
 	setTimeout(() => {
 		findHandle(15)
-	}, 1500)
+	}, 150)
 	setTimeout(() => {
 		findHandle(16)
-	}, 1600)
+	}, 160)
 	setTimeout(() => {
 		findHandle(17)
-	}, 1700)
+	}, 170)
 	setTimeout(() => {
 		findHandle(18)
-	}, 1800)
+	}, 180)
 	setTimeout(() => {
 		findHandle(19)
-	}, 1900)
+	}, 190)
 	setTimeout(() => {
 		findHandle(20)
-	}, 2000)
+	}, 200)
 	setTimeout(() => {
 		findHandle(21)
-	}, 2100)
+	}, 210)
 	setTimeout(() => {
 		findHandle(22)
-	}, 2200)
+	}, 220)
 	setTimeout(() => {
 		findHandle(23)
-	}, 2300)
+	}, 230)
 	setTimeout(() => {
 		findHandle(24)
-	}, 2400)
+	}, 240)
 	setTimeout(() => {
 		findHandle(25)
-	}, 2500)
+	}, 250)
 	setTimeout(() => {
 		findHandle(26)
-	}, 2600)
+	}, 260)
 	setTimeout(() => {
 		findHandle(27)
-	}, 2700)
+	}, 270)
 	setTimeout(() => {
 		findHandle(28)
-	}, 2800)
+	}, 280)
 	setTimeout(() => {
 		findHandle(29)
-	}, 2900)
+	}, 290)
 	setTimeout(() => {
 		findHandle(30)
-	}, 3000)
+	}, 300)
 	setTimeout(() => {
 		findHandle(31)
-	}, 3100)
+	}, 310)
 	setTimeout(() => {
 		findHandle(32)
-	}, 3200)
+	}, 320)
 	setTimeout(() => {
 		findHandle(33)
-	}, 3300)
+	}, 330)
 	setTimeout(() => {
 		findHandle(34)
-	}, 3400)
+	}, 340)
 	setTimeout(() => {
 		findHandle(35)
-	}, 3500)
+	}, 350)
 	setTimeout(() => {
 		findHandle(36)
-	}, 3600)
+	}, 360)
 	setTimeout(() => {
 		findHandle(37)
-	}, 3700)
+	}, 370)
 	setTimeout(() => {
 		findHandle(38)
-	}, 3800)
-	setTimeout(() => {
-		findHandle(39)
-	}, 3900)
+	}, 380)
 }
 function setStorage() {
 	uni.setStorageSync('arr1', JSON.stringify(arr1.value))
@@ -1001,7 +997,7 @@ function setStorage() {
 	uni.setStorageSync('arr38', JSON.stringify(arr38.value))
 	uni.setStorageSync('arr39', JSON.stringify(arr39.value))
 	uni.setStorageSync('arr40', JSON.stringify(arr40.value))
-	uni.setStorageSync('arr41', JSON.stringify(arr41.value))
+	uni.setStorageSync('arrComparison', JSON.stringify(arrComparison.value))
 }
 function getData() {
 	if(uni.getStorageSync('arr1')){
@@ -1045,1492 +1041,131 @@ function getData() {
 		arr38.value = JSON.parse(uni.getStorageSync('arr38'))
 		arr39.value = JSON.parse(uni.getStorageSync('arr39'))
 		arr40.value = JSON.parse(uni.getStorageSync('arr40'))
-		arr41.value = JSON.parse(uni.getStorageSync('arr41'))
+		arrComparison.value = JSON.parse(uni.getStorageSync('arrComparison'))
 	}
 }
+
+function setDataHandle(arrList, rightNum, wrongNum) {
+	let arr = JSON.parse(JSON.stringify(arrList.value)).reverse().map(item => {
+		return {
+			num: item,
+			isRightPrev: true
+		}
+	})
+	let arrData = JSON.parse(JSON.stringify(arrComparison.value)).reverse()
+	rightNum.value = 0
+	wrongNum.value = 0
+	arr.forEach((item, ind) => {
+		if (item['num'] == arrData[ind]) {
+			item['isRightPrev'] = true
+			wrongNum.value = 0
+			if (ind > 0) {
+				if (arr[ind - 1]['isRightPrev']) {
+					rightNum.value ++
+				} else {
+					rightNum.value = 1
+				}
+			} else {
+				rightNum.value = 1
+			}
+		} else {
+			item['isRightPrev'] = false
+			rightNum.value = 0
+			if (ind > 0) {
+				if (arr[ind - 1]['isRightPrev']) {
+					wrongNum.value = 1
+				} else {
+					wrongNum.value ++
+				}
+			} else {
+				wrongNum.value ++
+			}
+		}
+	})
+}
+
 function findHandle(index) {
-	let arr = []
 	if (index == 0) {
-		arr = JSON.parse(JSON.stringify(arr1.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum1.value = 0
-		wrongNum1.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum1.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum1.value ++
-					} else {
-						rightNum1.value = 1
-					}
-				} else {
-					rightNum1.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum1.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum1.value = 1
-					} else {
-						wrongNum1.value ++
-					}
-				} else {
-					wrongNum1.value ++
-				}
-			}
-		})
+		setDataHandle(arr1, rightNum1, wrongNum1)
 	} else if(index == 1) {
-		arr = JSON.parse(JSON.stringify(arr2.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum2.value = 0
-		wrongNum2.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum2.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum2.value ++
-					} else {
-						rightNum2.value = 1
-					}
-				} else {
-					rightNum2.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum2.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum2.value = 1
-					} else {
-						wrongNum2.value ++
-					}
-				} else {
-					wrongNum2.value ++
-				}
-			}
-		})
+		setDataHandle(arr2, rightNum2, wrongNum2)
 	} else if (index == 2) {
-		arr = JSON.parse(JSON.stringify(arr3.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum3.value = 0
-		wrongNum3.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum3.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum3.value ++
-					} else {
-						rightNum3.value = 1
-					}
-				} else {
-					rightNum3.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum3.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum3.value = 1
-					} else {
-						wrongNum3.value ++
-					}
-				} else {
-					wrongNum3.value ++
-				}
-			}
-		})
+		setDataHandle(arr3, rightNum3, wrongNum3)
 	} else if (index == 3) {
-		arr = JSON.parse(JSON.stringify(arr4.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum4.value = 0
-		wrongNum4.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum4.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum4.value ++
-					} else {
-						rightNum4.value = 1
-					}
-				} else {
-					rightNum4.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum4.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum4.value = 1
-					} else {
-						wrongNum4.value ++
-					}
-				} else {
-					wrongNum4.value ++
-				}
-			}
-		})
+		setDataHandle(arr4, rightNum4, wrongNum4)
 	} else if (index == 4) {
-		arr = JSON.parse(JSON.stringify(arr5.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum5.value = 0
-		wrongNum5.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum5.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum5.value ++
-					} else {
-						rightNum5.value = 1
-					}
-				} else {
-					rightNum5.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum5.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum5.value = 1
-					} else {
-						wrongNum5.value ++
-					}
-				} else {
-					wrongNum5.value ++
-				}
-			}
-		})
+		setDataHandle(arr5, rightNum5, wrongNum5)
 	} else if (index == 5) {
-		arr = JSON.parse(JSON.stringify(arr6.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum6.value = 0
-		wrongNum6.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum6.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum6.value ++
-					} else {
-						rightNum6.value = 1
-					}
-				} else {
-					rightNum6.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum6.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum6.value = 1
-					} else {
-						wrongNum6.value ++
-					}
-				} else {
-					wrongNum6.value ++
-				}
-			}
-		})
+		setDataHandle(arr6, rightNum6, wrongNum6)
 	} else if (index == 6) {
-		arr = JSON.parse(JSON.stringify(arr7.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum7.value = 0
-		wrongNum7.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum7.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum7.value ++
-					} else {
-						rightNum7.value = 1
-					}
-				} else {
-					rightNum7.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum7.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum7.value = 1
-					} else {
-						wrongNum7.value ++
-					}
-				} else {
-					wrongNum7.value ++
-				}
-			}
-		})
+		setDataHandle(arr7, rightNum7, wrongNum7)
 	} else if (index == 7) {
-		arr = JSON.parse(JSON.stringify(arr8.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum8.value = 0
-		wrongNum8.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum8.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum8.value ++
-					} else {
-						rightNum8.value = 1
-					}
-				} else {
-					rightNum8.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum8.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum8.value = 1
-					} else {
-						wrongNum8.value ++
-					}
-				} else {
-					wrongNum8.value ++
-				}
-			}
-		})
+		setDataHandle(arr8, rightNum8, wrongNum8)
 	} else if (index == 8) {
-		arr = JSON.parse(JSON.stringify(arr9.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum9.value = 0
-		wrongNum9.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum9.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum9.value ++
-					} else {
-						rightNum9.value = 1
-					}
-				} else {
-					rightNum9.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum9.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum9.value = 1
-					} else {
-						wrongNum9.value ++
-					}
-				} else {
-					wrongNum9.value ++
-				}
-			}
-		})
+		setDataHandle(arr9, rightNum9, wrongNum9)
 	} else if (index == 9) {
-		arr = JSON.parse(JSON.stringify(arr10.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum10.value = 0
-		wrongNum10.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum10.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum10.value ++
-					} else {
-						rightNum10.value = 1
-					}
-				} else {
-					rightNum10.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum10.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum10.value = 1
-					} else {
-						wrongNum10.value ++
-					}
-				} else {
-					wrongNum10.value ++
-				}
-			}
-		})
+		setDataHandle(arr10, rightNum10, wrongNum10)
 	} else if (index == 10) {
-		arr = JSON.parse(JSON.stringify(arr11.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum11.value = 0
-		wrongNum11.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum11.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum11.value ++
-					} else {
-						rightNum11.value = 1
-					}
-				} else {
-					rightNum11.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum11.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum11.value = 1
-					} else {
-						wrongNum11.value ++
-					}
-				} else {
-					wrongNum11.value ++
-				}
-			}
-		})
+		setDataHandle(arr11, rightNum11, wrongNum11)
 	} else if (index == 11) {
-		arr = JSON.parse(JSON.stringify(arr12.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum12.value = 0
-		wrongNum12.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum12.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum12.value ++
-					} else {
-						rightNum12.value = 1
-					}
-				} else {
-					rightNum12.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum12.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum12.value = 1
-					} else {
-						wrongNum12.value ++
-					}
-				} else {
-					wrongNum12.value ++
-				}
-			}
-		})
+		setDataHandle(arr12, rightNum12, wrongNum12)
 	} else if (index == 12) {
-		arr = JSON.parse(JSON.stringify(arr13.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum13.value = 0
-		wrongNum13.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum13.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum13.value ++
-					} else {
-						rightNum13.value = 1
-					}
-				} else {
-					rightNum13.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum13.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum13.value = 1
-					} else {
-						wrongNum13.value ++
-					}
-				} else {
-					wrongNum13.value ++
-				}
-			}
-		})
+		setDataHandle(arr13, rightNum13, wrongNum13)
 	} else if (index == 13) {
-		arr = JSON.parse(JSON.stringify(arr14.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum14.value = 0
-		wrongNum14.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum14.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum14.value ++
-					} else {
-						rightNum14.value = 1
-					}
-				} else {
-					rightNum14.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum14.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum14.value = 1
-					} else {
-						wrongNum14.value ++
-					}
-				} else {
-					wrongNum14.value ++
-				}
-			}
-		})
+		setDataHandle(arr14, rightNum14, wrongNum14)
 	} else if (index == 14) {
-		arr = JSON.parse(JSON.stringify(arr15.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum15.value = 0
-		wrongNum15.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum15.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum15.value ++
-					} else {
-						rightNum15.value = 1
-					}
-				} else {
-					rightNum15.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum15.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum15.value = 1
-					} else {
-						wrongNum15.value ++
-					}
-				} else {
-					wrongNum15.value ++
-				}
-			}
-		})
+		setDataHandle(arr15, rightNum15, wrongNum15)
 	} else if (index == 15) {
-		arr = JSON.parse(JSON.stringify(arr16.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum16.value = 0
-		wrongNum16.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum16.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum16.value ++
-					} else {
-						rightNum16.value = 1
-					}
-				} else {
-					rightNum16.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum16.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum16.value = 1
-					} else {
-						wrongNum16.value ++
-					}
-				} else {
-					wrongNum16.value ++
-				}
-			}
-		})
+		setDataHandle(arr16, rightNum16, wrongNum16)
 	} else if (index == 16) {
-		arr = JSON.parse(JSON.stringify(arr17.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum17.value = 0
-		wrongNum17.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum17.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum17.value ++
-					} else {
-						rightNum17.value = 1
-					}
-				} else {
-					rightNum17.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum17.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum17.value = 1
-					} else {
-						wrongNum17.value ++
-					}
-				} else {
-					wrongNum17.value ++
-				}
-			}
-		})
+		setDataHandle(arr17, rightNum17, wrongNum17)
 	} else if (index == 17) {
-		arr = JSON.parse(JSON.stringify(arr18.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum18.value = 0
-		wrongNum18.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum18.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum18.value ++
-					} else {
-						rightNum18.value = 1
-					}
-				} else {
-					rightNum18.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum18.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum18.value = 1
-					} else {
-						wrongNum18.value ++
-					}
-				} else {
-					wrongNum18.value ++
-				}
-			}
-		})
+		setDataHandle(arr18, rightNum18, wrongNum18)
 	} else if (index == 18) {
-		arr = JSON.parse(JSON.stringify(arr19.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum19.value = 0
-		wrongNum19.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum19.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum19.value ++
-					} else {
-						rightNum19.value = 1
-					}
-				} else {
-					rightNum19.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum19.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum19.value = 1
-					} else {
-						wrongNum19.value ++
-					}
-				} else {
-					wrongNum19.value ++
-				}
-			}
-		})
+		setDataHandle(arr19, rightNum19, wrongNum19)
 	} else if (index == 19) {
-		arr = JSON.parse(JSON.stringify(arr20.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum20.value = 0
-		wrongNum20.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum20.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum20.value ++
-					} else {
-						rightNum20.value = 1
-					}
-				} else {
-					rightNum20.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum20.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum20.value = 1
-					} else {
-						wrongNum20.value ++
-					}
-				} else {
-					wrongNum20.value ++
-				}
-			}
-		})
+		setDataHandle(arr20, rightNum20, wrongNum20)
 	} else if (index == 20) {
-		arr = JSON.parse(JSON.stringify(arr21.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum21.value = 0
-		wrongNum21.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum21.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum21.value ++
-					} else {
-						rightNum21.value = 1
-					}
-				} else {
-					rightNum21.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum21.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum21.value = 1
-					} else {
-						wrongNum21.value ++
-					}
-				} else {
-					wrongNum21.value ++
-				}
-			}
-		})
+		setDataHandle(arr21, rightNum21, wrongNum21)
 	} else if (index == 21) {
-		arr = JSON.parse(JSON.stringify(arr22.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum22.value = 0
-		wrongNum22.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum22.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum22.value ++
-					} else {
-						rightNum22.value = 1
-					}
-				} else {
-					rightNum22.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum22.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum22.value = 1
-					} else {
-						wrongNum22.value ++
-					}
-				} else {
-					wrongNum22.value ++
-				}
-			}
-		})
+		setDataHandle(arr22, rightNum22, wrongNum22)
 	} else if (index == 22) {
-		arr = JSON.parse(JSON.stringify(arr23.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum23.value = 0
-		wrongNum23.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum23.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum23.value ++
-					} else {
-						rightNum23.value = 1
-					}
-				} else {
-					rightNum23.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum23.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum23.value = 1
-					} else {
-						wrongNum23.value ++
-					}
-				} else {
-					wrongNum23.value ++
-				}
-			}
-		})
+		setDataHandle(arr23, rightNum23, wrongNum23)
 	} else if (index == 23) {
-		arr = JSON.parse(JSON.stringify(arr24.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum24.value = 0
-		wrongNum24.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum24.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum24.value ++
-					} else {
-						rightNum24.value = 1
-					}
-				} else {
-					rightNum24.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum24.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum24.value = 1
-					} else {
-						wrongNum24.value ++
-					}
-				} else {
-					wrongNum24.value ++
-				}
-			}
-		})
+		setDataHandle(arr24, rightNum24, wrongNum24)
 	} else if (index == 24) {
-		arr = JSON.parse(JSON.stringify(arr25.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum25.value = 0
-		wrongNum25.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum25.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum25.value ++
-					} else {
-						rightNum25.value = 1
-					}
-				} else {
-					rightNum25.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum25.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum25.value = 1
-					} else {
-						wrongNum25.value ++
-					}
-				} else {
-					wrongNum25.value ++
-				}
-			}
-		})
+		setDataHandle(arr25, rightNum25, wrongNum25)
 	} else if (index == 25) {
-		arr = JSON.parse(JSON.stringify(arr26.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum26.value = 0
-		wrongNum26.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum26.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum26.value ++
-					} else {
-						rightNum26.value = 1
-					}
-				} else {
-					rightNum26.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum26.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum26.value = 1
-					} else {
-						wrongNum26.value ++
-					}
-				} else {
-					wrongNum26.value ++
-				}
-			}
-		})
+		setDataHandle(arr26, rightNum26, wrongNum26)
 	} else if (index == 26) {
-		arr = JSON.parse(JSON.stringify(arr27.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum27.value = 0
-		wrongNum27.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum27.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum27.value ++
-					} else {
-						rightNum27.value = 1
-					}
-				} else {
-					rightNum27.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum27.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum27.value = 1
-					} else {
-						wrongNum27.value ++
-					}
-				} else {
-					wrongNum27.value ++
-				}
-			}
-		})
+		setDataHandle(arr27, rightNum27, wrongNum27)
 	} else if (index == 27) {
-		arr = JSON.parse(JSON.stringify(arr28.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum28.value = 0
-		wrongNum28.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum28.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum28.value ++
-					} else {
-						rightNum28.value = 1
-					}
-				} else {
-					rightNum28.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum28.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum28.value = 1
-					} else {
-						wrongNum28.value ++
-					}
-				} else {
-					wrongNum28.value ++
-				}
-			}
-		})
+		setDataHandle(arr28, rightNum28, wrongNum28)
 	} else if (index == 28) {
-		arr = JSON.parse(JSON.stringify(arr29.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum29.value = 0
-		wrongNum29.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum29.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum29.value ++
-					} else {
-						rightNum29.value = 1
-					}
-				} else {
-					rightNum29.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum29.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum29.value = 1
-					} else {
-						wrongNum29.value ++
-					}
-				} else {
-					wrongNum29.value ++
-				}
-			}
-		})
+		setDataHandle(arr29, rightNum29, wrongNum29)
 	} else if (index == 29) {
-		arr = JSON.parse(JSON.stringify(arr30.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum30.value = 0
-		wrongNum30.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum30.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum30.value ++
-					} else {
-						rightNum30.value = 1
-					}
-				} else {
-					rightNum30.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum30.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum30.value = 1
-					} else {
-						wrongNum30.value ++
-					}
-				} else {
-					wrongNum30.value ++
-				}
-			}
-		})
+		setDataHandle(arr30, rightNum30, wrongNum30)
 	} else if (index == 30) {
-		arr = JSON.parse(JSON.stringify(arr31.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum31.value = 0
-		wrongNum31.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum31.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum31.value ++
-					} else {
-						rightNum31.value = 1
-					}
-				} else {
-					rightNum31.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum31.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum31.value = 1
-					} else {
-						wrongNum31.value ++
-					}
-				} else {
-					wrongNum31.value ++
-				}
-			}
-		})
+		setDataHandle(arr31, rightNum31, wrongNum31)
 	} else if (index == 31) {
-		arr = JSON.parse(JSON.stringify(arr32.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum32.value = 0
-		wrongNum32.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum32.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum32.value ++
-					} else {
-						rightNum32.value = 1
-					}
-				} else {
-					rightNum32.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum32.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum32.value = 1
-					} else {
-						wrongNum32.value ++
-					}
-				} else {
-					wrongNum32.value ++
-				}
-			}
-		})
+		setDataHandle(arr32, rightNum32, wrongNum32)
 	} else if (index == 32) {
-		arr = JSON.parse(JSON.stringify(arr33.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum33.value = 0
-		wrongNum33.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum33.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum33.value ++
-					} else {
-						rightNum33.value = 1
-					}
-				} else {
-					rightNum33.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum33.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum33.value = 1
-					} else {
-						wrongNum33.value ++
-					}
-				} else {
-					wrongNum33.value ++
-				}
-			}
-		})
+		setDataHandle(arr33, rightNum33, wrongNum33)
 	} else if (index == 33) {
-		arr = JSON.parse(JSON.stringify(arr34.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum34.value = 0
-		wrongNum34.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum34.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum34.value ++
-					} else {
-						rightNum34.value = 1
-					}
-				} else {
-					rightNum34.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum34.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum34.value = 1
-					} else {
-						wrongNum34.value ++
-					}
-				} else {
-					wrongNum34.value ++
-				}
-			}
-		})
+		setDataHandle(arr34, rightNum34, wrongNum34)
 	} else if (index == 34) {
-		arr = JSON.parse(JSON.stringify(arr35.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum35.value = 0
-		wrongNum35.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum35.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum35.value ++
-					} else {
-						rightNum35.value = 1
-					}
-				} else {
-					rightNum35.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum35.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum35.value = 1
-					} else {
-						wrongNum35.value ++
-					}
-				} else {
-					wrongNum35.value ++
-				}
-			}
-		})
+		setDataHandle(arr35, rightNum35, wrongNum35)
 	} else if (index == 35) {
-		arr = JSON.parse(JSON.stringify(arr36.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum36.value = 0
-		wrongNum36.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum36.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum36.value ++
-					} else {
-						rightNum36.value = 1
-					}
-				} else {
-					rightNum36.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum36.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum36.value = 1
-					} else {
-						wrongNum36.value ++
-					}
-				} else {
-					wrongNum36.value ++
-				}
-			}
-		})
+		setDataHandle(arr36, rightNum36, wrongNum36)
 	} else if (index == 36) {
-		arr = JSON.parse(JSON.stringify(arr37.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum37.value = 0
-		wrongNum37.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum37.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum37.value ++
-					} else {
-						rightNum37.value = 1
-					}
-				} else {
-					rightNum37.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum37.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum37.value = 1
-					} else {
-						wrongNum37.value ++
-					}
-				} else {
-					wrongNum37.value ++
-				}
-			}
-		})
+		setDataHandle(arr37, rightNum37, wrongNum37)
 	} else if (index == 37) {
-		arr = JSON.parse(JSON.stringify(arr38.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum38.value = 0
-		wrongNum38.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum38.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum38.value ++
-					} else {
-						rightNum38.value = 1
-					}
-				} else {
-					rightNum38.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum38.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum38.value = 1
-					} else {
-						wrongNum38.value ++
-					}
-				} else {
-					wrongNum38.value ++
-				}
-			}
-		})
+		setDataHandle(arr38, rightNum38, wrongNum38)
 	} else if (index == 38) {
-		arr = JSON.parse(JSON.stringify(arr39.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum39.value = 0
-		wrongNum39.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum39.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum39.value ++
-					} else {
-						rightNum39.value = 1
-					}
-				} else {
-					rightNum39.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum39.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum39.value = 1
-					} else {
-						wrongNum39.value ++
-					}
-				} else {
-					wrongNum39.value ++
-				}
-			}
-		})
+		setDataHandle(arr39, rightNum39, wrongNum39)
 	} else if (index == 39) {
-		arr = JSON.parse(JSON.stringify(arr40.value)).reverse().map(item => {
-			return {
-				num: item,
-				isRightPrev: true
-			}
-		})
-		let arrData = JSON.parse(JSON.stringify(arr41.value)).reverse()
-		rightNum40.value = 0
-		wrongNum40.value = 0
-		arr.forEach((item, ind) => {
-			if (item['num'] == arrData[ind]) {
-				item['isRightPrev'] = true
-				wrongNum40.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						rightNum40.value ++
-					} else {
-						rightNum40.value = 1
-					}
-				} else {
-					rightNum40.value = 1
-				}
-			} else {
-				item['isRightPrev'] = false
-				rightNum40.value = 0
-				if (ind > 0) {
-					if (arr[ind - 1]['isRightPrev']) {
-						wrongNum40.value = 1
-					} else {
-						wrongNum40.value ++
-					}
-				} else {
-					wrongNum40.value ++
-				}
-			}
-		})
-	}
+		setDataHandle(arr40, rightNum40, wrongNum40)
+	} 
 }
 </script>
 
@@ -2548,7 +1183,7 @@ function findHandle(index) {
 			input {
 				padding: 30rpx 10rpx;
 				height: 60rpx;
-				font-size: 26rpx;
+				font-size: 38rpx;
 				letter-spacing: 20px;
 			}
 			.order {
@@ -2560,6 +1195,12 @@ function findHandle(index) {
 					padding: 0 2px;
 				}
 			}
+		}
+		.num {
+			height: 40rpx;
+			width: 100%;
+			word-wrap: break-word;
+			font-size: 12rpx;
 		}
 		.button {
 			display: flex;
