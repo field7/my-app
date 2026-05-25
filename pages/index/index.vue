@@ -84,34 +84,34 @@
 				</div>
 				<view class="result">
 					<view class="result1">
-						<view :class="(index == oneMax || index == oneMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == oneMax || index == oneAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result2">
-						<view :class="(index == twoMax || index == twoMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == twoMax || index == twoAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result3">
-						<view :class="(index == threeMax || index == threeMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == threeMax || index == threeAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result4">
-						<view :class="(index == fourMax || index == fourMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fourMax || index == fourAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result5">
-						<view :class="(index == fiveMax || index == fiveMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == fiveMax || index == fiveAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result6">
-						<view :class="(index == sixMax || index == sixMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == sixMax || index == sixAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result7">
-						<view :class="(index == sevenMax || index == sevenMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == sevenMax || index == sevenAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result8">
-						<view :class="(index == eightMax || index == eightMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == eightMax || index == eightAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result9">
-						<view :class="(index == nightMax || index == nightMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == nightMax || index == nightAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 					<view class="result10">
-						<view :class="(index == tenMax || index == tenMin) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
+						<view :class="(index == tenMax || index == tenAmountMax) ? 'item active' : 'item'" v-for="(item, index) in numArr" :key="index">{{ index }}</view>
 					</view>
 				</view>
 			</view>
